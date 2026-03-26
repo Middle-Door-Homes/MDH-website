@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     template: "%s | Middle Door Homes",
   },
   description:
-    "Durable, yield-forward, downside-protected investment grounded in critical U.S. housing.",
+    "Middle Door Homes helps small multifamily building owners transition from active management to passive income through a tax-deferred 721 exchange.",
   openGraph: {
     title: "Middle Door Homes",
     description:
-      "Durable, yield-forward, downside-protected investment grounded in critical U.S. housing.",
+      "Middle Door Homes helps small multifamily building owners transition from active management to passive income through a tax-deferred 721 exchange.",
     url: "https://www.middledoorhomes.com",
     siteName: "Middle Door Homes",
     locale: "en_US",

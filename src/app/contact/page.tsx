@@ -4,7 +4,7 @@ import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "For inquiries, contact Middle Door Homes directly at info@middledoorhomes.com.",
+  description: "Contact Middle Door Homes to discuss a 721 exchange, broker partnership, or lending relationship.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,8 @@ export default function ContactPage() {
               <Eyebrow>Contact</Eyebrow>
               <Heading className="mt-3">Contact Us</Heading>
               <Lead>
-                For institutional inquiries, contact{" "}
+                Whether you are a property owner exploring a 721 exchange, a broker with a client referral,
+                or a lender interested in our portfolio, we would like to hear from you. Reach us at{" "}
                 <a
                   href="mailto:info@middledoorhomes.com"
                   className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"

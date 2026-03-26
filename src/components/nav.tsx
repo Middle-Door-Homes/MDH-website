@@ -6,11 +6,16 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "./ui";
 
-const LINKS = [
+const AUDIENCE_LINKS = [
+  { href: "/owners", label: "Owners" },
+  { href: "/brokers", label: "Brokers" },
+  { href: "/lenders", label: "Lenders" },
+];
+
+const COMPANY_LINKS = [
   { href: "/about", label: "About" },
-  { href: "/asset-class", label: "Asset Class" },
   { href: "/team", label: "Team" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -37,8 +42,21 @@ export function Nav() {
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-8 text-sm md:flex">
-            {LINKS.map((link) => {
+          <nav aria-label="Primary" className="hidden items-center gap-5 text-sm md:flex">
+            {AUDIENCE_LINKS.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-medium text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <div className="h-4 w-px bg-[var(--mdh-line)]" aria-hidden />
+            {COMPANY_LINKS.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
@@ -84,7 +102,7 @@ export function Nav() {
         <div id="mobile-menu" className="border-t border-[var(--mdh-line)] bg-white md:hidden">
           <Container className="py-4">
             <nav aria-label="Mobile Primary" className="flex flex-col gap-3">
-              {LINKS.map((link) => {
+              {[...AUDIENCE_LINKS, ...COMPANY_LINKS].map((link) => {
                 const active = pathname === link.href;
                 return (
                   <Link
