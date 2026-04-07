@@ -23,7 +23,7 @@ const PRINCIPLES = [
   },
   {
     title: "Long-term orientation",
-    body: "We are building a durable housing business — not a fund with a defined exit window. Our hold strategy is designed around compounding income and operational improvement over time.",
+    body: "We are building a durable housing business – not a fund with a defined exit window. Our hold strategy is designed around compounding income and operational improvement over time.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">The model</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  We acquire 2–49 unit buildings from long-term individual owners using a 721 exchange — a
+                  We acquire 2–49 unit buildings from long-term individual owners using a 721 exchange – a
                   tax-deferred contribution structure. Owners receive a passive ownership stake and ongoing
                   income. We take on the management.
                 </p>
@@ -76,7 +76,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">The opportunity</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Small multifamily — or &ldquo;middle housing&rdquo; — represents more than $5 trillion in US asset
+                  Small multifamily – or &ldquo;middle housing&rdquo; – represents more than $5 trillion in US asset
                   value with less than 3% institutional ownership. It is the last large underserved category
                   in residential real estate.
                 </p>
@@ -84,15 +84,15 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">The operations</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Our team brings a proven scattered-site operational playbook — built managing 30,000+ homes
-                  at institutions like Home Partners of America and Invitation Homes — and applies it to small
+                  Our team brings a proven scattered-site operational playbook – built managing 30,000+ homes
+                  at institutions like Home Partners of America and Invitation Homes – and applies it to small
                   multifamily for the first time at scale.
                 </p>
               </div>
               <div>
                 <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">The capital structure</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owner contributions fund acquisitions. Conservative debt — at 15–20% LTV — supports
+                  Owner contributions fund acquisitions. Conservative debt – at 15–20% LTV – supports
                   renovation and closing costs only. Buildings enter the portfolio occupied, cash-flowing,
                   and with no lease-up or construction risk.
                 </p>

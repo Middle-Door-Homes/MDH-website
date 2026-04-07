@@ -9,7 +9,7 @@ import { Container } from "./ui";
 const AUDIENCE_LINKS = [
   { href: "/owners", label: "Owners" },
   { href: "/brokers", label: "Brokers" },
-  { href: "/lenders", label: "Lenders" },
+  { href: "/advisors", label: "Advisors" },
 ];
 
 const COMPANY_LINKS = [

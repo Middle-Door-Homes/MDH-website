@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "For Brokers & Partners",
@@ -8,18 +8,39 @@ export const metadata: Metadata = {
     "Earn full 3–4% commission on off-market small multifamily transactions. Middle Door Homes helps you unlock conversations with long-term owners who aren't otherwise planning to sell.",
 };
 
-const VALUE_PROPS = [
+const STATS = [
+  { value: "100%", label: "Owner tax deferral" },
+  { value: "3–4%", label: "Broker commission" },
+  { value: "90%+", label: "Off-market buildings" },
+];
+
+const FOR_YOU = [
   {
-    title: "Full commission — no split",
-    body: "We pay a standard broker commission of 3–4% on every transaction. There is no buyer's broker taking a share. You earn the full fee on deals you help us close.",
+    title: "Full commission – no split",
+    body: "We pay a standard commission of 3–4% on every transaction. There is no buyer's broker taking a share. You earn the full fee.",
   },
   {
     title: "Off-market access",
-    body: "Most small multifamily buildings never reach the open market. Long-term owners are not listed — but many are open to the right conversation. Our 721 exchange creates a path to transact with this pool.",
+    body: "Most small multifamily buildings never reach the open market. Our 721 exchange creates a path to transact with owners who would not otherwise be sellers.",
   },
   {
     title: "A referral flywheel",
-    body: "Satisfied owners refer others. Each successful transaction builds your reputation with this owner group and opens doors to additional conversations. One deal often leads to several more.",
+    body: "Satisfied owners refer others. Each successful transaction builds your reputation with this owner group. One conversation can unlock several more.",
+  },
+];
+
+const FOR_CLIENTS = [
+  {
+    title: "Tax deferral",
+    body: "For a long-term owner, a sale means a large tax bill. A 721 exchange defers that entirely.",
+  },
+  {
+    title: "Continued ownership",
+    body: "Your client owns a stake in a diversified portfolio with ongoing cash flow and portfolio appreciation.",
+  },
+  {
+    title: "No management",
+    body: "Professional management means truly passive income for your client – no more tenant calls or maintenance.",
   },
 ];
 
@@ -27,70 +48,56 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a long-term owner",
-    body: "Think about clients who have owned their buildings for years and show signs of management fatigue, tax concerns, or succession planning. These are ideal candidates for the 721 exchange conversation.",
+    body: "Think about clients who have owned their buildings for years – especially those showing signs of management fatigue, tax concerns, or succession planning.",
   },
   {
     step: "02",
     title: "Make the introduction",
-    body: "Connect them with Middle Door Homes. We handle the educational conversation — explaining the 721 exchange model, what the owner can expect, and whether it is a fit for their situation.",
+    body: "Connect them with Middle Door. We handle the educational conversation – explaining the 721 exchange and whether it is the right fit.",
   },
   {
     step: "03",
     title: "Earn your commission",
-    body: "If the building is contributed to our portfolio, you receive full commission — typically 3–4% — without a buyer's broker reducing your share.",
+    body: "If the building is contributed to our portfolio, you receive full commission – typically 3–4% – without a buyer's broker reducing your share.",
   },
 ];
 
 export default function BrokersPage() {
   return (
     <main>
-      <Section className="pb-6 pt-7 md:pt-10">
+      {/* Hero */}
+      <Section className="pb-5 pt-6 md:pt-8">
         <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
-            <div>
-              <Eyebrow>For brokers &amp; partners</Eyebrow>
-              <h1 className="mt-4 max-w-3xl text-4xl font-medium tracking-tight text-[var(--mdh-title)] md:text-5xl">
-                Earn full commission from owners who aren&apos;t planning to sell
-              </h1>
-              <Lead>
-                Most small multifamily owners will never list their building. Middle Door Homes helps you
-                unlock a new category of off-market transactions — and earn full commission on every one.
-              </Lead>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button href="/contact">Introduce a client</Button>
-                <Button href="/owners" variant="secondary">How owners benefit</Button>
-              </div>
-            </div>
-            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
+          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
+            <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/bldg-02.jpg"
-                alt="Urban small multifamily building"
+                src="/images/hero-broker.jpg"
+                alt="Urban small multifamily residential street"
                 fill
                 priority
-                quality={90}
-                sizes="(min-width: 1024px) 420px, 100vw"
+                quality={95}
+                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
                 className="object-cover object-[center_46%]"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
+                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
+                  For brokers &amp; partners
+                </p>
+                <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
+                  Earn full commission<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
+                </h1>
+              </div>
             </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white/60 p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>What we offer</Eyebrow>
-            <Heading className="mt-3">A new transaction channel — not a replacement for existing ones</Heading>
-            <p className="mt-3 max-w-[66ch] text-[0.98rem] leading-relaxed text-[var(--mdh-ink)]">
-              Most long-term small multifamily owners are not in the traditional sales funnel. They are not
-              looking for buyers — they are avoiding the tax consequence of selling. Middle Door opens a
-              path to transact with this group, and pays you a full commission for bringing them to the table.
-            </p>
-            <div className="mt-6 grid gap-5 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {VALUE_PROPS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
-                  <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
+              {STATS.map((item) => (
+                <div key={item.label} className="px-5 py-4 md:px-7 md:py-5">
+                  <p className="text-[1.5rem] font-semibold tracking-tight text-white md:text-[1.8rem]">
+                    {item.value}
+                  </p>
+                  <p className="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-white/50">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -98,27 +105,73 @@ export default function BrokersPage() {
         </Container>
       </Section>
 
+      {/* Pitch */}
       <Section className="pt-4">
         <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white/50 p-6 shadow-[0_10px_28px_rgba(18,29,41,0.045)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
+            <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
+              Many small multifamily owners are not looking to sell. We help you unlock off-market
+              transactions – to help owners make a tax-deferred transition to passive ownership.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* For you + For your clients */}
+      <Section className="pt-4">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+              <Eyebrow>For you</Eyebrow>
+              <Heading className="mt-2">Full commission from off-market transactions</Heading>
+              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
+                {FOR_YOU.map((item) => (
+                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+              <Eyebrow>For your clients</Eyebrow>
+              <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
+              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
+                {FOR_CLIENTS.map((item) => (
+                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* How it works */}
+      <Section className="pt-4">
+        <Container>
+          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
-              <Heading className="mt-3">Three steps to a commission</Heading>
-              <div className="mt-5 space-y-4">
+              <Heading className="mt-2">Three steps to a commission</Heading>
+              <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
-                  <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                    <p className="shrink-0 text-[1.4rem] font-medium leading-none tracking-tight text-[var(--mdh-line)]">
+                  <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">
+                    <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                       {item.step}
                     </p>
                     <div>
                       <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                      <p className="mt-1 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                      <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] lg:h-full lg:min-h-[320px]">
+            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
                 src="/images/bldg-13.jpg"
                 alt="Established neighborhood multifamily housing"
@@ -132,57 +185,26 @@ export default function BrokersPage() {
         </Container>
       </Section>
 
+      {/* CTA */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white/60 p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>The right candidates</Eyebrow>
-            <Heading className="mt-3">Who to think about in your book of business</Heading>
-            <div className="mt-5 grid gap-4 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-2">
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">Long-term owners (10+ years)</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owners who purchased for income and have accumulated significant embedded gains. A sale
-                  triggers a large tax bill — making the 721 exchange an appealing alternative.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">Management-fatigued landlords</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owners who are tired of the day-to-day demands of managing tenants, maintenance, and
-                  aging buildings — but do not want to give up their income by selling.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">Owners approaching retirement</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owners who want to simplify their financial lives, reduce their involvement, and secure a
-                  predictable, growing income stream without a taxable exit.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">Buildings that are difficult to sell</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Small multifamily buildings (2–49 units) with a thin buyer pool, deferred maintenance, or
-                  below-market rents — where a 721 exchange may offer better outcomes than a traditional sale.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
+          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
             <div>
-              <Heading>Have a client in mind?</Heading>
-              <p className="mt-2 max-w-[58ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Reach out to us directly. We can discuss whether your client is a good fit and how to
+              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
+                Have a client in mind?
+              </h2>
+              <p className="mt-2 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/70">
+                Reach out directly. We can discuss whether your client is a good fit and how to
                 structure the introduction.
               </p>
             </div>
             <div className="shrink-0">
-              <Button href="/contact">Introduce a client</Button>
+              <a
+                href="mailto:info@middledoorhomes.com"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+              >
+                Introduce a client
+              </a>
             </div>
           </div>
         </Container>
