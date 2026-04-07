@@ -5,21 +5,21 @@ import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange – without the tax bill.",
+    "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange - without the tax bill.",
 };
 
 
 const LOGOS = [
-  { name: "Home Partners of America", domain: "homepartners.com" },
-  { name: "Invitation Homes", domain: "invitationhomes.com" },
-  { name: "LaSalle Investment Management", domain: "lasalle.com" },
-  { name: "BCG", domain: "bcg.com" },
-  { name: "CBRE", domain: "cbre.com" },
-  { name: "Landis", domain: "landis.com" },
-  { name: "Real Foundations", domain: "realfoundations.net" },
-  { name: "Google", domain: "google.com" },
-  { name: "Stanford Business School", domain: "gsb.stanford.edu" },
-  { name: "Harvard University", domain: "harvard.edu" },
+  { name: "Home Partners of America", file: "home-partners.png" },
+  { name: "Invitation Homes", file: "invitation-homes.png" },
+  { name: "LaSalle Investment Management", file: "lasalle.png" },
+  { name: "BCG", file: "bcg.png" },
+  { name: "CBRE", file: "cbre.png" },
+  { name: "Landis", file: "landis.png" },
+  { name: "Real Foundations", file: "real-foundations.png" },
+  { name: "Google", file: "google.png" },
+  { name: "Stanford Business School", file: "stanford.png" },
+  { name: "Harvard University", file: "harvard.png" },
 ];
 
 const PRINCIPLES = [
@@ -29,7 +29,7 @@ const PRINCIPLES = [
   },
   {
     title: "You keep managing nothing",
-    body: "Once your building joins the portfolio, our team handles everything – tenants, maintenance, operations. You receive income. That is the entire job.",
+    body: "Once your building joins the portfolio, our team handles everything - tenants, maintenance, operations. You receive income. That is the entire job.",
   },
   {
     title: "Your income should grow",
@@ -53,8 +53,8 @@ export default function AboutPage() {
                 We built a third option for long-term owners.
               </h1>
               <Lead>
-                Most building owners face a choice: keep managing, or sell and pay 30–40% in taxes.
-                Middle Door Homes offers a different path – one that lets you stop managing without
+                Most building owners face a choice: keep managing, or sell and pay 30-40% in taxes.
+                Middle Door Homes offers a different path - one that lets you stop managing without
                 triggering a taxable event.
               </Lead>
             </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 721 exchange is an IRS-approved strategy that allows you to contribute your
                   building to a professionally managed portfolio in exchange for a passive ownership
-                  stake – without a taxable event at closing. No capital gains. No depreciation
+                  stake - without a taxable event at closing. No capital gains. No depreciation
                   recapture.
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling means a large, often
-                  unexpected tax bill – typically 30–40% of the building&apos;s value. A 721 exchange
+                  unexpected tax bill - typically 30-40% of the building&apos;s value. A 721 exchange
                   defers that entirely. Your equity rolls forward intact.
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   You own a stake in a diversified, professionally managed portfolio. You receive
-                  regular distributions from the portfolio – and our team manages everything. No
+                  regular distributions from the portfolio - and our team manages everything. No
                   tenant calls. No maintenance coordination. Truly passive income.
                 </p>
               </div>
@@ -116,8 +116,8 @@ export default function AboutPage() {
                   Who it is for
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owners of 2–49 unit buildings who have held for years, have built significant
-                  equity, and are ready to stop managing – but cannot afford the tax cost of a
+                  Owners of 2-49 unit buildings who have held for years, have built significant
+                  equity, and are ready to stop managing - but cannot afford the tax cost of a
                   traditional sale.
                 </p>
               </div>
@@ -136,11 +136,11 @@ export default function AboutPage() {
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Our team has managed more than 30,000 homes across scattered-site portfolios at
                 some of the largest residential housing operators in the country. We bring that same
-                operating playbook to small multifamily buildings – for the first time.
+                operating playbook to small multifamily buildings - for the first time.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 That experience matters for you. Professional management drives meaningful income
-                improvement through expense reduction, rent adjustments, and operational efficiency –
+                improvement through expense reduction, rent adjustments, and operational efficiency -
                 the same playbook we have applied across tens of thousands of homes.
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Before founding Middle Door Homes, we led operations at some of the largest
-                residential housing platforms in the country — including a 30,000+ home
+                residential housing platforms in the country - including a 30,000+ home
                 single-family residential portfolio and a transaction platform that executed
                 non-traditional home acquisitions at scale. We know how to operate occupied real
                 estate at institutional quality, run capital programs without disrupting tenants,
@@ -213,9 +213,9 @@ export default function AboutPage() {
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-6">
                 {LOGOS.map((logo) => (
-                  <div key={logo.domain} className="relative h-7 w-24 shrink-0">
+                  <div key={logo.file} className="relative h-7 w-24 shrink-0">
                     <Image
-                      src={`https://logo.clearbit.com/${logo.domain}`}
+                      src={`/images/logos/${logo.file}`}
                       alt={logo.name}
                       fill
                       sizes="96px"
@@ -236,7 +236,7 @@ export default function AboutPage() {
             <div>
               <Heading>Ready to learn more?</Heading>
               <p className="mt-2 max-w-[58ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                See the full owner overview – including how the 721 exchange works step by step and
+                See the full owner overview - including how the 721 exchange works step by step and
                 what you can expect to receive.
               </p>
             </div>

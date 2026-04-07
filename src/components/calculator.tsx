@@ -99,7 +99,7 @@ export function TaxCalculator() {
   const deprRecapture = Math.round(safeBasis * DEPR_RECAPTURE_RATE);
   const saleNet = bldg - saleCosts - safeM - capGainsTax - deprRecapture;
 
-  // 721 exchange scenario — same costs, no taxes
+  // 721 exchange scenario - same costs, no taxes
   const mdhNet = bldg - saleCosts - safeM;
   const equityGain = mdhNet - saleNet;
 
@@ -111,7 +111,7 @@ export function TaxCalculator() {
           <Heading className="mt-2">How much equity do you keep?</Heading>
           <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
             Adjust the sliders to match your situation. See how a 721 exchange compares to a
-            traditional sale — line by line.
+            traditional sale - line by line.
           </p>
 
           {/* Sliders */}
@@ -205,18 +205,18 @@ export function TaxCalculator() {
                 <Row label="Sale proceeds" value={fmt(bldg)} />
                 <Row
                   label="Sale costs (5%)"
-                  value={`–${fmt(saleCosts)}`}
+                  value={`-${fmt(saleCosts)}`}
                   negative
                 />
                 <Row
                   label="Mortgage payoff"
-                  value={safeM === 0 ? "$0" : `–${fmt(safeM)}`}
+                  value={safeM === 0 ? "$0" : `-${fmt(safeM)}`}
                   negative={safeM > 0}
                 />
-                <Row label="Capital gains tax (est.)" value={`–${fmt(capGainsTax)}`} negative />
+                <Row label="Capital gains tax (est.)" value={`-${fmt(capGainsTax)}`} negative />
                 <Row
                   label="Depreciation recapture (est.)"
-                  value={`–${fmt(deprRecapture)}`}
+                  value={`-${fmt(deprRecapture)}`}
                   negative
                 />
                 <Row label="Equity you keep" value={fmt(Math.max(0, saleNet))} total />
@@ -226,24 +226,24 @@ export function TaxCalculator() {
             {/* MDH 721 exchange */}
             <div className="rounded-xl border border-[var(--mdh-accent)] bg-[var(--mdh-ink)] p-5 md:p-6">
               <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-white/60">
-                721 Exchange — Middle Door
+                721 Exchange - Middle Door
               </p>
               <div className="mt-4 space-y-2.5">
                 <Row label="Contribution value" value={fmt(bldg)} dark />
                 <Row
-                  label="Sale costs (5%)"
-                  value={`–${fmt(saleCosts)}`}
+                  label="Sale costs (5%, non-cash)"
+                  value={`-${fmt(saleCosts)}`}
                   negative
                   dark
                 />
                 <Row
                   label="Mortgage payoff"
-                  value={safeM === 0 ? "$0" : `–${fmt(safeM)}`}
+                  value={safeM === 0 ? "$0" : `-${fmt(safeM)}`}
                   negative={safeM > 0}
                   dark
                 />
-                <Row label="Capital gains tax" value="$0 — deferred" zero dark />
-                <Row label="Depreciation recapture" value="$0 — deferred" zero dark />
+                <Row label="Capital gains tax" value="$0 - deferred" zero dark />
+                <Row label="Depreciation recapture" value="$0 - deferred" zero dark />
                 <Row label="Equity as OP units" value={fmt(mdhNet)} total dark />
               </div>
             </div>
@@ -266,7 +266,7 @@ export function TaxCalculator() {
 
           <p className="mt-4 text-[0.73rem] leading-relaxed text-[var(--mdh-muted)]">
             Actual tax liability depends on your cost basis, depreciation history, and state of
-            residence. This is illustrative only — not tax or legal advice.
+            residence. This is illustrative only - not tax or legal advice.
           </p>
         </div>
       </Container>

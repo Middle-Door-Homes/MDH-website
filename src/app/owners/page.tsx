@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
   title: "For Property Owners",
   description:
-    "From active landlord to passive investor – without the tax bill. A 721 exchange lets you contribute your building, defer taxes entirely, and receive growing passive income.",
+    "From active landlord to passive investor - without the tax bill. A 721 exchange lets you contribute your building, defer taxes entirely, and receive growing passive income.",
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
   { value: "30,000+", label: "Units managed by leadership team" },
-  { value: "8–10%+", label: "Target annual return" },
+  { value: "8-10%+", label: "Target annual return" },
 ];
 
 const BENEFITS = [
   {
     title: "Tax deferral & estate planning",
-    body: "No capital gains or depreciation recapture at closing — your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating a deferred tax liability entirely.",
+    body: "No capital gains or depreciation recapture at closing - your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating a deferred tax liability entirely.",
   },
   {
     title: "Continued ownership",
@@ -37,7 +38,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Conversation",
-    body: "We discuss your building, your financial situation, and your goals. No obligation – we want to understand if the model is genuinely a good fit.",
+    body: "We discuss your building, your financial situation, and your goals. No obligation - we want to understand if the model is genuinely a good fit.",
   },
   {
     step: "02",
@@ -47,7 +48,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Contribution",
-    body: "You contribute the building via 721 exchange – not a sale. Not a taxable event. Your existing mortgage is paid off at close. Your equity moves forward intact.",
+    body: "You contribute the building via 721 exchange - not a sale. Not a taxable event. Your existing mortgage is paid off at close. Your equity moves forward intact.",
   },
   {
     step: "04",
@@ -59,7 +60,7 @@ const HOW_IT_WORKS = [
 const AFTER_CLOSE = [
   {
     title: "Quarterly distributions",
-    body: "Regular income from the portfolio, paid after operating expenses, debt service, and capital reserves — subject to portfolio cash flow.",
+    body: "Regular income from the portfolio, paid after operating expenses, debt service, and capital reserves - subject to portfolio cash flow.",
   },
   {
     title: "Annual K-1 tax schedules",
@@ -71,26 +72,103 @@ const AFTER_CLOSE = [
   },
   {
     title: "Nothing to manage",
-    body: "Tenants, maintenance, leasing, compliance — all of it transfers on close. You are a passive investor from day one.",
+    body: "Tenants, maintenance, leasing, compliance - all of it transfers on close. You are a passive investor from day one.",
   },
 ];
 
-const RISKS = [
+const OWNER_FAQ: FaqGroup[] = [
   {
-    title: "Illiquidity",
-    body: "OP units are not publicly traded. There is a lockup period of 2–3 years from contribution. After lockup, semi-annual redemption windows open, but liquidity is not guaranteed on demand.",
+    group: "The 721 Exchange",
+    items: [
+      {
+        q: "What is a 721 exchange?",
+        a: "A 721 exchange (also called an UPREIT contribution) is an IRS-approved strategy that lets you contribute real property to an Operating Partnership in exchange for OP units - a passive ownership stake in the partnership. It is a contribution, not a sale, so no taxable event occurs at closing.",
+      },
+      {
+        q: "How is a 721 exchange different from a 1031 exchange?",
+        a: "A 1031 exchange also defers taxes, but requires you to identify a replacement property within 45 days and close within 180 - and you end up managing a new building. A 721 exchange has no identification window, no deadline, and no replacement property. You contribute once and exit active ownership permanently.",
+      },
+      {
+        q: "Is this a sale?",
+        a: "No. You are contributing your building to the Operating Partnership in exchange for OP units. Because it is a contribution rather than a sale, no capital gains tax or depreciation recapture is triggered at closing.",
+      },
+      {
+        q: "Do I need to be an accredited investor?",
+        a: "Yes. OP units are securities and this offering is limited to accredited investors - generally those with a net worth over $1M (excluding primary residence) or annual income above $200K ($300K joint). We can walk you through the requirements.",
+      },
+    ],
   },
   {
-    title: "Market risk",
-    body: "Property values can decline. Your OP units are linked to the portfolio's underlying value. Real estate investment carries real risk, and returns are never guaranteed.",
+    group: "Tax & Structure",
+    items: [
+      {
+        q: "What taxes do I defer?",
+        a: "Both federal long-term capital gains (typically 20%) and depreciation recapture (25% rate on prior depreciation) are deferred at closing. Your equity rolls forward intact. State taxes vary by location.",
+      },
+      {
+        q: "What happens to my deferred taxes eventually?",
+        a: "Deferred taxes become due when you sell or redeem your OP units. However, OP units can be passed to heirs with a step-up in cost basis - which can eliminate the deferred tax liability entirely for the next generation.",
+      },
+      {
+        q: "What is my ongoing tax treatment as an OP unit holder?",
+        a: "You continue to receive pass-through tax treatment. You receive a K-1 each year reflecting your allocable share of income, deductions, and depreciation from the portfolio's properties.",
+      },
+      {
+        q: "What happens to my mortgage?",
+        a: "Your existing mortgage is paid off at closing from the contribution proceeds. Only your net equity moves forward as OP units.",
+      },
+    ],
   },
   {
-    title: "Concentration",
-    body: "The portfolio is geographically focused. We diversify across neighborhoods and building types, but a broad downturn would affect returns.",
+    group: "The Process",
+    items: [
+      {
+        q: "What does the process look like from start to finish?",
+        a: "We start with a conversation about your building, financial situation, and goals. If it looks like a fit, we assess the building and structure the exchange terms. You review a full term sheet with your advisors. If you proceed, we close the contribution - title transfers, your mortgage is paid off, and your OP units are issued. From that point forward, you are a passive investor.",
+      },
+      {
+        q: "How long does the process take?",
+        a: "Typical timeline from first conversation to close is 60-90 days, depending on due diligence complexity and third-party timelines. We move as efficiently as possible.",
+      },
+      {
+        q: "Do I need my own attorney or CPA?",
+        a: "Yes, and we encourage it. This is a significant financial transaction and you should have independent counsel review the terms. We will provide full transparency on the documents and work cooperatively with your advisors.",
+      },
+    ],
   },
   {
-    title: "Management execution",
-    body: "The portfolio's performance depends on MDH's execution. We believe our team is well-equipped for this — but past experience is not a guarantee of future results.",
+    group: "Returns & Income",
+    items: [
+      {
+        q: "What return can I expect?",
+        a: "We target 8-10%+ annualized returns through distributions and portfolio appreciation. Returns are not guaranteed and depend on portfolio performance, occupancy, operating expenses, and market conditions.",
+      },
+      {
+        q: "How are distributions paid?",
+        a: "Distributions are paid quarterly, after operating expenses, debt service, and capital reserves. The timing and amount will vary with portfolio cash flow.",
+      },
+      {
+        q: "How does my income compare to what I earn now?",
+        a: "Most long-term owners are not capturing full income potential - deferred maintenance, below-market rents, and high operating costs reduce returns. Professional management typically drives 20-50%+ incremental cash flow at scale, which can mean meaningfully higher passive income than you are earning today.",
+      },
+    ],
+  },
+  {
+    group: "Liquidity & Exit",
+    items: [
+      {
+        q: "Can I get my money out?",
+        a: "OP units are not publicly traded and are illiquid for an initial lockup period of approximately 2-3 years. After lockup, structured semi-annual redemption windows provide flexibility, but liquidity is not guaranteed on demand. This is a long-term investment.",
+      },
+      {
+        q: "What are the risks I should understand?",
+        a: "Real estate investment carries real risk. Property values can decline, occupancy can fall, and returns are never guaranteed. The portfolio is geographically focused, so a broad market downturn would affect returns. Performance depends on MDH's execution - past experience is not a guarantee of future results. We want you to go in with clear expectations.",
+      },
+      {
+        q: "What if I change my mind after contributing?",
+        a: "Once you contribute, the building belongs to the Operating Partnership and cannot be returned. OP units can be redeemed in semi-annual windows after the lockup period, but you should treat this as a long-term commitment going in.",
+      },
+    ],
   },
 ];
 
@@ -117,7 +195,7 @@ export default function OwnersPage() {
                   For property owners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
-                  From active landlord<br className="hidden md:block" /> to passive investor –<br className="hidden md:block" /> without the tax bill.
+                  From active landlord<br className="hidden md:block" /> to passive investor -<br className="hidden md:block" /> without the tax bill.
                 </h1>
               </div>
             </div>
@@ -150,13 +228,13 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling triggers capital gains and
-                  depreciation recapture – often costing 30–40% of the building&apos;s value.
+                  depreciation recapture - often costing 30-40% of the building&apos;s value.
                 </p>
               </div>
               <div>
                 <h3 className="font-medium text-[var(--mdh-title)]">Management fatigue</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Small multifamily buildings require constant attention – tenant calls, aging systems,
+                  Small multifamily buildings require constant attention - tenant calls, aging systems,
                   deferred maintenance. Many owners reach a point where the income no longer justifies the effort.
                 </p>
               </div>
@@ -164,7 +242,7 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">No clean way out</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange defers taxes, but you must identify a replacement property in 45 days,
-                  close in 180, and then manage whatever you buy. You&apos;re not exiting landlord life –
+                  close in 180, and then manage whatever you buy. You&apos;re not exiting landlord life -
                   you&apos;re just changing which building you&apos;re managing.
                 </p>
               </div>
@@ -179,10 +257,10 @@ export default function OwnersPage() {
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-start">
             <div>
               <Eyebrow>The solution</Eyebrow>
-              <Heading className="mt-2">A 721 exchange – not a sale</Heading>
+              <Heading className="mt-2">A 721 exchange - not a sale</Heading>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange is an IRS-approved strategy that allows you to contribute your building
-                to a professionally managed portfolio, in exchange for a passive ownership stake –
+                to a professionally managed portfolio, in exchange for a passive ownership stake -
                 without a taxable event at closing.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -196,7 +274,7 @@ export default function OwnersPage() {
                   </p>
                   <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                     A 721 exchange is a contribution, not a sale. The tax event that would occur at
-                    sale is deferred – so you keep 100% of what you have built.
+                    sale is deferred - so you keep 100% of what you have built.
                   </p>
                 </div>
                 <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
@@ -205,7 +283,7 @@ export default function OwnersPage() {
                   </p>
                   <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                     A 1031 also defers taxes, but you face a 45-day identification window and 180-day
-                    closing deadline – and you end up managing a new building. A 721 exchange has no
+                    closing deadline - and you end up managing a new building. A 721 exchange has no
                     deadlines and no replacement property. You contribute once and exit active
                     ownership permanently.
                   </p>
@@ -288,7 +366,7 @@ export default function OwnersPage() {
               </table>
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180 – and you remain an active landlord afterward.
+              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180 - and you remain an active landlord afterward.
             </p>
           </div>
         </Container>
@@ -327,12 +405,12 @@ export default function OwnersPage() {
               <div>
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                   Professional management grows cash flow through expense reduction and rent
-                  adjustments – offering you a share of truly passive, growing income.
+                  adjustments - offering you a share of truly passive, growing income.
                 </p>
                 <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Professional management delivers{" "}
-                  <span className="font-medium text-[var(--mdh-title)]">~20–50%+ incremental cash flow at scale</span>{" "}
-                  – the same playbook we apply across the Middle Door portfolio.
+                  <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow at scale</span>{" "}
+                  - the same playbook we apply across the Middle Door portfolio.
                 </p>
               </div>
             </div>
@@ -351,9 +429,9 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
-                    "You own one or multiple 2–49 unit multifamily buildings",
+                    "You own one or multiple 2-49 unit multifamily buildings",
                     "You've built meaningful equity",
-                    "You're ready to stop managing – but the tax cost of a sale feels too high",
+                    "You're ready to stop managing - but the tax cost of a sale feels too high",
                     "You qualify as an accredited investor (generally: net worth over $1M excluding primary residence, or annual income above $200K)",
                     "Your mortgage is moderate relative to the building's value",
                   ].map((item) => (
@@ -374,7 +452,7 @@ export default function OwnersPage() {
                     "The illiquid nature of a private partnership doesn't match your financial situation",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                      <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">–</span>
+                      <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">-</span>
                       {item}
                     </li>
                   ))}
@@ -434,29 +512,19 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
-      {/* What to know — risks */}
+      {/* FAQ */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>What to know</Eyebrow>
-            <Heading className="mt-2">A few things to understand upfront</Heading>
-            <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              We want owners to go into this with clear expectations. Real estate investment carries
-              real risk, and we would rather be honest upfront than close a transaction that
-              doesn&apos;t serve you well.
-            </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
-              {RISKS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                </div>
-              ))}
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>Common questions</Eyebrow>
+            <Heading className="mt-2">Frequently asked questions</Heading>
+            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+              <FaqAccordion groups={OWNER_FAQ} />
             </div>
-            <p className="mt-5 text-[0.88rem] leading-relaxed text-[var(--mdh-muted)]">
-              MDH is structured conservatively – low leverage on high-quality, occupied, cash-flowing
-              collateral – which reduces downside risk relative to more aggressive real estate strategies.
+            <p className="mt-6 text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
               This is illustrative only and does not constitute an offer to sell securities.
+              Actual tax liability depends on your individual circumstances. Consult a qualified tax
+              and legal advisor before making any decisions.
             </p>
           </div>
         </Container>
@@ -472,7 +540,7 @@ export default function OwnersPage() {
               </h2>
               <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
                 There is no obligation. We start with a conversation to understand your building and
-                your goals – and to see whether a 721 exchange is the right fit for you.
+                your goals - and to see whether a 721 exchange is the right fit for you.
               </p>
             </div>
             <div className="shrink-0">

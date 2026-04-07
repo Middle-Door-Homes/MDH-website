@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CREDIBILITY = [
   { value: "0%", label: "Taxes at closing" },
   { value: "30,000+", label: "Units managed by leadership team" },
-  { value: "8–10%+", label: "Target annual return" },
+  { value: "8-10%+", label: "Target annual return" },
 ];
 
 const AUDIENCE_CARDS = [
@@ -28,14 +28,14 @@ const AUDIENCE_CARDS = [
     href: "/brokers",
     eyebrow: "For brokers & partners",
     title: "Full commission on off-market transactions",
-    body: "We pay 3–4% commission on every building we acquire. Most long-term owners don't list their properties – we help you unlock these transactions.",
+    body: "We pay 3-4% commission on every building we acquire. Most long-term owners don't list their properties - we help you unlock these transactions.",
     cta: "How to partner with us",
   },
   {
     href: "/advisors",
     eyebrow: "For financial advisors",
     title: "A tax-efficient solution for your clients' real estate",
-    body: "Help clients with embedded gains transition from active landlord to passive owner – without triggering a taxable event.",
+    body: "Help clients with embedded gains transition from active landlord to passive owner - without triggering a taxable event.",
     cta: "How advisors work with us",
   },
 ];
@@ -44,7 +44,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Contribute your building",
-    body: "Instead of selling, you contribute your property through a 721 exchange – a tax-deferred transaction with no capital gains at closing.",
+    body: "Instead of selling, you contribute your property through a 721 exchange - a tax-deferred transaction with no capital gains at closing.",
   },
   {
     step: "02",
@@ -54,7 +54,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Collect ongoing distributions",
-    body: "Our team handles everything. You receive regular income from the portfolio – and professional management works to grow it over time.",
+    body: "Our team handles everything. You receive regular income from the portfolio - and professional management works to grow it over time.",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function Home() {
                   Middle Door Homes
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.4rem] font-medium leading-[1.04] tracking-[-0.01em] text-white md:text-[3.6rem] lg:text-[4.2rem]">
-                  From active landlord<br className="hidden md:block" /> to passive investor –<br className="hidden md:block" /> without the tax bill.
+                  From active landlord<br className="hidden md:block" /> to passive investor -<br className="hidden md:block" /> without the tax bill.
                 </h1>
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function Home() {
               <p className="mt-4 max-w-[52ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange is an IRS-approved strategy that allows you to contribute your
                 building to a professionally managed portfolio, in exchange for a passive
-                ownership stake – without a taxable event at closing.
+                ownership stake - without a taxable event at closing.
               </p>
               <div className="mt-6">
                 <Button href="/owners">Owner overview</Button>

@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
   { value: "100%", label: "Equity preserved" },
-  { value: "8–10%+", label: "Target annual return" },
+  { value: "8-10%+", label: "Target annual return" },
 ];
 
 const FOR_YOU = [
   {
     title: "A solution to a persistent problem",
-    body: "Many high-net-worth clients carry concentrated real estate positions they cannot easily exit. The 721 exchange gives you a tax-efficient answer – one most clients have never heard of.",
+    body: "Many high-net-worth clients carry concentrated real estate positions they cannot easily exit. The 721 exchange gives you a tax-efficient answer - one most clients have never heard of.",
   },
   {
     title: "Strengthens your advisory relationship",
-    body: "Introducing a strategy that protects your client from a 30–40% tax hit at exit positions you as a proactive, comprehensive advisor – not just a portfolio manager.",
+    body: "Introducing a strategy that protects your client from a 30-40% tax hit at exit positions you as a proactive, comprehensive advisor - not just a portfolio manager.",
   },
   {
     title: "Simple referral, no complexity",
@@ -36,11 +36,11 @@ const FOR_CLIENTS = [
   },
   {
     title: "Passive income",
-    body: "Your client receives ongoing distributions from a professionally managed portfolio – without tenant calls, maintenance, or operational burden.",
+    body: "Your client receives ongoing distributions from a professionally managed portfolio - without tenant calls, maintenance, or operational burden.",
   },
   {
     title: "Estate planning benefit",
-    body: "The deferred tax basis can be a meaningful estate planning tool – coordinating with your client's broader wealth strategy.",
+    body: "The deferred tax basis can be a meaningful estate planning tool - coordinating with your client's broader wealth strategy.",
   },
 ];
 
@@ -51,7 +51,7 @@ const WHO_WE_WORK_WITH = [
   },
   {
     title: "CPAs & tax advisors",
-    body: "You understand the embedded gain problem better than anyone. We translate that into a structure your client can actually execute – and we coordinate with you throughout.",
+    body: "You understand the embedded gain problem better than anyone. We translate that into a structure your client can actually execute - and we coordinate with you throughout.",
   },
   {
     title: "Estate planning attorneys",
@@ -67,17 +67,17 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a client with embedded gains",
-    body: "Think about clients who own small multifamily buildings – especially those with long hold periods, deferred maintenance, or who are approaching a life transition.",
+    body: "Think about clients who own small multifamily buildings - especially those with long hold periods, deferred maintenance, or who are approaching a life transition.",
   },
   {
     step: "02",
     title: "Make the introduction",
-    body: "Connect them with Middle Door. We handle the educational conversation – explaining the 721 exchange structure and whether it is the right fit for their situation.",
+    body: "Connect them with Middle Door. We handle the educational conversation - explaining the 721 exchange structure and whether it is the right fit for their situation.",
   },
   {
     step: "03",
     title: "We coordinate with you and share in the upside",
-    body: "We work alongside you throughout the process. You stay informed and involved – we handle the transaction. Your client relationship stays yours – and you receive a finders' fee from us upon closing.",
+    body: "We work alongside you throughout the process. You stay informed and involved - we handle the transaction. Your client relationship stays yours - and you receive a finders' fee from us upon closing.",
   },
 ];
 
@@ -148,14 +148,14 @@ export default function AdvisorsPage() {
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners of small multifamily buildings carry decades of appreciation
                   and depreciation. A sale typically triggers a combined tax liability of
-                  30–40% of the building&apos;s value.
+                  30-40% of the building&apos;s value.
                 </p>
               </div>
               <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
                 <h3 className="font-medium text-[var(--mdh-title)]">The concentration risk</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   A single building often represents a disproportionate share of your client&apos;s
-                  net worth – illiquid, undiversified, and operationally demanding. The tax
+                  net worth - illiquid, undiversified, and operationally demanding. The tax
                   wall prevents the diversification they need.
                 </p>
               </div>
@@ -178,10 +178,10 @@ export default function AdvisorsPage() {
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-2 lg:items-center">
             <div>
               <Eyebrow>The solution</Eyebrow>
-              <Heading className="mt-2">A 721 exchange – not a sale</Heading>
+              <Heading className="mt-2">A 721 exchange - not a sale</Heading>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange allows your client to contribute their building to a professionally
-                managed portfolio in exchange for a passive ownership stake – with no taxable event
+                managed portfolio in exchange for a passive ownership stake - with no taxable event
                 at closing. No capital gains. No depreciation recapture.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -196,7 +196,7 @@ export default function AdvisorsPage() {
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   This is a contribution, not a sale. IRC Section 721 is the IRS-approved structure
                   that makes this possible. The tax event that would have occurred at sale is
-                  deferred entirely – your client keeps 100% of what they built.
+                  deferred entirely - your client keeps 100% of what they built.
                 </p>
               </div>
             </div>
