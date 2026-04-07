@@ -181,8 +181,8 @@ export default function OwnersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/hero-chicago-6flat.jpg"
-                alt="Classic Chicago six-flat apartment building"
+                src="/images/bldg-14.jpeg"
+                alt="Classic brick apartment buildings with courtyard"
                 fill
                 priority
                 quality={95}
@@ -252,7 +252,7 @@ export default function OwnersPage() {
       </Section>
 
       {/* The solution */}
-      <Section className="pt-4">
+      <Section id="solution" className="pt-4">
         <Container>
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-start">
             <div>
@@ -419,7 +419,7 @@ export default function OwnersPage() {
       </Section>
 
       {/* Who qualifies */}
-      <Section className="pt-4">
+      <Section id="qualifies" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Qualifying</Eyebrow>
@@ -468,7 +468,7 @@ export default function OwnersPage() {
       </Section>
 
       {/* How it works */}
-      <Section className="pt-4">
+      <Section id="process" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Process</Eyebrow>
@@ -513,7 +513,7 @@ export default function OwnersPage() {
       </Section>
 
       {/* FAQ */}
-      <Section className="pt-4">
+      <Section id="faq" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Common questions</Eyebrow>

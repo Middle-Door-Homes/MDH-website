@@ -219,7 +219,7 @@ export default function BrokersPage() {
       </Section>
 
       {/* For you + For your clients */}
-      <Section className="pt-4">
+      <Section id="commission" className="pt-4">
         <Container>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
@@ -252,7 +252,7 @@ export default function BrokersPage() {
       </Section>
 
       {/* How it works */}
-      <Section className="pt-4">
+      <Section id="how-it-works" className="pt-4">
         <Container>
           <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
@@ -287,7 +287,7 @@ export default function BrokersPage() {
       </Section>
 
       {/* FAQ */}
-      <Section className="pt-4">
+      <Section id="faq" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Common questions</Eyebrow>

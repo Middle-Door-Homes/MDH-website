@@ -173,7 +173,7 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* The solution */}
-      <Section className="pt-4">
+      <Section id="solution" className="pt-4">
         <Container>
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-2 lg:items-center">
             <div>
@@ -248,7 +248,7 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* Who we work with */}
-      <Section className="pt-4">
+      <Section id="who-we-work-with" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Who we work with</Eyebrow>
@@ -266,7 +266,7 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* How it works */}
-      <Section className="pt-4">
+      <Section id="how-it-works" className="pt-4">
         <Container>
           <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
