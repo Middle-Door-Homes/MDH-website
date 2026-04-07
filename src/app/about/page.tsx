@@ -60,8 +60,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
               <Image
-                src="/images/bldg-14.jpeg"
-                alt="Neighborhood multifamily building"
+                src="/images/hero-brownstones.jpg"
+                alt="Classic brownstone row on a tree-lined street"
                 fill
                 priority
                 quality={90}
@@ -146,8 +146,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
               <Image
-                src="/images/bldg-13.jpg"
-                alt="Residential neighborhood with small multifamily buildings"
+                src="/images/bldg-06.jpg"
+                alt="Classic brick multifamily building in an established neighborhood"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -211,17 +211,15 @@ export default function AboutPage() {
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-6">
+              <div className="mt-3 flex flex-wrap items-center gap-x-7 gap-y-4">
                 {LOGOS.map((logo) => (
-                  <div key={logo.file} className="relative h-7 w-24 shrink-0">
-                    <Image
-                      src={`/images/logos/${logo.file}`}
-                      alt={logo.name}
-                      fill
-                      sizes="96px"
-                      className="object-contain object-left grayscale opacity-50 transition hover:opacity-80 hover:grayscale-0"
-                    />
-                  </div>
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={logo.file}
+                    src={`/images/logos/${logo.file}`}
+                    alt={logo.name}
+                    className="h-auto w-auto max-h-[22px] max-w-[100px] shrink-0 grayscale opacity-50 transition hover:opacity-80 hover:grayscale-0"
+                  />
                 ))}
               </div>
             </div>

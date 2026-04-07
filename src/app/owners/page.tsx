@@ -181,8 +181,8 @@ export default function OwnersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/bldg-14.jpeg"
-                alt="Classic brick apartment building in an established urban neighborhood"
+                src="/images/hero-chicago-6flat.jpg"
+                alt="Classic Chicago six-flat apartment building"
                 fill
                 priority
                 quality={95}
@@ -292,8 +292,8 @@ export default function OwnersPage() {
             </div>
             <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[420px]">
               <Image
-                src="/images/bldg-15.jpg"
-                alt="Multifamily building exterior"
+                src="/images/bldg-04.jpg"
+                alt="Tree-lined street with classic brick multifamily buildings"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"

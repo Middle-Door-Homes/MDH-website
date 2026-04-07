@@ -274,8 +274,8 @@ export default function BrokersPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/bldg-13.jpg"
-                alt="Established neighborhood multifamily housing"
+                src="/images/bldg-11.jpg"
+                alt="Suburban brick apartment building surrounded by mature trees"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"
