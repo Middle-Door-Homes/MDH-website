@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const CREDIBILITY = [
   { value: "30,000+", label: "Homes managed by team" },
   { value: "0%", label: "Taxes at closing" },
-  { value: "15–20%", label: "Target LTV" },
-  { value: "3x+", label: "Debt service coverage" },
+  { value: "8–10%+", label: "Target annual return" },
+  { value: "90%+", label: "Off-market buildings" },
 ];
 
 const AUDIENCE_CARDS = [
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[52vh] min-h-[340px] md:h-[68vh] md:min-h-[480px]">
               <Image
-                src="/images/hero-main.jpg"
+                src="/images/bldg-01.jpg"
                 alt="Small multifamily building in an established urban neighborhood"
                 fill
                 priority

@@ -65,7 +65,7 @@ export default function OwnersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/hero-owner.jpg"
+                src="/images/bldg-14.jpeg"
                 alt="Classic brick apartment building in an established urban neighborhood"
                 fill
                 priority
