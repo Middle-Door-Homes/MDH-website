@@ -14,7 +14,6 @@ const AUDIENCE_LINKS = [
 
 const COMPANY_LINKS = [
   { href: "/about", label: "About" },
-  { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ];
 

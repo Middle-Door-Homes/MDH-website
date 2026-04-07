@@ -3,121 +3,234 @@
 import { useState } from "react";
 import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 
-const MIN = 300_000;
-const MAX = 5_000_000;
-const STEP = 50_000;
-const TAX_RATE = 0.35;
+const BLDG_MIN = 200_000;
+const BLDG_MAX = 5_000_000;
+const BLDG_STEP = 25_000;
+const BLDG_DEFAULT = 1_000_000;
 
-function fmt(n: number) {
-  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(1)}M`;
-  return `$${(n / 1_000).toFixed(0)}K`;
+const MORT_MAX_RATIO = 0.75;
+const MORT_STEP = 10_000;
+
+// Tax/cost assumptions (long-term owner, 20+ year hold)
+const SALE_COSTS_RATE = 0.04;     // 3% commission + ~1% closing costs
+const CAP_GAINS_RATE = 0.16;      // ~20% fed + avg state on ~80% estimated gain
+const DEPR_RECAPTURE_RATE = 0.10; // 25% recapture on ~20 yrs accumulated depreciation
+
+function fmt(n: number, compact = false) {
+  if (compact) {
+    if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(1)}M`;
+    return `$${Math.round(n / 1_000)}K`;
+  }
+  return n === 0 ? "$0" : `$${n.toLocaleString("en-US")}`;
+}
+
+function Row({
+  label,
+  value,
+  negative,
+  zero,
+  total,
+  dark,
+}: {
+  label: string;
+  value: string;
+  negative?: boolean;
+  zero?: boolean;
+  total?: boolean;
+  dark?: boolean;
+}) {
+  const labelClass = `text-[0.88rem] leading-snug ${
+    total
+      ? dark
+        ? "font-medium text-white"
+        : "font-medium text-[var(--mdh-title)]"
+      : dark
+        ? "text-white/75"
+        : "text-[var(--mdh-ink)]"
+  }`;
+
+  const valueClass = `shrink-0 tabular-nums ${
+    zero
+      ? "text-[0.9rem] font-semibold text-emerald-400"
+      : negative
+        ? dark
+          ? "text-[0.9rem] font-medium text-red-400"
+          : "text-[0.9rem] font-medium text-red-600"
+        : total
+          ? dark
+            ? "text-[1.1rem] font-bold text-white"
+            : "text-[1.1rem] font-bold text-[var(--mdh-title)]"
+          : dark
+            ? "text-[0.9rem] font-medium text-white/90"
+            : "text-[0.9rem] font-medium text-[var(--mdh-title)]"
+  }`;
+
+  return (
+    <div
+      className={`flex items-baseline justify-between gap-4 ${
+        total
+          ? `border-t pt-3 mt-1 ${dark ? "border-white/15" : "border-[var(--mdh-line)]"}`
+          : ""
+      }`}
+    >
+      <span className={labelClass}>{label}</span>
+      <span className={valueClass}>{value}</span>
+    </div>
+  );
 }
 
 export function TaxCalculator() {
-  const [value, setValue] = useState(1_000_000);
+  const [bldg, setBldg] = useState(BLDG_DEFAULT);
+  const [mort, setMort] = useState(0);
 
-  const taxBill = Math.round(value * TAX_RATE);
-  const equityAfterSale = value - taxBill;
-  const incomeMin = Math.round(value * 0.08);
-  const incomeMax = Math.round(value * 0.1);
+  const mortMax = Math.round(bldg * MORT_MAX_RATIO);
+  const safeM = Math.min(mort, mortMax);
+
+  // Sale scenario
+  const saleCosts = Math.round(bldg * SALE_COSTS_RATE);
+  const capGainsTax = Math.round(bldg * CAP_GAINS_RATE);
+  const deprRecapture = Math.round(bldg * DEPR_RECAPTURE_RATE);
+  const saleNet = bldg - saleCosts - safeM - capGainsTax - deprRecapture;
+
+  // 721 exchange scenario
+  const mdhNet = bldg - safeM;
+  const equityGain = mdhNet - saleNet;
 
   return (
     <Section className="pt-4">
       <Container>
         <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
-          <Eyebrow>Tax savings calculator</Eyebrow>
-          <Heading className="mt-2">See what you keep</Heading>
-          <p className="mt-3 max-w-[60ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-            Move the slider to your building&apos;s estimated value. See the difference between a
-            traditional sale and a 721 exchange.
+          <Eyebrow>Equity calculator</Eyebrow>
+          <Heading className="mt-2">How much equity do you keep?</Heading>
+          <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            Adjust the sliders to match your situation. See how a 721 exchange compares to a
+            traditional sale — line by line.
           </p>
 
-          {/* Slider */}
-          <div className="mt-7 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-            <div className="flex items-baseline justify-between">
-              <p className="text-[0.85rem] font-medium text-[var(--mdh-subtle)]">
-                Building value
-              </p>
-              <p className="text-[1.7rem] font-semibold tracking-tight text-[var(--mdh-title)]">
-                {fmt(value)}
-              </p>
+          {/* Sliders */}
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <div className="flex items-baseline justify-between">
+                <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
+                  Building value
+                </p>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                  {fmt(bldg, true)}
+                </p>
+              </div>
+              <input
+                type="range"
+                min={BLDG_MIN}
+                max={BLDG_MAX}
+                step={BLDG_STEP}
+                value={bldg}
+                onChange={(e) => {
+                  const v = Number(e.target.value);
+                  setBldg(v);
+                  if (mort > v * MORT_MAX_RATIO) setMort(Math.round(v * MORT_MAX_RATIO));
+                }}
+                className="mt-3 w-full accent-[var(--mdh-accent)]"
+              />
+              <div className="mt-1 flex justify-between text-[0.72rem] text-[var(--mdh-muted)]">
+                <span>{fmt(BLDG_MIN, true)}</span>
+                <span>{fmt(BLDG_MAX, true)}</span>
+              </div>
             </div>
-            <input
-              type="range"
-              min={MIN}
-              max={MAX}
-              step={STEP}
-              value={value}
-              onChange={(e) => setValue(Number(e.target.value))}
-              className="mt-3 w-full accent-[var(--mdh-accent)]"
-            />
-            <div className="mt-1 flex justify-between text-[0.73rem] text-[var(--mdh-muted)]">
-              <span>{fmt(MIN)}</span>
-              <span>{fmt(MAX)}</span>
+
+            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <div className="flex items-baseline justify-between">
+                <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
+                  Outstanding mortgage
+                </p>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                  {safeM === 0 ? "None" : fmt(safeM, true)}
+                </p>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={mortMax}
+                step={MORT_STEP}
+                value={safeM}
+                onChange={(e) => setMort(Number(e.target.value))}
+                className="mt-3 w-full accent-[var(--mdh-accent)]"
+              />
+              <div className="mt-1 flex justify-between text-[0.72rem] text-[var(--mdh-muted)]">
+                <span>$0</span>
+                <span>{fmt(mortMax, true)}</span>
+              </div>
             </div>
           </div>
 
-          {/* Comparison cards */}
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            {/* Sell column */}
+          {/* Comparison columns */}
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            {/* Traditional sale */}
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
-                If you sell
+              <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
+                Traditional sale
               </p>
-              <div className="mt-5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.9rem] text-[var(--mdh-ink)]">Tax bill at closing</span>
-                  <span className="text-[0.9rem] font-semibold text-red-600">
-                    &ndash;{fmt(taxBill)}
-                  </span>
-                </div>
-                <div className="h-px bg-[var(--mdh-line)]" />
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.9rem] font-medium text-[var(--mdh-title)]">
-                    Equity you keep
-                  </span>
-                  <span className="text-[1.15rem] font-semibold text-[var(--mdh-title)]">
-                    {fmt(equityAfterSale)}
-                  </span>
-                </div>
+              <div className="mt-4 space-y-2.5">
+                <Row label="Sale proceeds" value={fmt(bldg)} />
+                <Row
+                  label="Sale costs (commission + closing)"
+                  value={`–${fmt(saleCosts)}`}
+                  negative
+                />
+                <Row
+                  label="Mortgage payoff"
+                  value={safeM === 0 ? "$0" : `–${fmt(safeM)}`}
+                  negative={safeM > 0}
+                />
+                <Row label="Capital gains tax (est.)" value={`–${fmt(capGainsTax)}`} negative />
+                <Row
+                  label="Depreciation recapture (est.)"
+                  value={`–${fmt(deprRecapture)}`}
+                  negative
+                />
+                <Row label="Equity you keep" value={fmt(Math.max(0, saleNet))} total />
               </div>
-              <p className="mt-5 text-[0.75rem] leading-relaxed text-[var(--mdh-muted)]">
-                Based on ~30&ndash;40% combined capital gains and depreciation recapture tax.
-              </p>
             </div>
 
-            {/* MDH column */}
+            {/* MDH 721 exchange */}
             <div className="rounded-xl border border-[var(--mdh-accent)] bg-[var(--mdh-ink)] p-5 md:p-6">
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-white/60">
-                With Middle Door
+              <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-white/60">
+                721 Exchange — Middle Door
               </p>
-              <div className="mt-5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.9rem] text-white/80">Tax at closing</span>
-                  <span className="text-[0.9rem] font-semibold text-emerald-400">$0</span>
-                </div>
-                <div className="h-px bg-white/10" />
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.9rem] font-medium text-white">Equity you keep</span>
-                  <span className="text-[1.15rem] font-semibold text-white">{fmt(value)}</span>
-                </div>
-                <div className="h-px bg-white/10" />
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.9rem] font-medium text-white">Est. annual income</span>
-                  <span className="text-[1.15rem] font-semibold text-white">
-                    {fmt(incomeMin)}&ndash;{fmt(incomeMax)}
-                  </span>
-                </div>
+              <div className="mt-4 space-y-2.5">
+                <Row label="Contribution value" value={fmt(bldg)} dark />
+                <Row label="Sale costs (commission + closing)" value="$0" zero dark />
+                <Row
+                  label="Mortgage assumption"
+                  value={safeM === 0 ? "$0" : `–${fmt(safeM)}`}
+                  negative={safeM > 0}
+                  dark
+                />
+                <Row label="Capital gains tax" value="$0" zero dark />
+                <Row label="Depreciation recapture" value="$0" zero dark />
+                <Row label="Equity you keep" value={fmt(mdhNet)} total dark />
               </div>
-              <p className="mt-5 text-[0.75rem] leading-relaxed text-white/50">
-                Target return of 8&ndash;10%+ annually, distributed as passive income.
-              </p>
             </div>
           </div>
 
-          <p className="mt-5 text-[0.75rem] leading-relaxed text-[var(--mdh-muted)]">
-            Estimates only. Tax liability depends on your cost basis, depreciation history, and state
-            of residence. Annual income is a target, not a guarantee. Consult your tax advisor.
+          {/* Difference callout */}
+          {equityGain > 0 && (
+            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] px-5 py-4 text-center md:py-5">
+              <p className="text-[0.83rem] text-[var(--mdh-subtle)]">
+                With a 721 exchange you preserve
+              </p>
+              <p className="mt-0.5 text-[1.55rem] font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1.8rem]">
+                {fmt(equityGain)} more equity
+              </p>
+              <p className="mt-0.5 text-[0.83rem] text-[var(--mdh-muted)]">
+                compared to a traditional sale
+              </p>
+            </div>
+          )}
+
+          <p className="mt-4 text-[0.73rem] leading-relaxed text-[var(--mdh-muted)]">
+            Estimates assume ~20+ years of ownership with typical appreciation and accumulated
+            depreciation. Actual tax liability depends on your cost basis, depreciation history,
+            and state of residence. This is illustrative only — not tax or legal advice.
           </p>
         </div>
       </Container>

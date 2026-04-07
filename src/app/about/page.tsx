@@ -8,6 +8,42 @@ export const metadata: Metadata = {
     "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange – without the tax bill.",
 };
 
+const TEAM = [
+  {
+    name: "Jack Elzinga",
+    bio: "Transformative leader with expertise in housing and opportunity activation across institutional and entrepreneurial environments.",
+  },
+  {
+    name: "Jose Torres",
+    bio: "Housing executive with deep experience managing large scattered-site residential portfolios and a background in asset management.",
+  },
+  {
+    name: "Robert Callaway",
+    bio: "CFO with deep housing finance experience and a track record building organizations through scaled growth.",
+  },
+  {
+    name: "Mike Rozovics",
+    bio: "Operations executive with experience running large-scale property programs and driving performance across scattered-site housing portfolios.",
+  },
+  {
+    name: "Yexuan Fan",
+    bio: "Data science and AI leader translating machine learning and analytics into practical real estate operating decisions.",
+  },
+];
+
+const LOGOS = [
+  "Home Partners of America",
+  "Invitation Homes",
+  "LaSalle Investment Management",
+  "BCG",
+  "CBRE",
+  "Landis",
+  "Real Foundations",
+  "Google",
+  "Stanford Business School",
+  "Harvard University",
+];
+
 const PRINCIPLES = [
   {
     title: "We start with a conversation",
@@ -161,6 +197,44 @@ export default function AboutPage() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Team */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
+            <Eyebrow>Leadership</Eyebrow>
+            <Heading className="mt-3">The team</Heading>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-3">
+              {TEAM.map((member) => (
+                <div
+                  key={member.name}
+                  className="rounded-xl border border-[var(--mdh-line)] bg-white p-5"
+                >
+                  <p className="font-medium text-[var(--mdh-title)]">{member.name}</p>
+                  <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
+                    {member.bio}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+              <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
+                Team experience from
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {LOGOS.map((logo) => (
+                  <span
+                    key={logo}
+                    className="rounded-full border border-[var(--mdh-line)] bg-white px-3 py-1.5 text-[0.8rem] font-medium text-[var(--mdh-subtle)]"
+                  >
+                    {logo}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </Container>

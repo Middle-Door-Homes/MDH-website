@@ -174,6 +174,74 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
+      {/* Comparison chart */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>Compare your options</Eyebrow>
+            <Heading className="mt-2">How a 721 exchange stacks up</Heading>
+            <div className="mt-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6">
+              <table className="w-full min-w-[540px] text-[0.9rem]">
+                <thead>
+                  <tr>
+                    <th className="w-[34%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Sale</th>
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">1031 Exchange</th>
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">DST</th>
+                    <th className="pb-3 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-accent)]">Middle Door</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[var(--mdh-line)]">
+                  {[
+                    {
+                      label: "Tax deferred at closing",
+                      sale: false, ex1031: true, dst: true, mdh: true,
+                    },
+                    {
+                      label: "Stop managing immediately",
+                      sale: true, ex1031: false, dst: true, mdh: true,
+                    },
+                    {
+                      label: "No replacement property to find",
+                      sale: true, ex1031: false, dst: true, mdh: true,
+                    },
+                    {
+                      label: "Diversified real estate portfolio",
+                      sale: false, ex1031: false, dst: true, mdh: true,
+                    },
+                    {
+                      label: "Purpose-built for small multifamily",
+                      sale: false, ex1031: false, dst: false, mdh: true,
+                    },
+                  ].map((row) => (
+                    <tr key={row.label}>
+                      <td className="py-3 pr-4 font-medium text-[var(--mdh-title)]">{row.label}</td>
+                      {[row.sale, row.ex1031, row.dst].map((val, i) => (
+                        <td key={i} className="py-3 pr-4 text-center">
+                          {val
+                            ? <span className="text-emerald-600 font-bold">✓</span>
+                            : <span className="text-[var(--mdh-line)] font-bold">✗</span>
+                          }
+                        </td>
+                      ))}
+                      <td className="py-3 text-center">
+                        {row.mdh
+                          ? <span className="text-emerald-600 font-bold">✓</span>
+                          : <span className="text-[var(--mdh-line)] font-bold">✗</span>
+                        }
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
+              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require you to identify and manage a replacement property within strict IRS deadlines.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* Benefits */}
       <Section className="pt-4">
         <Container>

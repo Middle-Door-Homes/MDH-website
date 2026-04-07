@@ -67,8 +67,8 @@ export default function Home() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[52vh] min-h-[340px] md:h-[68vh] md:min-h-[480px]">
               <Image
-                src="/images/hero-chicago-6flat.jpg"
-                alt="Small multifamily building in an established urban neighborhood"
+                src="/images/hero-redbrick.jpg"
+                alt="Classic red brick apartment building with fire escapes"
                 fill
                 priority
                 quality={95}
