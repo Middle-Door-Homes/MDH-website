@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const CREDIBILITY = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units of experience" },
+  { value: "30,000+", label: "Units managed by leadership team" },
   { value: "8–10%+", label: "Target annual return" },
 ];
 
@@ -20,15 +20,15 @@ const AUDIENCE_CARDS = [
   {
     href: "/owners",
     eyebrow: "For property owners",
-    title: "Turn your building into passive income – without selling",
-    body: "A 721 exchange lets you contribute your property, defer your taxes, and receive ongoing income with no management responsibilities.",
+    title: "Turn your building into passive income",
+    body: "A 721 exchange lets you contribute your property and receive ongoing income with no management responsibilities, without triggering a taxable event.",
     cta: "Learn how it works",
   },
   {
     href: "/brokers",
     eyebrow: "For brokers & partners",
     title: "Full commission on off-market transactions",
-    body: "We pay 3–4% commission on every building we acquire. Most long-term owners aren't listed – we help you unlock that pool.",
+    body: "We pay 3–4% commission on every building we acquire. Most long-term owners don't list their properties – we help you unlock these transactions.",
     cta: "How to partner with us",
   },
   {
@@ -49,7 +49,7 @@ const HOW_IT_WORKS = [
   {
     step: "02",
     title: "Receive a passive ownership stake",
-    body: "Your equity rolls into a professionally managed real estate portfolio. You remain an owner, without any management responsibilities.",
+    body: "Your equity rolls into a professionally managed real estate portfolio. You remain an owner, without management responsibilities.",
   },
   {
     step: "03",

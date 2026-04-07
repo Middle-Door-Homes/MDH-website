@@ -5,7 +5,7 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 export const metadata: Metadata = {
   title: "For Financial Advisors",
   description:
-    "Help your clients with embedded real estate gains transition from active landlord to passive investor – without a taxable event. Middle Door Homes offers a 721 exchange solution built for client referrals.",
+    "Help your clients with real estate gains exit to passive ownership while retaining their equity. Middle Door Homes offers a 721 exchange solution built for client referrals.",
 };
 
 const STATS = [
@@ -36,7 +36,7 @@ const FOR_CLIENTS = [
   },
   {
     title: "Passive income",
-    body: "They receive ongoing distributions from a professionally managed portfolio – without tenant calls, maintenance, or operational burden.",
+    body: "Your client receives ongoing distributions from a professionally managed portfolio – without tenant calls, maintenance, or operational burden.",
   },
   {
     title: "Estate planning benefit",
@@ -47,7 +47,7 @@ const FOR_CLIENTS = [
 const WHO_WE_WORK_WITH = [
   {
     title: "Wealth managers & RIAs",
-    body: "Clients with significant real estate equity often hold an outsized share of their net worth in a single illiquid asset. The 721 exchange is a path to diversification without the tax cost.",
+    body: "Clients with significant real estate equity often hold an outsized share of their net worth in a single illiquid asset. The 721 exchange is a path to tax-efficient diversification.",
   },
   {
     title: "CPAs & tax advisors",
@@ -76,8 +76,8 @@ const HOW_IT_WORKS = [
   },
   {
     step: "03",
-    title: "We coordinate with you",
-    body: "We work alongside you throughout the process. You stay informed and involved – we handle the transaction. Your client relationship stays yours.",
+    title: "We coordinate with you and share in the upside",
+    body: "We work alongside you throughout the process. You stay informed and involved – we handle the transaction. Your client relationship stays yours – and you receive a finders' fee from us upon closing.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function AdvisorsPage() {
                   For financial advisors
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
-                  A tax-efficient exit<br className="hidden md:block" /> for clients who<br className="hidden md:block" /> can&apos;t afford to sell.
+                  A tax-efficient exit<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to keep.
                 </h1>
               </div>
             </div>
@@ -129,8 +129,8 @@ export default function AdvisorsPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
-              Many of your clients own real estate they cannot afford to sell. The embedded tax
-              liability is too large. We offer a path that eliminates that problem entirely.
+              Many of your clients own real estate they don&apos;t know how to exit while retaining
+              their gains. We offer a path that solves that problem entirely.
             </p>
           </div>
         </Container>

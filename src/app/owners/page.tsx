@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units of experience" },
+  { value: "30,000+", label: "Units managed by leadership team" },
   { value: "8–10%+", label: "Target annual return" },
 ];
 
 const BENEFITS = [
   {
     title: "Tax deferral & estate planning",
-    body: "No capital gains or depreciation recapture at closing — your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely without your heirs ever paying the tax.",
+    body: "No capital gains or depreciation recapture at closing — your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating a deferred tax liability entirely.",
   },
   {
     title: "Continued ownership",
@@ -29,7 +29,7 @@ const BENEFITS = [
   },
   {
     title: "Liquidity",
-    body: "After an initial lockup period, structured semi-annual redemption windows give you flexibility as your needs evolve.",
+    body: "After an initial lockup period, structured redemption windows give you flexibility as your needs evolve.",
   },
 ];
 
@@ -47,7 +47,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Contribution",
-    body: "You contribute the building via 721 exchange – not a sale. No capital gains. No depreciation recapture. Your existing mortgage is paid off at close. Your equity moves forward intact.",
+    body: "You contribute the building via 721 exchange – not a sale. Not a taxable event. Your existing mortgage is paid off at close. Your equity moves forward intact.",
   },
   {
     step: "04",
@@ -86,7 +86,7 @@ const RISKS = [
   },
   {
     title: "Concentration",
-    body: "The portfolio is geographically focused. We diversify across neighborhoods and building types, but a broad regional downturn would affect returns.",
+    body: "The portfolio is geographically focused. We diversify across neighborhoods and building types, but a broad downturn would affect returns.",
   },
   {
     title: "Management execution",
@@ -143,7 +143,7 @@ export default function OwnersPage() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
               You&apos;ve built equity over decades. Selling means a significant tax bill. Holding means
-              managing tenants, maintenance, and debt. We have built a third option.
+              managing tenants, maintenance, and debt. Middle Door Homes offers a third option.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
@@ -351,9 +351,9 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
-                    "You own a 2–49 unit multifamily building",
-                    "You've held for years and built meaningful equity",
-                    "You're ready to stop managing – but the tax cost of a sale is too high",
+                    "You own one or multiple 2–49 unit multifamily buildings",
+                    "You've built meaningful equity",
+                    "You're ready to stop managing – but the tax cost of a sale feels too high",
                     "You qualify as an accredited investor (generally: net worth over $1M excluding primary residence, or annual income above $200K)",
                     "Your mortgage is moderate relative to the building's value",
                   ].map((item) => (
@@ -368,7 +368,7 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
-                    "You need immediate, unrestricted liquidity within the next 2–3 years",
+                    "You need immediate, unrestricted liquidity",
                     "Your building carries a high mortgage relative to its value",
                     "You're looking for a quick exit rather than a long-term passive investment",
                     "The illiquid nature of a private partnership doesn't match your financial situation",

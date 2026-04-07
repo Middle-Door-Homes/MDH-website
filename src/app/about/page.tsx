@@ -197,7 +197,7 @@ export default function AboutPage() {
                 Before founding Middle Door Homes, we led operations at some of the largest
                 residential housing platforms in the country — including a 30,000+ home
                 single-family residential portfolio and a transaction platform that executed
-                tax-advantaged home acquisitions at scale. We know how to operate occupied real
+                non-traditional home acquisitions at scale. We know how to operate occupied real
                 estate at institutional quality, run capital programs without disrupting tenants,
                 and structure transactions that work for owners who have spent years building equity.
               </p>

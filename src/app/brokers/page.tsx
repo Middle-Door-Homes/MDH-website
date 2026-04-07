@@ -48,7 +48,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a long-term owner",
-    body: "Think about clients who have owned their buildings for years – especially those showing signs of management fatigue, tax concerns, or succession planning.",
+    body: "Think about clients who have owned their buildings for years – especially those showing signs of management fatigue, tax concerns, or an interest in succession planning.",
   },
   {
     step: "02",
@@ -85,7 +85,7 @@ export default function BrokersPage() {
                   For brokers &amp; partners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
-                  Earn full commission<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
+                  Earn a full commission<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
                 </h1>
               </div>
             </div>
@@ -195,7 +195,7 @@ export default function BrokersPage() {
               </h2>
               <p className="mt-2 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/70">
                 Reach out directly. We can discuss whether your client is a good fit and how to
-                structure the introduction.
+                structure an introduction.
               </p>
             </div>
             <div className="shrink-0">
