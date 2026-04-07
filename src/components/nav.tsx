@@ -77,12 +77,6 @@ export function Nav() {
             >
               info@middledoorhomes.com
             </a>
-            <Link
-              href="/investor-login"
-              className="rounded-full border border-[var(--mdh-line)] px-3 py-1 text-xs font-medium text-[var(--mdh-subtle)] hover:text-[var(--mdh-title)]"
-            >
-              Investor Login
-            </Link>
           </div>
 
           <button
@@ -122,13 +116,6 @@ export function Nav() {
             >
               info@middledoorhomes.com
             </a>
-            <Link
-              href="/investor-login"
-              onClick={() => setOpen(false)}
-              className="mt-3 inline-block text-sm font-medium text-[var(--mdh-subtle)]"
-            >
-              Investor Login
-            </Link>
           </Container>
         </div>
       ) : null}

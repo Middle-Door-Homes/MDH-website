@@ -195,8 +195,8 @@ export default function AdvisorsPage() {
                 </p>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   This is a contribution, not a sale. IRC Section 721 is the IRS-approved structure
-                  that makes this possible – the same mechanism used in large UPREIT transactions,
-                  applied to small multifamily.
+                  that makes this possible. The tax event that would have occurred at sale is
+                  deferred entirely – your client keeps 100% of what they built.
                 </p>
               </div>
             </div>

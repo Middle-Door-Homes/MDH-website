@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, Eyebrow, Heading, Section } from "@/components/ui";
+import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -135,6 +136,9 @@ export default function Home() {
           </div>
         </Container>
       </Section>
+
+      {/* Calculator */}
+      <TaxCalculator />
 
       {/* How it works */}
       <Section className="pt-4">
