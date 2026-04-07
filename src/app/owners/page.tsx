@@ -10,26 +10,26 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units of team experience" },
+  { value: "30,000+", label: "Units of experience" },
   { value: "8–10%+", label: "Target annual return" },
 ];
 
 const BENEFITS = [
   {
     title: "Tax deferral",
-    body: "No capital gains. No depreciation recapture. Your equity rolls over intact – 100% of it. The 721 exchange defers your tax obligation entirely.",
+    body: "No capital gains or depreciation recapture; your equity rolls over intact.",
   },
   {
     title: "Continued ownership",
-    body: "You own a stake in a diversified portfolio, and continue to benefit from ongoing cash flow and portfolio appreciation over time.",
+    body: "You own a stake in a diversified portfolio, and benefit from ongoing cash flow and portfolio appreciation.",
   },
   {
     title: "No management",
-    body: "Truly passive income. Our team handles leasing, maintenance, renovations, and operations. You never take another tenant call.",
+    body: "Truly passive income from professional management.",
   },
   {
     title: "Liquidity",
-    body: "Structured redemption windows give you flexibility as your needs evolve over time.",
+    body: "Structured redemption windows give you flexibility as needs evolve.",
   },
 ];
 
@@ -206,14 +206,13 @@ export default function OwnersPage() {
               </p>
               <div>
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Professional management grows cash flow through expense reduction, targeted renovations,
-                  and rent adjustments – offering you a share of truly passive, growing income.
+                  Professional management grows cash flow through expense reduction and rent
+                  adjustments – offering you a share of truly passive, growing income.
                 </p>
                 <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Our team has driven{" "}
-                  <span className="font-medium text-[var(--mdh-title)]">20%+ NOI improvement</span>{" "}
-                  on average through targeted capital programs – the same playbook we apply across
-                  the Middle Door portfolio.
+                  Professional management delivers{" "}
+                  <span className="font-medium text-[var(--mdh-title)]">~20–50%+ incremental cash flow at scale</span>{" "}
+                  – the same playbook we apply across the Middle Door portfolio.
                 </p>
               </div>
             </div>

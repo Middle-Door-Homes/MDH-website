@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const CREDIBILITY = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Homes managed by team" },
+  { value: "30,000+", label: "Units of experience" },
   { value: "8–10%+", label: "Target annual return" },
 ];
 
@@ -52,7 +52,7 @@ const HOW_IT_WORKS = [
   },
   {
     step: "03",
-    title: "Collect distributions",
+    title: "Collect ongoing distributions",
     body: "Our team handles everything. You receive regular income from the portfolio – and professional management works to grow it over time.",
   },
 ];
@@ -80,7 +80,7 @@ export default function Home() {
                   Middle Door Homes
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.4rem] font-medium leading-[1.04] tracking-[-0.01em] text-white md:text-[3.6rem] lg:text-[4.2rem]">
-                  From active landlord<br className="hidden md:block" /> to passive owner –<br className="hidden md:block" /> without the tax bill.
+                  From active landlord<br className="hidden md:block" /> to passive investor –<br className="hidden md:block" /> without the tax bill.
                 </h1>
               </div>
             </div>
@@ -144,9 +144,9 @@ export default function Home() {
               <Eyebrow>The 721 exchange</Eyebrow>
               <Heading className="mt-2">Three steps to passive ownership</Heading>
               <p className="mt-4 max-w-[52ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange is an IRS-approved structure that lets building owners contribute
-                a property to a real estate portfolio – completely tax-deferred – and receive a
-                passive ownership stake in return.
+                A 721 exchange is an IRS-approved strategy that allows you to contribute your
+                building to a professionally managed portfolio, in exchange for a passive
+                ownership stake – without a taxable event at closing.
               </p>
               <div className="mt-6">
                 <Button href="/owners">Owner overview</Button>

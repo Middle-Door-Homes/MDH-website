@@ -16,16 +16,16 @@ const STATS = [
 
 const FOR_YOU = [
   {
-    title: "Full commission – no split",
-    body: "We pay a standard commission of 3–4% on every transaction. There is no buyer's broker taking a share. You earn the full fee.",
+    title: "Full commission",
+    body: "We pay a standard commission – typically 3–4% – without a buyer's broker taking a share.",
   },
   {
     title: "Off-market access",
-    body: "Most small multifamily buildings never reach the open market. Our 721 exchange creates a path to transact with owners who would not otherwise be sellers.",
+    body: "Most small buildings don't sell; we open a path to transact with unlisted owners.",
   },
   {
-    title: "A referral flywheel",
-    body: "Satisfied owners refer others. Each successful transaction builds your reputation with this owner group. One conversation can unlock several more.",
+    title: "Referral flywheel",
+    body: "Satisfied owners will refer others; each conversation can unlock several more.",
   },
 ];
 
@@ -36,11 +36,11 @@ const FOR_CLIENTS = [
   },
   {
     title: "Continued ownership",
-    body: "Your client owns a stake in a diversified portfolio with ongoing cash flow and portfolio appreciation.",
+    body: "Your client owns a stake in a diversified portfolio with ongoing cash flow and growth.",
   },
   {
     title: "No management",
-    body: "Professional management means truly passive income for your client – no more tenant calls or maintenance.",
+    body: "Professional management means truly passive income for your client.",
   },
 ];
 
