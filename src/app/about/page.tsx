@@ -8,40 +8,18 @@ export const metadata: Metadata = {
     "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange – without the tax bill.",
 };
 
-const TEAM = [
-  {
-    name: "Jack Elzinga",
-    bio: "Transformative leader with expertise in housing and opportunity activation across institutional and entrepreneurial environments.",
-  },
-  {
-    name: "Jose Torres",
-    bio: "Housing executive with deep experience managing large scattered-site residential portfolios and a background in asset management.",
-  },
-  {
-    name: "Robert Callaway",
-    bio: "CFO with deep housing finance experience and a track record building organizations through scaled growth.",
-  },
-  {
-    name: "Mike Rozovics",
-    bio: "Operations executive with experience running large-scale property programs and driving performance across scattered-site housing portfolios.",
-  },
-  {
-    name: "Yexuan Fan",
-    bio: "Data science and AI leader translating machine learning and analytics into practical real estate operating decisions.",
-  },
-];
 
 const LOGOS = [
-  "Home Partners of America",
-  "Invitation Homes",
-  "LaSalle Investment Management",
-  "BCG",
-  "CBRE",
-  "Landis",
-  "Real Foundations",
-  "Google",
-  "Stanford Business School",
-  "Harvard University",
+  { name: "Home Partners of America", domain: "homepartners.com" },
+  { name: "Invitation Homes", domain: "invitationhomes.com" },
+  { name: "LaSalle Investment Management", domain: "lasalle.com" },
+  { name: "BCG", domain: "bcg.com" },
+  { name: "CBRE", domain: "cbre.com" },
+  { name: "Landis", domain: "landis.com" },
+  { name: "Real Foundations", domain: "realfoundations.net" },
+  { name: "Google", domain: "google.com" },
+  { name: "Stanford Business School", domain: "gsb.stanford.edu" },
+  { name: "Harvard University", domain: "harvard.edu" },
 ];
 
 const PRINCIPLES = [
@@ -206,33 +184,44 @@ export default function AboutPage() {
       <Section className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Leadership</Eyebrow>
-            <Heading className="mt-3">The team</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-3">
-              {TEAM.map((member) => (
-                <div
-                  key={member.name}
-                  className="rounded-xl border border-[var(--mdh-line)] bg-white p-5"
-                >
-                  <p className="font-medium text-[var(--mdh-title)]">{member.name}</p>
-                  <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {member.bio}
-                  </p>
-                </div>
-              ))}
+            <Eyebrow>Our team</Eyebrow>
+            <Heading className="mt-3">Operators who have done this at scale</Heading>
+            <div className="mt-5 border-t border-[var(--mdh-line)] pt-6">
+              <p className="max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                Our team has collectively managed tens of thousands of residential units across
+                dozens of markets, built and scaled large renovation programs on occupied residential
+                portfolios, and structured complex tax-advantaged real estate transactions at volume
+                across the country.
+              </p>
+              <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                Before founding Middle Door Homes, we led operations at some of the largest
+                residential housing platforms in the country — including a 30,000+ home
+                single-family residential portfolio and a transaction platform that executed
+                tax-advantaged home acquisitions at scale. We know how to operate occupied real
+                estate at institutional quality, run capital programs without disrupting tenants,
+                and structure transactions that work for owners who have spent years building equity.
+              </p>
+              <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                We built MDH because we saw a gap: the small multifamily owner was being left out
+                of a structure that large institutional players have been using for decades.
+                We&apos;re changing that.
+              </p>
             </div>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap items-center gap-6">
                 {LOGOS.map((logo) => (
-                  <span
-                    key={logo}
-                    className="rounded-full border border-[var(--mdh-line)] bg-white px-3 py-1.5 text-[0.8rem] font-medium text-[var(--mdh-subtle)]"
-                  >
-                    {logo}
-                  </span>
+                  <div key={logo.domain} className="relative h-7 w-24 shrink-0">
+                    <Image
+                      src={`https://logo.clearbit.com/${logo.domain}`}
+                      alt={logo.name}
+                      fill
+                      sizes="96px"
+                      className="object-contain object-left grayscale opacity-50 transition hover:opacity-80 hover:grayscale-0"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

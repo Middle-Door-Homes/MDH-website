@@ -8,13 +8,16 @@ const BLDG_MAX = 5_000_000;
 const BLDG_STEP = 25_000;
 const BLDG_DEFAULT = 1_000_000;
 
+const BASIS_MIN = 50_000;
+const BASIS_STEP = 25_000;
+const BASIS_DEFAULT = 350_000;
+
 const MORT_MAX_RATIO = 0.75;
 const MORT_STEP = 10_000;
 
-// Tax/cost assumptions (long-term owner, 20+ year hold)
-const SALE_COSTS_RATE = 0.04;     // 3% commission + ~1% closing costs
-const CAP_GAINS_RATE = 0.16;      // ~20% fed + avg state on ~80% estimated gain
-const DEPR_RECAPTURE_RATE = 0.10; // 25% recapture on ~20 yrs accumulated depreciation
+const SALE_COSTS_RATE = 0.05;     // 5% commission + closing costs (same both sides)
+const CAP_GAINS_RATE = 0.20;      // federal long-term rate; state taxes additional
+const DEPR_RECAPTURE_RATE = 0.10; // est. 25% recapture on accumulated depreciation
 
 function fmt(n: number, compact = false) {
   if (compact) {
@@ -81,19 +84,23 @@ function Row({
 
 export function TaxCalculator() {
   const [bldg, setBldg] = useState(BLDG_DEFAULT);
+  const [basis, setBasis] = useState(BASIS_DEFAULT);
   const [mort, setMort] = useState(0);
 
   const mortMax = Math.round(bldg * MORT_MAX_RATIO);
   const safeM = Math.min(mort, mortMax);
+  const safeBasis = Math.min(basis, bldg);
+
+  // Shared costs
+  const saleCosts = Math.round(bldg * SALE_COSTS_RATE);
 
   // Sale scenario
-  const saleCosts = Math.round(bldg * SALE_COSTS_RATE);
-  const capGainsTax = Math.round(bldg * CAP_GAINS_RATE);
-  const deprRecapture = Math.round(bldg * DEPR_RECAPTURE_RATE);
+  const capGainsTax = Math.round(Math.max(0, bldg - safeBasis) * CAP_GAINS_RATE);
+  const deprRecapture = Math.round(safeBasis * DEPR_RECAPTURE_RATE);
   const saleNet = bldg - saleCosts - safeM - capGainsTax - deprRecapture;
 
-  // 721 exchange scenario
-  const mdhNet = bldg - safeM;
+  // 721 exchange scenario — same costs, no taxes
+  const mdhNet = bldg - saleCosts - safeM;
   const equityGain = mdhNet - saleNet;
 
   return (
@@ -108,7 +115,7 @@ export function TaxCalculator() {
           </p>
 
           {/* Sliders */}
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
@@ -128,12 +135,37 @@ export function TaxCalculator() {
                   const v = Number(e.target.value);
                   setBldg(v);
                   if (mort > v * MORT_MAX_RATIO) setMort(Math.round(v * MORT_MAX_RATIO));
+                  if (basis > v) setBasis(v);
                 }}
                 className="mt-3 w-full accent-[var(--mdh-accent)]"
               />
               <div className="mt-1 flex justify-between text-[0.72rem] text-[var(--mdh-muted)]">
                 <span>{fmt(BLDG_MIN, true)}</span>
                 <span>{fmt(BLDG_MAX, true)}</span>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <div className="flex items-baseline justify-between">
+                <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
+                  Purchase price / cost basis
+                </p>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                  {fmt(safeBasis, true)}
+                </p>
+              </div>
+              <input
+                type="range"
+                min={BASIS_MIN}
+                max={bldg}
+                step={BASIS_STEP}
+                value={safeBasis}
+                onChange={(e) => setBasis(Number(e.target.value))}
+                className="mt-3 w-full accent-[var(--mdh-accent)]"
+              />
+              <div className="mt-1 flex justify-between text-[0.72rem] text-[var(--mdh-muted)]">
+                <span>{fmt(BASIS_MIN, true)}</span>
+                <span>{fmt(bldg, true)}</span>
               </div>
             </div>
 
@@ -172,7 +204,7 @@ export function TaxCalculator() {
               <div className="mt-4 space-y-2.5">
                 <Row label="Sale proceeds" value={fmt(bldg)} />
                 <Row
-                  label="Sale costs (commission + closing)"
+                  label="Sale costs (5%)"
                   value={`–${fmt(saleCosts)}`}
                   negative
                 />
@@ -198,16 +230,21 @@ export function TaxCalculator() {
               </p>
               <div className="mt-4 space-y-2.5">
                 <Row label="Contribution value" value={fmt(bldg)} dark />
-                <Row label="Sale costs (commission + closing)" value="$0" zero dark />
                 <Row
-                  label="Mortgage assumption"
+                  label="Sale costs (5%)"
+                  value={`–${fmt(saleCosts)}`}
+                  negative
+                  dark
+                />
+                <Row
+                  label="Mortgage payoff"
                   value={safeM === 0 ? "$0" : `–${fmt(safeM)}`}
                   negative={safeM > 0}
                   dark
                 />
-                <Row label="Capital gains tax" value="$0" zero dark />
-                <Row label="Depreciation recapture" value="$0" zero dark />
-                <Row label="Equity you keep" value={fmt(mdhNet)} total dark />
+                <Row label="Capital gains tax" value="$0 — deferred" zero dark />
+                <Row label="Depreciation recapture" value="$0 — deferred" zero dark />
+                <Row label="Equity as OP units" value={fmt(mdhNet)} total dark />
               </div>
             </div>
           </div>
@@ -228,9 +265,8 @@ export function TaxCalculator() {
           )}
 
           <p className="mt-4 text-[0.73rem] leading-relaxed text-[var(--mdh-muted)]">
-            Estimates assume ~20+ years of ownership with typical appreciation and accumulated
-            depreciation. Actual tax liability depends on your cost basis, depreciation history,
-            and state of residence. This is illustrative only — not tax or legal advice.
+            Actual tax liability depends on your cost basis, depreciation history, and state of
+            residence. This is illustrative only — not tax or legal advice.
           </p>
         </div>
       </Container>

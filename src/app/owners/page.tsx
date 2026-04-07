@@ -16,8 +16,8 @@ const STATS = [
 
 const BENEFITS = [
   {
-    title: "Tax deferral",
-    body: "No capital gains or depreciation recapture; your equity rolls over intact.",
+    title: "Tax deferral & estate planning",
+    body: "No capital gains or depreciation recapture at closing — your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely without your heirs ever paying the tax.",
   },
   {
     title: "Continued ownership",
@@ -25,11 +25,11 @@ const BENEFITS = [
   },
   {
     title: "No management",
-    body: "Truly passive income from professional management.",
+    body: "Truly passive income from professional management. No tenant calls, no maintenance coordination, no 2am emergencies.",
   },
   {
     title: "Liquidity",
-    body: "Structured redemption windows give you flexibility as needs evolve.",
+    body: "After an initial lockup period, structured semi-annual redemption windows give you flexibility as your needs evolve.",
   },
 ];
 
@@ -47,12 +47,50 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Contribution",
-    body: "You contribute the building via 721 exchange – not a sale. No capital gains. No depreciation recapture. Your equity moves forward intact.",
+    body: "You contribute the building via 721 exchange – not a sale. No capital gains. No depreciation recapture. Your existing mortgage is paid off at close. Your equity moves forward intact.",
   },
   {
     step: "04",
     title: "Ongoing income",
     body: "You receive regular distributions from the portfolio. Our team manages everything, working to grow your income over time.",
+  },
+];
+
+const AFTER_CLOSE = [
+  {
+    title: "Quarterly distributions",
+    body: "Regular income from the portfolio, paid after operating expenses, debt service, and capital reserves — subject to portfolio cash flow.",
+  },
+  {
+    title: "Annual K-1 tax schedules",
+    body: "You continue to receive pass-through tax treatment, including your allocable share of depreciation from the portfolio's properties.",
+  },
+  {
+    title: "Audited financial statements",
+    body: "Annual audited financials and quarterly portfolio reports covering occupancy, renovation progress, and market conditions.",
+  },
+  {
+    title: "Nothing to manage",
+    body: "Tenants, maintenance, leasing, compliance — all of it transfers on close. You are a passive investor from day one.",
+  },
+];
+
+const RISKS = [
+  {
+    title: "Illiquidity",
+    body: "OP units are not publicly traded. There is a lockup period of 2–3 years from contribution. After lockup, semi-annual redemption windows open, but liquidity is not guaranteed on demand.",
+  },
+  {
+    title: "Market risk",
+    body: "Property values can decline. Your OP units are linked to the portfolio's underlying value. Real estate investment carries real risk, and returns are never guaranteed.",
+  },
+  {
+    title: "Concentration",
+    body: "The portfolio is geographically focused. We diversify across neighborhoods and building types, but a broad regional downturn would affect returns.",
+  },
+  {
+    title: "Management execution",
+    body: "The portfolio's performance depends on MDH's execution. We believe our team is well-equipped for this — but past experience is not a guarantee of future results.",
   },
 ];
 
@@ -125,8 +163,9 @@ export default function OwnersPage() {
               <div>
                 <h3 className="font-medium text-[var(--mdh-title)]">No clean way out</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Traditional buyers are scarce. Selling on the open market is slow, uncertain, and still
-                  triggers the tax event. Most owners feel stuck between managing forever and paying to exit.
+                  A 1031 exchange defers taxes, but you must identify a replacement property in 45 days,
+                  close in 180, and then manage whatever you buy. You&apos;re not exiting landlord life –
+                  you&apos;re just changing which building you&apos;re managing.
                 </p>
               </div>
             </div>
@@ -137,7 +176,7 @@ export default function OwnersPage() {
       {/* The solution */}
       <Section className="pt-4">
         <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-start">
             <div>
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange – not a sale</Heading>
@@ -150,17 +189,30 @@ export default function OwnersPage() {
                 You do not sell. You do not lose your income. You simply stop managing. Your equity
                 moves forward intact into a diversified, professionally operated portfolio.
               </p>
-              <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
-                  The key distinction
-                </p>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 721 exchange is a contribution, not a sale. The tax event that would occur at
-                  sale is deferred – so you keep 100% of what you have built.
-                </p>
+              <div className="mt-5 space-y-3">
+                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                  <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
+                    The key distinction
+                  </p>
+                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                    A 721 exchange is a contribution, not a sale. The tax event that would occur at
+                    sale is deferred – so you keep 100% of what you have built.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                  <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
+                    Why not a 1031 exchange?
+                  </p>
+                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                    A 1031 also defers taxes, but you face a 45-day identification window and 180-day
+                    closing deadline – and you end up managing a new building. A 721 exchange has no
+                    deadlines and no replacement property. You contribute once and exit active
+                    ownership permanently.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[360px]">
+            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[420px]">
               <Image
                 src="/images/bldg-15.jpg"
                 alt="Multifamily building exterior"
@@ -236,7 +288,7 @@ export default function OwnersPage() {
               </table>
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require you to identify and manage a replacement property within strict IRS deadlines.
+              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180 – and you remain an active landlord afterward.
             </p>
           </div>
         </Container>
@@ -288,15 +340,64 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
-      {/* How it works */}
+      {/* Who qualifies */}
       <Section className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>Qualifying</Eyebrow>
+            <Heading className="mt-2">Is this a fit for you?</Heading>
+            <div className="mt-6 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+              <div>
+                <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
+                <ul className="mt-3 space-y-2">
+                  {[
+                    "You own a 2–49 unit multifamily building",
+                    "You've held for years and built meaningful equity",
+                    "You're ready to stop managing – but the tax cost of a sale is too high",
+                    "You qualify as an accredited investor (generally: net worth over $1M excluding primary residence, or annual income above $200K)",
+                    "Your mortgage is moderate relative to the building's value",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                      <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-medium text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
+                <ul className="mt-3 space-y-2">
+                  {[
+                    "You need immediate, unrestricted liquidity within the next 2–3 years",
+                    "Your building carries a high mortgage relative to its value",
+                    "You're looking for a quick exit rather than a long-term passive investment",
+                    "The illiquid nature of a private partnership doesn't match your financial situation",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                      <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">–</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
+                  The best way to find out is a conversation. There&apos;s no cost, no obligation, and
+                  we&apos;ll give you an honest answer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* How it works */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Process</Eyebrow>
             <Heading className="mt-2">Step by step</Heading>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               {HOW_IT_WORKS.map((item) => (
-                <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+                <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
                   <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                     {item.step}
                   </p>
@@ -307,6 +408,56 @@ export default function OwnersPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* After you close */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>The owner experience</Eyebrow>
+            <Heading className="mt-2">What happens after you contribute</Heading>
+            <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              On close, title transfers to the Operating Partnership and your OP units are issued. From
+              that point forward, you are a passive investor. Everything operational transfers to MDH.
+            </p>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
+              {AFTER_CLOSE.map((item) => (
+                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
+                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* What to know — risks */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+            <Eyebrow>What to know</Eyebrow>
+            <Heading className="mt-2">A few things to understand upfront</Heading>
+            <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              We want owners to go into this with clear expectations. Real estate investment carries
+              real risk, and we would rather be honest upfront than close a transaction that
+              doesn&apos;t serve you well.
+            </p>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
+              {RISKS.map((item) => (
+                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
+                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-[0.88rem] leading-relaxed text-[var(--mdh-muted)]">
+              MDH is structured conservatively – low leverage on high-quality, occupied, cash-flowing
+              collateral – which reduces downside risk relative to more aggressive real estate strategies.
+              This is illustrative only and does not constitute an offer to sell securities.
+            </p>
           </div>
         </Container>
       </Section>
