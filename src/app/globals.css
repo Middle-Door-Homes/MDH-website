@@ -33,7 +33,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Display serif — applied to hero h1 elements */
+/* Display serif - applied to hero h1 elements */
 .font-display {
   font-family: var(--font-serif), Georgia, "Times New Roman", serif;
 }
