@@ -3,9 +3,10 @@ import Image from "next/image";
 import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "For Financial Advisors",
+  title: "Financial Advisor Referral Program - 721 Exchange for Your Clients",
   description:
-    "Help your clients with real estate gains exit to passive ownership while retaining their equity. Middle Door Homes offers a 721 exchange solution built for client referrals.",
+    "Help clients with embedded real estate gains transition from active landlord to passive investor - tax-deferred, no replacement property required. Partner with Middle Door Homes.",
+  alternates: { canonical: "/advisors" },
 };
 
 const STATS = [

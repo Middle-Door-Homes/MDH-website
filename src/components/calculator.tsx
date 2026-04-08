@@ -122,7 +122,7 @@ export function TaxCalculator() {
                   Building value
                 </p>
                 <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
-                  {fmt(bldg, true)}
+                  {fmt(bldg)}
                 </p>
               </div>
               <input
@@ -151,7 +151,7 @@ export function TaxCalculator() {
                   Purchase price / cost basis
                 </p>
                 <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
-                  {fmt(safeBasis, true)}
+                  {fmt(safeBasis)}
                 </p>
               </div>
               <input
@@ -175,7 +175,7 @@ export function TaxCalculator() {
                   Outstanding mortgage
                 </p>
                 <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
-                  {safeM === 0 ? "None" : fmt(safeM, true)}
+                  {safeM === 0 ? "None" : fmt(safeM)}
                 </p>
               </div>
               <input

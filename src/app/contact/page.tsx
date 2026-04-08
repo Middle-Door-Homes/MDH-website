@@ -5,6 +5,7 @@ import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Contact Middle Door Homes to discuss a 721 exchange, broker partnership, or advisor referral.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -30,8 +31,8 @@ export default function ContactPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
               <Image
-                src="/images/hero-chicago-6flat.jpg"
-                alt="Classic Chicago multifamily building"
+                src="/images/hero-redbrick.jpg"
+                alt="Classic Chicago red brick apartment building"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 380px, 100vw"

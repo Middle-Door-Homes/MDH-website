@@ -6,6 +6,7 @@ import { InvestorLoginForm } from "@/components/investor-login-form";
 export const metadata: Metadata = {
   title: "Investor Login",
   description: "Investor portal login for Middle Door Homes.",
+  robots: { index: false, follow: false },
 };
 
 export default function InvestorLoginPage() {

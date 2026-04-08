@@ -4,9 +4,10 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "For Brokers & Partners",
+  title: "Broker Partner Program - Full Commission on 721 Exchange Transactions",
   description:
-    "Earn full 3-4% commission on off-market small multifamily transactions. Middle Door Homes helps you unlock conversations with long-term owners who aren't otherwise planning to sell.",
+    "Earn 3-4% full commission - no buyer's broker split - on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners.",
+  alternates: { canonical: "/brokers" },
 };
 
 const STATS = [
@@ -163,9 +164,25 @@ const BROKER_FAQ: FaqGroup[] = [
   },
 ];
 
+const brokerFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: BROKER_FAQ.flatMap((g) =>
+    g.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a as string },
+    }))
+  ),
+};
+
 export default function BrokersPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(brokerFaqSchema) }}
+      />
       {/* Hero */}
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
@@ -209,11 +226,21 @@ export default function BrokersPage() {
       {/* Pitch */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
+          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10 lg:grid-cols-[1fr_360px] lg:items-center">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
               Many small multifamily owners are not looking to sell. We help you unlock off-market
               transactions - to help owners make a tax-deferred transition to passive ownership.
             </p>
+            <div className="relative h-[240px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[200px]">
+              <Image
+                src="/images/px-3953058.jpg"
+                alt="Brick apartment building with balconies"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 360px, 100vw"
+                className="object-cover object-[center_50%]"
+              />
+            </div>
           </div>
         </Container>
       </Section>

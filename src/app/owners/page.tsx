@@ -4,9 +4,10 @@ import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "For Property Owners",
+  title: "721 Exchange for Property Owners",
   description:
-    "From active landlord to passive investor - without the tax bill. A 721 exchange lets you contribute your building, defer taxes entirely, and receive growing passive income.",
+    "Contribute your small multifamily building through a 721 exchange - no capital gains, no depreciation recapture, no management. Receive growing passive income as an OP unit holder.",
+  alternates: { canonical: "/owners" },
 };
 
 const STATS = [
@@ -172,22 +173,38 @@ const OWNER_FAQ: FaqGroup[] = [
   },
 ];
 
+const ownerFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: OWNER_FAQ.flatMap((g) =>
+    g.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a as string },
+    }))
+  ),
+};
+
 export default function OwnersPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ownerFaqSchema) }}
+      />
       {/* Hero */}
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/bldg-14.jpeg"
-                alt="Classic brick apartment buildings with courtyard"
+                src="/images/px-13025296.jpg"
+                alt="Classic brick apartment building courtyard"
                 fill
                 priority
                 quality={95}
                 sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_48%]"
+                className="object-cover object-[center_40%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.80)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
@@ -396,22 +413,34 @@ export default function OwnersPage() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Working with us</Eyebrow>
             <Heading className="mt-2">Grow your income, without the work</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-2">
-              <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Most long-term owners are not capturing the full income potential of their buildings.
-                Deferred maintenance, below-market rents, and high operating costs eat into returns
-                year after year.
-              </p>
-              <div>
+            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Professional management grows cash flow through expense reduction and rent
-                  adjustments - offering you a share of truly passive, growing income.
+                  Most long-term owners are not capturing the full income potential of their buildings.
+                  Deferred maintenance, below-market rents, and high operating costs eat into returns
+                  year after year.
                 </p>
-                <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Professional management delivers{" "}
-                  <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow at scale</span>{" "}
-                  - the same playbook we apply across the Middle Door portfolio.
-                </p>
+                <div>
+                  <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                    Professional management grows cash flow through expense reduction and rent
+                    adjustments - offering you a share of truly passive, growing income.
+                  </p>
+                  <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                    Professional management delivers{" "}
+                    <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow at scale</span>{" "}
+                    - the same playbook we apply across the Middle Door portfolio.
+                  </p>
+                </div>
+              </div>
+              <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
+                <Image
+                  src="/images/bldg-08.jpg"
+                  alt="Classic Chicago brick apartment building"
+                  fill
+                  quality={90}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-[center_40%]"
+                />
               </div>
             </div>
           </div>
@@ -422,8 +451,22 @@ export default function OwnersPage() {
       <Section id="qualifies" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>Qualifying</Eyebrow>
-            <Heading className="mt-2">Is this a fit for you?</Heading>
+            <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
+              <div>
+                <Eyebrow>Qualifying</Eyebrow>
+                <Heading className="mt-2">Is this a fit for you?</Heading>
+              </div>
+              <div className="relative h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[160px]">
+                <Image
+                  src="/images/brn-12168556.jpg"
+                  alt="Classic brownstone apartment buildings on a tree-lined street"
+                  fill
+                  quality={90}
+                  sizes="(min-width: 1024px) 320px, 100vw"
+                  className="object-cover object-[center_55%]"
+                />
+              </div>
+            </div>
             <div className="mt-6 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               <div>
                 <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
@@ -467,7 +510,7 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
-      {/* How it works */}
+      {/* Process */}
       <Section id="process" className="pt-4">
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">

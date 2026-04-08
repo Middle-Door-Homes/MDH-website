@@ -5,9 +5,12 @@ import { Button, Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: {
+    absolute: "Middle Door Homes | 721 Exchange for Small Multifamily Owners",
+  },
   description:
-    "Middle Door Homes helps small multifamily building owners transition from active management to passive income through a tax-deferred 721 exchange.",
+    "Stop managing, keep your equity. Middle Door Homes lets you contribute your small multifamily building through a 721 exchange and receive passive income - with no capital gains tax at closing.",
+  alternates: { canonical: "/" },
 };
 
 const CREDIBILITY = [
@@ -67,13 +70,13 @@ export default function Home() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[52vh] min-h-[340px] md:h-[68vh] md:min-h-[480px]">
               <Image
-                src="/images/hero-redbrick.jpg"
-                alt="Classic red brick apartment building with fire escapes"
+                src="/images/hero-chicago-street.jpg"
+                alt="Tree-lined street with classic Chicago brick townhomes"
                 fill
                 priority
                 quality={95}
                 sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_48%]"
+                className="object-cover object-[center_52%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.28)] to-[rgba(8,16,24,0.08)]" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
@@ -154,6 +157,16 @@ export default function Home() {
               </p>
               <div className="mt-6">
                 <Button href="/owners">Owner overview</Button>
+              </div>
+              <div className="relative mt-6 h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[240px]">
+                <Image
+                  src="/images/px-12168579.jpg"
+                  alt="Classic red brick apartment building facade"
+                  fill
+                  quality={90}
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-cover object-[center_50%]"
+                />
               </div>
             </div>
             <div className="space-y-3">

@@ -3,9 +3,10 @@ import Image from "next/image";
 import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Middle Door Homes",
   description:
     "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange - without the tax bill.",
+  alternates: { canonical: "/about" },
 };
 
 
