@@ -5,22 +5,22 @@ import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
   description:
-    "Middle Door Homes helps long-term property owners transition from active management to passive income through a 721 exchange - without the tax bill.",
+    "Middle Door Homes gives small multifamily investors an institutional-quality exit through a §721 exchange - preserving equity, exiting active operations, and generating passive LP income without a taxable event.",
   alternates: { canonical: "/about" },
 };
 
 
 const LOGOS = [
-  { name: "Home Partners of America", file: "home-partners.png" },
-  { name: "Invitation Homes", file: "invitation-homes.png" },
-  { name: "LaSalle Investment Management", file: "lasalle.png" },
-  { name: "BCG", file: "bcg.png" },
-  { name: "CBRE", file: "cbre.png" },
+  { name: "Home Partners of America", file: "home-partners.svg" },
+  { name: "Invitation Homes", file: "invitation-homes.svg" },
+  { name: "LaSalle Investment Management", file: "lasalle.svg" },
+  { name: "BCG", file: "bcg.svg" },
+  { name: "CBRE", file: "cbre.svg" },
   { name: "Landis", file: "landis.png" },
-  { name: "Real Foundations", file: "real-foundations.png" },
-  { name: "Google", file: "google.png" },
-  { name: "Stanford Business School", file: "stanford.png" },
-  { name: "Harvard University", file: "harvard.png" },
+  { name: "Real Foundations", file: "real-foundations.svg" },
+  { name: "Google", file: "google-wordmark.svg" },
+  { name: "Stanford Business School", file: "stanford.svg" },
+  { name: "Harvard University", file: "harvard.svg" },
 ];
 
 const PRINCIPLES = [
@@ -29,12 +29,12 @@ const PRINCIPLES = [
     body: "Not every owner is a good fit, and we will tell you that clearly. We want to understand your building, your financial situation, and your goals before recommending anything.",
   },
   {
-    title: "You keep managing nothing",
-    body: "Once your building joins the portfolio, our team handles everything - tenants, maintenance, operations. You receive income. That is the entire job.",
+    title: "You transition out of operations completely",
+    body: "Once your building joins the portfolio, our team handles everything - tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
   },
   {
-    title: "Your income should grow",
-    body: "Professional management unlocks income that most individual owners leave on the table. Expense reduction, rent adjustments, and operational efficiency work in your favor.",
+    title: "Your returns should improve",
+    body: "Institutional management unlocks NOI that most individual operators leave on the table. Expense reduction, rent optimization, and capital efficiency work in your favor from day one.",
   },
   {
     title: "We hold for the long term",
@@ -51,12 +51,13 @@ export default function AboutPage() {
             <div>
               <Eyebrow>About</Eyebrow>
               <h1 className="mt-4 max-w-3xl text-4xl font-medium tracking-tight text-[var(--mdh-title)] md:text-5xl">
-                We built a third option for long-term owners.
+                We built an institutional-quality exit for small multifamily investors.
               </h1>
               <Lead>
-                Most building owners face a choice: keep managing, or sell and pay 30-40% in taxes.
-                Middle Door Homes offers a different path - one that lets you stop managing without
-                triggering a taxable event.
+                Most small multifamily investors face the same impasse: keep operating, or sell and
+                surrender 30-40% of their equity to taxes. Middle Door Homes was built to offer
+                a third path - one that preserves your basis, exits you from active operations,
+                and keeps your capital working.
               </Lead>
             </div>
             <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
@@ -117,9 +118,9 @@ export default function AboutPage() {
                   Who it is for
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Owners of 2-49 unit buildings who have held for years, have built significant
-                  equity, and are ready to stop managing - but cannot afford the tax cost of a
-                  traditional sale.
+                  Multifamily investors with 2-49 unit holdings who have built meaningful embedded
+                  gains, want to exit active operations, and are looking for a tax-efficient way to
+                  reallocate their capital into passive income.
                 </p>
               </div>
             </div>
@@ -134,15 +135,21 @@ export default function AboutPage() {
             <div>
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
+              <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
+                Most small multifamily owners spent years building a position that institutional
+                investors envy - and then spent the next decade managing it themselves because no
+                better option existed. We built Middle Door to change that.
+              </p>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Our team has managed more than 30,000 homes across scattered-site portfolios at
-                some of the largest residential housing operators in the country. We bring that same
-                operating playbook to small multifamily buildings - for the first time.
+                Our team has operated at 30,000+ units of institutional scale - we know what
+                we&apos;re acquiring and what it takes to run it well. We bring that same operating
+                playbook to small multifamily buildings, for the first time making it accessible
+                to owners who built their positions outside the institutional market.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                That experience matters for you. Professional management drives meaningful income
-                improvement through expense reduction, rent adjustments, and operational efficiency -
-                the same playbook we have applied across tens of thousands of homes.
+                That depth of experience drives real NOI improvement through expense reduction,
+                rent optimization, and capital allocation - the same playbook applied across
+                tens of thousands of homes.
               </p>
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
@@ -188,22 +195,25 @@ export default function AboutPage() {
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-3">Operators who have done this at scale</Heading>
             <div className="mt-5 border-t border-[var(--mdh-line)] pt-6">
+              <div className="mb-5 rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
+                  Institutional track record
+                </p>
+                <p className="mt-2 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                  Our team has operated at 30,000+ units of institutional scale - we know what
+                  we&apos;re acquiring and what it takes to run it well.
+                </p>
+              </div>
               <p className="max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Our team has collectively managed tens of thousands of residential units across
-                dozens of markets, built and scaled large renovation programs on occupied residential
-                portfolios, and structured complex tax-advantaged real estate transactions at volume
-                across the country.
-              </p>
-              <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Before founding Middle Door Homes, we led operations at some of the largest
                 residential housing platforms in the country - including a 30,000+ home
-                single-family residential portfolio and a transaction platform that executed
-                non-traditional home acquisitions at scale. We know how to operate occupied real
+                scattered-site residential portfolio and a transaction platform that executed
+                non-traditional acquisitions at scale. We know how to operate occupied real
                 estate at institutional quality, run capital programs without disrupting tenants,
                 and structure transactions that work for owners who have spent years building equity.
               </p>
               <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                We built MDH because we saw a gap: the small multifamily owner was being left out
+                We built MDH because we saw a gap: the small multifamily investor was being left out
                 of a structure that large institutional players have been using for decades.
                 We&apos;re changing that.
               </p>
@@ -212,14 +222,14 @@ export default function AboutPage() {
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-x-7 gap-y-4">
+              <div className="mt-3 flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1">
                 {LOGOS.map((logo) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={logo.file}
                     src={`/images/logos/${logo.file}`}
                     alt={logo.name}
-                    className="h-auto w-auto max-h-[22px] max-w-[100px] shrink-0 grayscale opacity-50 transition hover:opacity-80 hover:grayscale-0"
+                    className="h-[22px] w-auto max-w-[100px] shrink-0 transition hover:opacity-80"
                   />
                 ))}
               </div>
@@ -233,10 +243,10 @@ export default function AboutPage() {
         <Container>
           <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
             <div>
-              <Heading>Ready to learn more?</Heading>
+              <Heading>See exactly how this works for you.</Heading>
               <p className="mt-2 max-w-[58ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                See the full owner overview - including how the 721 exchange works step by step and
-                what you can expect to receive.
+                The full owner overview covers the 721 exchange step by step, what you receive,
+                and what your income looks like going forward.
               </p>
             </div>
             <div className="shrink-0">

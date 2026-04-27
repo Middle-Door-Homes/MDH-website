@@ -14,7 +14,6 @@ const ROUTES: RouteConfig[] = [
   { path: "/brokers",    priority: 0.9, changeFrequency: "monthly" },
   { path: "/advisors",   priority: 0.9, changeFrequency: "monthly" },
   { path: "/about",      priority: 0.7, changeFrequency: "monthly" },
-  { path: "/team",       priority: 0.6, changeFrequency: "monthly" },
   { path: "/contact",    priority: 0.7, changeFrequency: "yearly"  },
   { path: "/asset-class",priority: 0.5, changeFrequency: "monthly" },
   // /investor-login intentionally excluded - private page

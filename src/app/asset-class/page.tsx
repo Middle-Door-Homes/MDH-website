@@ -3,9 +3,10 @@ import Image from "next/image";
 import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Asset Class",
+  title: "Small Multifamily as an Asset Class",
   description:
-    "Small multifamily is a deep, underinstitutionalized category with durable demand and operationally driven return potential.",
+    "Small multifamily (2-49 units) represents $5T+ in US housing with under 3% institutional ownership - a deep, underinstitutionalized category with durable demand and operationally driven return potential.",
+  alternates: { canonical: "/asset-class" },
 };
 
 export default function AssetClassPage() {

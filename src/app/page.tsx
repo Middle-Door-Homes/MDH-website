@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     absolute: "Middle Door Homes | 721 Exchange for Small Multifamily Owners",
   },
   description:
-    "Stop managing, keep your equity. Middle Door Homes lets you contribute your small multifamily building through a 721 exchange and receive passive income - with no capital gains tax at closing.",
+    "Middle Door Homes lets multifamily investors contribute their 2-49 unit buildings through a §721 exchange and receive passive LP income - preserving equity, deferring taxes, and exiting active operations.",
   alternates: { canonical: "/" },
 };
 
 const CREDIBILITY = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units managed by leadership team" },
-  { value: "8-10%+", label: "Target annual return" },
+  { value: "30,000+", label: "Homes managed at prior platforms" },
+  { value: "8-12%", label: "Target annual return" },
 ];
 
 const AUDIENCE_CARDS = [
@@ -24,14 +24,14 @@ const AUDIENCE_CARDS = [
     href: "/owners",
     eyebrow: "For property owners",
     title: "Turn your building into passive income",
-    body: "A 721 exchange lets you contribute your property and receive ongoing income with no management responsibilities, without triggering a taxable event.",
+    body: "A 721 exchange lets you convert your equity into a passive LP stake - institutional management, ongoing distributions, and no taxable event at contribution.",
     cta: "Learn how it works",
   },
   {
     href: "/brokers",
     eyebrow: "For brokers & partners",
-    title: "Full commission on off-market transactions",
-    body: "We pay 3-4% commission on every building we acquire. Most long-term owners don't list their properties - we help you unlock these transactions.",
+    title: "A finder's fee from off-market transactions",
+    body: "We pay a 2-4% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties - we help you unlock these transactions.",
     cta: "How to partner with us",
   },
   {
@@ -71,14 +71,15 @@ export default function Home() {
             <div className="relative h-[52vh] min-h-[340px] md:h-[68vh] md:min-h-[480px]">
               <Image
                 src="/images/hero-chicago-street.jpg"
-                alt="Tree-lined street with classic Chicago brick townhomes"
+                alt="Tree-lined street with classic brick townhomes"
                 fill
                 priority
                 quality={95}
                 sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
                 className="object-cover object-[center_52%]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.28)] to-[rgba(8,16,24,0.08)]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.88)] via-[rgba(8,16,24,0.30)] to-[rgba(8,16,24,0.45)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[rgba(14,24,36,0.30)] via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
@@ -86,6 +87,9 @@ export default function Home() {
                 <h1 className="font-display mt-3 max-w-3xl text-[2.4rem] font-medium leading-[1.04] tracking-[-0.01em] text-white md:text-[3.6rem] lg:text-[4.2rem]">
                   From active landlord<br className="hidden md:block" /> to passive investor -<br className="hidden md:block" /> without the tax bill.
                 </h1>
+                <p className="mt-4 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 md:text-[1rem]">
+                  You&apos;ve built real equity in multifamily real estate. But between managing tenants, deferred maintenance, and the tax bill that comes with selling, the path forward isn&apos;t obvious. The §721 exchange gives you a better option - passive income, diversified ownership, and no taxable event.
+                </p>
               </div>
             </div>
 
@@ -140,8 +144,74 @@ export default function Home() {
         </Container>
       </Section>
 
+      {/* Who this is for */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+            <Eyebrow>Who this is for</Eyebrow>
+            <Heading className="mt-2">Built for owners who have earned a better exit</Heading>
+            <p className="mt-4 max-w-[66ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              Middle Door is built for multifamily owners who have held long enough that a traditional sale would trigger a significant tax bill - and who are done letting active management work against their returns.
+            </p>
+            <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
+              {[
+                "Own one or more 2-49 unit multifamily buildings",
+                "Held 5+ years with meaningful embedded gains",
+                "Want passive income without giving up long-term upside",
+                "Ready to stop managing and start collecting - without triggering a tax event",
+              ].map((item) => (
+                <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
+                  <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
+                  <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* Calculator */}
       <TaxCalculator />
+
+      {/* Team credentials */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+            <Eyebrow>Our team</Eyebrow>
+            <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
+            <p className="mt-4 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily - giving individual owners access to an exit structure that has only ever been available to institutions.
+            </p>
+            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+              <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
+                Team experience from
+              </p>
+              <div className="mt-4 flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1">
+                {[
+                  { name: "Home Partners of America", file: "home-partners.svg" },
+                  { name: "Invitation Homes", file: "invitation-homes.svg" },
+                  { name: "LaSalle Investment Management", file: "lasalle.svg" },
+                  { name: "BCG", file: "bcg.svg" },
+                  { name: "CBRE", file: "cbre.svg" },
+                  { name: "Landis", file: "landis.png" },
+                  { name: "Real Foundations", file: "real-foundations.svg" },
+                  { name: "Google", file: "google-wordmark.svg" },
+                  { name: "Stanford Business School", file: "stanford.svg" },
+                  { name: "Harvard University", file: "harvard.svg" },
+                ].map((logo) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={logo.file}
+                    src={`/images/logos/${logo.file}`}
+                    alt={logo.name}
+                    className="h-[22px] w-auto max-w-[100px] shrink-0 transition hover:opacity-70"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
 
       {/* How it works */}
       <Section className="pt-4">

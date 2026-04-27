@@ -4,22 +4,22 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "Broker Partner Program - Full Commission on 721 Exchange Transactions",
+  title: "Broker Partner Program - Earn a Finder's Fee on 721 Exchange Transactions",
   description:
-    "Earn 3-4% full commission - no buyer's broker split - on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners.",
+    "Earn a 2-4% finder's fee on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners who aren't planning to sell.",
   alternates: { canonical: "/brokers" },
 };
 
 const STATS = [
   { value: "100%", label: "Owner tax deferral" },
-  { value: "3-4%", label: "Broker commission" },
+  { value: "2-4%", label: "Finder's fee" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
 const FOR_YOU = [
   {
-    title: "Full commission",
-    body: "We pay a standard commission - typically 3-4% - without a buyer's broker taking a share.",
+    title: "Finder's fee",
+    body: "We pay a finder's fee - typically 2-4% of the building value - for introductions that lead to a contribution. No buyer's broker taking a share.",
   },
   {
     title: "Off-market access",
@@ -59,22 +59,22 @@ const HOW_IT_WORKS = [
   },
   {
     step: "03",
-    title: "Earn your commission",
-    body: "If the building is contributed to our portfolio, you receive full commission - typically 3-4% - without a buyer's broker reducing your share.",
+    title: "Earn your finder's fee",
+    body: "If the building is contributed to our portfolio, you receive a finder's fee - typically 2-4% of the building value - paid at close.",
   },
 ];
 
 const BROKER_FAQ: FaqGroup[] = [
   {
-    group: "Your commission",
+    group: "Your finder's fee",
     items: [
       {
         q: "How much do I earn if I bring in a client?",
-        a: "We pay a full 3-4% commission on the contributed building value - with no buyer's broker taking a share. On a $1.5M building, that is $45,000-$60,000 to you. The commission structure is comparable to a traditional sale, but you are opening a conversation that most brokers never have - with owners who weren't planning to transact at all.",
+        a: "We pay a finder's fee of 2-4% of the contributed building value. On a $1.5M building, that is $30,000-$60,000 for an introduction. You are not doing the selling - just opening a door - and you are earning on a transaction that otherwise would never have happened.",
       },
       {
-        q: "How does this compare to a traditional sale commission?",
-        a: "In a traditional sale, you typically split a 5-6% commission with a buyer's broker, netting 2.5-3%. With Middle Door, you earn the full 3-4% with no split. The economics are better - and the client is in a much better position tax-wise.",
+        q: "How does this compare to a traditional sale referral?",
+        a: "In a traditional referral, you pass a client to another broker and might earn 20-25% of their commission - typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
       },
       {
         q: "Are there additional incentives for consistent referrals?",
@@ -82,7 +82,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "When do I get paid?",
-        a: "Commission is paid at close, when the building is contributed to the portfolio.",
+        a: "Your finder's fee is paid at close, when the building is contributed to the portfolio.",
       },
     ],
   },
@@ -203,7 +203,7 @@ export default function BrokersPage() {
                   For brokers &amp; partners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
-                  Earn a full commission<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
+                  Earn a finder&apos;s fee<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
                 </h1>
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function BrokersPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
               <Eyebrow>For you</Eyebrow>
-              <Heading className="mt-2">Full commission from off-market transactions</Heading>
+              <Heading className="mt-2">A finder's fee from off-market transactions</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_YOU.map((item) => (
                   <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
@@ -284,7 +284,7 @@ export default function BrokersPage() {
           <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
-              <Heading className="mt-2">Three steps to a commission</Heading>
+              <Heading className="mt-2">Three steps to a finder's fee</Heading>
               <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
                   <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">

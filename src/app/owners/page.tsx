@@ -6,32 +6,32 @@ import { FaqAccordion, type FaqGroup } from "@/components/faq";
 export const metadata: Metadata = {
   title: "721 Exchange for Property Owners",
   description:
-    "Contribute your small multifamily building through a 721 exchange - no capital gains, no depreciation recapture, no management. Receive growing passive income as an OP unit holder.",
+    "Multifamily investors with 2-49 units can contribute their buildings through a §721 exchange - no capital gains, no depreciation recapture, no active management. Receive passive LP income from an institutionally managed portfolio.",
   alternates: { canonical: "/owners" },
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units managed by leadership team" },
-  { value: "8-10%+", label: "Target annual return" },
+  { value: "30,000+", label: "Homes managed at prior platforms" },
+  { value: "8-12%", label: "Target annual return" },
 ];
 
 const BENEFITS = [
   {
     title: "Tax deferral & estate planning",
-    body: "No capital gains or depreciation recapture at closing - your equity rolls over intact. And OP units can pass to heirs with a step-up in cost basis, potentially eliminating a deferred tax liability entirely.",
+    body: "No capital gains or depreciation recapture at closing - your full equity basis rolls forward intact. OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely.",
   },
   {
-    title: "Continued ownership",
-    body: "You own a stake in a diversified portfolio, and benefit from ongoing cash flow and portfolio appreciation.",
+    title: "Continued ownership with upside",
+    body: "You own a passive LP stake in a diversified, professionally managed portfolio - with ongoing cash distributions and participation in portfolio appreciation over time.",
   },
   {
-    title: "No management",
-    body: "Truly passive income from professional management. No tenant calls, no maintenance coordination, no 2am emergencies.",
+    title: "Truly passive income",
+    body: "Operational responsibility transfers completely at close. Institutional-grade management handles tenants, maintenance, leasing, and compliance. You receive distributions, not work orders.",
   },
   {
-    title: "Liquidity",
-    body: "After an initial lockup period, structured redemption windows give you flexibility as your needs evolve.",
+    title: "Structured liquidity post-lockup",
+    body: "After an initial lockup period, structured semi-annual redemption windows give you flexibility as your financial needs evolve.",
   },
 ];
 
@@ -61,19 +61,19 @@ const HOW_IT_WORKS = [
 const AFTER_CLOSE = [
   {
     title: "Quarterly distributions",
-    body: "Regular income from the portfolio, paid after operating expenses, debt service, and capital reserves - subject to portfolio cash flow.",
+    body: "Regular passive income from the portfolio, paid after operating expenses, debt service, and capital reserves - subject to portfolio cash flow.",
   },
   {
     title: "Annual K-1 tax schedules",
-    body: "You continue to receive pass-through tax treatment, including your allocable share of depreciation from the portfolio's properties.",
+    body: "You continue to receive pass-through tax treatment as an LP, including your allocable share of depreciation from the portfolio's properties.",
   },
   {
     title: "Audited financial statements",
-    body: "Annual audited financials and quarterly portfolio reports covering occupancy, renovation progress, and market conditions.",
+    body: "Annual audited financials and quarterly portfolio reports covering occupancy, capital improvements, and market conditions - full transparency into what you own.",
   },
   {
     title: "Nothing to manage",
-    body: "Tenants, maintenance, leasing, compliance - all of it transfers on close. You are a passive investor from day one.",
+    body: "Tenants, maintenance, leasing, compliance - all of it transfers at close. You become a passive LP on day one.",
   },
 ];
 
@@ -142,7 +142,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What return can I expect?",
-        a: "We target 8-10%+ annualized returns through distributions and portfolio appreciation. Returns are not guaranteed and depend on portfolio performance, occupancy, operating expenses, and market conditions.",
+        a: "We target 8-12% annualized returns through distributions and portfolio appreciation. For context, a typical balanced advisory portfolio returns 5-7% annually - and that's after you've already surrendered 30-40% of your capital to taxes to get there. The 721 exchange lets your full equity basis work from day one. Returns are not guaranteed and depend on portfolio performance, occupancy, operating expenses, and market conditions.",
       },
       {
         q: "How are distributions paid?",
@@ -214,6 +214,9 @@ export default function OwnersPage() {
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
                   From active landlord<br className="hidden md:block" /> to passive investor -<br className="hidden md:block" /> without the tax bill.
                 </h1>
+                <p className="mt-4 max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 md:text-[0.97rem]">
+                  You&apos;ve built real equity in multifamily real estate. But between managing tenants, deferred maintenance, and the tax bill that comes with selling, the path forward isn&apos;t obvious. The §721 exchange gives you a better option - passive income, diversified ownership, and no taxable event.
+                </p>
               </div>
             </div>
             <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
@@ -237,8 +240,7 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
-              You&apos;ve built equity over decades. Selling means a significant tax bill. Holding means
-              managing tenants, maintenance, and debt. Middle Door Homes offers a third option.
+              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of that value to capital gains and depreciation recapture. Managing indefinitely means your capital keeps working - but so do you. Middle Door Homes offers a third path.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
@@ -249,18 +251,19 @@ export default function OwnersPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">Management fatigue</h3>
+                <h3 className="font-medium text-[var(--mdh-title)]">Operational drag on returns</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Small multifamily buildings require constant attention - tenant calls, aging systems,
-                  deferred maintenance. Many owners reach a point where the income no longer justifies the effort.
+                  deferred maintenance. At some point, the active management burden stops being worth
+                  the return on your time and capital. You built this as an investment, not a job.
                 </p>
               </div>
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">No clean way out</h3>
+                <h3 className="font-medium text-[var(--mdh-title)]">No clean exit from operations</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 1031 exchange defers taxes, but you must identify a replacement property in 45 days,
-                  close in 180, and then manage whatever you buy. You&apos;re not exiting landlord life -
-                  you&apos;re just changing which building you&apos;re managing.
+                  A 1031 exchange defers taxes, but requires identifying a replacement property in 45 days
+                  and closing in 180. You&apos;re not exiting active operations - you&apos;re just
+                  changing which building you&apos;re running.
                 </p>
               </div>
             </div>
@@ -345,7 +348,7 @@ export default function OwnersPage() {
                       sale: false, ex1031: true, dst: true, mdh: true,
                     },
                     {
-                      label: "Stop managing immediately",
+                      label: "Exit active operations immediately",
                       sale: true, ex1031: false, dst: true, mdh: true,
                     },
                     {
@@ -355,6 +358,18 @@ export default function OwnersPage() {
                     {
                       label: "Diversified real estate portfolio",
                       sale: false, ex1031: false, dst: true, mdh: true,
+                    },
+                    {
+                      label: "Upside participation (not fixed distributions)",
+                      sale: false, ex1031: true, dst: false, mdh: true,
+                    },
+                    {
+                      label: "Transparency into underlying assets",
+                      sale: false, ex1031: true, dst: false, mdh: true,
+                    },
+                    {
+                      label: "Structured redemption windows post-lockup",
+                      sale: true, ex1031: true, dst: false, mdh: true,
                     },
                     {
                       label: "Purpose-built for small multifamily",
@@ -383,7 +398,7 @@ export default function OwnersPage() {
               </table>
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180 - and you remain an active landlord afterward.
+              DST = Delaware Statutory Trust. DSTs defer taxes but use a blind-pool structure with no transparency into owned assets, pay fixed distributions with no upside participation, carry high minimum investment requirements, and offer no redemption mechanism. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180 - and you remain an active operator afterward.
             </p>
           </div>
         </Container>
@@ -403,6 +418,23 @@ export default function OwnersPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">How 8-12% compares</p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                <div>
+                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Balanced advisor portfolio</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">~5-7% annually - but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.</p>
+                </div>
+                <div>
+                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Keep managing the building</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns - with full operational responsibility and concentrated single-asset risk.</p>
+                </div>
+                <div className="rounded-lg border border-[var(--mdh-accent)]/30 bg-white p-3">
+                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">MDH 721 exchange</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span> - no tax haircut at contribution, no management burden.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
@@ -412,18 +444,18 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Working with us</Eyebrow>
-            <Heading className="mt-2">Grow your income, without the work</Heading>
+            <Heading className="mt-2">Grow your NOI, without the operational burden</Heading>
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Most long-term owners are not capturing the full income potential of their buildings.
-                  Deferred maintenance, below-market rents, and high operating costs eat into returns
+                  Most small multifamily owners are not capturing the full NOI potential of their buildings.
+                  Deferred maintenance, below-market rents, and high operating costs compress returns
                   year after year.
                 </p>
                 <div>
                   <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Professional management grows cash flow through expense reduction and rent
-                    adjustments - offering you a share of truly passive, growing income.
+                    Institutional-grade management drives cash flow improvement through expense reduction,
+                    rent optimization, and operational efficiency - passing that upside to you as a passive LP.
                   </p>
                   <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                     Professional management delivers{" "}
@@ -435,7 +467,7 @@ export default function OwnersPage() {
               <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
                 <Image
                   src="/images/bldg-08.jpg"
-                  alt="Classic Chicago brick apartment building"
+                  alt="Classic brick apartment building"
                   fill
                   quality={90}
                   sizes="(min-width: 1024px) 40vw, 100vw"
@@ -472,10 +504,10 @@ export default function OwnersPage() {
                 <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
-                    "You own one or multiple 2-49 unit multifamily buildings",
-                    "You've built meaningful equity",
-                    "You're ready to stop managing - but the tax cost of a sale feels too high",
-                    "You qualify as an accredited investor (generally: net worth over $1M excluding primary residence, or annual income above $200K)",
+                    "You own one or more multifamily buildings in the 2-49 unit range",
+                    "You've held long enough to have meaningful embedded gains",
+                    "You're ready to exit active operations, but the tax cost of a sale is too high",
+                    "You likely qualify as an accredited investor - most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
                     "Your mortgage is moderate relative to the building's value",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -490,9 +522,9 @@ export default function OwnersPage() {
                 <ul className="mt-3 space-y-2">
                   {[
                     "You need immediate, unrestricted liquidity",
-                    "Your building carries a high mortgage relative to its value",
-                    "You're looking for a quick exit rather than a long-term passive investment",
-                    "The illiquid nature of a private partnership doesn't match your financial situation",
+                    "Your building carries a high mortgage relative to its current value",
+                    "You want a short-term exit rather than a long-term passive investment",
+                    "The illiquid nature of a private partnership does not fit your financial situation",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                       <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">-</span>
@@ -540,8 +572,9 @@ export default function OwnersPage() {
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, title transfers to the Operating Partnership and your OP units are issued. From
-              that point forward, you are a passive investor. Everything operational transfers to MDH.
+              On close, title transfers to the Operating Partnership and your OP units are issued. The
+              tenant calls stop. The maintenance requests stop. The first quarterly distribution hits
+              your account - that&apos;s the entire job from here.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (
@@ -579,11 +612,11 @@ export default function OwnersPage() {
           <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
             <div>
               <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                Ready to explore your options?
+                You built something real. Let&apos;s make sure it keeps working for you.
               </h2>
               <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
-                There is no obligation. We start with a conversation to understand your building and
-                your goals - and to see whether a 721 exchange is the right fit for you.
+                No obligation. We start with a conversation to understand your building and your
+                goals - and give you an honest answer on whether a 721 exchange is the right fit.
               </p>
             </div>
             <div className="shrink-0">
@@ -591,7 +624,7 @@ export default function OwnersPage() {
                 href="mailto:info@middledoorhomes.com"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
               >
-                Request a conversation
+                Start the conversation
               </a>
             </div>
           </div>

@@ -50,15 +50,15 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/96 backdrop-blur">
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Middle Door Homes home">
-            <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-sm">
+          <Link href="/" className="flex items-center gap-2" aria-label="Middle Door Homes home">
+            <span className="relative h-8 w-8 shrink-0">
               <Image
                 src="/images/Logo.png"
                 alt="Middle Door Homes"
                 fill
                 priority
-                sizes="44px"
-                className="scale-[1.28] object-contain"
+                sizes="32px"
+                className="object-contain"
               />
             </span>
             <span className="text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
