@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 52">
+  <!-- "real" in dark olive green -->
+  <text x="2" y="39" font-family="Trebuchet MS, Calibri, Arial, sans-serif" font-size="32" font-weight="400" fill="#3E4E2F">real</text>
+  <!-- Orange circle: starts right after "real" ends (~x=68) -->
+  <circle cx="89" cy="22" r="20" fill="#F15139"/>
+  <!-- White italic "f" centered inside circle -->
+  <text x="82" y="39" font-family="Trebuchet MS, Calibri, Arial, sans-serif" font-size="32" font-style="italic" font-weight="700" fill="white">f</text>
+  <!-- "oundations" continues after circle -->
+  <text x="110" y="39" font-family="Trebuchet MS, Calibri, Arial, sans-serif" font-size="32" font-weight="400" fill="#3E4E2F">oundations</text>
+</svg>
