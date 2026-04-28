@@ -204,7 +204,7 @@ export default function Home() {
                     key={logo.file}
                     src={`/images/logos/${logo.file}`}
                     alt={logo.name}
-                    className="h-[22px] w-auto max-w-[100px] shrink-0 transition hover:opacity-70"
+                    className="h-[22px] w-auto max-w-[160px] shrink-0 transition hover:opacity-70"
                   />
                 ))}
               </div>
