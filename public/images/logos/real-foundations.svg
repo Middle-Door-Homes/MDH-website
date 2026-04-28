@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 2 192 52">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 4 248 45">
   <text x="9" y="45" font-family="Calibri, Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="400" fill="#445234">real</text>
-  <circle cx="65" cy="25.5" r="19.5" fill="#F15038"/>
+  <circle cx="78" cy="25.5" r="19.5" fill="#F15038"/>
   <text x="54" y="42" font-family="Calibri, Trebuchet MS, Arial, sans-serif" font-size="36" font-style="italic" font-weight="700" fill="#445234">f</text>
-  <text x="88" y="45" font-family="Calibri, Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="400" fill="#445234">oundations</text>
+  <text x="105" y="45" font-family="Calibri, Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="400" fill="#445234">oundations</text>
 </svg>

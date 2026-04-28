@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 284 75" shape-rendering="crispEdges">
-  <!-- Top bar -->
-  <rect x="0" y="0" width="67.5" height="10" fill="#023E5B"/>
-  <!-- Left outer edge -->
-  <rect x="0" y="10" width="5" height="50" fill="#023E5B"/>
-  <!-- Left inner column -->
-  <rect x="7.5" y="10" width="7.5" height="50" fill="#023E5B"/>
-  <!-- Center block -->
-  <rect x="17.5" y="10" width="30" height="50" fill="#023E5B"/>
-  <!-- Right inner column -->
-  <rect x="50" y="10" width="7.5" height="50" fill="#023E5B"/>
-  <!-- Right outer edge -->
-  <rect x="60" y="10" width="7.5" height="50" fill="#023E5B"/>
-  <!-- Bottom bar -->
-  <rect x="0" y="60" width="67.5" height="7.5" fill="#023E5B"/>
+  <!-- Top bar (rows 3-4) -->
+  <rect x="0" y="0" width="65" height="5" fill="#023E5B"/>
+  <!-- Sides only (row 5) -->
+  <rect x="0" y="5" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="5" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Transition row (row 6): inner columns emerge at 1px, center slightly narrower -->
+  <rect x="0" y="7.5" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="10" y="7.5" width="2.5" height="2.5" fill="#023E5B"/>
+  <rect x="20" y="7.5" width="25" height="2.5" fill="#023E5B"/>
+  <rect x="52.5" y="7.5" width="2.5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="7.5" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Standard columns (rows 7-12) -->
+  <rect x="0" y="10" width="5" height="15" fill="#023E5B"/>
+  <rect x="10" y="10" width="5" height="15" fill="#023E5B"/>
+  <rect x="17.5" y="10" width="30" height="15" fill="#023E5B"/>
+  <rect x="52.5" y="10" width="5" height="15" fill="#023E5B"/>
+  <rect x="60" y="10" width="5" height="15" fill="#023E5B"/>
+  <!-- Arch apex (row 13): center splits into two halves -->
+  <rect x="0" y="25" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="10" y="25" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="17.5" y="25" width="7.5" height="2.5" fill="#023E5B"/>
+  <rect x="40" y="25" width="7.5" height="2.5" fill="#023E5B"/>
+  <rect x="52.5" y="25" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="25" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Arch opening (row 14): sides + 1px inner remnants, center empty -->
+  <rect x="0" y="27.5" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="10" y="27.5" width="2.5" height="2.5" fill="#023E5B"/>
+  <rect x="52.5" y="27.5" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="27.5" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Arch center (row 15): sides + narrow center element -->
+  <rect x="0" y="30" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="25" y="30" width="15" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="30" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Arch base (row 16): sides + wide center element -->
+  <rect x="0" y="32.5" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="20" y="32.5" width="27.5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="32.5" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Transition row (row 17): columns resume with 1px inner -->
+  <rect x="0" y="35" width="5" height="2.5" fill="#023E5B"/>
+  <rect x="10" y="35" width="2.5" height="2.5" fill="#023E5B"/>
+  <rect x="17.5" y="35" width="30" height="2.5" fill="#023E5B"/>
+  <rect x="52.5" y="35" width="2.5" height="2.5" fill="#023E5B"/>
+  <rect x="60" y="35" width="5" height="2.5" fill="#023E5B"/>
+  <!-- Standard columns (rows 18-24) -->
+  <rect x="0" y="37.5" width="5" height="17.5" fill="#023E5B"/>
+  <rect x="10" y="37.5" width="5" height="17.5" fill="#023E5B"/>
+  <rect x="17.5" y="37.5" width="30" height="17.5" fill="#023E5B"/>
+  <rect x="52.5" y="37.5" width="5" height="17.5" fill="#023E5B"/>
+  <rect x="60" y="37.5" width="5" height="17.5" fill="#023E5B"/>
+  <!-- Bottom sides (rows 25-26) -->
+  <rect x="0" y="55" width="5" height="5" fill="#023E5B"/>
+  <rect x="60" y="55" width="5" height="5" fill="#023E5B"/>
+  <!-- Bottom bar (rows 27-28) -->
+  <rect x="0" y="60" width="65" height="5" fill="#023E5B"/>
   <text x="77.5" y="30" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#000000">Home Partners</text>
   <text x="77.5" y="58" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#000000">of America</text>
 </svg>
