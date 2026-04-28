@@ -186,7 +186,7 @@ export default function Home() {
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-4 flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1">
+              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
                 {[
                   { name: "Home Partners of America", file: "home-partners.svg" },
                   { name: "Invitation Homes", file: "invitation-homes.svg" },
@@ -204,7 +204,7 @@ export default function Home() {
                     key={logo.file}
                     src={`/images/logos/${logo.file}`}
                     alt={logo.name}
-                    className="h-[22px] w-auto max-w-[160px] shrink-0 transition hover:opacity-70"
+                    className="h-[18px] w-auto max-w-[140px] transition hover:opacity-70"
                   />
                 ))}
               </div>

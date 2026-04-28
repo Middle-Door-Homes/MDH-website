@@ -222,14 +222,14 @@ export default function AboutPage() {
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-3 flex flex-nowrap items-center gap-x-6 overflow-x-auto pb-1">
+              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
                 {LOGOS.map((logo) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={logo.file}
                     src={`/images/logos/${logo.file}`}
                     alt={logo.name}
-                    className="h-[22px] w-auto max-w-[160px] shrink-0 transition hover:opacity-80"
+                    className="h-[18px] w-auto max-w-[140px] transition hover:opacity-80"
                   />
                 ))}
               </div>
