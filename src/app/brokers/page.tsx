@@ -19,7 +19,7 @@ const STATS = [
 const FOR_YOU = [
   {
     title: "Finder's fee",
-    body: "We pay a finder's fee - typically 2-4% of the building value - for introductions that lead to a contribution. No buyer's broker taking a share.",
+    body: "We pay a finder's fee: typically 2-4% of the building value, for introductions that lead to a contribution. No buyer's broker taking a share.",
   },
   {
     title: "Off-market access",
@@ -50,17 +50,17 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a long-term owner",
-    body: "Think about clients who have owned their buildings for years - especially those showing signs of management fatigue, tax concerns, or an interest in succession planning.",
+    body: "Think about clients who have owned their buildings for years, especially those showing signs of management fatigue, tax concerns, or an interest in succession planning.",
   },
   {
     step: "02",
     title: "Make the introduction",
-    body: "Connect them with Middle Door. We handle the educational conversation - explaining the 721 exchange and whether it is the right fit.",
+    body: "Connect them with Middle Door. We handle the educational conversation, explaining the 721 exchange and whether it is the right fit.",
   },
   {
     step: "03",
     title: "Earn your finder's fee",
-    body: "If the building is contributed to our portfolio, you receive a finder's fee - typically 2-4% of the building value - paid at close.",
+    body: "If the building is contributed to our portfolio, you receive a finder's fee: typically 2-4% of the building value, paid at close.",
   },
 ];
 
@@ -70,15 +70,15 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "How much do I earn if I bring in a client?",
-        a: "We pay a finder's fee of 2-4% of the contributed building value. On a $1.5M building, that is $30,000-$60,000 for an introduction. You are not doing the selling - just opening a door - and you are earning on a transaction that otherwise would never have happened.",
+        a: "We pay a finder's fee of 2-4% of the contributed building value. On a $1.5M building, that is $30,000-$60,000 for an introduction. You are just opening a door and earning on a transaction that otherwise would never have happened.",
       },
       {
         q: "How does this compare to a traditional sale referral?",
-        a: "In a traditional referral, you pass a client to another broker and might earn 20-25% of their commission - typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
+        a: "In a traditional referral, you pass a client to another broker and might earn 20-25% of their commission, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
       },
       {
         q: "Are there additional incentives for consistent referrals?",
-        a: "We are building long-term relationships with broker partners and structure our arrangements accordingly. Reach out to discuss the specifics - we are open to conversations about ongoing referral arrangements for partners who are actively working with this client profile.",
+        a: "We are building long-term relationships with broker partners and structure our arrangements accordingly. Reach out to discuss the specifics; we are open to conversations about ongoing referral arrangements for partners who are actively working with this client profile.",
       },
       {
         q: "When do I get paid?",
@@ -91,15 +91,15 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What kind of client is the right fit?",
-        a: "The ideal client has owned a 2-49 unit multifamily building for many years, has built meaningful equity, and is showing signs of management fatigue - or is starting to think about succession. If they are hesitant to sell because of the tax hit, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
+        a: "The ideal client has owned a 2-49 unit multifamily building for many years, has built meaningful equity, and is showing signs of management fatigue, or is starting to think about succession. If they are hesitant to sell because of the tax hit, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
       },
       {
         q: "What if my client just wants to sell outright?",
-        a: "A traditional sale is always an option and we will say so honestly. But for long-term owners with low cost basis, the tax bill from a sale can be enormous. We can help you model the comparison - in most cases, a 721 exchange leaves the client significantly better off. That is a conversation worth having before they list.",
+        a: "A traditional sale is always an option and we will say so honestly. But for long-term owners with low cost basis, the tax bill from a sale can be enormous. We can help you model the comparison. In most cases, a 721 exchange leaves the client significantly better off. That is a conversation worth having before they list.",
       },
       {
         q: "My client is thinking about a 1031 exchange - should I still introduce them?",
-        a: "Yes. A 721 exchange is often a better solution than a 1031 for owners who want to stop managing. A 1031 also defers taxes, but requires finding a replacement property in 45 days, closing in 180, and then managing the new asset. A 721 exchange exits them from active ownership permanently - with no deadline and no new building to run.",
+        a: "Yes. A 721 exchange is often a better solution than a 1031 for owners who want to stop managing. A 1031 also defers taxes, but requires finding a replacement property in 45 days, closing in 180, and then managing the new asset. A 721 exchange exits them from active ownership permanently, with no deadline and no new building to run.",
       },
       {
         q: "What if my client owns a single-family rental or commercial property?",
@@ -112,11 +112,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What do I actually do to refer a client?",
-        a: "Just make the introduction. Email us at info@middledoorhomes.com with a note about your client's situation - building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
+        a: "Just make the introduction. Email us at info@middledoorhomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
       },
       {
         q: "Will you help me explain this to my client?",
-        a: "Yes. We provide materials you can share, and we are happy to do a joint call with you and your client to walk through how the 721 exchange works. You do not need to be a tax expert - you just need to open the door.",
+        a: "Yes. We provide materials you can share, and we are happy to do a joint call with you and your client to walk through how the 721 exchange works. You do not need to be a tax expert; you just need to open the door.",
       },
       {
         q: "What is the typical timeline from introduction to commission?",
@@ -124,7 +124,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "How does this affect my ongoing relationship with the client?",
-        a: "It usually strengthens it. You are solving a problem the client did not know had a solution. The referral flywheel is real - satisfied owners refer siblings, children, and other investors who own similar properties.",
+        a: "It usually strengthens it. You are solving a problem the client did not know had a solution. The referral flywheel is real. Satisfied owners refer siblings, children, and other investors who own similar properties.",
       },
     ],
   },
@@ -133,7 +133,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my client actually receive?",
-        a: "OP units - a passive ownership stake in a professionally managed, diversified portfolio. They receive quarterly distributions, annual K-1s, and nothing to manage. No tenant calls, no maintenance, no 2am emergencies.",
+        a: "OP units: a passive ownership stake in a professionally managed, diversified portfolio. They receive quarterly distributions, annual K-1s, and nothing to manage. No tenant calls, no maintenance, no 2am emergencies.",
       },
       {
         q: "Is this a good deal for the client or just for MDH?",
@@ -141,7 +141,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "How liquid is this for my client?",
-        a: "OP units are illiquid for an initial lockup period of approximately 2-3 years. After that, semi-annual redemption windows provide flexibility. This is a long-term investment - not appropriate for clients who need immediate liquidity.",
+        a: "OP units are illiquid for an initial lockup period of approximately 2-3 years. After that, semi-annual redemption windows provide flexibility. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
       },
     ],
   },
@@ -150,11 +150,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "How does Middle Door generate revenue?",
-        a: "MDH earns a property management fee on the portfolio - a standard percentage of gross rents, consistent with institutional property management. We do not charge acquisition fees or promote structures that would misalign our interests with owners. Our business grows when the portfolio grows and performs well.",
+        a: "MDH earns a property management fee on the portfolio: a standard percentage of gross rents, consistent with institutional property management. We do not charge acquisition fees or promote structures that would misalign our interests with owners. Our business grows when the portfolio grows and performs well.",
       },
       {
         q: "Are your interests aligned with mine and my client's?",
-        a: "Yes. We earn ongoing management fees tied to portfolio performance - so we are incentivized to operate well, grow income, and retain owners as long-term partners. We are not a fund with a short hold period trying to flip assets. We are building a durable housing business. When your client does well, we do well.",
+        a: "Yes. We earn ongoing management fees tied to portfolio performance. We are incentivized to operate well, grow income, and retain owners as long-term partners. We are not a fund with a short hold period trying to flip assets. We are building a durable housing business. When your client does well, we do well.",
       },
       {
         q: "Are you competing with me by going directly to property owners?",
@@ -229,7 +229,7 @@ export default function BrokersPage() {
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10 lg:grid-cols-[1fr_360px] lg:items-center">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
               Many small multifamily owners are not looking to sell. We help you unlock off-market
-              transactions - to help owners make a tax-deferred transition to passive ownership.
+              transactions, helping owners make a tax-deferred transition to passive ownership.
             </p>
             <div className="relative h-[240px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[200px]">
               <Image

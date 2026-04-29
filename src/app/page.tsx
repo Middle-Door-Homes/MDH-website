@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Middle Door Homes | 721 Exchange for Small Multifamily Owners",
   },
   description:
-    "Middle Door Homes lets multifamily investors contribute their 2-49 unit buildings through a §721 exchange and receive passive LP income - preserving equity, deferring taxes, and exiting active operations.",
+    "Middle Door Homes lets multifamily investors contribute their 2-49 unit buildings through a §721 exchange and receive passive LP income, preserving equity, deferring taxes, and exiting active operations.",
   alternates: { canonical: "/" },
 };
 
@@ -24,21 +24,21 @@ const AUDIENCE_CARDS = [
     href: "/owners",
     eyebrow: "For property owners",
     title: "Turn your building into passive income",
-    body: "A 721 exchange lets you convert your equity into a passive LP stake - institutional management, ongoing distributions, and no taxable event at contribution.",
+    body: "A 721 exchange lets you convert your equity into a passive LP stake: institutional management, ongoing distributions, and no taxable event at contribution.",
     cta: "Learn how it works",
   },
   {
     href: "/brokers",
     eyebrow: "For brokers & partners",
     title: "A finder's fee from off-market transactions",
-    body: "We pay a 2-4% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties - we help you unlock these transactions.",
+    body: "We pay a 2-4% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties. We help you unlock these transactions.",
     cta: "How to partner with us",
   },
   {
     href: "/advisors",
     eyebrow: "For financial advisors",
     title: "A tax-efficient solution for your clients' real estate",
-    body: "Help clients with embedded gains transition from active landlord to passive owner - without triggering a taxable event.",
+    body: "Help clients with embedded gains transition from active landlord to passive owner, without triggering a taxable event.",
     cta: "How advisors work with us",
   },
 ];
@@ -47,7 +47,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Contribute your building",
-    body: "Instead of selling, you contribute your property through a 721 exchange - a tax-deferred transaction with no capital gains at closing.",
+    body: "Instead of selling, you contribute your property through a 721 exchange: a tax-deferred transaction with no capital gains at closing.",
   },
   {
     step: "02",
@@ -57,7 +57,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Collect ongoing distributions",
-    body: "Our team handles everything. You receive regular income from the portfolio - and professional management works to grow it over time.",
+    body: "Our team handles everything. You receive regular income from the portfolio. Professional management works to grow it over time.",
   },
 ];
 
@@ -85,10 +85,10 @@ export default function Home() {
                   Middle Door Homes
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.4rem] font-medium leading-[1.04] tracking-[-0.01em] text-white md:text-[3.6rem] lg:text-[4.2rem]">
-                  From active landlord<br className="hidden md:block" /> to passive investor -<br className="hidden md:block" /> without the tax bill.
+                  From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
                 <p className="mt-4 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 md:text-[1rem]">
-                  You&apos;ve built real equity in multifamily real estate. But between managing tenants, deferred maintenance, and the tax bill that comes with selling, the path forward isn&apos;t obvious. The §721 exchange gives you a better option - passive income, diversified ownership, and no taxable event.
+                  You&apos;ve built real equity in multifamily real estate. But between managing tenants, deferred maintenance, and the tax bill that comes with selling, the path forward isn&apos;t obvious. The §721 exchange gives you a better option: passive income, diversified ownership, and no taxable event.
                 </p>
               </div>
             </div>
@@ -151,14 +151,14 @@ export default function Home() {
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for owners who have earned a better exit</Heading>
             <p className="mt-4 max-w-[66ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Middle Door is built for multifamily owners who have held long enough that a traditional sale would trigger a significant tax bill - and who are done letting active management work against their returns.
+              Middle Door is built for multifamily owners who have held long enough that a traditional sale would trigger a significant tax bill, and who are done letting active management work against their returns.
             </p>
             <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
               {[
                 "Own one or more 2-49 unit multifamily buildings",
                 "Held 5+ years with meaningful embedded gains",
                 "Want passive income without giving up long-term upside",
-                "Ready to stop managing and start collecting - without triggering a tax event",
+                "Ready to stop managing and start collecting, without triggering a tax event",
               ].map((item) => (
                 <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
                   <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
@@ -180,7 +180,7 @@ export default function Home() {
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
             <p className="mt-4 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily - giving individual owners access to an exit structure that has only ever been available to institutions.
+              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily, giving individual owners access to an exit structure that has only ever been available to institutions.
             </p>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
@@ -223,7 +223,7 @@ export default function Home() {
               <p className="mt-4 max-w-[52ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange is an IRS-approved strategy that allows you to contribute your
                 building to a professionally managed portfolio, in exchange for a passive
-                ownership stake - without a taxable event at closing.
+                ownership stake, with no taxable event at closing.
               </p>
               <div className="mt-6">
                 <Button href="/owners">Owner overview</Button>

@@ -5,7 +5,7 @@ import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Small Multifamily as an Asset Class",
   description:
-    "Small multifamily (2-49 units) represents $5T+ in US housing with under 3% institutional ownership - a deep, underinstitutionalized category with durable demand and operationally driven return potential.",
+    "Small multifamily (2-49 units) represents $5T+ in US housing with under 3% institutional ownership, a deep, underinstitutionalized category with durable demand and operationally driven return potential.",
   alternates: { canonical: "/asset-class" },
 };
 
@@ -60,7 +60,7 @@ export default function AssetClassPage() {
           <div className="mt-5 rounded-2xl border border-[var(--mdh-line)] bg-white/55 p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
             <div className="max-w-[70ch] space-y-3 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.05rem]">
               <p>
-                Strategy targets 5-7%+ stabilized cash yield, building toward 8-11%+ base-case organic
+                Strategy targets 5-7%+ stabilized cash yield, building toward 8-12%+ base-case organic
                 return, with 13-20% target total return / IRR over a 5-7 year horizon.
               </p>
               <p>

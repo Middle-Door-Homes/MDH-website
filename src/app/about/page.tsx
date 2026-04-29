@@ -5,7 +5,7 @@ import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
   description:
-    "Middle Door Homes gives small multifamily investors an institutional-quality exit through a §721 exchange - preserving equity, exiting active operations, and generating passive LP income without a taxable event.",
+    "Middle Door Homes gives small multifamily investors an institutional-quality exit through a §721 exchange, preserving equity, exiting active operations, and generating passive LP income without a taxable event.",
   alternates: { canonical: "/about" },
 };
 
@@ -30,7 +30,7 @@ const PRINCIPLES = [
   },
   {
     title: "You transition out of operations completely",
-    body: "Once your building joins the portfolio, our team handles everything - tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
+    body: "Once your building joins the portfolio, our team handles everything: tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
   },
   {
     title: "Your returns should improve",
@@ -56,7 +56,7 @@ export default function AboutPage() {
               <Lead>
                 Most small multifamily investors face the same impasse: keep operating, or sell and
                 surrender 30-40% of their equity to taxes. Middle Door Homes was built to offer
-                a third path - one that preserves your basis, exits you from active operations,
+                a third path that preserves your basis, exits you from active operations,
                 and keeps your capital working.
               </Lead>
             </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 721 exchange is an IRS-approved strategy that allows you to contribute your
                   building to a professionally managed portfolio in exchange for a passive ownership
-                  stake - without a taxable event at closing. No capital gains. No depreciation
+                  stake, with no taxable event at closing. No capital gains. No depreciation
                   recapture.
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling means a large, often
-                  unexpected tax bill - typically 30-40% of the building&apos;s value. A 721 exchange
+                  unexpected tax bill, typically 30-40% of the building&apos;s value. A 721 exchange
                   defers that entirely. Your equity rolls forward intact.
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   You own a stake in a diversified, professionally managed portfolio. You receive
-                  regular distributions from the portfolio - and our team manages everything. No
+                  regular distributions from the portfolio. Our team manages everything. No
                   tenant calls. No maintenance coordination. Truly passive income.
                 </p>
               </div>
@@ -137,18 +137,18 @@ export default function AboutPage() {
               <Heading className="mt-3">Experience managing at scale</Heading>
               <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
                 Most small multifamily owners spent years building a position that institutional
-                investors envy - and then spent the next decade managing it themselves because no
+                investors envy, and then spent the next decade managing it themselves because no
                 better option existed. We built Middle Door to change that.
               </p>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Our team has operated at 30,000+ units of institutional scale - we know what
+                Our team has operated at 30,000+ units of institutional scale. We know what
                 we&apos;re acquiring and what it takes to run it well. We bring that same operating
                 playbook to small multifamily buildings, for the first time making it accessible
                 to owners who built their positions outside the institutional market.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 That depth of experience drives real NOI improvement through expense reduction,
-                rent optimization, and capital allocation - the same playbook applied across
+                rent optimization, and capital allocation, the same playbook applied across
                 tens of thousands of homes.
               </p>
             </div>
@@ -200,13 +200,13 @@ export default function AboutPage() {
                   Institutional track record
                 </p>
                 <p className="mt-2 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Our team has operated at 30,000+ units of institutional scale - we know what
+                  Our team has operated at 30,000+ units of institutional scale. We know what
                   we&apos;re acquiring and what it takes to run it well.
                 </p>
               </div>
               <p className="max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Before founding Middle Door Homes, we led operations at some of the largest
-                residential housing platforms in the country - including a 30,000+ home
+                residential housing platforms in the country, including a 30,000+ home
                 scattered-site residential portfolio and a transaction platform that executed
                 non-traditional acquisitions at scale. We know how to operate occupied real
                 estate at institutional quality, run capital programs without disrupting tenants,
