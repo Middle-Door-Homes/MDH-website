@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const CREDIBILITY = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Homes managed at prior platforms" },
+  { value: "30,000+", label: "Units of experience" },
   { value: "8-12%", label: "Target annual return" },
 ];
 
