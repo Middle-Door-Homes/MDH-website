@@ -289,8 +289,8 @@ export default function AdvisorsPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/px-29419908.jpg"
-                alt="Sunlit brick brownstones on a tree-lined street"
+                src="/images/px-36275920.jpg"
+                alt="Classic red brick apartment building with arched entryway"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"
