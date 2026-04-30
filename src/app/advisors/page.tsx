@@ -203,8 +203,8 @@ export default function AdvisorsPage() {
             </div>
             <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[360px]">
               <Image
-                src="/images/bldg-07.jpg"
-                alt="Brick multifamily buildings in an established urban neighborhood"
+                src="/images/px-32117624.jpg"
+                alt="Tree-lined street with classic brick brownstone apartments"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -289,8 +289,8 @@ export default function AdvisorsPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/bldg-01.jpg"
-                alt="Well-maintained brick apartment courtyard building"
+                src="/images/px-29419908.jpg"
+                alt="Sunlit brick brownstones on a tree-lined street"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"

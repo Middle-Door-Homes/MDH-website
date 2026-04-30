@@ -154,8 +154,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
               <Image
-                src="/images/bldg-06.jpg"
-                alt="Classic brick multifamily building in an established neighborhood"
+                src="/images/px-29419908.jpg"
+                alt="Sunlit brick brownstones on a tree-lined street"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"

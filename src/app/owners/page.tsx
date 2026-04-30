@@ -466,8 +466,8 @@ export default function OwnersPage() {
               </div>
               <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
                 <Image
-                  src="/images/bldg-08.jpg"
-                  alt="Classic brick apartment building"
+                  src="/images/px-19928129.jpg"
+                  alt="Classic brick brownstone apartment stoops"
                   fill
                   quality={90}
                   sizes="(min-width: 1024px) 40vw, 100vw"

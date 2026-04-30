@@ -189,8 +189,8 @@ export default function BrokersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/bldg-02.jpg"
-                alt="Urban small multifamily residential street"
+                src="/images/px-27150697.jpg"
+                alt="Classic red brick apartment building with fire escapes"
                 fill
                 priority
                 quality={95}
@@ -301,8 +301,8 @@ export default function BrokersPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/bldg-11.jpg"
-                alt="Suburban brick apartment building surrounded by mature trees"
+                src="/images/px-30726437.jpg"
+                alt="Ornate brick brownstone building facade"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"
