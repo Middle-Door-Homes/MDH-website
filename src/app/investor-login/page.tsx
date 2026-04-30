@@ -25,8 +25,8 @@ export default function InvestorLoginPage() {
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="relative h-48 overflow-hidden rounded-xl border border-[var(--mdh-line)] sm:col-span-2 md:h-64">
                 <Image
-                  src="/images/bldg-13.jpg"
-                  alt="Portfolio multifamily exterior"
+                  src="/images/px-23973560.jpg"
+                  alt="Classic stone multifamily apartment building"
                   fill
                   quality={92}
                   sizes="100vw"
@@ -35,8 +35,8 @@ export default function InvestorLoginPage() {
               </div>
               <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-44">
                 <Image
-                  src="/images/bldg-10.jpg"
-                  alt="Urban multifamily stock"
+                  src="/images/px-9559775.jpg"
+                  alt="Red brick apartment building with fire escapes"
                   fill
                   quality={90}
                   sizes="50vw"
@@ -45,8 +45,8 @@ export default function InvestorLoginPage() {
               </div>
               <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-44">
                 <Image
-                  src="/images/bldg-15.jpg"
-                  alt="Neighborhood multifamily context"
+                  src="/images/px-28662920.jpg"
+                  alt="Ornate brownstone apartment building stoops"
                   fill
                   quality={90}
                   sizes="50vw"
