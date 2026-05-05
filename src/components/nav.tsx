@@ -50,7 +50,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/96 backdrop-blur">
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-1.5" aria-label="Middle Door Homes home">
+          <Link href="/" className="flex items-center gap-1" aria-label="Middle Door Homes home">
             <span className="relative h-8 w-8 shrink-0">
               <Image
                 src="/images/Logo.png"
