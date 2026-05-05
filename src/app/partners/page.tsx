@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "100%", label: "Owner tax deferral" },
+  { value: "0%", label: "Taxes at closing for owners" },
   { value: "2-4%", label: "Finder's fee" },
   { value: "90%+", label: "Off-market buildings" },
 ];
