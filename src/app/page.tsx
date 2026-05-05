@@ -28,8 +28,8 @@ const AUDIENCE_CARDS = [
     cta: "Learn how it works",
   },
   {
-    href: "/brokers",
-    eyebrow: "For brokers & partners",
+    href: "/partners",
+    eyebrow: "For partners",
     title: "A finder's fee from off-market transactions",
     body: "We pay a 2-4% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties. We help you unlock these transactions.",
     cta: "How to partner with us",
@@ -104,40 +104,6 @@ export default function Home() {
                     {item.label}
                   </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Audience routing */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <div className="mb-6">
-              <Eyebrow>Who we work with</Eyebrow>
-              <Heading className="mt-2">Find your path</Heading>
-            </div>
-            <div className="grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {AUDIENCE_CARDS.map((card) => (
-                <Link
-                  key={card.href}
-                  href={card.href}
-                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 transition hover:border-[var(--mdh-accent)] hover:bg-white hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
-                >
-                  <p className="text-[0.67rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
-                    {card.eyebrow}
-                  </p>
-                  <h2 className="mt-2 text-[1.05rem] font-medium leading-snug text-[var(--mdh-title)] md:text-[1.1rem]">
-                    {card.title}
-                  </h2>
-                  <p className="mt-2 flex-1 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {card.body}
-                  </p>
-                  <p className="mt-4 text-[0.85rem] font-medium text-[var(--mdh-accent)] transition group-hover:translate-x-0.5">
-                    {card.cta} →
-                  </p>
-                </Link>
               ))}
             </div>
           </div>
@@ -253,6 +219,40 @@ export default function Home() {
                     <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Audience routing */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <div className="mb-6">
+              <Eyebrow>Who we work with</Eyebrow>
+              <Heading className="mt-2">Find your path</Heading>
+            </div>
+            <div className="grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
+              {AUDIENCE_CARDS.map((card) => (
+                <Link
+                  key={card.href}
+                  href={card.href}
+                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 transition hover:border-[var(--mdh-accent)] hover:bg-white hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
+                >
+                  <p className="text-[0.67rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
+                    {card.eyebrow}
+                  </p>
+                  <h2 className="mt-2 text-[1.05rem] font-medium leading-snug text-[var(--mdh-title)] md:text-[1.1rem]">
+                    {card.title}
+                  </h2>
+                  <p className="mt-2 flex-1 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
+                    {card.body}
+                  </p>
+                  <p className="mt-4 text-[0.85rem] font-medium text-[var(--mdh-accent)] transition group-hover:translate-x-0.5">
+                    {card.cta} →
+                  </p>
+                </Link>
               ))}
             </div>
           </div>

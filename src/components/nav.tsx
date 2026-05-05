@@ -18,12 +18,12 @@ const AUDIENCE_LINKS = [
     ],
   },
   {
-    href: "/brokers",
-    label: "Brokers",
+    href: "/partners",
+    label: "Partners",
     sections: [
-      { href: "/brokers#commission", label: "Your commission" },
-      { href: "/brokers#how-it-works", label: "How it works" },
-      { href: "/brokers#faq", label: "FAQ" },
+      { href: "/partners#commission", label: "Your commission" },
+      { href: "/partners#how-it-works", label: "How it works" },
+      { href: "/partners#faq", label: "FAQ" },
     ],
   },
   {

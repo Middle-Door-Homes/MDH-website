@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
         destination: "https://www.middledoorhomes.com/:path*",
         permanent: true,
       },
+      {
+        source: "/brokers",
+        destination: "/partners",
+        permanent: true,
+      },
+      {
+        source: "/brokers/:path*",
+        destination: "/partners/:path*",
+        permanent: true,
+      },
     ];
   },
 };

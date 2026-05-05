@@ -4,10 +4,10 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "Broker Partner Program - Earn a Finder's Fee on 721 Exchange Transactions",
+  title: "Partner Program - Earn a Finder's Fee on 721 Exchange Transactions",
   description:
     "Earn a 2-4% finder's fee on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners who aren't planning to sell.",
-  alternates: { canonical: "/brokers" },
+  alternates: { canonical: "/partners" },
 };
 
 const STATS = [
@@ -176,7 +176,7 @@ const brokerFaqSchema = {
   ),
 };
 
-export default function BrokersPage() {
+export default function PartnersPage() {
   return (
     <main>
       <script
@@ -200,7 +200,7 @@ export default function BrokersPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For brokers &amp; partners
+                  For partners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
                   Earn a finder&apos;s fee<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
