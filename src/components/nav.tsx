@@ -51,7 +51,7 @@ export function Nav() {
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-1" aria-label="Middle Door Homes home">
-            <span className="relative h-6 w-6 shrink-0 translate-y-px">
+            <span className="relative h-6 w-6 shrink-0">
               <Image
                 src="/images/Logo.png"
                 alt="Middle Door Homes"
@@ -61,7 +61,7 @@ export function Nav() {
                 className="object-contain"
               />
             </span>
-            <span className="text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
+            <span className="translate-y-[1.5px] text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
               Middle Door Homes
             </span>
           </Link>
