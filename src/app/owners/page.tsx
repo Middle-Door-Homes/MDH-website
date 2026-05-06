@@ -448,7 +448,7 @@ export default function OwnersPage() {
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Most small multifamily owners are not capturing the full NOI potential of their buildings.
+                  Many small multifamily owners are not capturing the full NOI potential of their buildings.
                   Deferred maintenance, below-market rents, and high operating costs compress returns
                   year after year.
                 </p>

@@ -54,7 +54,7 @@ export default function AboutPage() {
                 We built an institutional-quality exit for small multifamily investors.
               </h1>
               <Lead>
-                Most small multifamily investors face the same impasse: keep operating, or sell and
+                Many small multifamily investors face the same impasse: keep operating, or sell and
                 surrender 30-40% of their equity to taxes. Middle Door Homes was built to offer
                 a third path that preserves your basis, exits you from active operations,
                 and keeps your capital working.
@@ -136,7 +136,7 @@ export default function AboutPage() {
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
               <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
-                Most small multifamily owners spent years building a position that institutional
+                Many small multifamily owners spent years building a position that institutional
                 investors envy, and then spent the next decade managing it themselves because no
                 better option existed. We built Middle Door to change that.
               </p>
