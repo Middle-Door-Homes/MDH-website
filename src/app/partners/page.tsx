@@ -74,7 +74,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "How does this compare to a traditional sale referral?",
-        a: "In a traditional referral, you pass a client to another broker and might earn 20-25% of their commission, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
+        a: "In a traditional referral, you pass a client to another broker and might earn a referral fee of 20-25% of their cut, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
       },
       {
         q: "Are there additional incentives for consistent referrals?",
@@ -119,7 +119,7 @@ const BROKER_FAQ: FaqGroup[] = [
         a: "Yes. We provide materials you can share, and we are happy to do a joint call with you and your client to walk through how the 721 exchange works. You do not need to be a tax expert; you just need to open the door.",
       },
       {
-        q: "What is the typical timeline from introduction to commission?",
+        q: "What is the typical timeline from introduction to finder's fee payment?",
         a: "From first conversation to close typically takes 60-90 days, depending on due diligence and the client's pace. We keep you informed throughout the process.",
       },
       {
@@ -158,7 +158,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "Are you competing with me by going directly to property owners?",
-        a: "No. We rely on broker introductions to reach most of our owners, and we protect your relationship. We do not poach clients you introduce, we do not go around you on commission, and we keep you informed throughout the process. Our interests are aligned: you earn commission, your client solves a real problem, and we grow the portfolio.",
+        a: "No. We rely on partner introductions to reach most of our owners, and we protect your relationship. We do not poach clients you introduce, we do not cut you out of your finder's fee, and we keep you informed throughout the process. Our interests are aligned: you earn your finder's fee, your client solves a real problem, and we grow the portfolio.",
       },
     ],
   },
@@ -249,7 +249,7 @@ export default function PartnersPage() {
       </Section>
 
       {/* For you + For your clients */}
-      <Section id="commission" className="pt-4">
+      <Section id="finders-fee" className="pt-4">
         <Container>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">

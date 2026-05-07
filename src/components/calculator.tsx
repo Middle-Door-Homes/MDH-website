@@ -15,7 +15,7 @@ const BASIS_DEFAULT = 350_000;
 const MORT_MAX_RATIO = 0.75;
 const MORT_STEP = 10_000;
 
-const SALE_COSTS_RATE = 0.05;     // 5% commission + closing costs (same both sides)
+const SALE_COSTS_RATE = 0.05;     // 5% broker fees + closing costs (same both sides)
 const CAP_GAINS_RATE = 0.20;      // federal long-term rate; state taxes additional
 const DEPR_RECAPTURE_RATE = 0.10; // est. 25% recapture on accumulated depreciation
 
