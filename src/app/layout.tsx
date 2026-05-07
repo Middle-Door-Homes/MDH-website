@@ -82,27 +82,35 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "RealEstateAgent"],
-  name: SITE_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/icon.png`,
-  description: DEFAULT_DESCRIPTION,
-  email: "info@middledoorhomes.com",
-  areaServed: {
-    "@type": "Country",
-    name: "United States",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
   },
-  knowsAbout: [
-    "721 exchange",
-    "UPREIT",
-    "small multifamily real estate",
-    "tax-deferred real estate transactions",
-    "operating partnership units",
-  ],
-  sameAs: [],
-};
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "RealEstateAgent"],
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.png`,
+    description: DEFAULT_DESCRIPTION,
+    email: "info@middledoorhomes.com",
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    knowsAbout: [
+      "721 exchange",
+      "UPREIT",
+      "small multifamily real estate",
+      "tax-deferred real estate transactions",
+      "operating partnership units",
+    ],
+    sameAs: [],
+  },
+];
 
 export default function RootLayout({
   children,
