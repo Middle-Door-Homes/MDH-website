@@ -214,7 +214,7 @@ export default function AboutPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Our team</Eyebrow>
-            <Heading className="mt-3">Operators who have done this at scale</Heading>
+            <Heading className="mt-3">Investors &amp; operators who have done this at scale</Heading>
             <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
