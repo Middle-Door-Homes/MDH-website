@@ -15,19 +15,19 @@ const TEAM = [
     name: "Jack Elzinga",
     title: "Managing Partner",
     photo: "/images/jack-elzinga.jpg",
-    bio: "Deep experience identifying and executing opportunities across institutional and entrepreneurial real estate environments. Led integration of a 30,000+ home portfolio through the Blackstone/Tricon merger, built NOI growth programs, and has spent his career applying an institutional operating playbook across housing at scale. BA in Economics from Harvard University, MBA from Stanford Graduate School of Business.",
+    bio: "Transformative leader with expertise activating opportunities across housing and other areas. Jack has spent his career executing across tier-one institutional and entrepreneurial real estate environments — including leading integration of the 30,000+ home HPA portfolio through the Blackstone/Tricon merger and driving $120M+ in annualized NOI growth. BA in Economics from Harvard, MBA from Stanford GSB.",
   },
   {
     name: "Jose Torres",
     title: "Chief Executive Officer",
     photo: "/images/jose-torres.jpg",
-    bio: "Housing leader with deep experience across scattered-site portfolios. Led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, managing 30,000+ homes. Previously led asset management and capital markets at Invitation Homes through its IPO, with background at CBRE and RealFoundations.",
+    bio: "Housing leader with deep experience across scattered-site portfolios. Jose led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes. He previously led asset management and capital markets at Invitation Homes through its IPO, with prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
     title: "EVP, Operations",
     photo: "/images/mike-rozovics.jpg",
-    bio: "Operations executive with deep expertise in scattered-site capital programs. Asset management leader for a $10B+ portfolio at Home Partners of America, with extensive experience leading cross-functional teams to deliver large-scale capital programs, drive NOI growth, and manage construction and renovation initiatives at institutional scale.",
+    bio: "Operations executive with deep expertise in scattered-site capital programs. Mike served as an asset management leader for a $10B+ portfolio at Home Partners of America, with hands-on experience directing large-scale capital programs, driving NOI growth, and managing renovation and construction initiatives across dispersed residential portfolios.",
   },
 ];
 
@@ -215,28 +215,7 @@ export default function AboutPage() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-3">Operators who have done this at scale</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {TEAM.map((member) => (
-                <div key={member.name} className="flex flex-col rounded-xl border border-[var(--mdh-line)] bg-white overflow-hidden shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
-                  <div className="relative h-[220px] w-full">
-                    <Image
-                      src={member.photo}
-                      alt={member.name}
-                      fill
-                      quality={90}
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="font-medium text-[var(--mdh-title)]">{member.name}</p>
-                    <p className="mt-0.5 text-[0.73rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">{member.title}</p>
-                    <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+            <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
@@ -251,6 +230,29 @@ export default function AboutPage() {
                   />
                 ))}
               </div>
+            </div>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
+              {TEAM.map((member) => (
+                <div key={member.name} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
+                  <div className="flex items-center gap-3">
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[var(--mdh-line)]">
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        fill
+                        quality={90}
+                        sizes="48px"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-medium leading-tight text-[var(--mdh-title)]">{member.name}</p>
+                      <p className="mt-0.5 text-[0.7rem] font-medium uppercase tracking-[0.13em] text-[var(--mdh-subtle)]">{member.title}</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
