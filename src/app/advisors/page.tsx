@@ -32,16 +32,16 @@ const FOR_YOU = [
 
 const FOR_CLIENTS = [
   {
-    title: "Tax deferral",
-    body: "A 721 exchange defers capital gains and depreciation recapture entirely. Your client keeps 100% of what they have built.",
+    title: "Capital preservation",
+    body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client&apos;s full equity basis rolls forward intact — no tax haircut at transition.",
   },
   {
-    title: "Passive income",
-    body: "Your client receives ongoing distributions from a professionally managed portfolio, without tenant calls, maintenance, or operational burden.",
+    title: "Income-producing passive ownership",
+    body: "Your client receives quarterly distributions from a professionally managed portfolio, with institutional-grade operations replacing all landlord responsibilities.",
   },
   {
     title: "Estate planning benefit",
-    body: "The deferred tax basis can be a meaningful estate planning tool, coordinating with your client's broader wealth strategy.",
+    body: "OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely — a meaningful tool in your client&apos;s broader wealth plan.",
   },
 ];
 

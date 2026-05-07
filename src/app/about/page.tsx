@@ -10,6 +10,27 @@ export const metadata: Metadata = {
 };
 
 
+const TEAM = [
+  {
+    name: "Jack Elzinga",
+    title: "Managing Partner",
+    photo: "/images/jack-elzinga.jpg",
+    bio: "Deep experience identifying and executing opportunities across institutional and entrepreneurial real estate environments. Led integration of a 30,000+ home portfolio through the Blackstone/Tricon merger, built NOI growth programs, and has spent his career applying an institutional operating playbook across housing at scale. BA in Economics from Harvard University, MBA from Stanford Graduate School of Business.",
+  },
+  {
+    name: "Jose Torres",
+    title: "Chief Executive Officer",
+    photo: "/images/jose-torres.jpg",
+    bio: "Housing leader with deep experience across scattered-site portfolios. Led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, managing 30,000+ homes. Previously led asset management and capital markets at Invitation Homes through its IPO, with background at CBRE and RealFoundations.",
+  },
+  {
+    name: "Mike Rozovics",
+    title: "EVP, Operations",
+    photo: "/images/mike-rozovics.jpg",
+    bio: "Operations executive with deep expertise in scattered-site capital programs. Asset management leader for a $10B+ portfolio at Home Partners of America, with extensive experience leading cross-functional teams to deliver large-scale capital programs, drive NOI growth, and manage construction and renovation initiatives at institutional scale.",
+  },
+];
+
 const LOGOS = [
   { name: "Home Partners of America", file: "home-partners.svg" },
   { name: "Invitation Homes", file: "invitation-homes.svg" },
@@ -136,9 +157,9 @@ export default function AboutPage() {
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
               <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
-                Many small multifamily owners spent years building a position that institutional
-                investors envy, and then spent the next decade managing it themselves because no
-                better option existed. We built Middle Door to change that.
+                Many small multifamily investors spent decades building a concentrated real estate
+                position — and continued managing it themselves because no institutional-quality
+                exit existed. We built Middle Door to change that.
               </p>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Our team has operated at 30,000+ units of institutional scale. We know what
@@ -194,29 +215,26 @@ export default function AboutPage() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-3">Operators who have done this at scale</Heading>
-            <div className="mt-5 border-t border-[var(--mdh-line)] pt-6">
-              <div className="mb-5 rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
-                  Institutional track record
-                </p>
-                <p className="mt-2 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Our team has operated at 30,000+ units of institutional scale. We know what
-                  we&apos;re acquiring and what it takes to run it well.
-                </p>
-              </div>
-              <p className="max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Before founding Middle Door Homes, we led operations at some of the largest
-                residential housing platforms in the country, including a 30,000+ home
-                scattered-site residential portfolio and a transaction platform that executed
-                non-traditional acquisitions at scale. We know how to operate occupied real
-                estate at institutional quality, run capital programs without disrupting tenants,
-                and structure transactions that work for owners who have spent years building equity.
-              </p>
-              <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                We built MDH because we saw a gap: the small multifamily investor was being left out
-                of a structure that large institutional players have been using for decades.
-                We&apos;re changing that.
-              </p>
+            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
+              {TEAM.map((member) => (
+                <div key={member.name} className="flex flex-col rounded-xl border border-[var(--mdh-line)] bg-white overflow-hidden shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
+                  <div className="relative h-[220px] w-full">
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      quality={90}
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="font-medium text-[var(--mdh-title)]">{member.name}</p>
+                    <p className="mt-0.5 text-[0.73rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">{member.title}</p>
+                    <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
+                  </div>
+                </div>
+              ))}
             </div>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">

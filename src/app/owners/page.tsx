@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Homes managed at prior platforms" },
+  { value: "30,000+", label: "Units of experience" },
   { value: "8-12%", label: "Target annual return" },
 ];
 
@@ -54,7 +54,7 @@ const HOW_IT_WORKS = [
   {
     step: "04",
     title: "Ongoing income",
-    body: "You receive regular distributions from the portfolio. Our team manages everything, working to grow your income over time.",
+    body: "You receive quarterly distributions from a diversified portfolio. Our team manages all operations, working to grow NAV and income over time.",
   },
 ];
 
@@ -215,7 +215,7 @@ export default function OwnersPage() {
                   From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
                 <p className="mt-4 max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 md:text-[0.97rem]">
-                  You&apos;ve built real equity in multifamily real estate. But between managing tenants, deferred maintenance, and the tax bill that comes with selling, the path forward isn&apos;t obvious. The §721 exchange gives you a better option: passive income, diversified ownership, and no taxable event.
+                  You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
                 </p>
               </div>
             </div>
