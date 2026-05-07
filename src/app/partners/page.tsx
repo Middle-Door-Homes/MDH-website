@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "0%", label: "Taxes at closing for owners" },
+  { value: "0%", label: "Taxes at closing for owners", asterisk: true },
   { value: "2-4%", label: "Finder's fee" },
   { value: "90%+", label: "Off-market buildings" },
 ];
@@ -211,7 +211,7 @@ export default function PartnersPage() {
               {STATS.map((item) => (
                 <div key={item.label} className="px-5 py-4 md:px-7 md:py-5">
                   <p className="text-[1.5rem] font-semibold tracking-tight text-white md:text-[1.8rem]">
-                    {item.value}
+                    {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
                   </p>
                   <p className="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-white/50">
                     {item.label}
@@ -219,6 +219,9 @@ export default function PartnersPage() {
                 </div>
               ))}
             </div>
+            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
+              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
+            </p>
           </div>
         </Container>
       </Section>
