@@ -52,7 +52,7 @@ function Row({
         : "text-[var(--mdh-ink)]"
   }`;
 
-  const valueClass = `shrink-0 tabular-nums ${
+  const valueClass = `shrink-0 whitespace-nowrap tabular-nums ${
     zero
       ? "text-[0.9rem] font-semibold text-emerald-400"
       : negative
@@ -117,11 +117,11 @@ export function TaxCalculator() {
           {/* Sliders */}
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-              <div className="flex items-baseline justify-between">
+              <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Building value
                 </p>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {fmt(bldg)}
                 </p>
               </div>
@@ -146,11 +146,11 @@ export function TaxCalculator() {
             </div>
 
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-              <div className="flex items-baseline justify-between">
+              <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Purchase price / cost basis
                 </p>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {fmt(safeBasis)}
                 </p>
               </div>
@@ -170,11 +170,11 @@ export function TaxCalculator() {
             </div>
 
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-              <div className="flex items-baseline justify-between">
+              <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Outstanding mortgage
                 </p>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {safeM === 0 ? "None" : fmt(safeM)}
                 </p>
               </div>
@@ -255,7 +255,7 @@ export function TaxCalculator() {
               <p className="text-[0.83rem] text-[var(--mdh-subtle)]">
                 With a 721 exchange you preserve
               </p>
-              <p className="mt-0.5 text-[1.55rem] font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1.8rem]">
+              <p className="mt-0.5 whitespace-nowrap text-[1.55rem] font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1.8rem]">
                 {fmt(equityGain)} more equity
               </p>
               <p className="mt-0.5 text-[0.83rem] text-[var(--mdh-muted)]">
