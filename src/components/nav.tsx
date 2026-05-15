@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -52,13 +51,13 @@ export function Nav() {
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-1" aria-label="Middle Door Homes home">
             <span className="relative h-6 w-6 shrink-0">
-              <Image
-                src="/images/Logo.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo.svg"
                 alt="Middle Door Homes"
-                fill
-                priority
-                sizes="24px"
-                className="object-contain"
+                width={24}
+                height={24}
+                className="h-6 w-6 object-contain"
               />
             </span>
             <span className="translate-y-[1.5px] text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
