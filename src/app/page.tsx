@@ -68,7 +68,7 @@ export default function Home() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[52vh] min-h-[340px] md:h-[68vh] md:min-h-[480px]">
+            <div className="relative h-[52vh] min-h-[380px] md:h-[68vh] md:min-h-[480px]">
               <Image
                 src="/images/hero-chicago-street.jpg"
                 alt="Tree-lined street with classic brick townhomes"
@@ -84,10 +84,13 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[2.4rem] font-medium leading-[1.04] tracking-[-0.01em] text-white md:text-[3.6rem] lg:text-[4.2rem]">
+                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.6rem] lg:text-[4.2rem]">
                   From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
-                <p className="mt-4 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 md:text-[1rem]">
+                <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
+                  A §721 exchange converts your building into a passive income stake — no tax event at contribution.
+                </p>
+                <p className="mt-4 hidden max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 sm:block md:text-[1rem]">
                   You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
                 </p>
               </div>

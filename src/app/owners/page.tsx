@@ -196,7 +196,7 @@ export default function OwnersPage() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
+            <div className="relative h-[46vh] min-h-[340px] md:h-[58vh] md:min-h-[400px]">
               <Image
                 src="/images/px-13025296.jpg"
                 alt="Classic brick apartment building courtyard"
@@ -211,10 +211,13 @@ export default function OwnersPage() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   For property owners
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
+                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
                   From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
-                <p className="mt-4 max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 md:text-[0.97rem]">
+                <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
+                  Contribute your building via §721 exchange — no tax event, no management, passive income from day one.
+                </p>
+                <p className="mt-4 hidden max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 sm:block md:text-[0.97rem]">
                   You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
                 </p>
               </div>
@@ -333,8 +336,8 @@ export default function OwnersPage() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>Compare your options</Eyebrow>
             <Heading className="mt-2">How a 721 exchange stacks up</Heading>
-            <div className="mt-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6">
-              <table className="w-full min-w-[540px] text-[0.9rem]">
+            <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
+              <table className="w-full min-w-[540px] px-6 text-[0.9rem] md:px-8">
                 <thead>
                   <tr>
                     <th className="w-[34%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />

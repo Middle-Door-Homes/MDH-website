@@ -89,7 +89,7 @@ export default function AdvisorsPage() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[300px] md:h-[58vh] md:min-h-[400px]">
+            <div className="relative h-[46vh] min-h-[320px] md:h-[58vh] md:min-h-[400px]">
               <Image
                 src="/images/bldg-10.jpg"
                 alt="Established residential neighborhood"
@@ -104,7 +104,7 @@ export default function AdvisorsPage() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   For financial advisors
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[2.2rem] font-medium leading-[1.06] tracking-[-0.01em] text-white md:text-[3.2rem] lg:text-[3.8rem]">
+                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
                   A tax-efficient exit<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to keep.
                 </h1>
               </div>
