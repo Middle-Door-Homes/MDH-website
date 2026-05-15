@@ -89,7 +89,7 @@ export default function AdvisorsPage() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[320px] md:h-[58vh] md:min-h-[400px]">
+            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
               <Image
                 src="/images/bldg-10.jpg"
                 alt="Established residential neighborhood"
@@ -111,11 +111,11 @@ export default function AdvisorsPage() {
             </div>
             <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
               {STATS.map((item) => (
-                <div key={item.label} className="px-5 py-4 md:px-7 md:py-5">
-                  <p className="text-[1.5rem] font-semibold tracking-tight text-white md:text-[1.8rem]">
+                <div key={item.label} className="px-3 py-3 sm:px-5 sm:py-4 md:px-7 md:py-5">
+                  <p className="text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
                     {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
                   </p>
-                  <p className="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-white/50">
+                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
                     {item.label}
                   </p>
                 </div>

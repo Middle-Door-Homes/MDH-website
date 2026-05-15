@@ -20,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-8 md:py-12 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-6 md:py-12 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -28,7 +28,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`text-[1.95rem] font-medium leading-[1.1] tracking-[-0.012em] text-[var(--mdh-title)] md:text-[2.35rem] lg:text-[2.55rem] ${className ?? ""}`.trim()}>
+    <h2 className={`text-[1.6rem] font-medium leading-[1.1] tracking-[-0.012em] text-[var(--mdh-title)] md:text-[2.35rem] lg:text-[2.55rem] ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );

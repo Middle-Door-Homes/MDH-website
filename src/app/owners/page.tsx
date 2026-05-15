@@ -196,7 +196,7 @@ export default function OwnersPage() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[340px] md:h-[58vh] md:min-h-[400px]">
+            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
               <Image
                 src="/images/px-13025296.jpg"
                 alt="Classic brick apartment building courtyard"
@@ -224,11 +224,11 @@ export default function OwnersPage() {
             </div>
             <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
               {STATS.map((item) => (
-                <div key={item.label} className="px-5 py-4 md:px-7 md:py-5">
-                  <p className="text-[1.5rem] font-semibold tracking-tight text-white md:text-[1.8rem]">
+                <div key={item.label} className="px-3 py-3 sm:px-5 sm:py-4 md:px-7 md:py-5">
+                  <p className="text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
                     {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
                   </p>
-                  <p className="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-white/50">
+                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
                     {item.label}
                   </p>
                 </div>
@@ -494,13 +494,13 @@ export default function OwnersPage() {
                 <Eyebrow>Qualifying</Eyebrow>
                 <Heading className="mt-2">Is this a fit for you?</Heading>
               </div>
-              <div className="relative h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[160px]">
+              <div className="relative hidden h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:block lg:h-[160px]">
                 <Image
                   src="/images/brn-12168556.jpg"
                   alt="Classic brownstone apartment buildings on a tree-lined street"
                   fill
                   quality={90}
-                  sizes="(min-width: 1024px) 320px, 100vw"
+                  sizes="320px"
                   className="object-cover object-[center_55%]"
                 />
               </div>

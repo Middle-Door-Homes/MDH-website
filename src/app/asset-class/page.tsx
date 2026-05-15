@@ -15,7 +15,7 @@ export default function AssetClassPage() {
       <Section className="pb-6 pt-7 md:pt-10">
         <Container>
           <Eyebrow>Asset Class</Eyebrow>
-          <h1 className="mt-4 max-w-4xl text-4xl font-medium tracking-tight text-[var(--mdh-title)] md:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
             A large category with limited institutional penetration
           </h1>
           <Lead>

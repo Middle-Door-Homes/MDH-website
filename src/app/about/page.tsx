@@ -71,7 +71,7 @@ export default function AboutPage() {
           <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
             <div>
               <Eyebrow>About</Eyebrow>
-              <h1 className="mt-4 max-w-3xl text-4xl font-medium tracking-tight text-[var(--mdh-title)] md:text-5xl">
+              <h1 className="mt-4 max-w-3xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
                 We built an institutional-quality exit for small multifamily investors.
               </h1>
               <Lead>
