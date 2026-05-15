@@ -210,7 +210,7 @@ export default function PartnersPage() {
             <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
               {STATS.map((item) => (
                 <div key={item.label} className="px-3 py-3 sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
+                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
                     {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
                   </p>
                   <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
