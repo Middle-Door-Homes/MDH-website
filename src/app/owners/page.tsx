@@ -367,7 +367,7 @@ export default function OwnersPage() {
                       sale: false, ex1031: false, dst: true, mdh: true,
                     },
                     {
-                      label: "Upside participation (not fixed distributions)",
+                      label: "Ongoing upside participation (vs. fixed distributions)",
                       sale: false, ex1031: true, dst: false, mdh: true,
                     },
                     {
