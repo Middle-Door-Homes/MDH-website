@@ -15,19 +15,19 @@ const TEAM = [
     name: "Jack Elzinga",
     title: "Managing Partner",
     photo: "/images/jack-elzinga.jpg",
-    bio: "Transformative leader with expertise activating opportunities across housing and other areas. Jack has spent his career executing across tier-one institutional and entrepreneurial real estate environments, including leading integration of the 30,000+ home HPA portfolio through the Blackstone/Tricon merger and driving $120M+ in annualized NOI growth. BA in Economics from Harvard, MBA from Stanford GSB.",
+    bio: "Jack built Middle Door after a decade inside institutional real estate platforms and other leading companies. He helped lead the integration of the 30,000+ home Home Partners of America portfolio through the Blackstone/Tricon merger and drove $120M+ in annualized NOI growth. That work shaped a clear view: the institutional playbook for residential operations had never been packaged in a structure that worked for individual multifamily owners. Harvard BA in Economics, Stanford MBA.",
   },
   {
     name: "Jose Torres",
     title: "Chief Executive Officer",
     photo: "/images/jose-torres.jpg",
-    bio: "Housing leader with deep experience across scattered-site portfolios. Jose led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes. He previously led asset management and capital markets at Invitation Homes through its IPO, with prior experience at CBRE and RealFoundations.",
+    bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and ran asset management and capital markets at Invitation Homes through its IPO. He knows exactly what institutional-quality residential management looks like from the inside. Prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
     title: "EVP, Operations",
     photo: "/images/mike-rozovics.jpg",
-    bio: "Operations executive with deep expertise in scattered-site capital programs. Mike served as an asset management leader for a $10B+ portfolio at Home Partners of America, with hands-on experience directing large-scale capital programs, driving NOI growth, and managing renovation and construction initiatives across dispersed residential portfolios.",
+    bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and NOI improvement across dispersed portfolios at scale. That range, from individual units to institutional infrastructure, is the operational core of what Middle Door brings to every contributed building.",
   },
 ];
 
