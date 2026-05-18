@@ -466,9 +466,9 @@ export default function OwnersPage() {
                     rent optimization, and operational efficiency, passing that upside to you as a passive LP.
                   </p>
                   <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Professional management delivers{" "}
-                    <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow at scale</span>
-                    {" "}at institutional scale, the same playbook applied across the Middle Door portfolio.
+                    Institutional management delivers{" "}
+                    <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow</span>
+                    {" "}at scale — the same playbook applied across the Middle Door portfolio.
                   </p>
                 </div>
               </div>
