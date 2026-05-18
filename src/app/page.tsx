@@ -24,7 +24,7 @@ const AUDIENCE_CARDS = [
     href: "/owners",
     eyebrow: "For property owners",
     title: "Convert your equity into a managed income position",
-    body: "A §721 exchange converts your concentrated real estate equity into a diversified, income-producing LP stake — institutional management, quarterly distributions, and no taxable event at contribution.",
+    body: "A §721 exchange converts your concentrated real estate equity into a diversified, income-producing LP stake: institutional management, quarterly distributions, and no taxable event at contribution.",
     cta: "Learn how it works",
   },
   {
@@ -47,7 +47,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Contribute your building",
-    body: "Instead of selling, you contribute your property through a §721 exchange — an IRS-recognized non-recognition event with no capital gains at contribution.",
+    body: "Instead of selling, you contribute your property through a §721 exchange, an IRS-recognized non-recognition event with no capital gains at contribution.",
   },
   {
     step: "02",
@@ -88,7 +88,7 @@ export default function Home() {
                   From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  A §721 exchange converts your building into a passive income stake — no tax event at contribution.
+                  A §721 exchange converts your building into a passive income stake with no tax event at contribution.
                 </p>
                 <p className="mt-4 hidden max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 sm:block md:text-[1rem]">
                   You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
@@ -130,7 +130,7 @@ export default function Home() {
                 "Own one or more 2-49 unit multifamily buildings",
                 "Held 5+ years with meaningful embedded gains",
                 "Want capital preservation and passive income without sacrificing long-term upside",
-                "Ready to exit active operations and convert equity into managed, income-producing capital — without triggering a taxable event",
+                "Ready to exit active operations and convert equity into managed, income-producing capital without triggering a taxable event",
               ].map((item) => (
                 <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
                   <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
@@ -152,7 +152,7 @@ export default function Home() {
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
             <p className="mt-4 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily — giving individual investors access to a wealth structure that has historically been available only to institutional capital.
+              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily, giving individual investors access to a wealth structure that has historically been available only to institutional capital.
             </p>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">

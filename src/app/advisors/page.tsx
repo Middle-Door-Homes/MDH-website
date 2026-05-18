@@ -33,7 +33,7 @@ const FOR_YOU = [
 const FOR_CLIENTS = [
   {
     title: "Capital preservation",
-    body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client&apos;s full equity basis rolls forward intact — no tax haircut at transition.",
+    body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client&apos;s full equity basis rolls forward intact with no tax haircut at transition.",
   },
   {
     title: "Income-producing passive ownership",
@@ -41,7 +41,7 @@ const FOR_CLIENTS = [
   },
   {
     title: "Estate planning benefit",
-    body: "OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely — a meaningful tool in your client&apos;s broader wealth plan.",
+    body: "OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely, a meaningful tool in your client&apos;s broader wealth plan.",
   },
 ];
 

@@ -21,7 +21,7 @@ export function Footer() {
           For informational purposes only; not an offer to sell or solicitation to buy securities.
           Forward-looking statements involve risks and uncertainties, and past performance does not
           guarantee future results. Tax outcomes from a §721 exchange depend on your individual
-          circumstances — including cost basis, depreciation history, holding period, and state of
+          circumstances, including cost basis, depreciation history, holding period, and state of
           residence. This is not tax advice. Please consult your CPA, attorney, and financial
           advisors before making any decisions.
         </p>

@@ -15,7 +15,7 @@ const TEAM = [
     name: "Jack Elzinga",
     title: "Managing Partner",
     photo: "/images/jack-elzinga.jpg",
-    bio: "Transformative leader with expertise activating opportunities across housing and other areas. Jack has spent his career executing across tier-one institutional and entrepreneurial real estate environments — including leading integration of the 30,000+ home HPA portfolio through the Blackstone/Tricon merger and driving $120M+ in annualized NOI growth. BA in Economics from Harvard, MBA from Stanford GSB.",
+    bio: "Transformative leader with expertise activating opportunities across housing and other areas. Jack has spent his career executing across tier-one institutional and entrepreneurial real estate environments, including leading integration of the 30,000+ home HPA portfolio through the Blackstone/Tricon merger and driving $120M+ in annualized NOI growth. BA in Economics from Harvard, MBA from Stanford GSB.",
   },
   {
     name: "Jose Torres",
@@ -158,7 +158,7 @@ export default function AboutPage() {
               <Heading className="mt-3">Experience managing at scale</Heading>
               <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
                 Many small multifamily investors spent decades building a concentrated real estate
-                position — and continued managing it themselves because no institutional-quality
+                position, and continued managing it themselves because no institutional-quality
                 exit existed. We built Middle Door to change that.
               </p>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">

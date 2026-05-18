@@ -215,7 +215,7 @@ export default function OwnersPage() {
                   From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  Contribute your building via §721 exchange — no tax event, no management, passive income from day one.
+                  Contribute your building via §721 exchange: no tax event, no management, passive income from day one.
                 </p>
                 <p className="mt-4 hidden max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 sm:block md:text-[0.97rem]">
                   You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
@@ -468,7 +468,7 @@ export default function OwnersPage() {
                   <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                     Institutional management delivers{" "}
                     <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow</span>
-                    {" "}at scale — the same playbook applied across the Middle Door portfolio.
+                    {" "}at scale, the same playbook applied across the Middle Door portfolio.
                   </p>
                 </div>
               </div>
