@@ -12,7 +12,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy to Vercel
-        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        run: npx vercel --prod --yes
         env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: team_yiAPoi1shdKEYc6i9mNV9M8m
           VERCEL_PROJECT_ID: prj_yFuNZBovb0ceUiotB2ycw5SsAH3A
