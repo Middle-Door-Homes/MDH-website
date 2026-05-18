@@ -406,7 +406,7 @@ export default function OwnersPage() {
               </div>
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. DSTs defer taxes but use a blind-pool structure with no transparency into owned assets, pay fixed distributions with no upside participation, carry high minimum investment requirements, and offer no redemption mechanism. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
+              DST = Delaware Statutory Trust. DSTs defer taxes but use a blind-pool structure with no transparency into owned assets, pay distributions that are generally fixed during the hold period with limited upside participation, carry high minimum investment requirements, and offer no redemption mechanism. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
             </p>
           </div>
         </Container>
