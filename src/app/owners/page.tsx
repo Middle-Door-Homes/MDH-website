@@ -196,7 +196,7 @@ export default function OwnersPage() {
       <Section className="pb-5 pt-6 md:pt-8">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
+            <div className="relative h-[46vh] min-h-[360px] md:h-[64vh] md:min-h-[480px]">
               <Image
                 src="/images/px-13025296.jpg"
                 alt="Classic brick apartment building courtyard"
@@ -337,7 +337,8 @@ export default function OwnersPage() {
             <Eyebrow>Compare your options</Eyebrow>
             <Heading className="mt-2">How a 721 exchange stacks up</Heading>
             <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
-              <table className="w-full min-w-[540px] px-6 text-[0.9rem] md:px-8">
+              <div className="px-6 md:px-8">
+              <table className="w-full min-w-[540px] text-[0.9rem]">
                 <thead>
                   <tr>
                     <th className="w-[34%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
@@ -402,6 +403,7 @@ export default function OwnersPage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
               DST = Delaware Statutory Trust. DSTs defer taxes but use a blind-pool structure with no transparency into owned assets, pay fixed distributions with no upside participation, carry high minimum investment requirements, and offer no redemption mechanism. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
