@@ -2,9 +2,7 @@
 
 import { useEffect } from "react";
 
-// TODO: replace with your Calendly booking URL once account is set up
-// e.g. "https://calendly.com/middledoorhomes/intro"
-const CALENDLY_URL = "https://calendly.com/middledoorhomes/intro";
+const CALENDLY_URL = "https://calendly.com/middle-door-homes";
 
 export function CalendlyEmbed() {
   useEffect(() => {
