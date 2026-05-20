@@ -23,8 +23,8 @@ export function CalendlyEmbed() {
   return (
     <div
       className="calendly-inline-widget w-full"
-      data-url={CALENDLY_URL}
-      style={{ minHeight: "700px" }}
+      data-url={`${CALENDLY_URL}?hide_gdpr_banner=1`}
+      style={{ height: "900px" }}
     />
   );
 }
