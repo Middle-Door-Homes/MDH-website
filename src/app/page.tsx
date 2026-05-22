@@ -84,8 +84,8 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.6rem] lg:text-[4.2rem]">
-                  Turn your real estate equity<br className="hidden md:block" /> into a diversified portfolio.
+                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.4rem] lg:text-[4rem]">
+                  Turn your real estate equity into a diversified portfolio.
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
                   Contribute your building. Receive a passive stake in a professionally managed, diversified portfolio: no tax event, no management burden.
