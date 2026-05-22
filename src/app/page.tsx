@@ -121,9 +121,9 @@ export default function Home() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Who this is for</Eyebrow>
-            <Heading className="mt-2">Built for investors who have earned a smarter exit</Heading>
+            <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
             <p className="mt-4 max-w-[66ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Middle Door is built for multifamily investors who have held long enough that a traditional sale would trigger a significant capital gains event, and whose capital deserves a more efficient structure than active management can provide.
+              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio — the same equity, working on better terms, with no tax event at contribution.
             </p>
             <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
               {[
