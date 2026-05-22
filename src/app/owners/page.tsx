@@ -337,13 +337,13 @@ export default function OwnersPage() {
             <Eyebrow>How returns are generated</Eyebrow>
             <Heading className="mt-2">We create value first. Then we take our stake.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              MDH doesn&apos;t manage contributed buildings passively. Every contributed property receives a capital program: renovation financing arranged by MDH, executed by our operations team to lift NOI, improve occupancy, and where the building allows, create additional units for incremental cash flow.
+              MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher NOI, improved occupancy, and where the building allows, additional units for incremental cash flow.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">The capital program</h3>
+                <h3 className="font-medium text-[var(--mdh-title)]">Building-level capital review</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  MDH arranges renovation financing at close. No capital required from you. Our operations team executes: systems upgrades, renovated units, and where feasible, additional units created for incremental cash flow. Every improvement grows the income the portfolio generates for all LP holders.
+                  We assess every contributed building for capital improvement opportunities. Where improvements generate measurable returns, MDH arranges renovation financing and executes: systems upgrades, unit renovations, and where feasible, additional units created for incremental cash flow. No capital required from you.
                 </p>
               </div>
               <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
