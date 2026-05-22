@@ -52,7 +52,7 @@ const HOW_IT_WORKS = [
   {
     step: "02",
     title: "Receive a passive ownership stake",
-    body: "Your equity converts into a passive LP stake in a professionally managed, diversified portfolio — full ownership in the asset class you have built in, now at institutional scale.",
+    body: "Your equity converts into a passive LP stake in a professionally managed, diversified portfolio. Full ownership in the asset class you have built in, now at institutional scale.",
   },
   {
     step: "03",
@@ -123,7 +123,7 @@ export default function Home() {
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
             <p className="mt-4 max-w-[66ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio — the same equity, working on better terms, with no tax event at contribution.
+              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio. The same equity, working on better terms, with no tax event at contribution.
             </p>
             <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
               {[
