@@ -52,7 +52,7 @@ const HOW_IT_WORKS = [
   {
     step: "02",
     title: "Receive a passive ownership stake",
-    body: "Your equity converts into an LP interest in a professionally managed portfolio. You retain ownership exposure to real estate without the operational burden.",
+    body: "Your equity converts into a passive LP stake in a professionally managed, diversified portfolio — full ownership in the asset class you have built in, now at institutional scale.",
   },
   {
     step: "03",
@@ -130,7 +130,7 @@ export default function Home() {
                 "Own one or more 2-49 unit multifamily buildings",
                 "Held 5+ years with meaningful embedded gains",
                 "Want capital preservation and passive income without sacrificing long-term upside",
-                "Ready to exit active operations and convert equity into managed, income-producing capital without triggering a taxable event",
+                "Ready to convert concentrated building equity into a diversified, income-producing portfolio without triggering a taxable event",
               ].map((item) => (
                 <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
                   <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>

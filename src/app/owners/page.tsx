@@ -246,7 +246,7 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
-              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of that value to capital gains and depreciation recapture. Managing indefinitely means your capital keeps working, but so do you. Middle Door Homes offers a third path.
+              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of that value to capital gains and depreciation recapture. The alternative has always been to hold, concentrated in the same single asset. Middle Door Homes offers a third path.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
@@ -290,8 +290,7 @@ export default function OwnersPage() {
                 with no taxable event at closing.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                You do not sell. You do not lose your income. You simply stop managing. Your equity
-                moves forward intact into a diversified, professionally operated portfolio.
+                You do not sell. Your equity moves forward intact into a diversified, professionally operated portfolio.
               </p>
               <div className="mt-5 space-y-3">
                 <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
@@ -485,7 +484,7 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Working with us</Eyebrow>
-            <Heading className="mt-2">Grow your NOI, without the operational burden</Heading>
+            <Heading className="mt-2">How institutional management grows portfolio income</Heading>
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -613,9 +612,7 @@ export default function OwnersPage() {
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, title transfers to the Operating Partnership and your OP units are issued. The
-              tenant calls stop. The maintenance requests stop. The first quarterly distribution hits
-              your account. That&apos;s the entire job from here.
+              On close, title transfers to the Operating Partnership and your OP units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (

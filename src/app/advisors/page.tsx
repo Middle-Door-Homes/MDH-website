@@ -5,7 +5,7 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Financial Advisor Referral Program - 721 Exchange for Your Clients",
   description:
-    "Help clients with embedded real estate gains transition from active landlord to passive investor: tax-deferred, no replacement property required. Partner with Middle Door Homes.",
+    "Help clients access a diversified, institutionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
   alternates: { canonical: "/advisors" },
 };
 
@@ -60,7 +60,7 @@ const WHO_WE_WORK_WITH = [
   },
   {
     title: "Financial planners",
-    body: "Clients approaching retirement who still manage small multifamily buildings often feel stuck. We provide a clean transition to truly passive income.",
+    body: "Clients with meaningful real estate equity and no institutional-quality vehicle for it. The 721 exchange gives them a structure their position has earned.",
   },
 ];
 
@@ -68,7 +68,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a client with embedded gains",
-    body: "Think about clients who own small multifamily buildings, especially those with long hold periods, deferred maintenance, or who are approaching a life transition.",
+    body: "Think about clients who own small multifamily buildings and have held long enough to carry meaningful embedded gains, but have never had an institutional-quality structure for that equity.",
   },
   {
     step: "02",
@@ -105,7 +105,7 @@ export default function AdvisorsPage() {
                   For financial advisors
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  A tax-efficient exit<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to keep.
+                  A better structure<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to protect.
                 </h1>
               </div>
             </div>
@@ -133,8 +133,7 @@ export default function AdvisorsPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
-              Many of your clients own real estate they don&apos;t know how to exit while retaining
-              their gains. We offer a path that solves that problem entirely.
+              Many of your clients have built meaningful real estate equity in a structure that was never designed for their next chapter. We give them a better one.
             </p>
           </div>
         </Container>
@@ -164,11 +163,12 @@ export default function AdvisorsPage() {
                 </p>
               </div>
               <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">No clean exit</h3>
+                <h3 className="font-medium text-[var(--mdh-title)]">No better structure</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 1031 exchange just replaces one active management obligation with another.
-                  Holding means continued management burden. Most clients feel trapped between
-                  paying to exit or managing forever.
+                  A 1031 exchange just replaces one building with another. Selling triggers a
+                  30-40% tax liability. For most clients, there has simply never been a structure
+                  that preserves their equity and keeps their capital working in a diversified,
+                  institutional vehicle.
                 </p>
               </div>
             </div>
@@ -189,9 +189,7 @@ export default function AdvisorsPage() {
                 at closing. No capital gains. No depreciation recapture.
               </p>
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                They stop managing. Their equity moves forward intact into a diversified,
-                income-producing portfolio. The tax event that would have occurred at sale is
-                deferred entirely.
+                Their equity moves forward intact into a diversified, income-producing portfolio. The tax event that would have occurred at a sale is deferred entirely.
               </p>
               <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
                 <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">

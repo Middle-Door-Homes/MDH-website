@@ -50,7 +50,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a long-term owner",
-    body: "Think about clients who have owned their buildings for years, especially those showing signs of management fatigue, tax concerns, or an interest in succession planning.",
+    body: "Think about owners who have held for years and built meaningful equity, but have never had an institutional-quality structure for that position.",
   },
   {
     step: "02",
@@ -91,7 +91,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What kind of client is the right fit?",
-        a: "The ideal client has owned a 2-49 unit multifamily building for many years, has built meaningful equity, and is showing signs of management fatigue, or is starting to think about succession. If they are hesitant to sell because of the tax hit, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
+        a: "The ideal client has owned a 2-49 unit multifamily building for many years and built meaningful embedded gains. If they are hesitant to sell because of the tax cost, or simply want their equity working in a better structure, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
       },
       {
         q: "What if my client just wants to sell outright?",
