@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Middle Door Homes | 721 Exchange for Small Multifamily Owners",
   },
   description:
-    "Middle Door Homes lets multifamily investors contribute their 2-49 unit buildings through a §721 exchange and receive passive LP income, preserving equity, deferring taxes, and exiting active operations.",
+    "Middle Door Homes turns your multifamily equity into a passive stake in a diversified, professionally managed residential portfolio, through a §721 exchange with no capital gains at contribution.",
   alternates: { canonical: "/" },
 };
 
@@ -85,13 +85,13 @@ export default function Home() {
                   Middle Door Homes
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.6rem] lg:text-[4.2rem]">
-                  From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
+                  Turn your real estate equity<br className="hidden md:block" /> into a diversified portfolio.
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  A §721 exchange converts your building into a passive income stake with no tax event at contribution.
+                  Contribute your building. Receive a passive stake in a professionally managed, diversified portfolio: no tax event, no management burden.
                 </p>
                 <p className="mt-4 hidden max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 sm:block md:text-[1rem]">
-                  You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
+                  Contribute your building and receive a passive stake in a professionally managed, diversified residential portfolio. Think of it as an index fund of residential real estate: institutional operations, quarterly distributions, and no taxable event at contribution.
                 </p>
               </div>
             </div>

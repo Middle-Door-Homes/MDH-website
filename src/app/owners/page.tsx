@@ -212,13 +212,13 @@ export default function OwnersPage() {
                   For property owners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  From active landlord<br className="hidden md:block" /> to passive investor,<br className="hidden md:block" /> without the tax bill.
+                  Turn your real estate equity<br className="hidden md:block" /> into a diversified portfolio.
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  Contribute your building via §721 exchange: no tax event, no management, passive income from day one.
+                  Contribute your building. A passive stake in a professionally managed, diversified portfolio: no tax event, no management from day one.
                 </p>
                 <p className="mt-4 hidden max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 sm:block md:text-[0.97rem]">
-                  You&apos;ve built significant equity in multifamily real estate. Between active management, deferred maintenance, and the capital gains exposure that comes with a traditional sale, most conventional exits erode the position you&apos;ve spent years building. The §721 exchange offers a better structure: a professionally managed, income-producing portfolio with no taxable event at contribution.
+                  Contribute your building through a §721 exchange and receive a passive stake in a professionally managed, diversified residential portfolio. No taxable event. No management burden. Institutional operations and quarterly distributions from day one.
                 </p>
               </div>
             </div>
@@ -330,6 +330,39 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
+      {/* Value creation */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>How returns are generated</Eyebrow>
+            <Heading className="mt-2">We create value first. Then we take our stake.</Heading>
+            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              MDH doesn&apos;t manage contributed buildings passively. Every contributed property receives a capital program: renovation financing arranged by MDH, executed by our operations team to lift NOI, improve occupancy, and where the building allows, create additional units for incremental cash flow.
+            </p>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+                <h3 className="font-medium text-[var(--mdh-title)]">The capital program</h3>
+                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                  MDH arranges renovation financing at close. No capital required from you. Our operations team executes: systems upgrades, renovated units, and where feasible, additional units created for incremental cash flow. Every improvement grows the income the portfolio generates for all LP holders.
+                </p>
+              </div>
+              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+                <h3 className="font-medium text-[var(--mdh-title)]">Promote tied to performance</h3>
+                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                  MDH earns its ownership stake only when value creation is confirmed by NOI growth. If the renovation doesn&apos;t generate measurable improvement, MDH doesn&apos;t take its equity stake. That alignment is structurally different from any other vehicle where the GP takes fees and promotes regardless of what they deliver.
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">The alignment</p>
+              <p className="mt-2 text-[0.97rem] font-medium leading-snug text-[var(--mdh-title)]">
+                We get paid when we make your asset more valuable. Not before. If the renovation does not generate confirmed NOI improvement, MDH does not take its equity stake.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* Comparison chart */}
       <Section className="pt-4">
         <Container>
@@ -338,12 +371,14 @@ export default function OwnersPage() {
             <Heading className="mt-2">How a 721 exchange stacks up</Heading>
             <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
               <div className="px-6 md:px-8">
-              <table className="w-full min-w-[540px] text-[0.9rem]">
+              <table className="w-full min-w-[720px] text-[0.9rem]">
                 <thead>
                   <tr>
-                    <th className="w-[34%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
+                    <th className="w-[28%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Self-manage</th>
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Hire PM</th>
                     <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Sale</th>
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">1031 Exchange</th>
+                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">1031</th>
                     <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">DST</th>
                     <th className="pb-3 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-accent)]">Middle Door</th>
                   </tr>
@@ -351,41 +386,33 @@ export default function OwnersPage() {
                 <tbody className="divide-y divide-[var(--mdh-line)]">
                   {[
                     {
-                      label: "Tax deferred at closing",
-                      sale: false, ex1031: true, dst: true, mdh: true,
+                      label: "No tax event at transition",
+                      selfManage: true, hirePm: true, sale: false, ex1031: true, dst: true, mdh: true,
                     },
                     {
-                      label: "Exit active operations immediately",
-                      sale: true, ex1031: false, dst: true, mdh: true,
-                    },
-                    {
-                      label: "No replacement property to find",
-                      sale: true, ex1031: false, dst: true, mdh: true,
-                    },
-                    {
-                      label: "Diversified real estate portfolio",
-                      sale: false, ex1031: false, dst: true, mdh: true,
+                      label: "Exit active operations completely",
+                      selfManage: false, hirePm: false, sale: true, ex1031: false, dst: true, mdh: true,
                     },
                     {
                       label: "Ongoing upside participation (vs. fixed distributions)",
-                      sale: false, ex1031: true, dst: false, mdh: true,
+                      selfManage: true, hirePm: true, sale: false, ex1031: true, dst: false, mdh: true,
                     },
                     {
-                      label: "Transparency into underlying assets",
-                      sale: false, ex1031: true, dst: false, mdh: true,
+                      label: "Diversified portfolio exposure",
+                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: true, mdh: true,
                     },
                     {
-                      label: "Structured redemption windows post-lockup",
-                      sale: true, ex1031: true, dst: false, mdh: true,
+                      label: "Renovation capital & value creation provided",
+                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
                     },
                     {
                       label: "Purpose-built for small multifamily",
-                      sale: false, ex1031: false, dst: false, mdh: true,
+                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
                     },
                   ].map((row) => (
                     <tr key={row.label}>
                       <td className="py-3 pr-4 font-medium text-[var(--mdh-title)]">{row.label}</td>
-                      {[row.sale, row.ex1031, row.dst].map((val, i) => (
+                      {[row.selfManage, row.hirePm, row.sale, row.ex1031, row.dst].map((val, i) => (
                         <td key={i} className="py-3 pr-4 text-center">
                           {val
                             ? <span className="text-emerald-600 font-bold">✓</span>
@@ -405,8 +432,14 @@ export default function OwnersPage() {
               </table>
               </div>
             </div>
+            <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <span className="font-medium text-[var(--mdh-title)]">Middle Door is the only structure that clears all three: </span>
+                no tax event at contribution, complete exit from active management, and ongoing upside participation. Every other option trades at least one away.
+              </p>
+            </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. DSTs defer taxes but use a blind-pool structure with no transparency into owned assets, pay distributions that are generally fixed during the hold period with limited upside participation, carry high minimum investment requirements, and offer no redemption mechanism. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
+              DST = Delaware Statutory Trust. DSTs defer taxes but require a 1031 exchange process, use a blind-pool structure with fixed distributions and limited upside, and offer no redemption mechanism. Hiring a property manager reduces but does not eliminate active ownership: owners remain responsible for capital decisions and pay 8-10% of gross rents regardless of performance. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
             </p>
           </div>
         </Container>
