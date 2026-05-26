@@ -72,13 +72,14 @@ export default function AboutPage() {
             <div>
               <Eyebrow>About</Eyebrow>
               <h1 className="mt-4 max-w-3xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
-                We built an institutional-quality exit for small multifamily investors.
+                We built an institutional-quality portfolio for small multifamily investors.
               </h1>
               <Lead>
-                Many small multifamily investors face the same impasse: keep operating, or sell and
-                surrender 30-40% of their equity to taxes. Middle Door Homes was built to offer
-                a third path that preserves your basis, exits you from active operations,
-                and keeps your capital working.
+                Many small multifamily investors have spent years building a concentrated real estate
+                position and kept managing it themselves because no institutional-quality structure
+                for that equity existed. Middle Door Homes was built to change that: contribute your
+                building and receive a passive stake in a diversified, professionally managed portfolio,
+                with no taxable event at contribution.
               </Lead>
             </div>
             <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
