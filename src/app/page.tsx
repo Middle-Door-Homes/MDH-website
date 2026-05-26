@@ -153,7 +153,7 @@ export default function Home() {
                 "Own one or more 2-49 unit multifamily buildings",
                 "Held 5+ years with meaningful embedded gains",
                 "Want capital preservation and passive income without sacrificing long-term upside",
-                "Ready to convert concentrated building equity into a diversified, income-producing portfolio without triggering a taxable event",
+                "Looking for options that don't involve a taxable event",
               ].map((item) => (
                 <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
                   <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
