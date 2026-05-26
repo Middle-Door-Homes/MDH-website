@@ -23,7 +23,7 @@ const THREE_PROOFS = [
   },
   {
     promise: "Diversify your ownership",
-    stat: "8–12%",
+    stat: "8-12%",
     statLabel: "target annual return",
     asterisk: false,
     body: "A passive stake in a professionally managed portfolio of cash-flowing neighborhood real estate.",
