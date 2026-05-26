@@ -152,7 +152,7 @@ export default function Home() {
               {[
                 "Own one or more 2-49 unit multifamily buildings",
                 "Held 5+ years with meaningful embedded gains",
-                "Want passive income and long-term upside without the management work",
+                "Enjoy passive income and long-term upside",
                 "Looking for options that don't involve a taxable event",
               ].map((item) => (
                 <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
