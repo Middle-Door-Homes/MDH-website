@@ -13,10 +13,28 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const CREDIBILITY = [
-  { value: "0%", label: "Taxes at closing", asterisk: true },
-  { value: "30,000+", label: "Units of experience" },
-  { value: "8-12%", label: "Target annual return" },
+const THREE_PROOFS = [
+  {
+    promise: "Keep your equity intact",
+    stat: "0%",
+    statLabel: "taxes at contribution",
+    asterisk: true,
+    body: "A §721 exchange converts your building to a portfolio stake with no capital gains or depreciation recapture at contribution.",
+  },
+  {
+    promise: "Diversify your ownership",
+    stat: "8–12%",
+    statLabel: "target annual return",
+    asterisk: false,
+    body: "A passive stake in a professionally managed portfolio of cash-flowing neighborhood real estate.",
+  },
+  {
+    promise: "Collect truly passive income",
+    stat: "30,000+",
+    statLabel: "units of experience",
+    asterisk: false,
+    body: "Our team handles everything: leasing, maintenance, capex. You receive quarterly distributions.",
+  },
 ];
 
 const AUDIENCE_CARDS = [
@@ -84,35 +102,45 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.4rem] lg:text-[4rem]">
-                  Turn your real estate equity into a diversified portfolio.
+                <h1 className="font-display mt-3 max-w-3xl text-[1.6rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2rem] md:text-[2.8rem] lg:text-[3.4rem]">
+                  Your real estate equity&rsquo;s next chapter: an &ldquo;index fund&rdquo; of neighborhood real estate
                 </h1>
                 <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  Contribute your building. Receive a passive stake in a professionally managed, diversified portfolio: no tax event, no management burden.
+                  Contribute your building. Receive a passive stake in a professionally managed portfolio of neighborhood real estate. No taxable event. No management work.
                 </p>
                 <p className="mt-4 hidden max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 sm:block md:text-[1rem]">
-                  Contribute your building and receive a passive stake in a professionally managed, diversified residential portfolio. Think of it as an index fund of residential real estate: institutional operations, quarterly distributions, and no taxable event at contribution.
+                  Contribute your building through a §721 exchange and receive a passive stake in a professionally managed, diversified portfolio of neighborhood real estate. Our team handles everything from there.
                 </p>
               </div>
             </div>
-
-            {/* Stats strip */}
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-              {CREDIBILITY.map((item) => (
-                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.65rem] md:text-[2rem]">
-                    {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
-                  </p>
-                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.73rem] sm:tracking-[0.14em]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
-              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-            </p>
           </div>
+        </Container>
+      </Section>
+
+      {/* Three proof cards */}
+      <Section className="pt-4">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-3">
+            {THREE_PROOFS.map((item) => (
+              <div key={item.promise} className="rounded-xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_4px_16px_rgba(18,29,41,0.06)]">
+                <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
+                  {item.promise}
+                </p>
+                <p className="mt-4 text-[3rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
+                  {item.stat}{item.asterisk && <sup className="text-[0.4em] font-normal">*</sup>}
+                </p>
+                <p className="mt-1.5 text-[0.75rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
+                  {item.statLabel}
+                </p>
+                <p className="mt-4 border-t border-[var(--mdh-line)] pt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-[0.65rem] leading-relaxed text-[var(--mdh-subtle)]">
+            * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
+          </p>
         </Container>
       </Section>
 
