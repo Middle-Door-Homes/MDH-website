@@ -257,7 +257,7 @@ export default function Home() {
       {/* Audience routing */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <div className="mb-6">
               <Eyebrow>Who we work with</Eyebrow>
               <Heading className="mt-2">Find your path</Heading>
@@ -267,7 +267,7 @@ export default function Home() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 transition hover:border-[var(--mdh-accent)] hover:bg-white hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
+                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-white p-5 transition hover:border-[var(--mdh-accent)] hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
                 >
                   <p className="text-[0.67rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
                     {card.eyebrow}
