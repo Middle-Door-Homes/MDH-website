@@ -145,7 +145,7 @@ export default function Home() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
-            <p className="mt-4 max-w-[66ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio. The same equity, working on better terms, with no tax event at contribution.
             </p>
             <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
-            <p className="mt-4 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily, giving individual investors access to a wealth structure that has historically been available only to institutional capital.
             </p>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
@@ -215,7 +215,7 @@ export default function Home() {
             <div>
               <Eyebrow>The 721 exchange</Eyebrow>
               <Heading className="mt-2">Three steps to passive ownership</Heading>
-              <p className="mt-4 max-w-[52ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 A §721 exchange is an IRS-recognized non-recognition event that allows you to
                 contribute your building to a professionally managed portfolio in exchange for a
                 passive ownership stake, with no capital gains or depreciation recapture at contribution.
