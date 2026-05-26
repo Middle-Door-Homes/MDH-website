@@ -102,11 +102,11 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
                 </p>
-                <h1 className="font-display mt-3 max-w-2xl text-[1.9rem] font-medium leading-[1.08] tracking-[-0.01em] text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                <h1 className="font-display mt-3 text-[1.9rem] font-medium leading-[1.08] tracking-[-0.01em] text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[3.8rem]">
                   Your building&rsquo;s next chapter
                 </h1>
                 <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  an &ldquo;index fund&rdquo; of neighborhood real estate
+                  An &ldquo;index fund&rdquo; of neighborhood real estate
                 </p>
                 <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
                   Contribute your building to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
@@ -114,15 +114,7 @@ export default function Home() {
               </div>
             </div>
 
-          </div>
-        </Container>
-      </Section>
-
-      {/* Proof cards */}
-      <Section className="pt-4">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-white shadow-[0_10px_32px_rgba(18,29,41,0.05)]">
-            <div className="grid divide-y divide-[var(--mdh-line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="grid divide-y divide-[var(--mdh-line)] border-t border-[var(--mdh-line)] bg-[var(--mdh-bg)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {THREE_PROOFS.map((item) => (
                 <div key={item.promise} className="p-6 md:p-8">
                   <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
