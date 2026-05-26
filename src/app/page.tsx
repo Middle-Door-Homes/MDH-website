@@ -102,41 +102,48 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   Middle Door Homes
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.6rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2rem] md:text-[2.8rem] lg:text-[3.4rem]">
-                  Your building&rsquo;s next chapter: an &ldquo;index fund&rdquo; of neighborhood real estate
+                <h1 className="font-display mt-3 max-w-2xl text-[1.9rem] font-medium leading-[1.08] tracking-[-0.01em] text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                  Your building&rsquo;s next chapter
                 </h1>
-                <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  Contribute your building. Receive a passive stake in a professionally managed portfolio of neighborhood real estate. No taxable event. No management work.
+                <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
+                  an &ldquo;index fund&rdquo; of neighborhood real estate
                 </p>
-                <p className="mt-4 hidden max-w-[52ch] text-[0.95rem] leading-relaxed text-white/72 sm:block md:text-[1rem]">
-                  Contribute your building through a §721 exchange and receive a passive stake in a professionally managed, diversified portfolio of neighborhood real estate. Our team handles everything from there.
+                <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
+                  Contribute your building to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
                 </p>
               </div>
             </div>
 
-            {/* Proof strip */}
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
+          </div>
+        </Container>
+      </Section>
+
+      {/* Proof cards */}
+      <Section className="pt-4">
+        <Container>
+          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-white shadow-[0_10px_32px_rgba(18,29,41,0.05)]">
+            <div className="grid divide-y divide-[var(--mdh-line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {THREE_PROOFS.map((item) => (
-                <div key={item.promise} className="flex flex-col px-3 py-4 text-center sm:px-5 sm:py-5 md:px-7 md:py-6">
-                  <p className="text-[0.58rem] font-medium uppercase tracking-[0.14em] text-white/50 sm:text-[0.63rem]">
+                <div key={item.promise} className="p-6 md:p-8">
+                  <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
                     {item.promise}
                   </p>
-                  <p className="mt-2.5 whitespace-nowrap text-[1.3rem] font-semibold leading-none tracking-tight text-white sm:text-[1.65rem] md:text-[2rem]">
-                    {item.stat}{item.asterisk && <sup className="text-[0.5em] font-normal">*</sup>}
+                  <p className="mt-3 text-[2.6rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
+                    {item.stat}{item.asterisk && <sup className="text-[0.45em] font-normal">*</sup>}
                   </p>
-                  <p className="mt-1 text-[0.58rem] uppercase tracking-[0.1em] text-white/40 sm:text-[0.63rem]">
+                  <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
                     {item.statLabel}
                   </p>
-                  <p className="mt-3 hidden border-t border-white/10 pt-3 text-left text-[0.78rem] leading-relaxed text-white/50 sm:block">
+                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-4 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">
                     {item.body}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
-              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-            </p>
           </div>
+          <p className="mt-3 text-[0.65rem] leading-relaxed text-[var(--mdh-subtle)]">
+            * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
+          </p>
         </Container>
       </Section>
 
