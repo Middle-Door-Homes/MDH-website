@@ -162,9 +162,9 @@ export default function Home() {
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 {[
-                  "Enjoy passive income and long-term upside",
-                  "Looking for options that don't involve a taxable event",
-                  "Ready to step back from day-to-day operations",
+                  "Enjoy passive income & long-term upside",
+                  "Seeking tax-efficient options",
+                  "Ready to hand off the day-to-day",
                 ].map((item) => (
                   <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
                     <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
