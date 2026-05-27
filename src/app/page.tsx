@@ -148,18 +148,30 @@ export default function Home() {
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio. The same equity, working on better terms, with no tax event at contribution.
             </p>
-            <div className="mt-6 grid gap-3 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 sm:items-start">
-              {[
-                "Own one or more 2-49 unit multifamily buildings",
-                "Held 5+ years with meaningful embedded gains",
-                "Enjoy passive income and long-term upside",
-                "Looking for options that don't involve a taxable event",
-              ].map((item) => (
-                <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
-                  <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
-                  <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
-                </div>
-              ))}
+            <div className="mt-6 space-y-3 border-t border-[var(--mdh-line)] pt-6">
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  "Own one or more 2-49 unit multifamily buildings",
+                  "Held 5+ years with meaningful embedded gains",
+                ].map((item) => (
+                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
+                    <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
+                    <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {[
+                  "Enjoy passive income and long-term upside",
+                  "Looking for options that don't involve a taxable event",
+                  "Ready to step back from day-to-day operations",
+                ].map((item) => (
+                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
+                    <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
+                    <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
