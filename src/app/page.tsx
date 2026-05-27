@@ -33,7 +33,7 @@ const THREE_PROOFS = [
     stat: "30,000+",
     statLabel: "units of experience",
     asterisk: false,
-    body: "Our team handles everything: leasing, maintenance, and targeted renovations that grow building value. You share in the resulting income growth.",
+    body: "Our team handles everything: leasing, maintenance, and targeted renovations that grow building value. You share in all future income growth and appreciation.",
   },
 ];
 
