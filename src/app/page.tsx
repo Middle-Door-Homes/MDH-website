@@ -106,10 +106,10 @@ export default function Home() {
                   Your building&rsquo;s next chapter
                 </h1>
                 <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  An &ldquo;index fund&rdquo; of neighborhood real estate
+                  A portfolio of neighborhood real estate
                 </p>
                 <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
-                  Contribute your building to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
+                  Contribute your building to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside. Think of it as an index fund of neighborhood real estate.
                 </p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Home() {
       {/* Who this is for */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -154,7 +154,7 @@ export default function Home() {
                   "Own one or more 2-49 unit multifamily buildings",
                   "Held 5+ years with meaningful embedded gains",
                 ].map((item) => (
-                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
+                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4">
                     <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
                     <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
                   </div>
@@ -166,7 +166,7 @@ export default function Home() {
                   "Seeking tax-efficient options",
                   "Ready to hand off the day-to-day",
                 ].map((item) => (
-                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-white p-4">
+                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4">
                     <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
                     <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
                   </div>
@@ -183,7 +183,7 @@ export default function Home() {
       {/* Team credentials */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -223,7 +223,7 @@ export default function Home() {
       {/* How it works */}
       <Section className="pt-4">
         <Container>
-          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
               <Eyebrow>The 721 exchange</Eyebrow>
               <Heading className="mt-2">Three steps to passive ownership</Heading>
@@ -250,7 +250,7 @@ export default function Home() {
               {HOW_IT_WORKS.map((item) => (
                 <div
                   key={item.step}
-                  className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5"
+                  className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5"
                 >
                   <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)] md:text-[1.7rem]">
                     {item.step}
@@ -269,7 +269,7 @@ export default function Home() {
       {/* Audience routing */}
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <div className="mb-6">
               <Eyebrow>Who we work with</Eyebrow>
               <Heading className="mt-2">Find your path</Heading>
@@ -279,7 +279,7 @@ export default function Home() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-white p-5 transition hover:border-[var(--mdh-accent)] hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
+                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 transition hover:border-[var(--mdh-accent)] hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
                 >
                   <p className="text-[0.67rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
                     {card.eyebrow}
