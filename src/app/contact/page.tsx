@@ -20,8 +20,10 @@ export default function ContactPage() {
               <Heading className="mt-3">Contact Us</Heading>
               <Lead>
                 Whether you are a property owner exploring a 721 exchange, a broker with a client
-                referral, or an advisor interested in learning more, schedule a call below or reach
-                us at{" "}
+                referral, or an advisor interested in learning more, we would be glad to connect.
+                For property owners, we offer a personalized, no-commitment valuation of your
+                building and a clear walkthrough of how the numbers work for your specific
+                situation. Schedule a 20-minute call below or reach us at{" "}
                 <a
                   href="tel:7084126898"
                   className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"

@@ -26,14 +26,14 @@ const THREE_PROOFS = [
     stat: "8-12%",
     statLabel: "target annual return",
     asterisk: false,
-    body: "A passive stake in a professionally managed portfolio of cash-flowing neighborhood real estate.",
+    body: "You receive an ownership stake in a diversified portfolio of cash-flowing neighborhood real estate.",
   },
   {
     promise: "Collect truly passive income",
     stat: "30,000+",
     statLabel: "units of experience",
     asterisk: false,
-    body: "Our team handles everything: leasing, maintenance, and targeted renovations that grow building value. You share in all future income growth and appreciation.",
+    body: "Our professional management team handles leasing, maintenance, and renovations that grow your value. You share in all future income and appreciation.",
   },
 ];
 
@@ -106,10 +106,10 @@ export default function Home() {
                   Your building&rsquo;s next chapter
                 </h1>
                 <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  An &ldquo;index fund&rdquo; of neighborhood real estate
+                  Use your building&rsquo;s equity to become an owner of a neighborhood real estate portfolio
                 </p>
                 <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
-                  Contribute your building to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
+                  Think of it as an index fund of neighborhood real estate: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
                 </p>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function Home() {
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. MDH offers a different structure: contribute your building and receive a passive stake in a diversified, institutionally managed portfolio. The same equity, working on better terms, with no tax event at contribution.
+              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. A 1031 exchange keeps your wealth concentrated and the operational burden on your plate. Middle Door Homes offers a third option: contribute your building and receive a passive stake in a diversified, professionally managed portfolio, without sacrificing your equity gains.
             </p>
             <div className="mt-6 space-y-3 border-t border-[var(--mdh-line)] pt-6">
               <div className="grid gap-3 sm:grid-cols-2">
