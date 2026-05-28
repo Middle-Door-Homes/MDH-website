@@ -4,7 +4,15 @@ import { useEffect } from "react";
 
 const CALENDLY_URL = "https://calendly.com/middle-door-homes";
 
-export function CalendlyEmbed() {
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
+export function CalendlyButton({ label = "Schedule a 20-minute call" }: { label?: string }) {
   useEffect(() => {
     if (!document.querySelector('link[href*="calendly.com"]')) {
       const link = document.createElement("link");
@@ -21,10 +29,13 @@ export function CalendlyEmbed() {
   }, []);
 
   return (
-    <div
-      className="calendly-inline-widget w-full"
-      data-url={`${CALENDLY_URL}?hide_gdpr_banner=1`}
-      style={{ height: "900px" }}
-    />
+    <button
+      onClick={() =>
+        window.Calendly?.initPopupWidget({ url: `${CALENDLY_URL}?hide_gdpr_banner=1` })
+      }
+      className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
+    >
+      {label}
+    </button>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
-import { CalendlyEmbed } from "@/components/calendly-embed";
+import { CalendlyButton } from "@/components/calendly-embed";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -58,8 +58,18 @@ export default function ContactPage() {
 
       <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-6">
-            <CalendlyEmbed />
+          <div className="flex flex-col gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
+            <div>
+              <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                Ready to see how this works for your building?
+              </p>
+              <p className="mt-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                A 20-minute call is enough to walk through the structure, estimate your equity outcome, and answer your questions.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <CalendlyButton />
+            </div>
           </div>
         </Container>
       </Section>
