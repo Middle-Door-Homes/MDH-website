@@ -106,10 +106,10 @@ export default function Home() {
                   Your building&rsquo;s next chapter
                 </h1>
                 <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  Use your building&rsquo;s equity to become an owner of a neighborhood real estate portfolio
+                  An &ldquo;index fund&rdquo; of neighborhood real estate
                 </p>
                 <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
-                  Think of it as an index fund of neighborhood real estate: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
+                  Use your building&rsquo;s equity to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
                 </p>
               </div>
             </div>
