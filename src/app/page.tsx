@@ -49,7 +49,7 @@ const AUDIENCE_CARDS = [
     href: "/partners",
     eyebrow: "For partners",
     title: "A finder's fee from off-market transactions",
-    body: "We pay a 2-4% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties. We help you unlock these transactions.",
+    body: "We pay a 3% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties. We help you unlock these transactions.",
     cta: "How to partner with us",
   },
   {

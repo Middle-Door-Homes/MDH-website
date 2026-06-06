@@ -6,20 +6,20 @@ import { FaqAccordion, type FaqGroup } from "@/components/faq";
 export const metadata: Metadata = {
   title: "Partner Program - Earn a Finder's Fee on 721 Exchange Transactions",
   description:
-    "Earn a 2-4% finder's fee on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners who aren't planning to sell.",
+    "Earn a 3% finder's fee on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners who aren't planning to sell.",
   alternates: { canonical: "/partners" },
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "2-4%", label: "Finder's fee" },
+  { value: "3%", label: "Finder's fee" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
 const FOR_YOU = [
   {
     title: "Finder's fee",
-    body: "We pay a finder's fee: typically 2-4% of the building value, for introductions that lead to a contribution. No buyer's broker taking a share.",
+    body: "We pay a finder's fee of 3% of the building value for introductions that lead to a contribution. No buyer's broker taking a share.",
   },
   {
     title: "Off-market access",
@@ -60,7 +60,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Earn your finder's fee",
-    body: "If the building is contributed to our portfolio, you receive a finder's fee: typically 2-4% of the building value, paid at close.",
+    body: "If the building is contributed to our portfolio, you receive a finder's fee of 3% of the building value, paid at close.",
   },
 ];
 
@@ -70,11 +70,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "How much do I earn if I bring in a client?",
-        a: "We pay a finder's fee of 2-4% of the contributed building value. On a $1.5M building, that is $30,000-$60,000 for an introduction. You are just opening a door and earning on a transaction that otherwise would never have happened.",
+        a: "We pay a finder's fee of 3% of the contributed building value. On a $1.5M building, that is $45,000 for an introduction. You are just opening a door and earning on a transaction that otherwise would never have happened.",
       },
       {
         q: "How does this compare to a traditional sale referral?",
-        a: "In a traditional referral, you pass a client to another broker and might earn a referral fee of 20-25% of their cut, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 2-4% with no split. And your client avoids a large tax bill in the process.",
+        a: "In a traditional referral, you pass a client to another broker and might earn a referral fee of 20-25% of their cut, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 3% with no split. And your client avoids a large tax bill in the process.",
       },
       {
         q: "Are there additional incentives for consistent referrals?",
