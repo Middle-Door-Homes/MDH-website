@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "Seller-side", label: "Commission" },
+  { value: "3%", label: "Typical commission" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
@@ -70,11 +70,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my commission look like?",
-        a: "You earn a typical seller-side real estate commission for representing your client's sale, negotiated with your client as you would in any transaction. You are representing a sale that otherwise would never have happened.",
+        a: "You earn a typical seller-side real estate commission, negotiated with your client as you would in any transaction — MDH does not set commission rates. In a traditional sale, total commission is often split between a seller's broker and a buyer's broker, roughly 3% to each side for a combined 6%. With Middle Door, there is no buyer's broker: we are the acquirer. The full seller-side commission goes to you. We observe 3% to be typical for seller-side representation on these transactions, though the rate is between you and your client.",
       },
       {
         q: "How does this compare to representing a traditional sale?",
-        a: "In a traditional sale, your commission may be shared across buyer's and seller's agents. When you represent a client's sale to Middle Door, you earn a seller-side real estate commission directly, with no buyer's broker split. And your client avoids a large tax bill in the process.",
+        a: "In a traditional sale, total commission is typically split between the seller's broker and buyer's broker — roughly 3% each side. With Middle Door, there is no buyer's broker, so you earn the full seller-side commission with no split. And your client avoids a large tax bill in the process.",
       },
       {
         q: "Are there arrangements for consistent broker partners?",
