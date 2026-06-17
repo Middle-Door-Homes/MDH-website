@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "3%", label: "Commission (seller-side)" },
+  { value: "Seller-side", label: "Commission" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
 const FOR_YOU = [
   {
     title: "Real estate commission",
-    body: "You represent your client's building sale and earn a 3% seller-side real estate commission, paid at close. No buyer's broker split.",
+    body: "You represent your client's building sale and earn a typical seller-side real estate commission, paid at close. No buyer's broker split.",
   },
   {
     title: "Off-market access",
@@ -60,7 +60,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Earn your commission",
-    body: "If your client's building is contributed to our portfolio, you receive a 3% seller-side real estate commission for representing the sale, paid at close.",
+    body: "If your client's building is contributed to our portfolio, you receive a typical seller-side real estate commission for representing the sale, paid at close.",
   },
 ];
 
@@ -70,7 +70,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my commission look like?",
-        a: "We pay a 3% seller-side real estate commission for representing your client's sale. On a $1.5M building, that is $45,000. You are representing a transaction that otherwise would never have happened.",
+        a: "You earn a typical seller-side real estate commission for representing your client's sale, negotiated with your client as you would in any transaction. You are representing a sale that otherwise would never have happened.",
       },
       {
         q: "How does this compare to representing a traditional sale?",
