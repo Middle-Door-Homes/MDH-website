@@ -21,7 +21,7 @@ const AUDIENCE_LINKS = [
     href: "/partners",
     label: "Partners",
     sections: [
-      { href: "/partners#finders-fee", label: "Your finder's fee" },
+      { href: "/partners#commission", label: "Your commission" },
       { href: "/partners#how-it-works", label: "How it works" },
       { href: "/partners#faq", label: "FAQ" },
     ],

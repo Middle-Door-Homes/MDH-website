@@ -48,8 +48,8 @@ const AUDIENCE_CARDS = [
   {
     href: "/partners",
     eyebrow: "For partners",
-    title: "A finder's fee from off-market transactions",
-    body: "We pay a 3% finder's fee for introductions that lead to a contribution. Most long-term owners don't list their properties. We help you unlock these transactions.",
+    title: "A real estate commission for representing your client's sale",
+    body: "Represent your client's building sale through a 721 exchange. We work with licensed real estate brokers whose clients want a tax-deferred transition to passive ownership.",
     cta: "How to partner with us",
   },
   {

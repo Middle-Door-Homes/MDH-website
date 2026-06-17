@@ -4,29 +4,29 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "Partner Program - Earn a Finder's Fee on 721 Exchange Transactions",
+  title: "Partner Program - Earn a Real Estate Commission on 721 Exchange Transactions",
   description:
-    "Earn a 3% finder's fee on small multifamily 721 exchange transactions. We help you unlock off-market conversations with long-term owners who aren't planning to sell.",
+    "Earn a real estate commission representing your client's building sale through a §721 exchange. We work with licensed brokers who represent small multifamily owners in this tax-deferred transition.",
   alternates: { canonical: "/partners" },
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "3%", label: "Finder's fee" },
+  { value: "Seller-side", label: "Commission" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
 const FOR_YOU = [
   {
-    title: "Finder's fee",
-    body: "We pay a finder's fee of 3% of the building value for introductions that lead to a contribution. No buyer's broker taking a share.",
+    title: "Real estate commission",
+    body: "You represent your client's building sale and earn a real estate commission for that representation, paid at close. No buyer's broker split.",
   },
   {
     title: "Off-market access",
     body: "Most small buildings don't sell; we open a path to transact with unlisted owners.",
   },
   {
-    title: "Referral flywheel",
+    title: "Relationship flywheel",
     body: "Satisfied owners will refer others; each conversation can unlock several more.",
   },
 ];
@@ -59,30 +59,30 @@ const HOW_IT_WORKS = [
   },
   {
     step: "03",
-    title: "Earn your finder's fee",
-    body: "If the building is contributed to our portfolio, you receive a finder's fee of 3% of the building value, paid at close.",
+    title: "Earn your commission",
+    body: "If your client's building is contributed to our portfolio, you receive a real estate commission for representing the sale, paid at close.",
   },
 ];
 
 const BROKER_FAQ: FaqGroup[] = [
   {
-    group: "Your finder's fee",
+    group: "Your commission",
     items: [
       {
-        q: "How much do I earn if I bring in a client?",
-        a: "We pay a finder's fee of 3% of the contributed building value. On a $1.5M building, that is $45,000 for an introduction. You are just opening a door and earning on a transaction that otherwise would never have happened.",
+        q: "What does my commission look like?",
+        a: "We pay a real estate commission for representing your client's sale. The specific structure is discussed directly when we engage — reach out to talk through the details. You are representing a transaction that otherwise would never have happened.",
       },
       {
-        q: "How does this compare to a traditional sale referral?",
-        a: "In a traditional referral, you pass a client to another broker and might earn a referral fee of 20-25% of their cut, typically less than 1% of the transaction value. With Middle Door, you earn a direct finder's fee of 3% with no split. And your client avoids a large tax bill in the process.",
+        q: "How does this compare to representing a traditional sale?",
+        a: "In a traditional sale, your commission may be shared across buyer's and seller's agents. When you represent a client's sale to Middle Door, you earn a seller-side real estate commission directly, with no buyer's broker split. And your client avoids a large tax bill in the process.",
       },
       {
-        q: "Are there additional incentives for consistent referrals?",
-        a: "We are building long-term relationships with broker partners and structure our arrangements accordingly. Reach out to discuss the specifics; we are open to conversations about ongoing referral arrangements for partners who are actively working with this client profile.",
+        q: "Are there arrangements for consistent broker partners?",
+        a: "We are building long-term relationships with real estate broker partners and structure our arrangements accordingly. Reach out to discuss the specifics; we are open to conversations about ongoing arrangements for brokers who are actively working with this client profile.",
       },
       {
         q: "When do I get paid?",
-        a: "Your finder's fee is paid at close, when the building is contributed to the portfolio.",
+        a: "Your commission is paid at close, when the building is contributed to the portfolio.",
       },
     ],
   },
@@ -108,10 +108,10 @@ const BROKER_FAQ: FaqGroup[] = [
     ],
   },
   {
-    group: "The referral process",
+    group: "Working together",
     items: [
       {
-        q: "What do I actually do to refer a client?",
+        q: "What do I actually do to represent a client?",
         a: "Just make the introduction. Email us at info@middledoorhomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
       },
       {
@@ -119,12 +119,12 @@ const BROKER_FAQ: FaqGroup[] = [
         a: "Yes. We provide materials you can share, and we are happy to do a joint call with you and your client to walk through how the 721 exchange works. You do not need to be a tax expert; you just need to open the door.",
       },
       {
-        q: "What is the typical timeline from introduction to finder's fee payment?",
+        q: "What is the typical timeline from introduction to commission payment?",
         a: "From first conversation to close typically takes 60-90 days, depending on due diligence and the client's pace. We keep you informed throughout the process.",
       },
       {
         q: "How does this affect my ongoing relationship with the client?",
-        a: "It usually strengthens it. You are solving a problem the client did not know had a solution. The referral flywheel is real. Satisfied owners refer siblings, children, and other investors who own similar properties.",
+        a: "It usually strengthens it. You are solving a problem the client did not know had a solution. Satisfied owners refer family members and other investors who own similar properties.",
       },
     ],
   },
@@ -158,7 +158,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "Are you competing with me by going directly to property owners?",
-        a: "No. We rely on partner introductions to reach most of our owners, and we protect your relationship. We do not poach clients you introduce, we do not cut you out of your finder's fee, and we keep you informed throughout the process. Our interests are aligned: you earn your finder's fee, your client solves a real problem, and we grow the portfolio.",
+        a: "No. We work closely with broker partners and protect your client relationships. We do not circumvent you or diminish your commission, and we keep you informed throughout the process. Our interests are aligned: you represent your client's interests, your client solves a real problem, and we grow the portfolio.",
       },
     ],
   },
@@ -203,7 +203,7 @@ export default function PartnersPage() {
                   For partners
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Earn a finder&apos;s fee<br className="hidden md:block" /> from owners who<br className="hidden md:block" /> aren&apos;t planning to sell.
+                  Represent your client&apos;s sale.<br className="hidden md:block" /> Earn a real estate<br className="hidden md:block" /> commission.
                 </h1>
               </div>
             </div>
@@ -249,12 +249,12 @@ export default function PartnersPage() {
       </Section>
 
       {/* For you + For your clients */}
-      <Section id="finders-fee" className="pt-4">
+      <Section id="commission" className="pt-4">
         <Container>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
               <Eyebrow>For you</Eyebrow>
-              <Heading className="mt-2">A finder's fee from off-market transactions</Heading>
+              <Heading className="mt-2">A real estate commission for representing the sale</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_YOU.map((item) => (
                   <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
@@ -287,7 +287,7 @@ export default function PartnersPage() {
           <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
-              <Heading className="mt-2">Three steps to a finder's fee</Heading>
+              <Heading className="mt-2">Three steps to a commission</Heading>
               <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
                   <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">

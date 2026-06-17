@@ -19,8 +19,8 @@ export default function ContactPage() {
               <Eyebrow>Contact</Eyebrow>
               <Heading className="mt-3">Contact Us</Heading>
               <Lead>
-                Whether you are a property owner exploring a 721 exchange, a broker with a client
-                referral, or an advisor interested in learning more, we would be glad to connect.
+                Whether you are a property owner exploring a 721 exchange, a real estate broker
+                representing a client&apos;s sale, or an advisor interested in learning more, we would be glad to connect.
               </Lead>
               <Lead>
                 For property owners, we offer a personalized, no-commitment valuation of your
