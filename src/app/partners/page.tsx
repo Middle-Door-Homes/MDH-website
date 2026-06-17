@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "3%", label: "Typical commission" },
+  { value: "3%", label: "Typical commission (seller-side)" },
   { value: "90%+", label: "Off-market buildings" },
 ];
 
