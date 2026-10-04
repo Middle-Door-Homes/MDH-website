@@ -108,11 +108,8 @@ export default function Home() {
                 <h1 className="font-display mt-3 text-[1.9rem] font-medium leading-[1.08] tracking-[-0.01em] text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[3.8rem]">
                   Your building&rsquo;s next chapter
                 </h1>
-                <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  Roll your equity into a larger portfolio instead of selling it
-                </p>
-                <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
-                  Keep collecting income, share in the appreciation, defer the tax, and stop managing.
+                <p className="mt-3 max-w-3xl text-[1.05rem] font-light leading-snug text-white/80 sm:text-[1.25rem] md:text-[1.45rem]">
+                  The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
                 </p>
               </div>
             </div>
