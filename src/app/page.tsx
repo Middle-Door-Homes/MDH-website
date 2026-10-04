@@ -18,23 +18,26 @@ const THREE_PROOFS = [
     promise: "Keep your equity intact",
     stat: "0%",
     statLabel: "taxes at contribution",
-    asterisk: true,
     body: "A §721 exchange converts your building to a portfolio stake with no capital gains or depreciation recapture at contribution.",
   },
   {
     promise: "Diversify your ownership",
     stat: "8-12%",
     statLabel: "target annual return",
-    asterisk: false,
     body: "You receive an ownership stake in a diversified portfolio of cash-flowing neighborhood real estate.",
   },
   {
     promise: "Collect truly passive income",
     stat: "30,000+",
     statLabel: "units of experience",
-    asterisk: false,
     body: "Our professional management team handles leasing, maintenance, and renovations that grow your value. You share in all future income and appreciation.",
   },
+];
+
+const THREE_DOORS = [
+  { label: "Sell", body: "30-40% of gains lost to tax", mdh: false },
+  { label: "Hold", body: "Tenants, repairs, and debt stay your job", mdh: false },
+  { label: "Middle Door", body: "Defer the tax, keep the income, stop managing", mdh: true },
 ];
 
 const AUDIENCE_CARDS = [
@@ -46,11 +49,11 @@ const AUDIENCE_CARDS = [
     cta: "Learn how it works",
   },
   {
-    href: "/partners",
-    eyebrow: "For partners",
+    href: "/brokers",
+    eyebrow: "For brokers",
     title: "A real estate commission for representing your client's sale",
     body: "Represent your client's building sale through a 721 exchange. We work with licensed real estate brokers whose clients want a tax-deferred transition to passive ownership.",
-    cta: "How to partner with us",
+    cta: "How brokers work with us",
   },
   {
     href: "/advisors",
@@ -106,10 +109,10 @@ export default function Home() {
                   Your building&rsquo;s next chapter
                 </h1>
                 <p className="mt-2 max-w-2xl text-[1.05rem] font-light leading-snug text-white/75 sm:text-[1.25rem] md:text-[1.45rem]">
-                  An &ldquo;index fund&rdquo; of neighborhood real estate
+                  Roll your equity into a larger portfolio instead of selling it
                 </p>
                 <p className="mt-4 max-w-[54ch] text-[0.88rem] leading-relaxed text-white/65 sm:text-[0.95rem] md:text-[1rem]">
-                  Use your building&rsquo;s equity to become an owner of a neighborhood real estate portfolio: no taxes at contribution, diversified ownership, and professional management where you share in the upside.
+                  Keep collecting income, share in the appreciation, defer the tax, and stop managing.
                 </p>
               </div>
             </div>
@@ -121,7 +124,7 @@ export default function Home() {
                     {item.promise}
                   </p>
                   <p className="mt-3 text-[2.6rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
-                    {item.stat}{item.asterisk && <sup className="text-[0.45em] font-normal">*</sup>}
+                    {item.stat}
                   </p>
                   <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
                     {item.statLabel}
@@ -133,9 +136,29 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <p className="mt-3 text-[0.65rem] leading-relaxed text-[var(--mdh-subtle)]">
-            * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-          </p>
+        </Container>
+      </Section>
+
+      {/* Three doors */}
+      <Section className="pt-0">
+        <Container>
+          <div className="grid overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-white shadow-[0_10px_32px_rgba(18,29,41,0.04)] sm:grid-cols-3">
+            {THREE_DOORS.map((door) => (
+              <div
+                key={door.label}
+                className={door.mdh
+                  ? "bg-[var(--mdh-ink)] p-6 md:p-8"
+                  : "border-b border-[var(--mdh-line)] p-6 sm:border-b-0 sm:border-r md:p-8"}
+              >
+                <p className={`text-[0.68rem] font-medium uppercase tracking-[0.2em] ${door.mdh ? "text-white/60" : "text-[var(--mdh-subtle)]"}`}>
+                  {door.label}
+                </p>
+                <p className={`mt-3 text-[1.15rem] font-medium leading-snug md:text-[1.3rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
+                  {door.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </Container>
       </Section>
 
@@ -146,7 +169,7 @@ export default function Home() {
             <Eyebrow>Who this is for</Eyebrow>
             <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              You have built meaningful equity in a single asset. A traditional sale erodes 30-40% of that to capital gains and depreciation recapture. A 1031 exchange keeps your wealth concentrated and the operational burden on your plate. Middle Door Homes offers a third option: contribute your building and receive a passive stake in a diversified, professionally managed portfolio, without sacrificing your equity gains.
+              You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your gains to capital gains tax and depreciation recapture. A 1031 exchange keeps your wealth concentrated and the operational burden on your plate. Middle Door Homes offers a third option: contribute your building and receive a passive stake in a diversified, professionally managed portfolio, without sacrificing your equity gains.
             </p>
             <div className="mt-6 space-y-3 border-t border-[var(--mdh-line)] pt-6">
               <div className="grid gap-3 sm:grid-cols-2">
@@ -228,9 +251,10 @@ export default function Home() {
               <Eyebrow>The 721 exchange</Eyebrow>
               <Heading className="mt-2">Three steps to passive ownership</Heading>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A §721 exchange is an IRS-recognized non-recognition event that allows you to
-                contribute your building to a professionally managed portfolio in exchange for a
-                passive ownership stake, with no capital gains or depreciation recapture at contribution.
+                A §721 exchange lets you contribute your building to a partnership for ownership
+                units, with no capital gains or depreciation recapture at contribution. It is the same
+                tool large REITs have used for decades to buy from owners who did not want to sell.
+                What is new is applying it to buildings your size.
               </p>
               <div className="mt-6">
                 <Button href="/owners">Owner overview</Button>

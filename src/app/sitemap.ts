@@ -11,11 +11,10 @@ type RouteConfig = {
 const ROUTES: RouteConfig[] = [
   { path: "/",           priority: 1.0, changeFrequency: "weekly"  },
   { path: "/owners",     priority: 0.9, changeFrequency: "monthly" },
-  { path: "/partners",   priority: 0.9, changeFrequency: "monthly" },
+  { path: "/brokers",    priority: 0.9, changeFrequency: "monthly" },
   { path: "/advisors",   priority: 0.9, changeFrequency: "monthly" },
   { path: "/about",      priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact",    priority: 0.7, changeFrequency: "yearly"  },
-  { path: "/asset-class",priority: 0.5, changeFrequency: "monthly" },
   // /investor-login intentionally excluded - private page
 ];
 

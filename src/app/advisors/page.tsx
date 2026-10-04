@@ -3,14 +3,14 @@ import Image from "next/image";
 import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Financial Advisor Referral Program - 721 Exchange for Your Clients",
+  title: "For Financial Advisors: 721 Exchange for Your Clients",
   description:
     "Help clients access a diversified, institutionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
   alternates: { canonical: "/advisors" },
 };
 
 const STATS = [
-  { value: "0%", label: "Taxes at closing", asterisk: true },
+  { value: "0%", label: "Taxes at closing" },
   { value: "100%", label: "Equity preserved" },
   { value: "8-12%", label: "Target annual return" },
 ];
@@ -22,7 +22,7 @@ const FOR_YOU = [
   },
   {
     title: "Strengthens your advisory relationship",
-    body: "Introducing a strategy that protects your client from a 30-40% tax hit at exit positions you as a proactive, comprehensive advisor, not just a portfolio manager.",
+    body: "Introducing a strategy that protects your client from losing 30-40% of their gains to tax at exit positions you as a proactive, comprehensive advisor, not just a portfolio manager.",
   },
   {
     title: "Simple referral, no complexity",
@@ -77,8 +77,8 @@ const HOW_IT_WORKS = [
   },
   {
     step: "03",
-    title: "We coordinate with you and share in the upside",
-    body: "We work alongside you throughout the process. You stay informed and involved. We handle the transaction, your client relationship stays yours, and you receive a finder's fee from us upon closing.",
+    title: "We coordinate with you throughout",
+    body: "You stay informed and involved, we handle the transaction, and your client relationship stays yours.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function AdvisorsPage() {
               {STATS.map((item) => (
                 <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
                   <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
+                    {item.value}
                   </p>
                   <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
                     {item.label}
@@ -121,9 +121,6 @@ export default function AdvisorsPage() {
                 </div>
               ))}
             </div>
-            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
-              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-            </p>
           </div>
         </Container>
       </Section>
@@ -151,7 +148,7 @@ export default function AdvisorsPage() {
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners of small multifamily buildings carry decades of appreciation
                   and depreciation. A sale typically triggers a combined tax liability of
-                  30-40% of the building&apos;s value.
+                  30-40% of their gains.
                 </p>
               </div>
               <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
@@ -165,8 +162,8 @@ export default function AdvisorsPage() {
               <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
                 <h3 className="font-medium text-[var(--mdh-title)]">No better structure</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 1031 exchange just replaces one building with another. Selling triggers a
-                  30-40% tax liability. For most clients, there has simply never been a structure
+                  A 1031 exchange just replaces one building with another. Selling gives up
+                  30-40% of the gains to tax. For most clients, there has simply never been a structure
                   that preserves their equity and keeps their capital working in a diversified,
                   institutional vehicle.
                 </p>
@@ -196,7 +193,7 @@ export default function AdvisorsPage() {
                   Key distinction
                 </p>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  This is a contribution, not a sale. IRC Section 721 is the IRS-approved structure
+                  This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
                   that makes this possible. The tax event that would have occurred at sale is
                   deferred entirely. Your client keeps 100% of what they built.
                 </p>
@@ -317,7 +314,7 @@ export default function AdvisorsPage() {
             </div>
             <div className="shrink-0">
               <a
-                href="mailto:info@middledoorhomes.com"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
               >
                 Start a conversation

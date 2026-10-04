@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "0%", label: "Taxes at closing", asterisk: true },
+  { value: "0%", label: "Taxes at closing" },
   { value: "30,000+", label: "Units of experience" },
   { value: "8-12%", label: "Target annual return" },
 ];
@@ -30,8 +30,46 @@ const BENEFITS = [
     body: "Operational responsibility transfers completely at close. Institutional-grade management handles tenants, maintenance, leasing, and compliance. You receive distributions, not work orders.",
   },
   {
-    title: "Structured liquidity post-lockup",
-    body: "After an initial lockup period, structured semi-annual redemption windows give you flexibility as your financial needs evolve.",
+    title: "Structured liquidity",
+    body: "A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity.",
+  },
+];
+
+const SITUATIONS = [
+  {
+    title: "Tired of managing",
+    body: "You have held a long time, built a large gain, and you are done with tenants and repairs.",
+    number: "$1M building: ~$540K after a cash sale vs. ~$740K through us",
+  },
+  {
+    title: "Loan maturing",
+    body: "Refinancing at today's rates can mean a much larger payment on the same building and the same management.",
+    number: "A refi can double your payment. We pay the loan off at closing.",
+  },
+  {
+    title: "Planning a 1031",
+    body: "A 1031 defers the tax, but only by taking on another building to find, finance, close, and run.",
+    number: "Same deferral, no 45-day clock, no new building",
+  },
+  {
+    title: "Building with upside left",
+    body: "Rents that could be higher and units that could be updated. Sell as-is and the next owner keeps that upside.",
+    number: "Listed at $1.2M: ~$1.0M as-is vs. ~$1.3-1.4M after the work",
+  },
+];
+
+const PARTNERSHIP_POINTS = [
+  {
+    title: "Today's value stays yours",
+    body: "The building's value today is yours in full. The upside comes on top.",
+  },
+  {
+    title: "We handle the work",
+    body: "We own renovations, operations, and rents. You stay fully passive.",
+  },
+  {
+    title: "50/50 on the gain",
+    body: "Everything above today's value is split with you, which is how owners typically end up well past any as-is sale.",
   },
 ];
 
@@ -65,7 +103,7 @@ const AFTER_CLOSE = [
   },
   {
     title: "Annual K-1 tax schedules",
-    body: "You continue to receive pass-through tax treatment as an LP, including your allocable share of depreciation from the portfolio's properties.",
+    body: "You keep pass-through tax treatment and receive a Schedule K-1 each year. What that is worth in a given year depends on your own basis.",
   },
   {
     title: "Audited financial statements",
@@ -83,7 +121,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What is a 721 exchange?",
-        a: "A 721 exchange (also called an UPREIT contribution) is an IRS-approved strategy that lets you contribute real property to an Operating Partnership in exchange for OP units: a passive ownership stake in the partnership. It is a contribution, not a sale, so no taxable event occurs at closing.",
+        a: "A 721 exchange (also called an UPREIT contribution) is a long-established part of the tax code that lets you contribute real property to an Operating Partnership in exchange for OP units: a passive ownership stake in the partnership. It is the same tool large REITs have used for decades to buy from owners who did not want to sell. What is new is applying it to buildings your size. It is a contribution, not a sale, so no taxable event occurs at closing.",
       },
       {
         q: "How is a 721 exchange different from a 1031 exchange?",
@@ -112,7 +150,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What is my ongoing tax treatment as an OP unit holder?",
-        a: "You continue to receive pass-through tax treatment. You receive a K-1 each year reflecting your allocable share of income, deductions, and depreciation from the portfolio's properties.",
+        a: "You keep pass-through tax treatment and receive a Schedule K-1 each year. What that is worth in a given year depends on your own basis.",
       },
       {
         q: "What happens to my mortgage?",
@@ -129,7 +167,11 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "How long does the process take?",
-        a: "Typical timeline from first conversation to close is 60-90 days, depending on due diligence complexity and third-party timelines. We move as efficiently as possible.",
+        a: "Typically a few months from first conversation to close, depending on due diligence and third-party timelines. We move as efficiently as possible.",
+      },
+      {
+        q: "Where do you buy?",
+        a: "We are a national platform. Within our cities we concentrate on neighborhoods with real tenant demand, proximity to employment and a trajectory we have conviction in, rather than areas already priced for perfection.",
       },
       {
         q: "Do I need my own attorney or CPA?",
@@ -145,12 +187,16 @@ const OWNER_FAQ: FaqGroup[] = [
         a: "We target 8-12% annualized returns through distributions and portfolio appreciation. For context, a typical balanced advisory portfolio returns 5-7% annually, and that's after you've already surrendered 30-40% of your capital to taxes to get there. The 721 exchange lets your full equity basis work from day one. Returns are not guaranteed and depend on portfolio performance, occupancy, operating expenses, and market conditions.",
       },
       {
-        q: "How are distributions paid?",
-        a: "Distributions are paid quarterly, after operating expenses, debt service, and capital reserves. The timing and amount will vary with portfolio cash flow.",
+        q: "How do distributions work?",
+        a: "You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50. We never take more than 30% of a year's total return, and if portfolio value falls we earn nothing further until it recovers. Distributions are targeted quarterly, subject to portfolio cash flow.",
+      },
+      {
+        q: "How does Middle Door Homes make money?",
+        a: "An annual management fee of 1.25% of assets under management, our share of the upside above the 6% preferred return, and our own units alongside yours. We do our best when the portfolio does.",
       },
       {
         q: "How does my income compare to what I earn now?",
-        a: "Most long-term owners are not capturing full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Professional management typically drives 20-50%+ incremental cash flow at scale, which can mean meaningfully higher passive income than you are earning today.",
+        a: "Most long-term owners are not capturing full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Our team has driven $120M+ in annualized NOI growth across a 30,000+ home portfolio, and we bring the same playbook to every building we own.",
       },
     ],
   },
@@ -159,7 +205,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "Can I get my money out?",
-        a: "OP units are not publicly traded and are illiquid for an initial lockup period of approximately 2-3 years. After lockup, structured semi-annual redemption windows provide flexibility, but liquidity is not guaranteed on demand. This is a long-term investment.",
+        a: "OP units are not publicly traded. A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity. Liquidity is not guaranteed on demand, so treat this as a long-term investment.",
       },
       {
         q: "What are the risks I should understand?",
@@ -167,7 +213,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What if I change my mind after contributing?",
-        a: "Once you contribute, the building belongs to the Operating Partnership and cannot be returned. OP units can be redeemed in semi-annual windows after the lockup period, but you should treat this as a long-term commitment going in.",
+        a: "Once you contribute, the building belongs to the Operating Partnership and cannot be returned. OP units can be redeemed through quarterly repurchase windows from year four, but you should treat this as a long-term commitment going in.",
       },
     ],
   },
@@ -226,7 +272,7 @@ export default function OwnersPage() {
               {STATS.map((item) => (
                 <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
                   <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
+                    {item.value}
                   </p>
                   <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
                     {item.label}
@@ -234,9 +280,6 @@ export default function OwnersPage() {
                 </div>
               ))}
             </div>
-            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
-              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-            </p>
           </div>
         </Container>
       </Section>
@@ -246,14 +289,14 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
-              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of that value to capital gains and depreciation recapture. The alternative has always been to hold, concentrated in the same single asset. Middle Door Homes offers a third path.
+              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of your gains to capital gains tax and depreciation recapture. The alternative has always been to hold, concentrated in the same single asset. Middle Door Homes offers a third path.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
                 <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling triggers capital gains and
-                  depreciation recapture, often costing 30-40% of the building&apos;s value.
+                  depreciation recapture, often costing 30-40% of your gains.
                 </p>
               </div>
               <div>
@@ -277,6 +320,30 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
+      {/* Situations */}
+      <Section className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>Where owners start</Eyebrow>
+            <Heading className="mt-2">Which sounds like you?</Heading>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
+              {SITUATIONS.map((item) => (
+                <div key={item.title} className="flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
+                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-3 text-[0.9rem] font-medium leading-snug text-[var(--mdh-title)]">
+                    {item.number}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
+              Illustrative round numbers. Figures will differ for your building.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* The solution */}
       <Section id="solution" className="pt-4">
         <Container>
@@ -285,7 +352,7 @@ export default function OwnersPage() {
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange is an IRS-approved strategy that allows you to contribute your building
+                A 721 exchange is a long-established part of the tax code that allows you to contribute your building
                 to a professionally managed portfolio, in exchange for a passive ownership stake,
                 with no taxable event at closing.
               </p>
@@ -334,7 +401,7 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
             <Eyebrow>How returns are generated</Eyebrow>
-            <Heading className="mt-2">We create value first. Then we take our stake.</Heading>
+            <Heading className="mt-2">We invest in the buildings. You get paid first.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher NOI, improved occupancy, and where the building allows, additional units for incremental cash flow.
             </p>
@@ -346,17 +413,38 @@ export default function OwnersPage() {
                 </p>
               </div>
               <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">Promote tied to performance</h3>
+                <h3 className="font-medium text-[var(--mdh-title)]">You are paid first</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  MDH earns its ownership stake only when value creation is confirmed by NOI growth. If the renovation doesn&apos;t generate measurable improvement, MDH doesn&apos;t take its equity stake. That alignment is structurally different from any other vehicle where the GP takes fees and promotes regardless of what they deliver.
+                  You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50.
                 </p>
               </div>
             </div>
             <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">The alignment</p>
               <p className="mt-2 text-[0.97rem] font-medium leading-snug text-[var(--mdh-title)]">
-                We get paid when we make your asset more valuable. Not before. If the renovation does not generate confirmed NOI improvement, MDH does not take its equity stake.
+                We never take more than 30% of a year&apos;s total return, and if portfolio value falls we earn nothing further until it recovers. We hold our own units alongside yours.
               </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Value-add partnership */}
+      <Section id="partnership" className="pt-4">
+        <Container>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>For buildings with upside left in them</Eyebrow>
+            <Heading className="mt-2">The value-add partnership</Heading>
+            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              Some buildings are worth more after the work than any as-is buyer will pay. For those, we offer a partnership: your building goes into a single-asset partnership with us, we handle the renovation, operations, and rents, and the increase in value is split 50/50 with you.
+            </p>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
+              {PARTNERSHIP_POINTS.map((item) => (
+                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
+                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
@@ -463,15 +551,15 @@ export default function OwnersPage() {
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 <div>
                   <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Balanced advisor portfolio</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">~5-7% annually - but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">~5-7% annually, but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.</p>
                 </div>
                 <div>
                   <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Keep managing the building</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns - with full operational responsibility and concentrated single-asset risk.</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns, with full operational responsibility and concentrated single-asset risk.</p>
                 </div>
                 <div className="rounded-lg border border-[var(--mdh-accent)]/30 bg-white p-3">
                   <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">MDH 721 exchange</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span> - no tax haircut at contribution, no management burden.</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span>: no tax haircut at contribution, no management burden.</p>
                 </div>
               </div>
             </div>
@@ -498,9 +586,9 @@ export default function OwnersPage() {
                     rent optimization, and operational efficiency, passing that upside to you as a passive LP.
                   </p>
                   <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Institutional management delivers{" "}
-                    <span className="font-medium text-[var(--mdh-title)]">~20-50%+ incremental cash flow</span>
-                    {" "}at scale, the same playbook applied across the Middle Door portfolio.
+                    Our team has driven{" "}
+                    <span className="font-medium text-[var(--mdh-title)]">$120M+ in annualized NOI growth</span>
+                    {" "}across a 30,000+ home portfolio. We bring the same playbook to every building we own.
                   </p>
                 </div>
               </div>
@@ -548,7 +636,7 @@ export default function OwnersPage() {
                     "You've held long enough to have meaningful embedded gains",
                     "You're ready to exit active operations, but the tax cost of a sale is too high",
                     "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
-                    "Your mortgage is moderate relative to the building's value",
+                    "You do not need a debt-free building: we pay off your mortgage at closing",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                       <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
@@ -562,7 +650,7 @@ export default function OwnersPage() {
                 <ul className="mt-3 space-y-2">
                   {[
                     "You need immediate, unrestricted liquidity",
-                    "Your building carries a high mortgage relative to its current value",
+                    "Your mortgage is close to the building's value, leaving little equity to contribute",
                     "You want a short-term exit rather than a long-term passive investment",
                     "The illiquid nature of a private partnership does not fit your financial situation",
                   ].map((item) => (
@@ -659,10 +747,10 @@ export default function OwnersPage() {
             </div>
             <div className="shrink-0">
               <a
-                href="mailto:info@middledoorhomes.com"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
               >
-                Start the conversation
+                Send us the address
               </a>
             </div>
           </div>

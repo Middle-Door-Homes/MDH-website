@@ -10,14 +10,22 @@ const BLDG_DEFAULT = 1_000_000;
 
 const BASIS_MIN = 50_000;
 const BASIS_STEP = 25_000;
-const BASIS_DEFAULT = 350_000;
+const BASIS_DEFAULT = 575_000;
 
 const MORT_MAX_RATIO = 0.75;
 const MORT_STEP = 10_000;
+const MORT_DEFAULT = 200_000;
 
-const SALE_COSTS_RATE = 0.05;     // 5% broker fees + closing costs (same both sides)
-const CAP_GAINS_RATE = 0.20;      // federal long-term rate; state taxes additional
-const DEPR_RECAPTURE_RATE = 0.10; // est. 25% recapture on accumulated depreciation
+const SALE_COSTS_RATE = 0.06;     // 6% broker fees + closing costs (same both sides)
+const CAP_GAINS_RATE = 0.20;      // federal long-term capital gains rate
+const RECAPTURE_RATE = 0.25;      // federal depreciation recapture rate
+const NIIT_RATE = 0.038;          // net investment income tax
+const DEPRECIATED_SHARE = 0.40;   // est. share of purchase price already depreciated
+const STATE_MAX = 0.10;
+const STATE_STEP = 0.005;
+const STATE_DEFAULT = 0.05;
+
+const roundK = (n: number) => Math.round(n / 1_000) * 1_000;
 
 function fmt(n: number, compact = false) {
   if (compact) {
@@ -85,7 +93,8 @@ function Row({
 export function TaxCalculator() {
   const [bldg, setBldg] = useState(BLDG_DEFAULT);
   const [basis, setBasis] = useState(BASIS_DEFAULT);
-  const [mort, setMort] = useState(0);
+  const [mort, setMort] = useState(MORT_DEFAULT);
+  const [stateRate, setStateRate] = useState(STATE_DEFAULT);
 
   const mortMax = Math.round(bldg * MORT_MAX_RATIO);
   const safeM = Math.min(mort, mortMax);
@@ -95,11 +104,11 @@ export function TaxCalculator() {
   const saleCosts = Math.round(bldg * SALE_COSTS_RATE);
 
   // Sale scenario
-  const capGainsTax = Math.round(Math.max(0, bldg - safeBasis) * CAP_GAINS_RATE);
-  const deprRecapture = Math.round(safeBasis * DEPR_RECAPTURE_RATE);
+  const capGainsTax = roundK(Math.max(0, bldg - safeBasis) * (CAP_GAINS_RATE + NIIT_RATE + stateRate));
+  const deprRecapture = roundK(safeBasis * DEPRECIATED_SHARE * (RECAPTURE_RATE + NIIT_RATE + stateRate));
   const saleNet = bldg - saleCosts - safeM - capGainsTax - deprRecapture;
 
-  // 721 exchange scenario - same costs, no taxes
+  // 721 exchange scenario: same costs, no taxes
   const mdhNet = bldg - saleCosts - safeM;
   const equityGain = mdhNet - saleNet;
 
@@ -111,11 +120,11 @@ export function TaxCalculator() {
           <Heading className="mt-2">How much equity do you keep?</Heading>
           <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
             Adjust the sliders to match your situation. See how a 721 exchange compares to a
-            traditional sale - line by line.
+            traditional sale, line by line.
           </p>
 
           {/* Sliders */}
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
@@ -192,6 +201,29 @@ export function TaxCalculator() {
                 <span>{fmt(mortMax, true)}</span>
               </div>
             </div>
+            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <div className="flex items-baseline justify-between gap-2">
+                <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
+                  State income tax rate
+                </p>
+                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                  {(stateRate * 100).toFixed(1)}%
+                </p>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={STATE_MAX}
+                step={STATE_STEP}
+                value={stateRate}
+                onChange={(e) => setStateRate(Number(e.target.value))}
+                className="mt-3 w-full accent-[var(--mdh-accent)]"
+              />
+              <div className="mt-1 flex justify-between text-[0.72rem] text-[var(--mdh-muted)]">
+                <span>0%</span>
+                <span>{STATE_MAX * 100}%</span>
+              </div>
+            </div>
           </div>
 
           {/* Comparison columns */}
@@ -204,7 +236,7 @@ export function TaxCalculator() {
               <div className="mt-4 space-y-2.5">
                 <Row label="Sale proceeds" value={fmt(bldg)} />
                 <Row
-                  label="Sale costs (5%)"
+                  label="Sale costs (6%)"
                   value={`-${fmt(saleCosts)}`}
                   negative
                 />
@@ -226,12 +258,12 @@ export function TaxCalculator() {
             {/* MDH 721 exchange */}
             <div className="rounded-xl border border-[var(--mdh-accent)] bg-[var(--mdh-ink)] p-5 md:p-6">
               <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-white/60">
-                721 Exchange - Middle Door
+                721 Exchange: Middle Door
               </p>
               <div className="mt-4 space-y-2.5">
                 <Row label="Contribution value" value={fmt(bldg)} dark />
                 <Row
-                  label="Sale costs (5%, non-cash)"
+                  label="Sale costs (6%, non-cash)"
                   value={`-${fmt(saleCosts)}`}
                   negative
                   dark
@@ -242,8 +274,8 @@ export function TaxCalculator() {
                   negative={safeM > 0}
                   dark
                 />
-                <Row label="Capital gains tax" value="$0 - deferred" zero dark />
-                <Row label="Depreciation recapture" value="$0 - deferred" zero dark />
+                <Row label="Capital gains tax" value="$0 (deferred)" zero dark />
+                <Row label="Depreciation recapture" value="$0 (deferred)" zero dark />
                 <Row label="Equity as OP units" value={fmt(mdhNet)} total dark />
               </div>
             </div>
@@ -265,8 +297,8 @@ export function TaxCalculator() {
           )}
 
           <p className="mt-4 text-[0.73rem] leading-relaxed text-[var(--mdh-muted)]">
-            Actual tax liability depends on your cost basis, depreciation history, and state of
-            residence. This is illustrative only - not tax or legal advice.
+            Illustrative only. Assumes 20% federal capital gains, 25% depreciation recapture, 3.8%
+            net investment income tax, and your state rate, with 40% of the purchase price depreciated.
           </p>
         </div>
       </Container>

@@ -18,12 +18,12 @@ const AUDIENCE_LINKS = [
     ],
   },
   {
-    href: "/partners",
-    label: "Partners",
+    href: "/brokers",
+    label: "Brokers",
     sections: [
-      { href: "/partners#commission", label: "Your commission" },
-      { href: "/partners#how-it-works", label: "How it works" },
-      { href: "/partners#faq", label: "FAQ" },
+      { href: "/brokers#commission", label: "Your commission" },
+      { href: "/brokers#how-it-works", label: "How it works" },
+      { href: "/brokers#faq", label: "FAQ" },
     ],
   },
   {
@@ -113,10 +113,10 @@ export function Nav() {
 
           <div className="hidden items-center gap-4 md:flex">
             <a
-              href="mailto:info@middledoorhomes.com"
+              href="mailto:acquisitions@middledoorhomes.com"
               className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
             >
-              info@middledoorhomes.com
+              acquisitions@middledoorhomes.com
             </a>
           </div>
 
@@ -179,10 +179,10 @@ export function Nav() {
               })}
             </nav>
             <a
-              href="mailto:info@middledoorhomes.com"
+              href="mailto:acquisitions@middledoorhomes.com"
               className="mt-4 inline-block text-sm font-medium text-[var(--mdh-ink)]"
             >
-              info@middledoorhomes.com
+              acquisitions@middledoorhomes.com
             </a>
           </Container>
         </div>

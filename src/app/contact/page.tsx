@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
-import { CalendlyButton } from "@/components/calendly-embed";
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Schedule a call with Middle Door Homes to discuss a 721 exchange for your multifamily building.",
+  description: "Send Middle Door Homes your building address for a personalized valuation and proposal on a 721 exchange.",
   alternates: { canonical: "/contact" },
 };
 
@@ -23,9 +23,9 @@ export default function ContactPage() {
                 representing a client&apos;s sale, or an advisor interested in learning more, we would be glad to connect.
               </Lead>
               <Lead>
-                For property owners, we offer a personalized, no-commitment valuation of your
-                building and a clear walkthrough of how the numbers work for your specific
-                situation. Schedule a 20-minute call below or reach us at{" "}
+                For property owners, send us the address for a personalized, no-commitment
+                valuation and proposal, with a clear walkthrough of how the numbers work for your
+                situation. Use the form below or reach us at{" "}
                 <a
                   href="tel:7084126898"
                   className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
@@ -34,10 +34,10 @@ export default function ContactPage() {
                 </a>
                 {" "}or{" "}
                 <a
-                  href="mailto:info@middledoorhomes.com"
+                  href="mailto:acquisitions@middledoorhomes.com"
                   className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
                 >
-                  info@middledoorhomes.com
+                  acquisitions@middledoorhomes.com
                 </a>
                 .
               </Lead>
@@ -58,17 +58,15 @@ export default function ContactPage() {
 
       <Section className="pt-4">
         <Container>
-          <div className="flex flex-col gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
-            <div>
-              <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                Ready to see how this works for your building?
-              </p>
-              <p className="mt-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 20-minute call is enough to walk through the structure, estimate your equity outcome, and answer your questions.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <CalendlyButton />
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+              Send us the address for a personalized valuation and proposal
+            </p>
+            <p className="mt-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+              An address is enough to start. We will come back with a number and walk you through how it works for your building.
+            </p>
+            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+              <ContactForm />
             </div>
           </div>
         </Container>

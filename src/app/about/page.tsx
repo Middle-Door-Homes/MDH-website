@@ -29,6 +29,12 @@ const TEAM = [
     photo: "/images/mike-rozovics.jpg",
     bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and NOI improvement across dispersed portfolios at scale. That range, from individual units to institutional infrastructure, is the operational core of what Middle Door brings to every contributed building.",
   },
+  {
+    name: "Bob Sievewright",
+    title: "Principal, Acquisitions",
+    photo: "/images/bob-sievewright.jpg",
+    bio: "Bob spent nearly fifteen years advising high-net-worth clients on their investments: as a financial advisor at Smith Barney, Vice President of Private Client Services at Bear Stearns, and Senior Vice President of Investments at Morgan Stanley. He went on to found Wright Advisory Group, a sales and business development consultancy. At Middle Door he leads owner, broker, and advisor relationships, bringing long-term owners a way out of active management that keeps their equity working.",
+  },
 ];
 
 const LOGOS = [
@@ -109,7 +115,7 @@ export default function AboutPage() {
                   How it works
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 721 exchange is an IRS-approved strategy that allows you to contribute your
+                  A 721 exchange is a long-established part of the tax code that allows you to contribute your
                   building to a professionally managed portfolio in exchange for a passive ownership
                   stake, with no taxable event at closing. No capital gains. No depreciation
                   recapture.
@@ -121,7 +127,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling means a large, often
-                  unexpected tax bill, typically 30-40% of the building&apos;s value. A 721 exchange
+                  unexpected tax bill, typically 30-40% of your gains. A 721 exchange
                   defers that entirely. Your equity rolls forward intact.
                 </p>
               </div>
@@ -232,7 +238,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               {TEAM.map((member) => (
                 <div key={member.name} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
                   <div className="flex items-center gap-3">

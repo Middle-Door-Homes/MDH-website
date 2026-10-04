@@ -4,22 +4,22 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "Partner Program - Earn a Real Estate Commission on 721 Exchange Transactions",
+  title: "For Brokers: Your Full Commission on 721 Exchange Transactions",
   description:
-    "Earn a real estate commission representing your client's building sale through a §721 exchange. We work with licensed brokers who represent small multifamily owners in this tax-deferred transition.",
-  alternates: { canonical: "/partners" },
+    "Your commission is paid in full, in cash at closing, per your listing agreement. Middle Door Homes gives long-term small multifamily owners a tax-deferred way to say yes.",
+  alternates: { canonical: "/brokers" },
 };
 
 const STATS = [
-  { value: "0%", label: "Taxes at closing for owners", asterisk: true },
-  { value: "3%", label: "Typical commission (seller-side)" },
-  { value: "90%+", label: "Off-market buildings" },
+  { value: "0%", label: "Taxes at closing for owners" },
+  { value: "100%", label: "Commission paid in cash at close" },
+  { value: "2-49", label: "Units per building" },
 ];
 
 const FOR_YOU = [
   {
-    title: "Real estate commission",
-    body: "You represent your client's building sale and earn a typical seller-side real estate commission, paid at close. No buyer's broker split.",
+    title: "Your full commission",
+    body: "Paid 100% in cash at closing, per your listing agreement, the same as a conventional sale.",
   },
   {
     title: "Off-market access",
@@ -60,7 +60,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Earn your commission",
-    body: "If your client's building is contributed to our portfolio, you receive a typical seller-side real estate commission for representing the sale, paid at close.",
+    body: "If your client's building is contributed to our portfolio, your commission is paid in full, in cash at closing, per your listing agreement.",
   },
 ];
 
@@ -70,11 +70,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my commission look like?",
-        a: "You earn a typical seller-side real estate commission, negotiated with your client as you would in any transaction — MDH does not set commission rates. In a traditional sale, total commission is often split between a seller's broker and a buyer's broker, roughly 3% to each side for a combined 6%. With Middle Door, there is no buyer's broker: we are the acquirer. The full seller-side commission goes to you. We observe 3% to be typical for seller-side representation on these transactions, though the rate is between you and your client.",
+        a: "Your commission is paid 100% in cash at closing, per your listing agreement, the same as a conventional sale. MDH does not set commission rates; that stays between you and your client.",
       },
       {
         q: "How does this compare to representing a traditional sale?",
-        a: "In a traditional sale, total commission is typically split between the seller's broker and buyer's broker — roughly 3% each side. With Middle Door, there is no buyer's broker, so you earn the full seller-side commission with no split. And your client avoids a large tax bill in the process.",
+        a: "On your side it looks the same: same listing agreement, same commission, paid in cash at closing. The difference is for your seller, who can defer the tax bill that often keeps long-term owners from selling at all.",
       },
       {
         q: "Are there arrangements for consistent broker partners?",
@@ -98,7 +98,7 @@ const BROKER_FAQ: FaqGroup[] = [
         a: "A traditional sale is always an option and we will say so honestly. But for long-term owners with low cost basis, the tax bill from a sale can be enormous. We can help you model the comparison. In most cases, a 721 exchange leaves the client significantly better off. That is a conversation worth having before they list.",
       },
       {
-        q: "My client is thinking about a 1031 exchange - should I still introduce them?",
+        q: "My client is thinking about a 1031 exchange. Should I still introduce them?",
         a: "Yes. A 721 exchange is often a better solution than a 1031 for owners who want to stop managing. A 1031 also defers taxes, but requires finding a replacement property in 45 days, closing in 180, and then managing the new asset. A 721 exchange exits them from active ownership permanently, with no deadline and no new building to run.",
       },
       {
@@ -112,7 +112,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What do I actually do to represent a client?",
-        a: "Just make the introduction. Email us at info@middledoorhomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
+        a: "Just make the introduction. Email us at acquisitions@middledoorhomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
       },
       {
         q: "Will you help me explain this to my client?",
@@ -120,11 +120,27 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "What is the typical timeline from introduction to commission payment?",
-        a: "From first conversation to close typically takes 60-90 days, depending on due diligence and the client's pace. We keep you informed throughout the process.",
+        a: "Typically a few months from first conversation to close, depending on due diligence and the client\'s pace. We keep you informed throughout the process.",
       },
       {
         q: "How does this affect my ongoing relationship with the client?",
         a: "It usually strengthens it. You are solving a problem the client did not know had a solution. Satisfied owners refer family members and other investors who own similar properties.",
+      },
+      {
+        q: "Are you going around me to the owner?",
+        a: "No. You represent your client and we keep you in the loop the whole way. We do not circumvent you or diminish your commission.",
+      },
+      {
+        q: "Are you actually going to close?",
+        a: "Yes. We close with conventional financing. Happy to walk you through our process and share references.",
+      },
+      {
+        q: "Do you need a tour first?",
+        a: "No. We make the offer off the listing data and inspect during diligence.",
+      },
+      {
+        q: "I can't give tax advice. Is that a problem?",
+        a: "No, and the process is built that way. You spot the situation and make the introduction. We handle the structure conversation with your client and their CPA from there.",
       },
     ],
   },
@@ -141,7 +157,11 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "How liquid is this for my client?",
-        a: "OP units are illiquid for an initial lockup period of approximately 2-3 years. After that, semi-annual redemption windows provide flexibility. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
+        a: "OP units are not publicly traded. A three-year minimum hold applies to all units, and from year four the partnership targets quarterly repurchase windows, at the holder\'s option and subject to portfolio liquidity. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
+      },
+      {
+        q: "Why a partnership and not a cash offer?",
+        a: "For buildings with upside left in them, a cash offer pays as-is value. The partnership pays that same value plus half of what the renovation adds.",
       },
     ],
   },
@@ -150,15 +170,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "How does Middle Door generate revenue?",
-        a: "MDH earns a property management fee on the portfolio: a standard percentage of gross rents, consistent with institutional property management. We do not charge acquisition fees or promote structures that would misalign our interests with owners. Our business grows when the portfolio grows and performs well.",
+        a: "An annual management fee of 1.25% of assets under management, our share of the upside above a 6% preferred return, and our own units held alongside owners\'. Owners receive 100% of the first 6% of annual total return before we participate. We do our best when the portfolio does.",
       },
       {
         q: "Are your interests aligned with mine and my client's?",
-        a: "Yes. We earn ongoing management fees tied to portfolio performance. We are incentivized to operate well, grow income, and retain owners as long-term partners. We are not a fund with a short hold period trying to flip assets. We are building a durable housing business. When your client does well, we do well.",
-      },
-      {
-        q: "Are you competing with me by going directly to property owners?",
-        a: "No. We work closely with broker partners and protect your client relationships. We do not circumvent you or diminish your commission, and we keep you informed throughout the process. Our interests are aligned: you represent your client's interests, your client solves a real problem, and we grow the portfolio.",
+        a: "Yes. Owners receive the first 6% of annual total return before we participate, we never take more than 30% of a year\'s return, and if portfolio value falls we earn nothing further until it recovers. We are not a fund with a short hold period trying to flip assets. We are building a durable housing business. When your client does well, we do well.",
       },
     ],
   },
@@ -176,7 +192,7 @@ const brokerFaqSchema = {
   ),
 };
 
-export default function PartnersPage() {
+export default function BrokersPage() {
   return (
     <main>
       <script
@@ -200,10 +216,10 @@ export default function PartnersPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For partners
+                  For brokers
                 </p>
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Represent your client&apos;s sale.<br className="hidden md:block" /> Earn a real estate<br className="hidden md:block" /> commission.
+                  Your commission, paid in full.<br className="hidden md:block" /> A new way for your<br className="hidden md:block" /> seller to say yes.
                 </h1>
               </div>
             </div>
@@ -211,7 +227,7 @@ export default function PartnersPage() {
               {STATS.map((item) => (
                 <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
                   <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}{item.asterisk && <sup className="text-[0.55em] font-normal">*</sup>}
+                    {item.value}
                   </p>
                   <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
                     {item.label}
@@ -219,9 +235,6 @@ export default function PartnersPage() {
                 </div>
               ))}
             </div>
-            <p className="border-t border-white/10 px-5 py-2.5 text-[0.65rem] leading-relaxed text-white/30 md:px-7">
-              * §721 exchanges are non-recognition events for federal income tax purposes. Individual tax outcomes depend on cost basis, depreciation history, holding period, and state of residence. Consult your CPA.
-            </p>
           </div>
         </Container>
       </Section>
@@ -344,7 +357,7 @@ export default function PartnersPage() {
             </div>
             <div className="shrink-0">
               <a
-                href="mailto:info@middledoorhomes.com"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
               >
                 Introduce a client

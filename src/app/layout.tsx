@@ -21,12 +21,12 @@ const playfair = Playfair_Display({
 const SITE_URL = "https://www.middledoorhomes.com";
 const SITE_NAME = "Middle Door Homes";
 const DEFAULT_DESCRIPTION =
-  "Middle Door Homes helps small multifamily building owners transition from active landlord to passive investor through a tax-deferred 721 exchange - without triggering a taxable event.";
+  "Middle Door Homes helps small multifamily building owners transition from active landlord to passive investor through a tax-deferred 721 exchange, without triggering a taxable event.";
 const OG_IMAGE = {
   url: "/images/hero-redbrick.jpg",
   width: 1200,
   height: 800,
-  alt: "Classic brick apartment building - Middle Door Homes",
+  alt: "Classic brick apartment building, Middle Door Homes",
 };
 
 export const metadata: Metadata = {
@@ -96,7 +96,8 @@ const jsonLd = [
     url: SITE_URL,
     logo: `${SITE_URL}/icon.png`,
     description: DEFAULT_DESCRIPTION,
-    email: "info@middledoorhomes.com",
+    email: "acquisitions@middledoorhomes.com",
+    telephone: "+1-708-412-6898",
     areaServed: {
       "@type": "Country",
       name: "United States",

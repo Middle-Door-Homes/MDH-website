@@ -11,8 +11,11 @@ export function Footer() {
             <Link href="/investor-login" className="hover:text-[var(--mdh-ink)]">
               Investor Login
             </Link>
-            <a href="mailto:info@middledoorhomes.com" className="hover:text-[var(--mdh-ink)]">
-              info@middledoorhomes.com
+            <a href="tel:7084126898" className="hover:text-[var(--mdh-ink)]">
+              (708) 412-6898
+            </a>
+            <a href="mailto:acquisitions@middledoorhomes.com" className="hover:text-[var(--mdh-ink)]">
+              acquisitions@middledoorhomes.com
             </a>
           </div>
         </div>
