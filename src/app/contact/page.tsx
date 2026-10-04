@@ -37,7 +37,7 @@ export default function ContactPage() {
                   href="mailto:acquisitions@middledoorhomes.com"
                   className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
                 >
-                  acquisitions@middledoorhomes.com
+                  Acquisitions@MiddleDoorHomes.com
                 </a>
                 .
               </Lead>

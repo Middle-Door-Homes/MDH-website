@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const EMAIL = "acquisitions@middledoorhomes.com";
+const EMAIL = "Acquisitions@MiddleDoorHomes.com";
 
 const inputClass =
   "mt-1.5 w-full rounded-lg border border-[var(--mdh-line)] bg-white px-3.5 py-2.5 text-[0.95rem] text-[var(--mdh-title)] outline-none transition focus:border-[var(--mdh-accent)]";

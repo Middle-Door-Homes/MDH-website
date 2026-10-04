@@ -112,7 +112,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What do I actually do to represent a client?",
-        a: "Just make the introduction. Email us at acquisitions@middledoorhomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
+        a: "Just make the introduction. Email us at Acquisitions@MiddleDoorHomes.com with a note about your client's situation: building size, location, approximate value, and what is prompting the conversation. We handle the educational discussion with the owner from there.",
       },
       {
         q: "Will you help me explain this to my client?",

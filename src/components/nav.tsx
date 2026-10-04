@@ -116,7 +116,7 @@ export function Nav() {
               href="mailto:acquisitions@middledoorhomes.com"
               className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
             >
-              acquisitions@middledoorhomes.com
+              Acquisitions@MiddleDoorHomes.com
             </a>
           </div>
 
@@ -182,7 +182,7 @@ export function Nav() {
               href="mailto:acquisitions@middledoorhomes.com"
               className="mt-4 inline-block text-sm font-medium text-[var(--mdh-ink)]"
             >
-              acquisitions@middledoorhomes.com
+              Acquisitions@MiddleDoorHomes.com
             </a>
           </Container>
         </div>

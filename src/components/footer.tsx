@@ -15,7 +15,7 @@ export function Footer() {
               (708) 412-6898
             </a>
             <a href="mailto:acquisitions@middledoorhomes.com" className="hover:text-[var(--mdh-ink)]">
-              acquisitions@middledoorhomes.com
+              Acquisitions@MiddleDoorHomes.com
             </a>
           </div>
         </div>

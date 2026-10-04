@@ -19,13 +19,13 @@ const TEAM = [
   },
   {
     name: "Jose Torres",
-    title: "Chief Executive Officer",
+    title: "Partner & CEO",
     photo: "/images/jose-torres.jpg",
     bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He was head of asset management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and served as chief of staff within Invitation Homes' finance organization through its IPO. He knows what institutional-quality residential platforms look like from the inside, both operationally and financially. Prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
-    title: "EVP, Operations",
+    title: "Partner & EVP Operations",
     photo: "/images/mike-rozovics.jpg",
     bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and NOI improvement across dispersed portfolios at scale. That range, from individual units to institutional infrastructure, is the operational core of what Middle Door brings to every contributed building.",
   },
