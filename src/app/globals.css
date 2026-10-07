@@ -63,3 +63,12 @@ input {
 ::selection {
   background: rgba(32, 55, 76, 0.18);
 }
+
+/* Slow drift on the homepage hero photo */
+@keyframes mdh-drift {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.08); }
+}
+.mdh-drift {
+  animation: mdh-drift 24s ease-out forwards;
+}

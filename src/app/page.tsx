@@ -112,15 +112,17 @@ const LOGOS = [
 
 const SERIF_H2 =
   "font-display text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[3.1rem] xl:text-[3.5rem]";
-const LABEL = "text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]";
+
+
+const BRASS = "#b8894f";
 
 export default function Home() {
   return (
     <main>
-      {/* Hero: split panel (photo first on phones) */}
+      {/* Hero: tall split panel, slow drift on the photo */}
       <section className="bg-[var(--mdh-ink)]">
         <div className="grid lg:grid-cols-2">
-          <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:order-last lg:aspect-auto">
+          <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:order-last lg:aspect-auto">
             <Image
               src="/images/hero-chicago-street.jpg"
               alt="Tree-lined street of brick multifamily buildings"
@@ -128,24 +130,27 @@ export default function Home() {
               priority
               quality={92}
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[62%_center]"
+              className="mdh-drift object-cover object-[62%_center]"
             />
           </div>
-          <div className="flex items-center px-5 pb-12 pt-10 sm:px-8 md:py-16 lg:min-h-[640px] lg:py-24 lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))]">
+          <div className="flex items-center px-5 pb-20 pt-10 sm:px-8 md:pb-24 md:pt-16 lg:min-h-[min(820px,calc(100vh-64px))] lg:pb-32 lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 lg:pt-24 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))]">
             <div className="max-w-xl">
-              <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/55 lg:block">
-                Middle Door Homes
-              </p>
-              <h1 className="font-display text-[2.3rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[3rem] lg:mt-4 lg:text-[4rem]">
+              <div className="hidden items-center gap-4 lg:flex">
+                <span className="h-px w-10" style={{ background: BRASS }} />
+                <p className="text-[0.72rem] font-medium uppercase tracking-[0.26em]" style={{ color: BRASS }}>
+                  Middle Door Homes
+                </p>
+              </div>
+              <h1 className="font-display text-[2.5rem] font-medium leading-[1.02] tracking-[-0.015em] text-white sm:text-[3.4rem] lg:mt-6 lg:text-[4.6rem] xl:text-[5.2rem]">
                 Your building&rsquo;s next chapter
               </h1>
-              <p className="mt-4 text-[1.05rem] font-light leading-relaxed text-white/80 md:mt-5 md:text-[1.25rem]">
+              <p className="mt-5 text-[1.08rem] font-light leading-relaxed text-white/80 md:mt-7 md:text-[1.3rem]">
                 The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 md:mt-9">
+              <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 md:mt-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
                 >
                   Send us an address
                 </Link>
@@ -158,17 +163,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key figures */}
-      <section className="border-b border-[var(--mdh-line)] bg-white">
+      {/* Key figures: floating panel overlapping the hero */}
+      <section className="relative z-10">
         <Container>
-          <div className="grid grid-cols-3 divide-x divide-[var(--mdh-line)]">
+          <div className="-mt-12 grid grid-cols-3 divide-x divide-[var(--mdh-line)] bg-white shadow-[0_24px_60px_rgba(18,29,41,0.16)] md:-mt-20">
             {THREE_PROOFS.map((item) => (
-              <div key={item.promise} className="px-3 py-6 text-center first:pl-0 last:pr-0 sm:px-8 sm:text-left md:py-10">
-                <p className={`hidden sm:block ${LABEL}`}>{item.promise}</p>
-                <p className="text-[1.7rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)] sm:mt-3 sm:text-[2.4rem] md:text-[3rem]">
+              <div key={item.promise} className="px-3 py-6 text-center sm:px-8 sm:py-9 sm:text-left md:px-10 md:py-10">
+                <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.2em] sm:block" style={{ color: BRASS }}>
+                  {item.promise}
+                </p>
+                <p className="font-display text-[1.9rem] leading-none text-[var(--mdh-title)] lining-nums sm:mt-4 sm:text-[2.8rem] md:text-[3.4rem]">
                   {item.stat}
                 </p>
-                <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
+                <p className="mt-2 text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[var(--mdh-subtle)]">
                   {item.statLabel}
                 </p>
                 <p className="mt-4 hidden text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] sm:block md:text-[1.02rem]">{item.body}</p>
@@ -178,28 +185,44 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Statement + three doors */}
-      <section className="py-14 md:py-20">
-        <Container>
-          <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2rem] font-medium leading-[1.2] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[3.1rem] xl:text-[3.75rem]">
+      {/* Statement over a full-width photo */}
+      <section className="relative mt-16 overflow-hidden md:mt-24">
+        <Image
+          src="/images/nb-autumn-corner.jpg"
+          alt=""
+          fill
+          quality={88}
+          sizes="100vw"
+          className="object-cover object-[center_60%]"
+        />
+        <div className="absolute inset-0 bg-[rgba(14,22,32,0.68)]" />
+        <Container className="relative py-24 md:py-36">
+          <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
             Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
           </p>
-          <div className="mt-10 grid border-y border-[var(--mdh-line)] md:mt-12 md:grid-cols-3">
+        </Container>
+      </section>
+
+      {/* Three doors */}
+      <section className="bg-white py-14 md:py-20">
+        <Container>
+          <div className="grid border-y border-[var(--mdh-line)] md:grid-cols-3">
             {THREE_DOORS.map((door) => (
               <div
                 key={door.label}
                 className={`flex items-center gap-5 px-5 py-6 text-left md:flex-col md:gap-0 md:px-8 md:py-16 md:text-center ${
-                  door.mdh
-                    ? "bg-[var(--mdh-ink)]"
-                    : "border-b border-[var(--mdh-line)] md:border-b-0 md:border-r"
+                  door.mdh ? "bg-[var(--mdh-ink)]" : "border-b border-[var(--mdh-line)] md:border-b-0 md:border-r"
                 }`}
               >
                 <DoorIcon
                   open={door.mdh}
-                  className={`h-12 w-9 shrink-0 md:h-20 md:w-14 ${door.mdh ? "text-[#c99a5e]" : "text-[var(--mdh-subtle)]/60"}`}
+                  className={`h-12 w-9 shrink-0 md:h-20 md:w-14 ${door.mdh ? "text-[#b8894f]" : "text-[var(--mdh-subtle)]/60"}`}
                 />
                 <div>
-                  <p className={`text-[0.7rem] font-medium uppercase tracking-[0.2em] md:mt-5 ${door.mdh ? "text-white/60" : "text-[var(--mdh-subtle)]"}`}>
+                  <p
+                    className={`text-[0.7rem] font-medium uppercase tracking-[0.2em] md:mt-5 ${door.mdh ? "" : "text-[var(--mdh-subtle)]"}`}
+                    style={door.mdh ? { color: BRASS } : undefined}
+                  >
                     {door.label}
                   </p>
                   <p className={`font-display mt-1.5 text-[1.25rem] leading-snug lining-nums md:mx-auto md:mt-4 md:max-w-[18ch] md:text-[1.75rem] xl:text-[2rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
@@ -212,32 +235,34 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Who this is for: photo beside text */}
-      <section className="bg-white py-14 md:py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-stretch lg:gap-16">
-            <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[560px]">
-              <Image
-                src="/images/nb-brick-threeflats.jpg"
-                alt="Brick three-flats on a tree-lined street"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <p className={LABEL}>Who this is for</p>
+      {/* Who this is for: photo bleeds to the left edge */}
+      <section className="pb-14 md:pb-20">
+        <div className="grid lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[620px]">
+            <Image
+              src="/images/nb-brick-threeflats.jpg"
+              alt="Brick three-flats on a tree-lined street"
+              fill
+              quality={90}
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex items-center px-5 pt-10 sm:px-8 lg:pl-16 lg:pr-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pt-0 xl:pr-[max(5rem,calc((100vw-110rem)/2+5rem))]">
+            <div className="max-w-xl">
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
+                Who this is for
+              </p>
               <h2 className={`mt-4 ${SERIF_H2}`}>Built for investors who have earned a better next chapter</h2>
               <p className="mt-6 text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
-                You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your
-                gains to tax. A 1031 keeps your wealth concentrated and the work on your plate. Middle Door Homes
-                offers a third option.
+                You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your gains to
+                tax. A 1031 keeps your wealth concentrated and the work on your plate. Middle Door Homes offers a third
+                option.
               </p>
               <ul className="mt-8 border-t border-[var(--mdh-line)]">
                 {FIT.map((item) => (
                   <li key={item} className="flex gap-3 border-b border-[var(--mdh-line)] py-4 text-[1.05rem] text-[var(--mdh-ink)]">
-                    <span className="text-[var(--mdh-accent)]" aria-hidden>
+                    <span style={{ color: BRASS }} aria-hidden>
                       &#10003;
                     </span>
                     {item}
@@ -246,34 +271,37 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
-      {/* How it works: numbered columns */}
+      {/* How it works */}
       <section id="how-it-works" className="py-14 md:py-20">
         <Container>
           <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div>
-              <p className={LABEL}>The 721 exchange</p>
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
+                The 721 exchange
+              </p>
               <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
             </div>
             <p className="text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
-              A §721 exchange lets you contribute your building to a partnership for ownership units, with no
-              capital gains or depreciation recapture at contribution. It is the same tool large REITs have used
-              for decades to buy from owners who did not want to sell. What is new is applying it to buildings your
-              size.
+              A §721 exchange lets you contribute your building to a partnership for ownership units, with no capital
+              gains or depreciation recapture at contribution. It is the same tool large REITs have used for decades to
+              buy from owners who did not want to sell. What is new is applying it to buildings your size.
             </p>
           </div>
-          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">
             {HOW_IT_WORKS.map((item) => (
-              <div key={item.step} className="border-t border-[var(--mdh-title)]/40 pt-6">
-                <p className="font-display text-[3.5rem] leading-none text-[var(--mdh-title)]/30 lining-nums">{item.step}</p>
+              <div key={item.step} className="border-t-2 pt-6" style={{ borderColor: BRASS }}>
+                <p className="font-display text-[3.75rem] leading-none lining-nums" style={{ color: BRASS }}>
+                  {item.step}
+                </p>
                 <p className="font-display mt-5 text-[1.6rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
                 <p className="mt-3 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10">
+          <div className="mt-12">
             <Button href="/owners">The full owner overview</Button>
           </div>
         </Container>
@@ -283,24 +311,29 @@ export default function Home() {
       <TaxCalculator />
 
       {/* Team: navy band */}
-      <section className="bg-[var(--mdh-ink)] py-14 md:py-20">
+      <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white/55">Our team</p>
-              <h2 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[3.1rem] xl:text-[3.5rem]">
+              <div className="flex items-center gap-4">
+                <span className="h-px w-10" style={{ background: BRASS }} />
+                <p className="text-[0.72rem] font-medium uppercase tracking-[0.26em]" style={{ color: BRASS }}>
+                  Our team
+                </p>
+              </div>
+              <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[3.1rem] xl:text-[3.5rem]">
                 Billions of dollars of institutional housing experience
               </h2>
               <p className="mt-6 text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
-                Our team has operated 30,000+ units across some of the largest residential platforms in the
-                country. We built Middle Door to bring that institutional playbook to multifamily owners, and to
-                offer them a structure that, until now, only large real estate institutions used.
+                Our team has operated 30,000+ units across some of the largest residential platforms in the country. We
+                built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a
+                structure that, until now, only large real estate institutions used.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-center">
               {TEAM.map((member) => (
                 <Link key={member.name} href="/about" className="group flex items-center gap-4">
-                  <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full md:h-24 md:w-24">
+                  <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20 md:h-24 md:w-24">
                     <Image src={member.photo} alt={member.name} fill quality={90} sizes="96px" className="object-cover object-top" />
                   </span>
                   <span>
@@ -325,28 +358,25 @@ export default function Home() {
           <div className="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {LOGOS.map((logo) => (
               // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={logo.file}
-                src={`/images/logos/${logo.file}`}
-                alt={logo.name}
-                className="h-[20px] w-auto max-w-[140px]"
-              />
+              <img key={logo.file} src={`/images/logos/${logo.file}`} alt={logo.name} className="h-[20px] w-auto max-w-[140px]" />
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Audience routing: open columns */}
+      {/* Audience routing */}
       <section className="py-14 md:py-20">
         <Container>
           <h2 className={SERIF_H2}>Find your path</h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-10">
             {AUDIENCE_CARDS.map((card) => (
-              <Link key={card.href} href={card.href} className="group flex flex-col border-t border-[var(--mdh-line)] pt-6">
-                <p className={LABEL}>{card.eyebrow}</p>
+              <Link key={card.href} href={card.href} className="group flex flex-col border-t border-[var(--mdh-line)] pt-6 transition hover:border-[#b8894f]">
+                <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
+                  {card.eyebrow}
+                </p>
                 <h3 className="font-display mt-4 text-[1.75rem] font-medium leading-snug text-[var(--mdh-title)]">{card.title}</h3>
                 <p className="mt-3 flex-1 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{card.body}</p>
-                <p className="mt-6 text-[0.88rem] font-medium text-[var(--mdh-accent)] transition group-hover:translate-x-0.5">
+                <p className="mt-6 text-[0.88rem] font-medium text-[var(--mdh-title)] transition group-hover:translate-x-1">
                   {card.cta} &rarr;
                 </p>
               </Link>
@@ -355,20 +385,29 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Closing statement */}
-      <section className="border-t border-[var(--mdh-line)] bg-white py-14 md:py-20">
-        <Container>
+      {/* Closing over a full-width photo */}
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/nb-courtyard.jpg"
+          alt=""
+          fill
+          quality={88}
+          sizes="100vw"
+          className="object-cover object-[center_40%]"
+        />
+        <div className="absolute inset-0 bg-[rgba(14,22,32,0.72)]" />
+        <Container className="relative py-24 md:py-32">
           <div className="mx-auto max-w-5xl text-center">
-            <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[3.1rem] xl:text-[3.5rem]">
+            <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-white md:text-[3.3rem] xl:text-[3.75rem]">
               You built something real. Let&apos;s make sure it keeps working for you.
             </h2>
-            <p className="mt-5 text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-5 text-[1.08rem] leading-relaxed text-white/80">
               Send us an address for a personalized valuation and proposal.
             </p>
-            <div className="mt-8">
+            <div className="mt-9">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
               >
                 Send us an address
               </Link>
