@@ -60,8 +60,8 @@ const PRINCIPLES = [
     body: "Once your building joins the portfolio, our team handles everything: tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
   },
   {
-    title: "We work to improve returns",
-    body: "Experienced, full-time management looks for income many individual owners leave on the table: lower operating costs, rents set to the market, and capital spent where it pays back.",
+    title: "Your returns should improve",
+    body: "Experienced, full-time management finds income most individual owners leave on the table: lower operating costs, rents set to the market, and capital spent where it pays back.",
   },
   {
     title: "We hold for the long term",
