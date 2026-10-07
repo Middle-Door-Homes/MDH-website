@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Nav } from "@/components/nav";
 import "./globals.css";
@@ -10,10 +10,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const serif = Source_Serif_4({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -119,7 +120,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${serif.variable} antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Split, Steps } from "@/components/ui";
+import Image from "next/image";
+import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
@@ -8,6 +9,12 @@ export const metadata: Metadata = {
     "Your commission is paid in full, in cash at closing, per your listing agreement. Middle Door Homes gives long-term multifamily owners a tax-deferred way to say yes.",
   alternates: { canonical: "/brokers" },
 };
+
+const STATS = [
+  { value: "0%", label: "Taxes at closing for owners" },
+  { value: "100%", label: "Commission paid in cash at close" },
+  { value: "2-49", label: "Units per building" },
+];
 
 const FOR_YOU = [
   {
@@ -192,64 +199,173 @@ export default function BrokersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(brokerFaqSchema) }}
       />
-
-      <PageHero
-        eyebrow="For brokers"
-        title="Your commission, paid in full. A new way for your seller to say yes."
-        image="/images/nb-sixflat-front.jpg"
-        imageAlt="Brick six-flat apartment building with a front garden"
-        actions={
-          <>
-            <Button href="/contact">Introduce a client</Button>
-            <Button href="#faq" variant="secondary">
-              Broker FAQ
-            </Button>
-          </>
-        }
-      >
-        Many multifamily owners are not looking to sell. We help you unlock off-market transactions, giving
-        owners a tax-deferred transition to passive ownership.
-      </PageHero>
-
-      {/* For you + for your clients */}
-      <Section id="commission">
-        <Container className="grid gap-14 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <Intro eyebrow="For you" title="A real estate commission for representing the sale" />
-            <div className="mt-10">
-              <FeatureGrid cols={1} items={FOR_YOU} />
+      {/* Hero */}
+      <Section className="pb-5 pt-6 md:pt-8">
+        <Container>
+          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
+            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
+              <Image
+                src="/images/px-27150697.jpg"
+                alt="Classic red brick apartment building with fire escapes"
+                fill
+                priority
+                quality={95}
+                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
+                className="object-cover object-[center_46%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
+                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
+                  For brokers
+                </p>
+                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                  Your commission, paid in full.<br className="hidden md:block" /> A new way for your<br className="hidden md:block" /> seller to say yes.
+                </h1>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
+              {STATS.map((item) => (
+                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
+                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
+                    {item.value}
+                  </p>
+                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-          <div>
-            <Intro eyebrow="For your clients" title="A tax-efficient transition to passive income" />
-            <div className="mt-10">
-              <FeatureGrid cols={1} items={FOR_CLIENTS} />
+        </Container>
+      </Section>
+
+      {/* Pitch */}
+      <Section className="pt-4">
+        <Container>
+          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10 lg:grid-cols-[1fr_360px] lg:items-center">
+            <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
+              Many multifamily owners are not looking to sell. We help you unlock off-market
+              transactions, helping owners make a tax-deferred transition to passive ownership.
+            </p>
+            <div className="relative h-[240px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[200px]">
+              <Image
+                src="/images/px-3953058.jpg"
+                alt="Brick apartment building with balconies"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 360px, 100vw"
+                className="object-cover object-[center_50%]"
+              />
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* For you + For your clients */}
+      <Section id="commission" className="pt-4">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+              <Eyebrow>For you</Eyebrow>
+              <Heading className="mt-2">A real estate commission for representing the sale</Heading>
+              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
+                {FOR_YOU.map((item) => (
+                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+              <Eyebrow>For your clients</Eyebrow>
+              <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
+              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
+                {FOR_CLIENTS.map((item) => (
+                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </Section>
 
       {/* How it works */}
-      <Section id="how-it-works" tone="stone">
+      <Section id="how-it-works" className="pt-4">
         <Container>
-          <Split sticky={false} eyebrow="How it works" title="Three steps to a commission">
-            <Steps items={HOW_IT_WORKS} />
-          </Split>
+          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+            <div>
+              <Eyebrow>How it works</Eyebrow>
+              <Heading className="mt-2">Three steps to a commission</Heading>
+              <div className="mt-5 space-y-3">
+                {HOW_IT_WORKS.map((item) => (
+                  <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">
+                    <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
+                      {item.step}
+                    </p>
+                    <div>
+                      <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
+                      <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
+              <Image
+                src="/images/px-30726437.jpg"
+                alt="Ornate brick brownstone building facade"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-[center_45%]"
+              />
+            </div>
+          </div>
         </Container>
       </Section>
 
       {/* FAQ */}
-      <Section id="faq">
+      <Section id="faq" className="pt-4">
         <Container>
-          <Split title="Frequently asked questions" intro="How the commission works, which clients fit, and what working with us looks like.">
-            <FaqAccordion groups={BROKER_FAQ} />
-          </Split>
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <Eyebrow>Common questions</Eyebrow>
+            <Heading className="mt-2">Frequently asked questions</Heading>
+            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+              <FaqAccordion groups={BROKER_FAQ} />
+            </div>
+          </div>
         </Container>
       </Section>
 
-      <CtaBand title="Have a client in mind?" action={{ href: "/contact", label: "Introduce a client" }}>
-        We can discuss whether your client is a good fit and how to structure an introduction.
-      </CtaBand>
+      {/* CTA */}
+      <Section className="pt-4">
+        <Container>
+          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
+            <div>
+              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
+                Have a client in mind?
+              </h2>
+              <p className="mt-2 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/70">
+                Reach out directly. We can discuss whether your client is a good fit and how to
+                structure an introduction.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+              >
+                Introduce a client
+              </a>
+            </div>
+          </div>
+        </Container>
+      </Section>
     </main>
   );
 }

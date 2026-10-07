@@ -1,32 +1,16 @@
 @import "tailwindcss";
 
-/*
-  Brand palette, matched to the print collateral (one-pagers, owner letters).
-  Deep green carries headings and dark bands, brass is the single accent,
-  stone is the alternate section background.
-*/
 :root {
-  --mdh-green: #1e3a3b;
-  --mdh-green-soft: #2b4c4d;
-  --mdh-slate: #335b74;
-  --mdh-brass: #a9722f;
-  --mdh-brass-soft: #c99a5e;
-  --mdh-stone: #f3f2ee;
-  --mdh-parchment: #f7f3ea;
+  --mdh-bg: #f4f6f8;
   --mdh-surface: #ffffff;
-
-  --mdh-ink: #26302f;
-  --mdh-muted: #5a6664;
-  --mdh-line: #dddcd5;
-  --mdh-line-dark: rgba(255, 255, 255, 0.14);
-
-  /* Legacy names used across components */
-  --mdh-title: var(--mdh-green);
-  --mdh-subtle: #4e6b6c;
-  --mdh-accent: var(--mdh-brass);
-  --mdh-bg: var(--mdh-stone);
-
-  --background: var(--mdh-surface);
+  --mdh-ink: #17212b;
+  --mdh-ink-soft: #101822;
+  --mdh-title: #274f6c;
+  --mdh-subtle: #445261;
+  --mdh-muted: #5e6f7f;
+  --mdh-line: #d7e1e9;
+  --mdh-accent: #2f5c7d;
+  --background: var(--mdh-bg);
   --foreground: var(--mdh-ink);
 }
 
@@ -36,45 +20,34 @@
   --font-sans: var(--font-inter);
 }
 
-html {
-  /* 17px base: the audience skews older, and every rem size scales with it */
-  font-size: 106.25%;
-  scroll-behavior: smooth;
-}
-
 html,
 body {
+  height: 100%;
   overflow-x: hidden;
 }
 
 body {
-  background: var(--mdh-surface);
+  background: linear-gradient(180deg, #f9fbfc 0%, var(--mdh-bg) 100%);
   color: var(--mdh-ink);
   font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
+/* Display serif - applied to hero h1 elements */
 .font-display {
-  font-family: var(--font-serif), Cambria, Georgia, "Times New Roman", serif;
-  font-feature-settings: "liga", "kern";
-}
-
-[id] {
-  scroll-margin-top: 88px;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
 }
 
 a,
 button,
-input,
-textarea {
+input {
   transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease,
     box-shadow 140ms ease, opacity 140ms ease;
 }
 
 :focus-visible {
-  outline: 2px solid var(--mdh-brass);
+  outline: 2px solid var(--mdh-accent);
   outline-offset: 2px;
 }
 
@@ -88,5 +61,5 @@ textarea {
 }
 
 ::selection {
-  background: rgba(169, 114, 47, 0.22);
+  background: rgba(32, 55, 76, 0.18);
 }
