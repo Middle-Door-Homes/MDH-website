@@ -5,7 +5,7 @@ import { Container, Eyebrow, Heading, Section } from "@/components/ui";
 export const metadata: Metadata = {
   title: "For Financial Advisors: 721 Exchange for Your Clients",
   description:
-    "Help clients access a diversified, institutionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
+    "Help clients access a diversified, professionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
   alternates: { canonical: "/advisors" },
 };
 
@@ -37,11 +37,11 @@ const FOR_CLIENTS = [
   },
   {
     title: "Income-producing passive ownership",
-    body: "Your client receives quarterly distributions from a professionally managed portfolio, with institutional-grade operations replacing all landlord responsibilities.",
+    body: "Your client receives quarterly distributions from a professionally managed portfolio, with professional operations replacing all landlord responsibilities.",
   },
   {
     title: "Estate planning benefit",
-    body: "OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely, a meaningful tool in your client&apos;s broader wealth plan.",
+    body: "Ownership units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely, a meaningful tool in your client&apos;s broader wealth plan.",
   },
 ];
 
@@ -60,7 +60,7 @@ const WHO_WE_WORK_WITH = [
   },
   {
     title: "Financial planners",
-    body: "Clients with meaningful real estate equity and no institutional-quality vehicle for it. The 721 exchange gives them a structure their position has earned.",
+    body: "Clients with meaningful real estate equity and no tax-efficient way to diversify it. The 721 exchange gives them a structure their position has earned.",
   },
 ];
 
@@ -68,7 +68,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a client with embedded gains",
-    body: "Think about clients who own small multifamily buildings and have held long enough to carry meaningful embedded gains, but have never had an institutional-quality structure for that equity.",
+    body: "Think about clients who own multifamily buildings and have held long enough to carry meaningful embedded gains, but have no tax-efficient way out.",
   },
   {
     step: "02",
@@ -146,7 +146,7 @@ export default function AdvisorsPage() {
               <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
                 <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Long-term owners of small multifamily buildings carry decades of appreciation
+                  Long-term owners of multifamily buildings carry decades of appreciation
                   and depreciation. A sale typically triggers a combined tax liability of
                   30-40% of their gains.
                 </p>

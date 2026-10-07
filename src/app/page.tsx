@@ -6,7 +6,7 @@ import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Middle Door Homes | 721 Exchange for Small Multifamily Owners",
+    absolute: "Middle Door Homes | 721 Exchange for Multifamily Owners",
   },
   description:
     "Middle Door Homes turns your multifamily equity into a passive stake in a diversified, professionally managed residential portfolio, through a §721 exchange with no capital gains at contribution.",
@@ -44,8 +44,8 @@ const AUDIENCE_CARDS = [
   {
     href: "/owners",
     eyebrow: "For property owners",
-    title: "Convert your equity into a managed income position",
-    body: "A §721 exchange converts your concentrated real estate equity into a diversified, income-producing LP stake: institutional management, quarterly distributions, and no taxable event at contribution.",
+    title: "Keep your equity working, without the work",
+    body: "Contribute your building and receive ownership in a diversified portfolio of income-producing buildings: professional management, quarterly distributions, and no tax at contribution.",
     cta: "Learn how it works",
   },
   {
@@ -68,12 +68,12 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Contribute your building",
-    body: "Instead of selling, you contribute your property through a §721 exchange, an IRS-recognized non-recognition event with no capital gains at contribution.",
+    body: "Instead of selling, you contribute your building under Section 721 of the tax code. No capital gains tax is due at contribution.",
   },
   {
     step: "02",
     title: "Receive a passive ownership stake",
-    body: "Your equity converts into a passive LP stake in a professionally managed, diversified portfolio. Full ownership in the asset class you have built in, now at institutional scale.",
+    body: "Your equity becomes ownership in a diversified portfolio of neighborhood buildings. You stay invested in what you know, without running any of it.",
   },
   {
     step: "03",
@@ -172,7 +172,7 @@ export default function Home() {
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
                   "Own one or more 2-49 unit multifamily buildings",
-                  "Held 5+ years with meaningful embedded gains",
+                  "Held 5+ years, with a large gain built up",
                 ].map((item) => (
                   <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4">
                     <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
@@ -207,7 +207,7 @@ export default function Home() {
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to small multifamily, giving individual investors access to a wealth structure that has historically been available only to institutional capital.
+              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a structure that, until now, only large real estate institutions used.
             </p>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">

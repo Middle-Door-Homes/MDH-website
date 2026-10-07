@@ -6,7 +6,7 @@ import { FaqAccordion, type FaqGroup } from "@/components/faq";
 export const metadata: Metadata = {
   title: "For Brokers: Your Full Commission on 721 Exchange Transactions",
   description:
-    "Your commission is paid in full, in cash at closing, per your listing agreement. Middle Door Homes gives long-term small multifamily owners a tax-deferred way to say yes.",
+    "Your commission is paid in full, in cash at closing, per your listing agreement. Middle Door Homes gives long-term multifamily owners a tax-deferred way to say yes.",
   alternates: { canonical: "/brokers" },
 };
 
@@ -23,7 +23,7 @@ const FOR_YOU = [
   },
   {
     title: "Off-market access",
-    body: "Most small buildings don't sell; we open a path to transact with unlisted owners.",
+    body: "Most multifamily buildings never come to market; we open a path to transact with unlisted owners.",
   },
   {
     title: "Relationship flywheel",
@@ -50,7 +50,7 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Identify a long-term owner",
-    body: "Think about owners who have held for years and built meaningful equity, but have never had an institutional-quality structure for that position.",
+    body: "Think about owners who have held for years and built meaningful equity, but the tax bill keeps them from selling.",
   },
   {
     step: "02",
@@ -91,7 +91,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What kind of client is the right fit?",
-        a: "The ideal client has owned a 2-49 unit multifamily building for many years and built meaningful embedded gains. If they are hesitant to sell because of the tax cost, or simply want their equity working in a better structure, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
+        a: "The ideal client has owned a 2-49 unit multifamily building for many years and built up a large gain. If they are hesitant to sell because of the tax cost, or simply want their equity working in a better structure, that is exactly the conversation to start. They also need to qualify as an accredited investor.",
       },
       {
         q: "What if my client just wants to sell outright?",
@@ -103,7 +103,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "What if my client owns a single-family rental or commercial property?",
-        a: "Our focus is small multifamily (2-49 units). We are not a fit for single-family rentals or large commercial properties. If the client owns a mix, reach out and we can discuss whether any of their holdings qualify.",
+        a: "Our focus is multifamily buildings of 2-49 units. We are not a fit for single-family rentals or large commercial properties. If the client owns a mix, reach out and we can discuss whether any of their holdings qualify.",
       },
     ],
   },
@@ -149,7 +149,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my client actually receive?",
-        a: "OP units: a passive ownership stake in a professionally managed, diversified portfolio. They receive quarterly distributions, annual K-1s, and nothing to manage. No tenant calls, no maintenance, no 2am emergencies.",
+        a: "Ownership units (also called OP units): a passive stake in a professionally managed, diversified portfolio. They receive quarterly distributions, annual K-1s, and nothing to manage. No tenant calls, no maintenance, no 2am emergencies.",
       },
       {
         q: "Is this a good deal for the client or just for MDH?",
@@ -157,7 +157,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "How liquid is this for my client?",
-        a: "OP units are not publicly traded. A three-year minimum hold applies to all units, and from year four the partnership targets quarterly repurchase windows, at the holder\'s option and subject to portfolio liquidity. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
+        a: "Ownership units are not publicly traded. A three-year minimum hold applies to all units, and from year four the partnership targets quarterly repurchase windows, at the holder\'s option and subject to portfolio liquidity. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
       },
       {
         q: "Why a partnership and not a cash offer?",
@@ -244,7 +244,7 @@ export default function BrokersPage() {
         <Container>
           <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10 lg:grid-cols-[1fr_360px] lg:items-center">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
-              Many small multifamily owners are not looking to sell. We help you unlock off-market
+              Many multifamily owners are not looking to sell. We help you unlock off-market
               transactions, helping owners make a tax-deferred transition to passive ownership.
             </p>
             <div className="relative h-[240px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[200px]">

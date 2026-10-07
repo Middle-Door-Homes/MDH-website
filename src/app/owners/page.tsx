@@ -6,7 +6,7 @@ import { FaqAccordion, type FaqGroup } from "@/components/faq";
 export const metadata: Metadata = {
   title: "721 Exchange for Property Owners",
   description:
-    "Multifamily investors with 2-49 units can contribute their buildings through a §721 exchange: no capital gains, no depreciation recapture, no active management. Receive passive LP income from an institutionally managed portfolio.",
+    "Owners of 2-49 unit multifamily buildings can contribute their building through a §721 exchange: no tax at closing and no more management. Receive quarterly distributions from a professionally managed portfolio.",
   alternates: { canonical: "/owners" },
 };
 
@@ -19,15 +19,15 @@ const STATS = [
 const BENEFITS = [
   {
     title: "Tax deferral & estate planning",
-    body: "No capital gains or depreciation recapture at closing. Your full equity basis rolls forward intact. OP units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely.",
+    body: "No capital gains or depreciation recapture at closing. Your full equity basis rolls forward intact. Ownership units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely.",
   },
   {
     title: "Continued ownership with upside",
-    body: "You own a passive LP stake in a diversified, professionally managed portfolio, with ongoing cash distributions and participation in portfolio appreciation over time.",
+    body: "You own a share of a diversified, professionally managed portfolio, with quarterly distributions and a share of its growth over time.",
   },
   {
     title: "Truly passive income",
-    body: "Operational responsibility transfers completely at close. Institutional-grade management handles tenants, maintenance, leasing, and compliance. You receive distributions, not work orders.",
+    body: "Our team handles tenants, maintenance, leasing, and compliance. You receive distributions, not work orders.",
   },
   {
     title: "Structured liquidity",
@@ -92,7 +92,7 @@ const HOW_IT_WORKS = [
   {
     step: "04",
     title: "Ongoing income",
-    body: "You receive quarterly distributions from a diversified portfolio. Our team manages all operations, working to grow NAV and income over time.",
+    body: "You receive quarterly distributions from a diversified portfolio. Our team manages all operations, working to grow the portfolio's value and income over time.",
   },
 ];
 
@@ -102,8 +102,8 @@ const AFTER_CLOSE = [
     body: "Regular passive income from the portfolio, paid after operating expenses, debt service, and capital reserves, subject to portfolio cash flow.",
   },
   {
-    title: "Annual K-1 tax schedules",
-    body: "You keep pass-through tax treatment and receive a Schedule K-1 each year. What that is worth in a given year depends on your own basis.",
+    title: "An annual K-1",
+    body: "You keep pass-through tax treatment and receive a Schedule K-1, the yearly tax form a partnership sends its owners. What it is worth in a given year depends on your own basis.",
   },
   {
     title: "Audited financial statements",
@@ -111,7 +111,7 @@ const AFTER_CLOSE = [
   },
   {
     title: "Nothing to manage",
-    body: "Tenants, maintenance, leasing, compliance: all transfer at close. You become a passive LP on day one.",
+    body: "Tenants, maintenance, leasing, compliance: all transfer at close. You are a passive owner from day one.",
   },
 ];
 
@@ -121,7 +121,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What is a 721 exchange?",
-        a: "A 721 exchange (also called an UPREIT contribution) is a long-established part of the tax code that lets you contribute real property to an Operating Partnership in exchange for OP units: a passive ownership stake in the partnership. It is the same tool large REITs have used for decades to buy from owners who did not want to sell. What is new is applying it to buildings your size. It is a contribution, not a sale, so no taxable event occurs at closing.",
+        a: "A 721 exchange (also called an UPREIT contribution) is a long-established part of the tax code that lets you contribute real property to an operating partnership in exchange for ownership units (often called OP units): a passive ownership stake in the partnership. It is the same tool large REITs have used for decades to buy from owners who did not want to sell. What is new is applying it to buildings your size. It is a contribution, not a sale, so no taxable event occurs at closing.",
       },
       {
         q: "How is a 721 exchange different from a 1031 exchange?",
@@ -129,11 +129,11 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "Is this a sale?",
-        a: "No. You are contributing your building to the Operating Partnership in exchange for OP units. Because it is a contribution rather than a sale, no capital gains tax or depreciation recapture is triggered at closing.",
+        a: "No. You are contributing your building to our partnership in exchange for ownership units. Because it is a contribution rather than a sale, no capital gains tax or depreciation recapture is triggered at closing.",
       },
       {
         q: "Do I need to be an accredited investor?",
-        a: "Yes. OP units are securities and this offering is limited to accredited investors: generally those with a net worth over $1M (excluding primary residence) or annual income above $200K ($300K joint). We can walk you through the requirements.",
+        a: "Yes. Ownership units are securities and this offering is limited to accredited investors: generally those with a net worth over $1M (excluding primary residence) or annual income above $200K ($300K joint). We can walk you through the requirements.",
       },
     ],
   },
@@ -146,7 +146,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What happens to my deferred taxes eventually?",
-        a: "Deferred taxes become due when you sell or redeem your OP units. However, OP units can be passed to heirs with a step-up in cost basis, which can eliminate the deferred tax liability entirely for the next generation.",
+        a: "Deferred taxes become due when you sell or redeem your units. However, units can be passed to heirs with a step-up in cost basis, which can eliminate the deferred tax liability entirely for the next generation.",
       },
       {
         q: "What is my ongoing tax treatment as an OP unit holder?",
@@ -154,7 +154,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What happens to my mortgage?",
-        a: "Your existing mortgage is paid off at closing from the contribution proceeds. Only your net equity moves forward as OP units.",
+        a: "Your existing mortgage is paid off at closing from the contribution proceeds. Only your net equity moves forward as ownership units.",
       },
     ],
   },
@@ -163,7 +163,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does the process look like from start to finish?",
-        a: "We start with a conversation about your building, financial situation, and goals. If it looks like a fit, we assess the building and structure the exchange terms. You review a full term sheet with your advisors. If you proceed, we close the contribution. Title transfers, your mortgage is paid off, and your OP units are issued. From that point forward, you are a passive investor.",
+        a: "We start with a conversation about your building, financial situation, and goals. If it looks like a fit, we assess the building and structure the exchange terms. You review a full term sheet with your advisors. If you proceed, we close the contribution. Title transfers, your mortgage is paid off, and your ownership units are issued. From that point forward, you are a passive investor.",
       },
       {
         q: "How long does the process take?",
@@ -196,7 +196,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "How does my income compare to what I earn now?",
-        a: "Most long-term owners are not capturing full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Our team has driven $120M+ in annualized NOI growth across a 30,000+ home portfolio, and we bring the same playbook to every building we own.",
+        a: "Most long-term owners are not capturing full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Our team has driven $120M+ in annual net operating income growth across a 30,000+ home portfolio, and we bring the same playbook to every building we own.",
       },
     ],
   },
@@ -205,7 +205,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "Can I get my money out?",
-        a: "OP units are not publicly traded. A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity. Liquidity is not guaranteed on demand, so treat this as a long-term investment.",
+        a: "Ownership units are not publicly traded. A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity. Liquidity is not guaranteed on demand, so treat this as a long-term investment.",
       },
       {
         q: "What are the risks I should understand?",
@@ -213,8 +213,20 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What if I change my mind after contributing?",
-        a: "Once you contribute, the building belongs to the Operating Partnership and cannot be returned. OP units can be redeemed through quarterly repurchase windows from year four, but you should treat this as a long-term commitment going in.",
+        a: "Once you contribute, the building belongs to the partnership and cannot be returned. Units can be redeemed through quarterly repurchase windows from year four, but you should treat this as a long-term commitment going in.",
       },
+    ],
+  },
+  {
+    group: "Terms in plain English",
+    items: [
+      { q: "Ownership units (OP units)", a: "Your stake in our partnership, received instead of cash when you contribute your building." },
+      { q: "Section 721 contribution", a: "Contributing a building to a partnership in exchange for ownership units, without triggering tax at the time of transfer. Often called a 721 exchange." },
+      { q: "Depreciation recapture", a: "Tax owed on depreciation you have already deducted. It is why the tax bill on a sale is usually larger than owners expect." },
+      { q: "Basis", a: "Your tax cost in the building. Your gain is measured against it." },
+      { q: "Preferred return", a: "The first 6% of annual total return, which owners receive in full before we participate." },
+      { q: "K-1", a: "The yearly tax form a partnership sends its owners." },
+      { q: "Accredited investor", a: "Someone who meets an income or net worth test and can therefore own securities like our units." },
     ],
   },
 ];
@@ -260,11 +272,8 @@ export default function OwnersPage() {
                 <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
                   Turn your real estate equity into a diversified portfolio.
                 </h1>
-                <p className="mt-3 text-[0.88rem] leading-relaxed text-white/72 sm:hidden">
-                  Contribute your building. A passive stake in a professionally managed, diversified portfolio: no tax event, no management from day one.
-                </p>
-                <p className="mt-4 hidden max-w-[50ch] text-[0.92rem] leading-relaxed text-white/72 sm:block md:text-[0.97rem]">
-                  Contribute your building through a §721 exchange and receive a passive stake in a professionally managed, diversified residential portfolio. No taxable event. No management burden. Institutional operations and quarterly distributions from day one.
+                <p className="mt-4 max-w-[52ch] text-[0.92rem] leading-relaxed text-white/75 md:text-[1rem]">
+                  Contribute your building instead of selling it. You receive ownership in a diversified portfolio of neighborhood buildings, owe no tax at closing, and hand off the management on day one.
                 </p>
               </div>
             </div>
@@ -289,7 +298,7 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
             <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
-              You&apos;ve spent years building a concentrated real estate position with significant embedded gains. Selling means surrendering 30-40% of your gains to capital gains tax and depreciation recapture. The alternative has always been to hold, concentrated in the same single asset. Middle Door Homes offers a third path.
+              You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means staying a landlord, with everything riding on one property. Middle Door Homes offers a third path.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
@@ -302,7 +311,7 @@ export default function OwnersPage() {
               <div>
                 <h3 className="font-medium text-[var(--mdh-title)]">Operational drag on returns</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Small multifamily buildings require constant attention: tenant calls, aging systems,
+                  Multifamily buildings require constant attention: tenant calls, aging systems,
                   deferred maintenance. At some point, the active management burden stops being worth
                   the return on your time and capital. You built this as an investment, not a job.
                 </p>
@@ -403,7 +412,7 @@ export default function OwnersPage() {
             <Eyebrow>How returns are generated</Eyebrow>
             <Heading className="mt-2">We invest in the buildings. You get paid first.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher NOI, improved occupancy, and where the building allows, additional units for incremental cash flow.
+              MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher net operating income (rent minus operating costs), better occupancy, and where the building allows, additional units for incremental cash flow.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
@@ -493,7 +502,7 @@ export default function OwnersPage() {
                       selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
                     },
                     {
-                      label: "Purpose-built for small multifamily",
+                      label: "Purpose-built for 2-49 unit buildings",
                       selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
                     },
                   ].map((row) => (
@@ -572,22 +581,21 @@ export default function OwnersPage() {
         <Container>
           <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
             <Eyebrow>Working with us</Eyebrow>
-            <Heading className="mt-2">How institutional management grows portfolio income</Heading>
+            <Heading className="mt-2">How professional management grows your income</Heading>
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
                 <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Many small multifamily owners are not capturing the full NOI potential of their buildings.
-                  Deferred maintenance, below-market rents, and high operating costs compress returns
-                  year after year.
+                  Many owners are not earning everything their building could. Deferred maintenance,
+                  below-market rents, and high operating costs hold returns down year after year.
                 </p>
                 <div>
                   <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Institutional-grade management drives cash flow improvement through expense reduction,
-                    rent optimization, and operational efficiency, passing that upside to you as a passive LP.
+                    Full-time, experienced management lifts income through lower operating costs, rents set
+                    to the market, and efficient operations. That upside flows to you as an owner.
                   </p>
                   <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                     Our team has driven{" "}
-                    <span className="font-medium text-[var(--mdh-title)]">$120M+ in annualized NOI growth</span>
+                    <span className="font-medium text-[var(--mdh-title)]">$120M+ in annual net operating income growth</span>
                     {" "}across a 30,000+ home portfolio. We bring the same playbook to every building we own.
                   </p>
                 </div>
@@ -633,7 +641,7 @@ export default function OwnersPage() {
                 <ul className="mt-3 space-y-2">
                   {[
                     "You own one or more multifamily buildings in the 2-49 unit range",
-                    "You've held long enough to have meaningful embedded gains",
+                    "You've held long enough to build up a large gain",
                     "You're ready to exit active operations, but the tax cost of a sale is too high",
                     "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
                     "You do not need a debt-free building: we pay off your mortgage at closing",
@@ -700,7 +708,7 @@ export default function OwnersPage() {
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, title transfers to the Operating Partnership and your OP units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
+              On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (

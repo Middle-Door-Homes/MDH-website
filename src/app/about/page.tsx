@@ -5,7 +5,7 @@ import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
   description:
-    "Middle Door Homes gives small multifamily investors an institutional-quality exit through a §721 exchange, preserving equity, exiting active operations, and generating passive LP income without a taxable event.",
+    "Middle Door Homes gives multifamily owners a way out of active management through a §721 exchange: keep your equity, defer the tax, and receive passive income from a diversified portfolio.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,19 +15,19 @@ const TEAM = [
     name: "Jack Elzinga",
     title: "Managing Partner",
     photo: "/images/jack-elzinga.jpg",
-    bio: "Jack built Middle Door after a decade inside institutional real estate platforms and other leading companies. He helped lead the integration of the 30,000+ home Home Partners of America portfolio through the Blackstone/Tricon merger and drove $120M+ in annualized NOI growth. That work shaped a clear view: the institutional playbook for residential operations had never been packaged in a structure that worked for individual multifamily owners. Harvard BA in Economics, Stanford MBA.",
+    bio: "Jack built Middle Door after a decade inside institutional real estate platforms and other leading companies. He helped lead the integration of the 30,000+ home Home Partners of America portfolio through the Blackstone/Tricon merger and drove $120M+ in annual net operating income growth. That work shaped a clear view: the institutional playbook for residential operations had never been packaged in a structure that worked for individual multifamily owners. Harvard BA in Economics, Stanford MBA.",
   },
   {
     name: "Jose Torres",
     title: "Partner & CEO",
     photo: "/images/jose-torres.jpg",
-    bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He was head of asset management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and served as chief of staff within Invitation Homes' finance organization through its IPO. He knows what institutional-quality residential platforms look like from the inside, both operationally and financially. Prior experience at CBRE and RealFoundations.",
+    bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He was head of asset management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and served as chief of staff within Invitation Homes' finance organization through its IPO. He knows what well-run residential platforms look like from the inside, both operationally and financially. Prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
     title: "Partner & EVP Operations",
     photo: "/images/mike-rozovics.jpg",
-    bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and NOI improvement across dispersed portfolios at scale. That range, from individual units to institutional infrastructure, is the operational core of what Middle Door brings to every contributed building.",
+    bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and income growth across dispersed portfolios at scale. That range, from individual units to portfolio-wide systems, is the operational core of what Middle Door brings to every contributed building.",
   },
   {
     name: "Bob Sievewright",
@@ -61,7 +61,7 @@ const PRINCIPLES = [
   },
   {
     title: "Your returns should improve",
-    body: "Institutional management unlocks NOI that most individual operators leave on the table. Expense reduction, rent optimization, and capital efficiency work in your favor from day one.",
+    body: "Experienced, full-time management finds income most individual owners leave on the table: lower operating costs, rents set to the market, and capital spent where it pays back.",
   },
   {
     title: "We hold for the long term",
@@ -78,14 +78,12 @@ export default function AboutPage() {
             <div>
               <Eyebrow>About</Eyebrow>
               <h1 className="mt-4 max-w-3xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
-                We built an institutional-quality portfolio for small multifamily investors.
+                A better next step for multifamily owners.
               </h1>
               <Lead>
-                Many small multifamily investors have spent years building a concentrated real estate
-                position and kept managing it themselves because no institutional-quality structure
-                for that equity existed. Middle Door Homes was built to change that: contribute your
-                building and receive a passive stake in a diversified, professionally managed portfolio,
-                with no taxable event at contribution.
+                Many multifamily owners have spent decades building equity and kept managing because
+                there was no good way out: selling meant a large tax bill, and a 1031 meant another
+                building to run. We built Middle Door Homes to change that.
               </Lead>
             </div>
             <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
@@ -164,20 +162,13 @@ export default function AboutPage() {
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
               <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
-                Many small multifamily investors spent decades building a concentrated real estate
-                position, and continued managing it themselves because no institutional-quality
-                exit existed. We built Middle Door to change that.
+                We know what it takes to run residential real estate well, because we have done it
+                at scale.
               </p>
               <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Our team has operated at 30,000+ units of institutional scale. We know what
-                we&apos;re acquiring and what it takes to run it well. We bring that same operating
-                playbook to small multifamily buildings, for the first time making it accessible
-                to owners who built their positions outside the institutional market.
-              </p>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                That depth of experience drives real NOI improvement through expense reduction,
-                rent optimization, and capital allocation, the same playbook applied across
-                tens of thousands of homes.
+                Our team has operated 30,000+ homes at institutional scale, across some of the largest
+                residential platforms in the country. We bring that same operating playbook to every
+                multifamily building we own.
               </p>
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">

@@ -157,7 +157,7 @@ export function TaxCalculator() {
             <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
-                  Purchase price / cost basis
+                  What you paid for the building
                 </p>
                 <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {fmt(safeBasis)}
@@ -276,7 +276,7 @@ export function TaxCalculator() {
                 />
                 <Row label="Capital gains tax" value="$0 (deferred)" zero dark />
                 <Row label="Depreciation recapture" value="$0 (deferred)" zero dark />
-                <Row label="Equity as OP units" value={fmt(mdhNet)} total dark />
+                <Row label="Equity as ownership units" value={fmt(mdhNet)} total dark />
               </div>
             </div>
           </div>
