@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, DoorIcon } from "@/components/ui";
-import { TaxCalculator } from "@/components/calculator";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
@@ -188,13 +187,18 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Statement over a fixed photo */}
-      <section
-        className="relative mt-16 bg-cover bg-[center_60%] md:mt-24 lg:bg-fixed"
-        style={{ backgroundImage: "url(/images/nb-autumn-corner.jpg)" }}
-      >
+      {/* Statement over a full-width photo */}
+      <section className="relative mt-16 overflow-hidden md:mt-24">
+        <Image
+          src="/images/nb-autumn-corner.jpg"
+          alt=""
+          fill
+          quality={88}
+          sizes="100vw"
+          className="object-cover object-[center_60%]"
+        />
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.68)]" />
-        <Container className="relative py-28 md:py-44">
+        <Container className="relative py-24 md:py-36">
           <Reveal>
             <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
               Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
@@ -276,41 +280,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section id="how-it-works" className="py-14 md:py-20">
-        <Container>
-          <Reveal>
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
-            <div>
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
-                The 721 exchange
-              </p>
-              <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
-            </div>
-            <p className="text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
-              A §721 exchange lets you contribute your building to a partnership for ownership units, with no capital
-              gains or depreciation recapture at contribution. It is the same tool large REITs have used for decades to
-              buy from owners who did not want to sell. What is new is applying it to buildings your size.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">
-            {HOW_IT_WORKS.map((item) => (
-              <div key={item.step} className="border-t-2 pt-6" style={{ borderColor: BRASS }}>
-                <p className="font-display text-[3.75rem] leading-none lining-nums" style={{ color: BRASS }}>
-                  {item.step}
-                </p>
-                <p className="font-display mt-5 text-[1.6rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
-                <p className="mt-3 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12">
-            <Button href="/owners">The full owner overview</Button>
-          </div>
-          </Reveal>
-        </Container>
-      </section>
-
       {/* The math */}
       <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
         <Container>
@@ -357,19 +326,58 @@ export default function Home() {
                   Illustrative: $1M value, $200K mortgage, $60K closing costs, $200K capital gains and depreciation
                   recapture. Figures will differ for your building.
                 </p>
+                <Link
+                  href="/owners#calculator"
+                  className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
+                >
+                  Run your own numbers &rarr;
+                </Link>
               </div>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* Calculator */}
-      <TaxCalculator />
+
+      {/* How it works */}
+      <section id="how-it-works" className="py-14 md:py-20">
+        <Container>
+          <Reveal>
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
+            <div>
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
+                The 721 exchange
+              </p>
+              <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
+            </div>
+            <p className="text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
+              A §721 exchange lets you contribute your building to a partnership for ownership units, with no capital
+              gains or depreciation recapture at contribution. It is the same tool large REITs have used for decades to
+              buy from owners who did not want to sell. What is new is applying it to buildings your size.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">
+            {HOW_IT_WORKS.map((item) => (
+              <div key={item.step} className="border-t-2 pt-6" style={{ borderColor: BRASS }}>
+                <p className="font-display text-[3.75rem] leading-none lining-nums" style={{ color: BRASS }}>
+                  {item.step}
+                </p>
+                <p className="font-display mt-5 text-[1.6rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
+                <p className="mt-3 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12">
+            <Button href="/owners">The full owner overview</Button>
+          </div>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* Team: navy band */}
       <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="flex items-center gap-4">
                 <span className="h-px w-10" style={{ background: BRASS }} />
@@ -380,32 +388,27 @@ export default function Home() {
               <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[3.1rem] xl:text-[3.5rem]">
                 Billions of dollars of institutional housing experience
               </h2>
-            </div>
-            <p className="text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
+              <p className="mt-6 text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
                 Our team has operated 30,000+ units across some of the largest residential platforms in the country. We
                 built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a
                 structure that, until now, only large real estate institutions used.
-            </p>
-          </div>
-          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-            {TEAM.map((member) => (
-              <Link key={member.name} href="/about" className="group">
-                <span className="relative block aspect-[4/5] overflow-hidden bg-white/5">
-                  <Image
-                    src={member.photo}
-                    alt={member.name}
-                    fill
-                    quality={90}
-                    sizes="(min-width: 768px) 22vw, 45vw"
-                    className="object-cover object-top transition duration-700 group-hover:scale-[1.03]"
-                  />
-                </span>
-                <span className="mt-4 block text-[1.1rem] font-medium leading-tight text-white">{member.name}</span>
-                <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em]" style={{ color: BRASS }}>
-                  {member.title}
-                </span>
-              </Link>
-            ))}
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-center">
+              {TEAM.map((member) => (
+                <Link key={member.name} href="/about" className="group flex items-center gap-4">
+                  <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20 md:h-24 md:w-24">
+                    <Image src={member.photo} alt={member.name} fill quality={90} sizes="96px" className="object-cover object-top" />
+                  </span>
+                  <span>
+                    <span className="block text-[1.1rem] font-medium leading-tight text-white group-hover:underline">{member.name}</span>
+                    <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em] text-white/55">
+                      {member.title}
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

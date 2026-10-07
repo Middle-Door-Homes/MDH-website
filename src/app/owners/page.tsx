@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
+import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
   title: "721 Exchange for Property Owners",
@@ -541,6 +542,11 @@ export default function OwnersPage() {
           </div>
         </Container>
       </Section>
+
+      {/* Calculator */}
+      <div id="calculator" className="scroll-mt-20">
+        <TaxCalculator />
+      </div>
 
       {/* Benefits */}
       <Section className="pt-4">
