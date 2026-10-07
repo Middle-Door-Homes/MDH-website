@@ -113,7 +113,7 @@ const LOGOS = [
 ];
 
 const SERIF_H2 =
-  "font-display text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[3.1rem] xl:text-[3.5rem]";
+  "font-display text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.5rem] xl:text-[2.75rem]";
 
 
 const BRASS = "#b8894f";
@@ -130,9 +130,9 @@ export default function Home() {
               alt="Tree-lined street of brick multifamily buildings"
               fill
               priority
-              quality={92}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="mdh-drift object-cover object-[62%_center]"
+              quality={95}
+              sizes="100vw"
+              className="object-cover object-[62%_center]"
             />
           </div>
           <div className="flex items-center px-5 pb-20 pt-10 sm:px-8 md:pb-24 md:pt-16 lg:min-h-[min(820px,calc(100vh-64px))] lg:pb-32 lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 lg:pt-24 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))]">
@@ -143,7 +143,7 @@ export default function Home() {
                   Middle Door Homes
                 </p>
               </div>
-              <h1 className="font-display text-[2.5rem] font-medium leading-[1.02] tracking-[-0.015em] text-white sm:text-[3.4rem] lg:mt-6 lg:text-[4.6rem] xl:text-[5.2rem]">
+              <h1 className="font-display text-[2.3rem] font-medium leading-[1.04] tracking-[-0.015em] text-white sm:text-[3rem] lg:mt-6 lg:text-[3.8rem] xl:text-[4.2rem]">
                 Your building&rsquo;s next chapter
               </h1>
               <p className="mt-5 text-[1.08rem] font-light leading-relaxed text-white/80 md:mt-7 md:text-[1.3rem]">
@@ -174,7 +174,7 @@ export default function Home() {
                 <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.2em] sm:block" style={{ color: BRASS }}>
                   {item.promise}
                 </p>
-                <p className="font-display text-[1.9rem] leading-none text-[var(--mdh-title)] lining-nums sm:mt-4 sm:text-[2.8rem] md:text-[3.4rem]">
+                <p className="font-display text-[1.9rem] leading-none text-[var(--mdh-title)] lining-nums sm:mt-4 sm:text-[2.3rem] md:text-[2.6rem]">
                   {item.stat}
                 </p>
                 <p className="mt-2 text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[var(--mdh-subtle)]">
@@ -200,7 +200,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.55)]" />
         <Container className="relative py-24 md:py-36">
           <Reveal>
-            <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
+            <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[2.5rem] xl:text-[2.9rem]">
               Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
             </p>
           </Reveal>
@@ -230,7 +230,7 @@ export default function Home() {
                   >
                     {door.label}
                   </p>
-                  <p className={`font-display mt-1.5 text-[1.25rem] leading-snug lining-nums md:mx-auto md:mt-4 md:max-w-[18ch] md:text-[1.75rem] xl:text-[2rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
+                  <p className={`font-display mt-1.5 text-[1.25rem] leading-snug lining-nums md:mx-auto md:mt-4 md:max-w-[18ch] md:text-[1.45rem] xl:text-[1.6rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
                     {door.body}
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export default function Home() {
                     The math, illustrated
                   </p>
                 </div>
-                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[3.1rem] xl:text-[3.5rem]">
+                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[2.5rem] xl:text-[2.75rem]">
                   On a $1M building, about $200K more of your equity keeps working.
                 </h2>
                 <p className="mt-6 text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -308,7 +308,7 @@ export default function Home() {
                   <div key={bar.label}>
                     <div className="flex items-baseline justify-between">
                       <p className="text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">{bar.label}</p>
-                      <p className="font-display text-[2.2rem] leading-none text-[var(--mdh-title)] lining-nums md:text-[2.8rem]">{bar.value}</p>
+                      <p className="font-display text-[2.2rem] leading-none text-[var(--mdh-title)] lining-nums md:text-[2.2rem]">{bar.value}</p>
                     </div>
                     <div className="mt-4 h-3 w-full bg-[var(--mdh-title)]/10">
                       <div
@@ -359,10 +359,10 @@ export default function Home() {
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">
             {HOW_IT_WORKS.map((item) => (
               <div key={item.step} className="border-t-2 pt-6" style={{ borderColor: BRASS }}>
-                <p className="font-display text-[3.75rem] leading-none lining-nums" style={{ color: BRASS }}>
+                <p className="font-display text-[2.8rem] leading-none lining-nums" style={{ color: BRASS }}>
                   {item.step}
                 </p>
-                <p className="font-display mt-5 text-[1.6rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
+                <p className="font-display mt-4 text-[1.35rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
                 <p className="mt-3 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
               </div>
             ))}
@@ -385,7 +385,7 @@ export default function Home() {
                   Our team
                 </p>
               </div>
-              <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[3.1rem] xl:text-[3.5rem]">
+              <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[2.5rem] xl:text-[2.75rem]">
                 Billions of dollars of institutional housing experience
               </h2>
               <p className="mt-6 text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
@@ -449,7 +449,7 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
                   {card.eyebrow}
                 </p>
-                <h3 className="font-display mt-4 text-[1.75rem] font-medium leading-snug text-[var(--mdh-title)]">{card.title}</h3>
+                <h3 className="font-display mt-4 text-[1.4rem] font-medium leading-snug text-[var(--mdh-title)]">{card.title}</h3>
                 <p className="mt-3 flex-1 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{card.body}</p>
                 <p className="mt-6 text-[0.88rem] font-medium text-[var(--mdh-title)] transition group-hover:translate-x-1">
                   {card.cta} &rarr;
@@ -474,7 +474,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.58)]" />
         <Container className="relative py-24 md:py-32">
           <div className="mx-auto max-w-5xl text-center">
-            <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-white md:text-[3.3rem] xl:text-[3.75rem]">
+            <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-white md:text-[2.5rem] xl:text-[2.75rem]">
               You built something real. Let&apos;s make sure it keeps working for you.
             </h2>
             <p className="mt-5 text-[1.08rem] leading-relaxed text-white/80">
