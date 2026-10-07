@@ -197,7 +197,7 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-[center_60%]"
         />
-        <div className="absolute inset-0 bg-[rgba(14,22,32,0.68)]" />
+        <div className="absolute inset-0 bg-[rgba(14,22,32,0.55)]" />
         <Container className="relative py-24 md:py-36">
           <Reveal>
             <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* The math */}
-      <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
+      <section className="bg-[#f6f1e7] py-16 md:py-24">
         <Container>
           <Reveal>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-20">
@@ -292,10 +292,10 @@ export default function Home() {
                     The math, illustrated
                   </p>
                 </div>
-                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white lining-nums md:text-[3.1rem] xl:text-[3.5rem]">
+                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[3.1rem] xl:text-[3.5rem]">
                   On a $1M building, about $200K more of your equity keeps working.
                 </h2>
-                <p className="mt-6 text-[1.05rem] leading-relaxed text-white/70">
+                <p className="mt-6 text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">
                   Same building, same mortgage payoff, same closing costs. The difference is the tax you do not pay at
                   closing.
                 </p>
@@ -307,28 +307,28 @@ export default function Home() {
                 ].map((bar) => (
                   <div key={bar.label}>
                     <div className="flex items-baseline justify-between">
-                      <p className="text-[0.75rem] font-medium uppercase tracking-[0.18em] text-white/60">{bar.label}</p>
-                      <p className="font-display text-[2.2rem] leading-none text-white lining-nums md:text-[2.8rem]">{bar.value}</p>
+                      <p className="text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">{bar.label}</p>
+                      <p className="font-display text-[2.2rem] leading-none text-[var(--mdh-title)] lining-nums md:text-[2.8rem]">{bar.value}</p>
                     </div>
-                    <div className="mt-4 h-3 w-full bg-white/10">
+                    <div className="mt-4 h-3 w-full bg-[var(--mdh-title)]/10">
                       <div
                         className="h-full"
-                        style={{ width: `${bar.pct}%`, background: bar.mdh ? BRASS : "rgba(255,255,255,0.45)" }}
+                        style={{ width: `${bar.pct}%`, background: bar.mdh ? BRASS : "rgba(39,79,108,0.45)" }}
                       />
                     </div>
                   </div>
                 ))}
-                <p className="text-[0.95rem] text-white/70">
+                <p className="text-[0.95rem] text-[var(--mdh-ink)]">
                   <span className="font-display text-[1.6rem] [font-variant-numeric:lining-nums]" style={{ color: BRASS }}>+$200K</span>
                   <span className="ml-3">of equity preserved, about 37% more than a traditional sale.</span>
                 </p>
-                <p className="text-[0.75rem] leading-relaxed text-white/40">
+                <p className="text-[0.75rem] leading-relaxed text-[var(--mdh-muted)]">
                   Illustrative: $1M value, $200K mortgage, $60K closing costs, $200K capital gains and depreciation
                   recapture. Figures will differ for your building.
                 </p>
                 <Link
                   href="/owners#calculator"
-                  className="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
                 >
                   Run your own numbers &rarr;
                 </Link>
@@ -471,7 +471,7 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-[center_40%]"
         />
-        <div className="absolute inset-0 bg-[rgba(14,22,32,0.72)]" />
+        <div className="absolute inset-0 bg-[rgba(14,22,32,0.58)]" />
         <Container className="relative py-24 md:py-32">
           <div className="mx-auto max-w-5xl text-center">
             <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-white md:text-[3.3rem] xl:text-[3.75rem]">
