@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 import { TaxCalculator } from "@/components/calculator";
 
@@ -251,67 +251,32 @@ export default function OwnersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ownerFaqSchema) }}
       />
-      {/* Hero */}
-      <Section className="pb-5 pt-6 md:pt-8">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[360px] md:h-[64vh] md:min-h-[480px]">
-              <Image
-                src="/images/nb-brick-threeflats.jpg"
-                alt="Brick three-flats on a tree-lined street"
-                fill
-                priority
-                quality={95}
-                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_40%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.80)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,16,24,0.62)] via-[rgba(8,16,24,0.28)] to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For property owners
-                </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Turn your real estate equity into a diversified portfolio.
-                </h1>
-                <p className="mt-4 max-w-[52ch] text-[0.92rem] leading-relaxed text-white/75 md:text-[1rem]">
-                  Contribute your building instead of selling it. You receive ownership in a diversified portfolio of neighborhood buildings, owe no tax at closing, and hand off the management on day one.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-              {STATS.map((item) => (
-                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}
-                  </p>
-                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageHero
+        eyebrow="For property owners"
+        title="Turn your real estate equity into a diversified portfolio."
+        lead="Contribute your building instead of selling it. You receive ownership in a diversified portfolio of neighborhood buildings, owe no tax at closing, and hand off the management on day one."
+        image="/images/nb-brick-threeflats.jpg"
+        imageAlt="Brick three-flats on a tree-lined street"
+        stats={STATS}
+      />
 
       {/* Pitch */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
-            <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
+          <div className="">
+            <p className="font-display max-w-4xl text-[1.35rem] leading-[1.45] text-[var(--mdh-title)] md:text-[1.65rem]">
               You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means staying a landlord, with everything riding on one property. Middle Door Homes offers a third path.
             </p>
             <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The tax problem</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling triggers capital gains and
                   depreciation recapture, often costing 30-40% of your gains.
                 </p>
               </div>
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">Operational drag on returns</h3>
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">Operational drag on returns</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Multifamily buildings require constant attention: tenant calls, aging systems,
                   deferred maintenance. At some point, the active management burden stops being worth
@@ -319,7 +284,7 @@ export default function OwnersPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">No clean exit from operations</h3>
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">No clean exit from operations</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange defers taxes, but requires identifying a replacement property in 45 days
                   and closing in 180. You&apos;re not exiting active operations; you&apos;re just
@@ -332,15 +297,15 @@ export default function OwnersPage() {
       </Section>
 
       {/* Situations */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>Where owners start</Eyebrow>
             <Heading className="mt-2">Which sounds like you?</Heading>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
               {SITUATIONS.map((item) => (
-                <div key={item.title} className="flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                <div key={item.title} className="flex flex-col border-t border-[var(--mdh-line)] pt-5">
+                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                   <p className="mt-2 flex-1 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   <p className="mt-4 border-t border-[var(--mdh-line)] pt-3 text-[0.9rem] font-medium leading-snug text-[var(--mdh-title)]">
                     {item.number}
@@ -356,9 +321,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* The solution */}
-      <Section id="solution" className="pt-4">
+      <Section id="solution" tone="white">
         <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-start">
+          <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
             <div>
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
@@ -371,7 +336,7 @@ export default function OwnersPage() {
                 You do not sell. Your equity moves forward intact into a diversified, professionally operated portfolio.
               </p>
               <div className="mt-5 space-y-3">
-                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                <div className="border-t border-[var(--mdh-line)] pt-5">
                   <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                     The key distinction
                   </p>
@@ -380,7 +345,7 @@ export default function OwnersPage() {
                     sale is deferred, so you keep 100% of what you have built.
                   </p>
                 </div>
-                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
+                <div className="border-t border-[var(--mdh-line)] pt-5">
                   <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                     Why not a 1031 exchange?
                   </p>
@@ -393,7 +358,7 @@ export default function OwnersPage() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[420px]">
+            <div className="relative h-[320px] overflow-hidden lg:h-full lg:min-h-[420px]">
               <Image
                 src="/images/nb-greystone-row.jpg"
                 alt="Greystone and brick buildings on a tree-lined street"
@@ -408,29 +373,29 @@ export default function OwnersPage() {
       </Section>
 
       {/* Value creation */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>How returns are generated</Eyebrow>
             <Heading className="mt-2">We invest in the buildings. You get paid first.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher net operating income (rent minus operating costs), better occupancy, and where the building allows, additional units for incremental cash flow.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">Building-level capital review</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">Building-level capital review</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   We assess every contributed building for capital improvement opportunities. Where improvements generate measurable returns, MDH arranges renovation financing and executes: systems upgrades, unit renovations, and where feasible, additional units created for incremental cash flow. No capital required from you.
                 </p>
               </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">You are paid first</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">You are paid first</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50.
                 </p>
               </div>
             </div>
-            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="mt-4 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">The alignment</p>
               <p className="mt-2 text-[0.97rem] font-medium leading-snug text-[var(--mdh-title)]">
                 We never take more than 30% of a year&apos;s total return, and if portfolio value falls we earn nothing further until it recovers. We hold our own units alongside yours.
@@ -441,9 +406,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* Value-add partnership */}
-      <Section id="partnership" className="pt-4">
+      <Section id="partnership" tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>For buildings with upside left in them</Eyebrow>
             <Heading className="mt-2">The value-add partnership</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -451,8 +416,8 @@ export default function OwnersPage() {
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
               {PARTNERSHIP_POINTS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                   <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
@@ -462,9 +427,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* Comparison chart */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>Compare your options</Eyebrow>
             <Heading className="mt-2">How a 721 exchange stacks up</Heading>
             <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
@@ -513,14 +478,14 @@ export default function OwnersPage() {
                       {[row.selfManage, row.hirePm, row.sale, row.ex1031, row.dst].map((val, i) => (
                         <td key={i} className="py-3 pr-4 text-center">
                           {val
-                            ? <span className="text-emerald-600 font-bold">✓</span>
+                            ? <span className="text-[#b8894f] font-bold">✓</span>
                             : <span className="text-[var(--mdh-line)] font-bold">✗</span>
                           }
                         </td>
                       ))}
                       <td className="py-3 text-center">
                         {row.mdh
-                          ? <span className="text-emerald-600 font-bold">✓</span>
+                          ? <span className="text-[#b8894f] font-bold">✓</span>
                           : <span className="text-[var(--mdh-line)] font-bold">✗</span>
                         }
                       </td>
@@ -530,7 +495,7 @@ export default function OwnersPage() {
               </table>
               </div>
             </div>
-            <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 <span className="font-medium text-[var(--mdh-title)]">Middle Door is the only structure that clears all three: </span>
                 no tax event at contribution, complete exit from active management, and ongoing upside participation. Every other option trades at least one away.
@@ -549,20 +514,20 @@ export default function OwnersPage() {
       </div>
 
       {/* Benefits */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>What you receive</Eyebrow>
             <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {BENEFITS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                   <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+            <div className="mt-4 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">How 8-12% compares</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 <div>
@@ -573,7 +538,7 @@ export default function OwnersPage() {
                   <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Keep managing the building</p>
                   <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns, with full operational responsibility and concentrated single-asset risk.</p>
                 </div>
-                <div className="rounded-lg border border-[var(--mdh-accent)]/30 bg-white p-3">
+                <div className="border-t border-[var(--mdh-line)] pt-5">
                   <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">MDH 721 exchange</p>
                   <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span>: no tax haircut at contribution, no management burden.</p>
                 </div>
@@ -584,9 +549,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* Income growth */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="">
             <Eyebrow>Working with us</Eyebrow>
             <Heading className="mt-2">How professional management grows your income</Heading>
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
@@ -600,14 +565,14 @@ export default function OwnersPage() {
                     Full-time, experienced management lifts income through lower operating costs, rents set
                     to the market, and efficient operations. That upside flows to you as an owner.
                   </p>
-                  <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                  <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)] border-t border-[var(--mdh-line)] pt-5">
                     Our team has driven{" "}
                     <span className="font-medium text-[var(--mdh-title)]">$120M+ in annual net operating income growth</span>
                     {" "}across a 30,000+ home portfolio. We bring the same playbook to every building we own.
                   </p>
                 </div>
               </div>
-              <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
+              <div className="relative h-[260px] overflow-hidden lg:h-full lg:min-h-[300px]">
                 <Image
                   src="/images/nb-courtyard.jpg"
                   alt="Brick courtyard apartment building with a garden walkway"
@@ -623,15 +588,15 @@ export default function OwnersPage() {
       </Section>
 
       {/* Who qualifies */}
-      <Section id="qualifies" className="pt-4">
+      <Section id="qualifies" tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
               <div>
                 <Eyebrow>Qualifying</Eyebrow>
                 <Heading className="mt-2">Is this a fit for you?</Heading>
               </div>
-              <div className="relative hidden h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:block lg:h-[160px]">
+              <div className="relative hidden h-[200px] overflow-hidden lg:block lg:h-[160px]">
                 <Image
                   src="/images/nb-entrance.jpg"
                   alt="Building entrance with stone steps and a wooden door"
@@ -644,7 +609,7 @@ export default function OwnersPage() {
             </div>
             <div className="mt-6 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">MDH works best if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
                     "You own one or more multifamily buildings in the 2-49 unit range",
@@ -654,14 +619,14 @@ export default function OwnersPage() {
                     "You do not need a debt-free building: we pay off your mortgage at closing",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                      <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
+                      <span className="mt-0.5 shrink-0 text-[#b8894f]">✓</span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
                     "You need immediate, unrestricted liquidity",
@@ -686,14 +651,14 @@ export default function OwnersPage() {
       </Section>
 
       {/* Process */}
-      <Section id="process" className="pt-4">
+      <Section id="process">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>Process</Eyebrow>
             <Heading className="mt-2">Step by step</Heading>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               {HOW_IT_WORKS.map((item) => (
-                <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
+                <div key={item.step} className="flex gap-4 border-t border-[var(--mdh-line)] pt-5">
                   <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                     {item.step}
                   </p>
@@ -709,9 +674,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* After you close */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -719,8 +684,8 @@ export default function OwnersPage() {
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                   <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
@@ -730,9 +695,9 @@ export default function OwnersPage() {
       </Section>
 
       {/* FAQ */}
-      <Section id="faq" className="pt-4">
+      <Section id="faq">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>Common questions</Eyebrow>
             <Heading className="mt-2">Frequently asked questions</Heading>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
@@ -747,30 +712,11 @@ export default function OwnersPage() {
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                You built something real. Let&apos;s make sure it keeps working for you.
-              </h2>
-              <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
-                No obligation. We start with a conversation to understand your building and your
-                goals, and give you an honest answer on whether a 721 exchange is the right fit.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
-              >
-                Send us an address
-              </a>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <ClosingCta
+        title="You built something real. Let's make sure it keeps working for you."
+        body="No obligation. We start with a conversation to understand your building and your goals, and give you an honest answer on whether a 721 exchange is the right fit."
+        cta={{ href: "/contact", label: "Send us an address" }}
+      />
     </main>
   );
 }

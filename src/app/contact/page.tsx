@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Section className="pb-6 pt-7 md:pt-10">
+      <Section tone="white">
         <Container>
           <div className="grid gap-7 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 .
               </Lead>
             </div>
-            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
+            <div className="relative h-[280px] overflow-hidden">
               <Image
                 src="/images/nb-entrance.jpg"
                 alt="Building entrance with stone steps and a wooden door"
@@ -56,9 +56,9 @@ export default function ContactPage() {
         </Container>
       </Section>
 
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
               Send us an address for a personalized valuation and proposal
             </p>

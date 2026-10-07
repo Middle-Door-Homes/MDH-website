@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container, Eyebrow, Heading, Section } from "@/components/ui";
+import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "For Financial Advisors: 721 Exchange for Your Clients",
@@ -85,51 +85,18 @@ const HOW_IT_WORKS = [
 export default function AdvisorsPage() {
   return (
     <main>
-      {/* Hero */}
-      <Section className="pb-5 pt-6 md:pt-8">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
-              <Image
-                src="/images/nb-courtyard.jpg"
-                alt="Brick courtyard apartment building with a garden walkway"
-                fill
-                priority
-                quality={95}
-                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_46%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,16,24,0.62)] via-[rgba(8,16,24,0.28)] to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For financial advisors
-                </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  A better structure<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to protect.
-                </h1>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-              {STATS.map((item) => (
-                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}
-                  </p>
-                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageHero
+        eyebrow="For financial advisors"
+        title="A better structure for clients with gains they want to protect."
+        image="/images/nb-courtyard.jpg"
+        imageAlt="Brick courtyard apartment building with a garden walkway"
+        stats={STATS}
+      />
 
       {/* Pitch */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
+          <div className="">
             <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
               Many of your clients have built meaningful real estate equity in a structure that was never designed for their next chapter. We give them a better one.
             </p>
@@ -138,30 +105,30 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* The problem */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="">
             <Eyebrow>The problem</Eyebrow>
             <Heading className="mt-2">Clients stuck in real estate</Heading>
             <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-3">
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The tax problem</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners of multifamily buildings carry decades of appreciation
                   and depreciation. A sale typically triggers a combined tax liability of
                   30-40% of their gains.
                 </p>
               </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">The concentration risk</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The concentration risk</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   A single building often represents a disproportionate share of your client&apos;s
                   net worth, illiquid, undiversified, and operationally demanding. The tax
                   wall prevents the diversification they need.
                 </p>
               </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">No better structure</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">No better structure</h3>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange just replaces one building with another. Selling gives up
                   30-40% of the gains to tax. For most clients, there has simply never been a structure
@@ -175,9 +142,9 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* The solution */}
-      <Section id="solution" className="pt-4">
+      <Section id="solution" tone="white">
         <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
             <div>
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
@@ -189,7 +156,7 @@ export default function AdvisorsPage() {
               <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
                 Their equity moves forward intact into a diversified, income-producing portfolio. The tax event that would have occurred at a sale is deferred entirely.
               </p>
-              <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+              <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
                 <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                   Key distinction
                 </p>
@@ -200,7 +167,7 @@ export default function AdvisorsPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[360px]">
+            <div className="relative h-[320px] overflow-hidden lg:h-full lg:min-h-[360px]">
               <Image
                 src="/images/nb-greystone-row.jpg"
                 alt="Greystone and brick buildings on a tree-lined street"
@@ -215,29 +182,29 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* For you + For your clients */}
-      <Section className="pt-4">
+      <Section>
         <Container>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+            <div className="">
               <Eyebrow>For you</Eyebrow>
               <Heading className="mt-2">A stronger advisory relationship</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_YOU.map((item) => (
-                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                     <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+            <div className="">
               <Eyebrow>For your clients</Eyebrow>
               <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_CLIENTS.map((item) => (
-                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                  <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                     <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
@@ -248,15 +215,15 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* Who we work with */}
-      <Section id="who-we-work-with" className="pt-4">
+      <Section id="who-we-work-with" tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="">
             <Eyebrow>Who we work with</Eyebrow>
             <Heading className="mt-2">Built for the advisors who know their clients best</Heading>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {WHO_WE_WORK_WITH.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
+                <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
+                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
                   <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
@@ -266,15 +233,15 @@ export default function AdvisorsPage() {
       </Section>
 
       {/* How it works */}
-      <Section id="how-it-works" className="pt-4">
+      <Section id="how-it-works">
         <Container>
-          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
               <Heading className="mt-2">Three steps to a referral</Heading>
               <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
-                  <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">
+                  <div key={item.step} className="flex gap-4 border-t border-[var(--mdh-line)] pt-5">
                     <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                       {item.step}
                     </p>
@@ -286,7 +253,7 @@ export default function AdvisorsPage() {
                 ))}
               </div>
             </div>
-            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
+            <div className="relative h-[280px] overflow-hidden lg:h-full lg:min-h-[320px]">
               <Image
                 src="/images/nb-autumn-corner.jpg"
                 alt="Brick apartment building on a tree-lined corner in autumn"
@@ -300,30 +267,11 @@ export default function AdvisorsPage() {
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                Have a client who might benefit?
-              </h2>
-              <p className="mt-2 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/70">
-                Reach out directly. We can walk through the 721 exchange structure with you and
-                discuss whether it is a fit for your client&apos;s situation.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
-              >
-                Start a conversation
-              </a>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <ClosingCta
+        title="Have a client who might benefit?"
+        body="Reach out directly. We can walk through the 721 exchange structure with you and discuss whether it is a fit for your client's situation."
+        cta={{ href: "/contact", label: "Start a conversation" }}
+      />
     </main>
   );
 }

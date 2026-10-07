@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
@@ -72,39 +72,18 @@ const PRINCIPLES = [
 export default function AboutPage() {
   return (
     <main>
-      <Section className="pb-6 pt-7 md:pt-10">
-        <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
-            <div>
-              <Eyebrow>About</Eyebrow>
-              <h1 className="mt-4 max-w-3xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
-                A better next step for multifamily owners.
-              </h1>
-              <Lead>
-                Many multifamily owners have spent decades building equity and kept managing because
-                there was no good way out: selling meant a large tax bill, and a 1031 meant another
-                building to run. We built Middle Door Homes to change that.
-              </Lead>
-            </div>
-            <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
-              <Image
-                src="/images/nb-courtyard.jpg"
-                alt="Brick courtyard apartment building with a garden walkway"
-                fill
-                priority
-                quality={90}
-                sizes="(min-width: 1024px) 420px, 100vw"
-                className="object-cover object-[center_48%]"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageHero
+        eyebrow="About"
+        title="A better next step for multifamily owners."
+        lead="Many multifamily owners have spent decades building equity and kept managing because there was no good way out: selling meant a large tax bill, and a 1031 meant another building to run. We built Middle Door Homes to change that."
+        image="/images/nb-garden-apartments.jpg"
+        imageAlt="Two-story brick garden apartment building under mature oak trees"
+      />
 
       {/* What is a 721 exchange */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>The 721 exchange</Eyebrow>
             <Heading className="mt-3">A contribution, not a sale</Heading>
             <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
@@ -155,9 +134,9 @@ export default function AboutPage() {
       </Section>
 
       {/* Why Middle Door */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
             <div>
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
@@ -171,10 +150,10 @@ export default function AboutPage() {
                 multifamily building we own.
               </p>
             </div>
-            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
+            <div className="relative h-[300px] overflow-hidden lg:h-full lg:min-h-[340px]">
               <Image
-                src="/images/nb-garden-apartments.jpg"
-                alt="Two-story brick garden apartment building under mature oak trees"
+                src="/images/nb-greystone-row.jpg"
+                alt="Greystone and brick buildings on a tree-lined street"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -186,9 +165,9 @@ export default function AboutPage() {
       </Section>
 
       {/* How we work */}
-      <Section className="pt-4">
+      <Section tone="white">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
+          <div className="">
             <Eyebrow>How we work</Eyebrow>
             <Heading className="mt-3">What to expect from us</Heading>
             <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
@@ -208,9 +187,9 @@ export default function AboutPage() {
       </Section>
 
       {/* Team */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
+          <div className="">
             <Eyebrow>Our team</Eyebrow>
             <Heading className="mt-3">Investors &amp; operators who have done this at scale</Heading>
             <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
@@ -231,7 +210,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
               {TEAM.map((member) => (
-                <div key={member.name} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
+                <div key={member.name} className="border-t border-[var(--mdh-line)] pt-5">
                   <div className="flex items-center gap-3">
                     <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[var(--mdh-line)]">
                       <Image
@@ -256,23 +235,11 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
-            <div>
-              <Heading>See exactly how this works for you.</Heading>
-              <p className="mt-2 max-w-[58ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                The full owner overview covers the 721 exchange step by step, what you receive,
-                and what your income looks like going forward.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <Button href="/owners">Owner overview</Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <ClosingCta
+        title="See exactly how this works for you."
+        body="The full owner overview covers the 721 exchange step by step, what you receive, and what your income looks like going forward."
+        cta={{ href: "/owners", label: "Owner overview" }}
+      />
     </main>
   );
 }

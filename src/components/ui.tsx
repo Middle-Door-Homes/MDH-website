@@ -18,9 +18,11 @@ export function Section({
   className,
   children,
   id,
-}: ClassName & { children: ReactNode; id?: string }) {
+  tone = "plain",
+}: ClassName & { children: ReactNode; id?: string; tone?: "plain" | "white" | "warm" }) {
+  const bg = tone === "white" ? "bg-white" : tone === "warm" ? "bg-[#f6f1e7]" : "";
   return (
-    <section id={id} className={`py-6 md:py-12 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-14 md:py-20 ${bg} ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -28,7 +30,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`text-[1.6rem] font-medium leading-[1.1] tracking-[-0.012em] text-[var(--mdh-title)] md:text-[2.35rem] lg:text-[2.55rem] ${className ?? ""}`.trim()}>
+    <h2 className={`font-display text-[2rem] font-medium leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[2.75rem] xl:text-[3rem] ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );
@@ -36,7 +38,7 @@ export function Heading({ className, children }: ClassName & { children: ReactNo
 
 export function Eyebrow({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)] md:text-[0.72rem] ${className ?? ""}`.trim()}>
+    <p className={`text-[0.7rem] font-medium uppercase tracking-[0.22em] text-[#b8894f] md:text-[0.72rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -147,5 +149,114 @@ export function DoorIcon({ open, className }: ClassName & { open?: boolean }) {
       <rect x="22" y="48" width="20" height="26" rx="1" stroke="currentColor" strokeWidth="2.5" />
       <circle cx="43" cy="46" r="2.6" fill="currentColor" />
     </svg>
+  );
+}
+
+const BRASS = "#b8894f";
+
+/** Split hero used on inner pages: navy text panel beside an uncovered photo, optional floating figures. */
+export function PageHero({
+  eyebrow,
+  title,
+  lead,
+  image,
+  imageAlt,
+  stats,
+  cta = { href: "/contact", label: "Send us an address" },
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  lead?: ReactNode;
+  image: string;
+  imageAlt: string;
+  stats?: { value: string; label: string }[];
+  cta?: { href: string; label: string };
+}) {
+  return (
+    <>
+      <section className="bg-[var(--mdh-ink)]">
+        <div className="grid lg:grid-cols-2">
+          <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:order-last lg:aspect-auto">
+            <Image src={image} alt={imageAlt} fill priority quality={90} sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          </div>
+          <div
+            className={`flex items-center px-5 pt-10 sm:px-8 lg:min-h-[560px] lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))] ${
+              stats ? "pb-20 md:pb-24 lg:pb-28 lg:pt-20" : "pb-14 lg:py-20"
+            }`}
+          >
+            <div className="max-w-xl">
+              <div className="flex items-center gap-4">
+                <span className="h-px w-10" style={{ background: BRASS }} />
+                <p className="text-[0.72rem] font-medium uppercase tracking-[0.26em]" style={{ color: BRASS }}>
+                  {eyebrow}
+                </p>
+              </div>
+              <h1 className="font-display mt-5 text-[2.3rem] font-medium leading-[1.05] tracking-[-0.015em] text-white sm:text-[3rem] lg:text-[3.6rem] xl:text-[4rem]">
+                {title}
+              </h1>
+              {lead ? <p className="mt-5 text-[1.05rem] font-light leading-relaxed text-white/80 md:text-[1.2rem]">{lead}</p> : null}
+              <div className="mt-8">
+                <Link
+                  href={cta.href}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+                >
+                  {cta.label}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {stats ? (
+        <section className="relative z-10">
+          <Container>
+            <div className="-mt-12 grid grid-cols-3 divide-x divide-[var(--mdh-line)] bg-white shadow-[0_24px_60px_rgba(18,29,41,0.14)] md:-mt-16">
+              {stats.map((s) => (
+                <div key={s.label} className="px-3 py-6 text-center md:px-8 md:py-8">
+                  <p className="font-display text-[1.8rem] leading-none text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[2.8rem]">
+                    {s.value}
+                  </p>
+                  <p className="mt-2 text-[0.66rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)] md:text-[0.72rem]">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
+    </>
+  );
+}
+
+/** Light closing call to action used at the bottom of inner pages. */
+export function ClosingCta({
+  title,
+  body,
+  cta = { href: "/contact", label: "Send us an address" },
+}: {
+  title: ReactNode;
+  body?: ReactNode;
+  cta?: { href: string; label: string };
+}) {
+  return (
+    <section className="border-t border-[var(--mdh-line)] bg-[#f6f1e7] py-16 md:py-24">
+      <Container>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-balance text-[2.1rem] font-medium leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[3rem]">
+            {title}
+          </h2>
+          {body ? <p className="mx-auto mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">{body}</p> : null}
+          <div className="mt-8">
+            <Link
+              href={cta.href}
+              className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-8 py-3.5 text-sm font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
+            >
+              {cta.label}
+            </Link>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }
