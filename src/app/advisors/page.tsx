@@ -91,8 +91,8 @@ export default function AdvisorsPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/bldg-10.jpg"
-                alt="Established residential neighborhood"
+                src="/images/nb-courtyard.jpg"
+                alt="Brick courtyard apartment building with a garden walkway"
                 fill
                 priority
                 quality={95}
@@ -100,6 +100,7 @@ export default function AdvisorsPage() {
                 className="object-cover object-[center_46%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,16,24,0.62)] via-[rgba(8,16,24,0.28)] to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   For financial advisors
@@ -201,8 +202,8 @@ export default function AdvisorsPage() {
             </div>
             <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[360px]">
               <Image
-                src="/images/px-32117624.jpg"
-                alt="Tree-lined street with classic brick brownstone apartments"
+                src="/images/nb-greystone-row.jpg"
+                alt="Greystone and brick buildings on a tree-lined street"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -287,8 +288,8 @@ export default function AdvisorsPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/px-36275920.jpg"
-                alt="Classic red brick apartment building with arched entryway"
+                src="/images/nb-autumn-corner.jpg"
+                alt="Brick apartment building on a tree-lined corner in autumn"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button, Container, Eyebrow, Heading, Section } from "@/components/ui";
+import { Button, Container, DoorIcon, Eyebrow, Heading, Section } from "@/components/ui";
 import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
@@ -37,7 +37,14 @@ const THREE_PROOFS = [
 const THREE_DOORS = [
   { label: "Sell", body: "30-40% of gains lost to tax", mdh: false },
   { label: "Hold", body: "Tenants, repairs, and debt stay your job", mdh: false },
-  { label: "Middle Door", body: "Defer the tax, keep the income, stop managing", mdh: true },
+  { label: "Middle Door", body: "Your full equity, working in a diversified portfolio", mdh: true },
+];
+
+const TEAM = [
+  { name: "Jack Elzinga", title: "Managing Partner", photo: "/images/jack-elzinga.jpg" },
+  { name: "Jose Torres", title: "Partner & CEO", photo: "/images/jose-torres.jpg" },
+  { name: "Mike Rozovics", title: "Partner & EVP Operations", photo: "/images/mike-rozovics.jpg" },
+  { name: "Bob Sievewright", title: "Principal, Acquisitions", photo: "/images/bob-sievewright.jpg" },
 ];
 
 const AUDIENCE_CARDS = [
@@ -111,6 +118,12 @@ export default function Home() {
                 <p className="mt-3 max-w-3xl text-[1.05rem] font-light leading-snug text-white/80 sm:text-[1.25rem] md:text-[1.45rem]">
                   The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
                 </p>
+                <Link
+                  href="/contact"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+                >
+                  Send us an address
+                </Link>
               </div>
             </div>
 
@@ -147,6 +160,10 @@ export default function Home() {
                   ? "bg-[var(--mdh-ink)] p-6 md:p-8"
                   : "border-b border-[var(--mdh-line)] p-6 sm:border-b-0 sm:border-r md:p-8"}
               >
+                <DoorIcon
+                  open={door.mdh}
+                  className={`mb-4 h-11 w-8 ${door.mdh ? "text-[#c99a5e]" : "text-[var(--mdh-subtle)]/70"}`}
+                />
                 <p className={`text-[0.68rem] font-medium uppercase tracking-[0.2em] ${door.mdh ? "text-white/60" : "text-[var(--mdh-subtle)]"}`}>
                   {door.label}
                 </p>
@@ -197,6 +214,53 @@ export default function Home() {
         </Container>
       </Section>
 
+      {/* How it works */}
+      <Section className="pt-4">
+        <Container>
+          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
+              <Eyebrow>The 721 exchange</Eyebrow>
+              <Heading className="mt-2">Three steps to passive ownership</Heading>
+              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                A §721 exchange lets you contribute your building to a partnership for ownership
+                units, with no capital gains or depreciation recapture at contribution. It is the same
+                tool large REITs have used for decades to buy from owners who did not want to sell.
+                What is new is applying it to buildings your size.
+              </p>
+              <div className="mt-6">
+                <Button href="/owners">Owner overview</Button>
+              </div>
+              <div className="relative mt-6 h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[240px]">
+                <Image
+                  src="/images/nb-autumn-corner.jpg"
+                  alt="Brick apartment building on a tree-lined corner in autumn"
+                  fill
+                  quality={90}
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-cover object-[center_50%]"
+                />
+              </div>
+            </div>
+            <div className="space-y-3">
+              {HOW_IT_WORKS.map((item) => (
+                <div
+                  key={item.step}
+                  className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5"
+                >
+                  <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)] md:text-[1.7rem]">
+                    {item.step}
+                  </p>
+                  <div>
+                    <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
+                    <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* Calculator */}
       <TaxCalculator />
 
@@ -209,6 +273,19 @@ export default function Home() {
             <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
               Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a structure that, until now, only large real estate institutions used.
             </p>
+            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
+              {TEAM.map((member) => (
+                <Link key={member.name} href="/about" className="group flex items-center gap-3">
+                  <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[var(--mdh-line)]">
+                    <Image src={member.photo} alt={member.name} fill quality={90} sizes="48px" className="object-cover object-top" />
+                  </span>
+                  <span>
+                    <span className="block font-medium leading-tight text-[var(--mdh-title)] group-hover:underline">{member.name}</span>
+                    <span className="mt-0.5 block text-[0.7rem] font-medium uppercase tracking-[0.13em] text-[var(--mdh-subtle)]">{member.title}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
@@ -235,53 +312,6 @@ export default function Home() {
                   />
                 ))}
               </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* How it works */}
-      <Section className="pt-4">
-        <Container>
-          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-            <div>
-              <Eyebrow>The 721 exchange</Eyebrow>
-              <Heading className="mt-2">Three steps to passive ownership</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A §721 exchange lets you contribute your building to a partnership for ownership
-                units, with no capital gains or depreciation recapture at contribution. It is the same
-                tool large REITs have used for decades to buy from owners who did not want to sell.
-                What is new is applying it to buildings your size.
-              </p>
-              <div className="mt-6">
-                <Button href="/owners">Owner overview</Button>
-              </div>
-              <div className="relative mt-6 h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[240px]">
-                <Image
-                  src="/images/px-12168579.jpg"
-                  alt="Classic red brick apartment building facade"
-                  fill
-                  quality={90}
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-cover object-[center_50%]"
-                />
-              </div>
-            </div>
-            <div className="space-y-3">
-              {HOW_IT_WORKS.map((item) => (
-                <div
-                  key={item.step}
-                  className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5"
-                >
-                  <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)] md:text-[1.7rem]">
-                    {item.step}
-                  </p>
-                  <div>
-                    <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                    <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </Container>
@@ -316,6 +346,30 @@ export default function Home() {
                   </p>
                 </Link>
               ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA */}
+      <Section className="pt-4">
+        <Container>
+          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
+            <div>
+              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
+                You built something real. Let&apos;s make sure it keeps working for you.
+              </h2>
+              <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
+                Send us an address for a personalized valuation and proposal.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+              >
+                Send us an address
+              </Link>
             </div>
           </div>
         </Container>

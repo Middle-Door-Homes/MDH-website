@@ -88,8 +88,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
               <Image
-                src="/images/hero-brownstones.jpg"
-                alt="Classic brownstone row on a tree-lined street"
+                src="/images/nb-courtyard.jpg"
+                alt="Brick courtyard apartment building with a garden walkway"
                 fill
                 priority
                 quality={90}
@@ -173,8 +173,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
               <Image
-                src="/images/px-29419908.jpg"
-                alt="Sunlit brick brownstones on a tree-lined street"
+                src="/images/nb-garden-apartments.jpg"
+                alt="Two-story brick garden apartment building under mature oak trees"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"

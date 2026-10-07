@@ -126,3 +126,26 @@ export function Button({
     </Link>
   );
 }
+
+/** Door illustrations from the brand collateral: closed for sell / hold, open for Middle Door. */
+export function DoorIcon({ open, className }: ClassName & { open?: boolean }) {
+  if (open) {
+    return (
+      <svg viewBox="0 0 64 88" fill="none" aria-hidden className={className}>
+        <path d="M6 84h52" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+        <path d="M12 84V6h40v78" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+        <path d="M17 10l24 5v66l-24 3z" fill="currentColor" fillOpacity="0.12" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+        <circle cx="35" cy="48" r="2.6" fill="currentColor" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 64 88" fill="none" aria-hidden className={className}>
+      <rect x="10" y="4" width="44" height="80" rx="1.5" stroke="currentColor" strokeWidth="3" />
+      <rect x="16" y="10" width="32" height="74" stroke="currentColor" strokeWidth="3" />
+      <rect x="22" y="18" width="20" height="22" rx="1" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="22" y="48" width="20" height="26" rx="1" stroke="currentColor" strokeWidth="2.5" />
+      <circle cx="43" cy="46" r="2.6" fill="currentColor" />
+    </svg>
+  );
+}

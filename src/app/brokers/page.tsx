@@ -205,8 +205,8 @@ export default function BrokersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
               <Image
-                src="/images/px-27150697.jpg"
-                alt="Classic red brick apartment building with fire escapes"
+                src="/images/nb-sixflat-front.jpg"
+                alt="Brick six-flat apartment building with a front garden"
                 fill
                 priority
                 quality={95}
@@ -214,12 +214,13 @@ export default function BrokersPage() {
                 className="object-cover object-[center_46%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,16,24,0.62)] via-[rgba(8,16,24,0.28)] to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   For brokers
                 </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Your commission, paid in full.<br className="hidden md:block" /> A new way for your<br className="hidden md:block" /> seller to say yes.
+                <h1 className="font-display mt-3 max-w-5xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                  <span className="md:block">Your commission, paid in full.</span> <span className="md:block">A new way for your seller to say yes.</span>
                 </h1>
               </div>
             </div>
@@ -249,8 +250,8 @@ export default function BrokersPage() {
             </p>
             <div className="relative h-[240px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[200px]">
               <Image
-                src="/images/px-3953058.jpg"
-                alt="Brick apartment building with balconies"
+                src="/images/nb-garden-apartments.jpg"
+                alt="Two-story brick garden apartment building under mature oak trees"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 360px, 100vw"
@@ -317,8 +318,8 @@ export default function BrokersPage() {
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
               <Image
-                src="/images/px-30726437.jpg"
-                alt="Ornate brick brownstone building facade"
+                src="/images/nb-greystone.jpg"
+                alt="Greystone multifamily building with a lit entrance"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 45vw, 100vw"

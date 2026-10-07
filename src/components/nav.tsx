@@ -112,12 +112,12 @@ export function Nav() {
           </nav>
 
           <div className="hidden items-center gap-4 md:flex">
-            <a
-              href="mailto:acquisitions@middledoorhomes.com"
-              className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-4 py-2 text-[0.82rem] font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
             >
-              Acquisitions@MiddleDoorHomes.com
-            </a>
+              Send us an address
+            </Link>
           </div>
 
           <button
@@ -178,12 +178,13 @@ export function Nav() {
                 );
               })}
             </nav>
-            <a
-              href="mailto:acquisitions@middledoorhomes.com"
-              className="mt-4 inline-block text-sm font-medium text-[var(--mdh-ink)]"
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-4 py-2 text-sm font-medium text-white"
             >
-              Acquisitions@MiddleDoorHomes.com
-            </a>
+              Send us an address
+            </Link>
           </Container>
         </div>
       ) : null}

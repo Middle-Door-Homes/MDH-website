@@ -256,8 +256,8 @@ export default function OwnersPage() {
           <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
             <div className="relative h-[46vh] min-h-[360px] md:h-[64vh] md:min-h-[480px]">
               <Image
-                src="/images/px-13025296.jpg"
-                alt="Classic brick apartment building courtyard"
+                src="/images/nb-brick-threeflats.jpg"
+                alt="Brick three-flats on a tree-lined street"
                 fill
                 priority
                 quality={95}
@@ -265,6 +265,7 @@ export default function OwnersPage() {
                 className="object-cover object-[center_40%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.80)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,16,24,0.62)] via-[rgba(8,16,24,0.28)] to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
                   For property owners
@@ -393,8 +394,8 @@ export default function OwnersPage() {
             </div>
             <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[420px]">
               <Image
-                src="/images/bldg-04.jpg"
-                alt="Tree-lined street with classic brick multifamily buildings"
+                src="/images/nb-greystone-row.jpg"
+                alt="Greystone and brick buildings on a tree-lined street"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -602,8 +603,8 @@ export default function OwnersPage() {
               </div>
               <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
                 <Image
-                  src="/images/px-19928129.jpg"
-                  alt="Classic brick brownstone apartment stoops"
+                  src="/images/nb-courtyard.jpg"
+                  alt="Brick courtyard apartment building with a garden walkway"
                   fill
                   quality={90}
                   sizes="(min-width: 1024px) 40vw, 100vw"
@@ -626,8 +627,8 @@ export default function OwnersPage() {
               </div>
               <div className="relative hidden h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:block lg:h-[160px]">
                 <Image
-                  src="/images/brn-12168556.jpg"
-                  alt="Classic brownstone apartment buildings on a tree-lined street"
+                  src="/images/nb-entrance.jpg"
+                  alt="Building entrance with stone steps and a wooden door"
                   fill
                   quality={90}
                   sizes="320px"
