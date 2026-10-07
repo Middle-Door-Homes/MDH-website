@@ -117,7 +117,7 @@ export function TaxCalculator() {
       <Container>
         <div>
           <Eyebrow>Equity calculator</Eyebrow>
-          <h2 className="font-display mt-4 text-[2rem] font-medium leading-[1.12] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.75rem]">
+          <h2 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[3.1rem] xl:text-[3.5rem]">
             How much equity do you keep?
           </h2>
           <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
