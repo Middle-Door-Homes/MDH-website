@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-[110rem] px-5 md:px-10 lg:px-16 xl:px-20 ${className ?? ""}`.trim()}>
+    <div className={`w-full px-5 md:px-8 lg:px-10 xl:px-12 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -30,7 +30,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`font-display text-[2rem] font-medium leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[2.3rem] xl:text-[2.5rem] ${className ?? ""}`.trim()}>
+    <h2 className={`font-display text-[1.65rem] font-normal leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[1.8rem] xl:text-[1.95rem] ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );
@@ -46,7 +46,7 @@ export function Eyebrow({ className, children }: ClassName & { children: ReactNo
 
 export function Subheading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`mt-4 max-w-[66ch] text-[0.99rem] leading-relaxed text-[var(--mdh-muted)] md:text-[1.06rem] ${className ?? ""}`.trim()}>
+    <p className={`mt-4 max-w-[66ch] text-[0.93rem] leading-relaxed text-[var(--mdh-muted)] md:text-[0.98rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -54,7 +54,7 @@ export function Subheading({ className, children }: ClassName & { children: Reac
 
 export function Lead({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`mt-4 max-w-[62ch] text-[1.04rem] leading-[1.62] text-[var(--mdh-ink)] md:text-[1.2rem] ${className ?? ""}`.trim()}>
+    <p className={`mt-4 max-w-[62ch] text-[0.96rem] leading-[1.62] text-[var(--mdh-ink)] md:text-[1.05rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -180,7 +180,7 @@ export function PageHero({
             <Image src={image} alt={imageAlt} fill priority quality={90} sizes="100vw" className="object-cover" />
           </div>
           <div
-            className={`flex items-center px-5 pt-10 sm:px-8 lg:min-h-[560px] lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))] ${
+            className={`flex items-center px-5 pt-10 sm:px-8 lg:min-h-[560px] lg:pl-10 lg:pr-14 xl:pl-12 ${
               stats ? "pb-20 md:pb-24 lg:pb-28 lg:pt-20" : "pb-14 lg:py-20"
             }`}
           >
@@ -191,10 +191,10 @@ export function PageHero({
                   {eyebrow}
                 </p>
               </div>
-              <h1 className="font-display mt-5 text-[2.3rem] font-medium leading-[1.05] tracking-[-0.015em] text-white sm:text-[2.6rem] lg:text-[3.1rem] xl:text-[3.4rem]">
+              <h1 className="font-display mt-5 text-balance text-[1.8rem] font-normal leading-[1.05] tracking-[-0.015em] text-white sm:text-[2rem] lg:text-[2.7rem] xl:text-[2.9rem]">
                 {title}
               </h1>
-              {lead ? <p className="mt-5 text-[1.05rem] font-light leading-relaxed text-white/80 md:text-[1.2rem]">{lead}</p> : null}
+              {lead ? <p className="mt-5 text-[0.96rem] font-light leading-relaxed text-white/80 md:text-[1.05rem]">{lead}</p> : null}
               <div className="mt-8">
                 <Link
                   href={cta.href}
@@ -213,7 +213,7 @@ export function PageHero({
             <div className="-mt-12 grid grid-cols-3 divide-x divide-[var(--mdh-line)] bg-white shadow-[0_24px_60px_rgba(18,29,41,0.14)] md:-mt-16">
               {stats.map((s) => (
                 <div key={s.label} className="px-3 py-6 text-center md:px-8 md:py-8">
-                  <p className="font-display text-[1.8rem] leading-none text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[2.3rem]">
+                  <p className="font-display text-[1.5rem] leading-none text-[var(--mdh-title)] [font-variant-numeric:lining-nums] md:text-[1.8rem]">
                     {s.value}
                   </p>
                   <p className="mt-2 text-[0.66rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)] md:text-[0.72rem]">
@@ -243,10 +243,10 @@ export function ClosingCta({
     <section className="border-t border-[var(--mdh-line)] bg-[#f6f1e7] py-16 md:py-24">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-balance text-[2.1rem] font-medium leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.4rem]">
+          <h2 className="font-display text-balance text-[1.7rem] font-normal leading-[1.1] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
             {title}
           </h2>
-          {body ? <p className="mx-auto mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">{body}</p> : null}
+          {body ? <p className="mx-auto mt-5 max-w-2xl text-[0.96rem] leading-relaxed text-[var(--mdh-ink)]">{body}</p> : null}
           <div className="mt-8">
             <Link
               href={cta.href}

@@ -31,7 +31,7 @@ export function TeamHoverGrid({ team }: { team: TeamMember[] }) {
               >
                 <Image src={member.image} alt={member.name} fill sizes="220px" className="object-cover" />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(12,20,29,0.62)] to-transparent p-3">
-                  <p className="text-[0.88rem] font-medium tracking-[-0.01em] text-white md:text-[0.92rem]">
+                  <p className="text-[0.88rem] font-medium tracking-[-0.01em] text-white md:text-[0.88rem]">
                     {member.name}
                   </p>
                 </div>
@@ -43,10 +43,10 @@ export function TeamHoverGrid({ team }: { team: TeamMember[] }) {
 
       <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[rgba(248,251,253,0.85)] p-4 md:p-5">
         <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">Profile</p>
-        <h3 className="mt-2 text-[1.6rem] font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.75rem]">
+        <h3 className="mt-2 text-[1.35rem] font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.45rem]">
           {team[activeIndex]?.name}
         </h3>
-        <p className="mt-3 max-w-[70ch] text-[0.97rem] leading-[1.62] text-[var(--mdh-ink)] md:text-[1.01rem]">
+        <p className="mt-3 max-w-[70ch] text-[0.93rem] leading-[1.62] text-[var(--mdh-ink)] md:text-[0.95rem]">
           {team[activeIndex]?.bio}
         </p>
       </div>

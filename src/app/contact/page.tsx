@@ -14,7 +14,7 @@ export default function ContactPage() {
     <main>
       <Section tone="white">
         <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_380px] lg:items-end">
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
               <Eyebrow>Contact</Eyebrow>
               <Heading className="mt-3">Contact Us</Heading>
@@ -59,10 +59,10 @@ export default function ContactPage() {
       <Section>
         <Container>
           <div className="">
-            <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+            <p className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
               Send us an address for a personalized valuation and proposal
             </p>
-            <p className="mt-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-1 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
               An address is enough to start. We will come back with a number and walk you through how it works for your building.
             </p>
             <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">

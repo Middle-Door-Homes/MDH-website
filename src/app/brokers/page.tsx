@@ -214,8 +214,8 @@ export default function BrokersPage() {
       {/* Pitch */}
       <Section tone="white">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-[1fr_360px] lg:items-center">
-            <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
+          <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[1fr_360px] lg:items-center">
+            <p className="font-display max-w-3xl text-[1.3rem] font-normal leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.6rem]">
               Many multifamily owners are not looking to sell. We help you unlock off-market
               transactions, helping owners make a tax-deferred transition to passive ownership.
             </p>
@@ -236,15 +236,15 @@ export default function BrokersPage() {
       {/* For you + For your clients */}
       <Section id="commission">
         <Container>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-x-12 gap-y-6 md:grid-cols-2">
             <div className="">
               <Eyebrow>For you</Eyebrow>
               <Heading className="mt-2">A real estate commission for representing the sale</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_YOU.map((item) => (
                   <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -256,8 +256,8 @@ export default function BrokersPage() {
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_CLIENTS.map((item) => (
                   <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -269,19 +269,19 @@ export default function BrokersPage() {
       {/* How it works */}
       <Section id="how-it-works" tone="white">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
               <Heading className="mt-2">Three steps to a commission</Heading>
               <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
                   <div key={item.step} className="flex gap-4 border-t border-[var(--mdh-line)] pt-5">
-                    <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
+                    <p className="shrink-0 text-[1.3rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                       {item.step}
                     </p>
                     <div>
                       <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                      <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                      <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                     </div>
                   </div>
                 ))}

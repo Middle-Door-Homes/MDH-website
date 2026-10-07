@@ -14,7 +14,7 @@ export default function InvestorLoginPage() {
     <main>
       <Section className="pb-6 pt-7 md:pt-10">
         <Container>
-          <div className="grid gap-7 lg:grid-cols-[minmax(0,480px)_1fr] lg:items-start">
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,480px)_1fr] lg:items-start">
             <div>
               <Eyebrow>Investor Access</Eyebrow>
               <Heading className="mt-3">Investor Login</Heading>
@@ -22,7 +22,7 @@ export default function InvestorLoginPage() {
                 <InvestorLoginForm />
               </Card>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-x-12 gap-y-6 sm:grid-cols-2">
               <div className="relative h-48 overflow-hidden rounded-xl border border-[var(--mdh-line)] sm:col-span-2 md:h-64">
                 <Image
                   src="/images/px-23973560.jpg"

@@ -62,18 +62,18 @@ function Row({
 
   const valueClass = `shrink-0 whitespace-nowrap tabular-nums ${
     zero
-      ? "text-[0.9rem] font-semibold text-emerald-400"
+      ? "text-[0.88rem] font-semibold text-emerald-400"
       : negative
         ? dark
-          ? "text-[0.9rem] font-medium text-red-400"
-          : "text-[0.9rem] font-medium text-red-600"
+          ? "text-[0.88rem] font-medium text-red-400"
+          : "text-[0.88rem] font-medium text-red-600"
         : total
           ? dark
-            ? "text-[1.1rem] font-bold text-white"
-            : "text-[1.1rem] font-bold text-[var(--mdh-title)]"
+            ? "text-[1rem] font-bold text-white"
+            : "text-[1rem] font-bold text-[var(--mdh-title)]"
           : dark
-            ? "text-[0.9rem] font-medium text-white/90"
-            : "text-[0.9rem] font-medium text-[var(--mdh-title)]"
+            ? "text-[0.88rem] font-medium text-white/90"
+            : "text-[0.88rem] font-medium text-[var(--mdh-title)]"
   }`;
 
   return (
@@ -117,10 +117,10 @@ export function TaxCalculator() {
       <Container>
         <div>
           <Eyebrow>Equity calculator</Eyebrow>
-          <h2 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.5rem] xl:text-[2.75rem]">
+          <h2 className="font-display mt-4 text-[1.75rem] font-normal leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.95rem] xl:text-[2.1rem]">
             How much equity do you keep?
           </h2>
-          <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+          <p className="mt-3 max-w-[62ch] text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
             Adjust the sliders to match your situation. See how a 721 exchange compares to a
             traditional sale, line by line.
           </p>
@@ -132,7 +132,7 @@ export function TaxCalculator() {
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Building value
                 </p>
-                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.2rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {fmt(bldg)}
                 </p>
               </div>
@@ -161,7 +161,7 @@ export function TaxCalculator() {
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   What you paid for the building
                 </p>
-                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.2rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {fmt(safeBasis)}
                 </p>
               </div>
@@ -185,7 +185,7 @@ export function TaxCalculator() {
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Outstanding mortgage
                 </p>
-                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.2rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {safeM === 0 ? "None" : fmt(safeM)}
                 </p>
               </div>
@@ -208,7 +208,7 @@ export function TaxCalculator() {
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   State income tax rate
                 </p>
-                <p className="shrink-0 whitespace-nowrap text-[1.4rem] font-semibold tracking-tight text-[var(--mdh-title)]">
+                <p className="shrink-0 whitespace-nowrap text-[1.2rem] font-semibold tracking-tight text-[var(--mdh-title)]">
                   {(stateRate * 100).toFixed(1)}%
                 </p>
               </div>
@@ -289,7 +289,7 @@ export function TaxCalculator() {
               <p className="text-[0.83rem] text-[var(--mdh-subtle)]">
                 With a 721 exchange you preserve
               </p>
-              <p className="mt-0.5 whitespace-nowrap text-[1.55rem] font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1.8rem]">
+              <p className="mt-0.5 whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1.5rem]">
                 {fmt(equityGain)} more equity
               </p>
               <p className="mt-0.5 text-[0.83rem] text-[var(--mdh-muted)]">

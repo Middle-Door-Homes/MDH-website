@@ -86,12 +86,12 @@ export default function AboutPage() {
           <div className="">
             <Eyebrow>The 721 exchange</Eyebrow>
             <Heading className="mt-3">A contribution, not a sale</Heading>
-            <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+            <div className="mt-5 grid gap-x-12 gap-y-2 md:grid-cols-2">
               <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                <h3 className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
                   How it works
                 </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 721 exchange is a long-established part of the tax code that allows you to contribute your
                   building to a professionally managed portfolio in exchange for a passive ownership
                   stake, with no taxable event at closing. No capital gains. No depreciation
@@ -99,30 +99,30 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                <h3 className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
                   Why it matters
                 </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling means a large, often
                   unexpected tax bill, typically 30-40% of your gains. A 721 exchange
                   defers that entirely. Your equity rolls forward intact.
                 </p>
               </div>
               <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                <h3 className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
                   What you receive
                 </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                   You own a stake in a diversified, professionally managed portfolio. You receive
                   regular distributions from the portfolio. Our team manages everything. No
                   tenant calls. No maintenance coordination. Truly passive income.
                 </p>
               </div>
               <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                <h3 className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
                   Who it is for
                 </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                   Multifamily investors with 2-49 unit holdings who have built meaningful embedded
                   gains, want to exit active operations, and are looking for a tax-efficient way to
                   reallocate their capital into passive income.
@@ -136,15 +136,15 @@ export default function AboutPage() {
       {/* Why Middle Door */}
       <Section>
         <Container>
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-x-12 gap-y-6 lg:grid-cols-2 lg:items-center">
             <div>
               <Eyebrow>Why Middle Door</Eyebrow>
               <Heading className="mt-3">Experience managing at scale</Heading>
-              <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
+              <p className="mt-4 text-[0.95rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
                 We know what it takes to run residential real estate well, because we have done it
                 at scale.
               </p>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 Our team has operated 30,000+ homes at institutional scale, across some of the largest
                 residential platforms in the country. We bring that same operating playbook to every
                 multifamily building we own.
@@ -170,13 +170,13 @@ export default function AboutPage() {
           <div className="">
             <Eyebrow>How we work</Eyebrow>
             <Heading className="mt-3">What to expect from us</Heading>
-            <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+            <div className="mt-5 grid gap-x-12 gap-y-2 md:grid-cols-2">
               {PRINCIPLES.map((item) => (
                 <div key={item.title}>
-                  <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+                  <h3 className="text-[0.96rem] font-medium text-[var(--mdh-title)]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                  <p className="mt-2 max-w-[62ch] text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                     {item.body}
                   </p>
                 </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 md:grid-cols-2">
               {TEAM.map((member) => (
                 <div key={member.name} className="border-t border-[var(--mdh-line)] pt-5">
                   <div className="flex items-center gap-3">

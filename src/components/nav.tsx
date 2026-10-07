@@ -61,7 +61,7 @@ export function Nav() {
                 className="object-contain"
               />
             </span>
-            <span className="translate-y-[1.5px] text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
+            <span className="translate-y-[1.5px] text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[0.96rem]">
               Middle Door Homes
             </span>
           </Link>

@@ -290,28 +290,28 @@ export default function OwnersPage() {
       <Section tone="white">
         <Container>
           <div className="">
-            <p className="font-display max-w-4xl text-[1.35rem] leading-[1.45] text-[var(--mdh-title)] md:text-[1.65rem]">
+            <p className="font-display max-w-4xl text-[1.15rem] leading-[1.45] text-[var(--mdh-title)] md:text-[1.4rem]">
               You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means staying a landlord, with everything riding on one property. Middle Door Homes offers a third path.
             </p>
-            <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
+            <div className="mt-8 grid gap-x-12 gap-y-2 md:grid-cols-3">
               <div>
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The tax problem</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">The tax problem</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners carry decades of appreciation. Selling triggers capital gains and
                   depreciation recapture, often costing 30-40% of your gains.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">Operational drag on returns</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">Operational drag on returns</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   Multifamily buildings require constant attention: tenant calls, aging systems,
                   deferred maintenance. At some point, the active management burden stops being worth
                   the return on your time and capital. You built this as an investment, not a job.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">No clean exit from operations</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">No clean exit from operations</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange defers taxes, but requires identifying a replacement property in 45 days
                   and closing in 180. You&apos;re not exiting active operations; you&apos;re just
                   changing which building you&apos;re running.
@@ -328,12 +328,12 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>Where owners start</Eyebrow>
             <Heading className="mt-2">Which sounds like you?</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 grid gap-x-12 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">
               {SITUATIONS.map((item) => (
                 <div key={item.title} className="flex flex-col border-t border-[var(--mdh-line)] pt-5">
-                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 flex-1 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-3 text-[0.9rem] font-medium leading-snug text-[var(--mdh-title)]">
+                  <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-3 text-[0.88rem] font-medium leading-snug text-[var(--mdh-title)]">
                     {item.number}
                   </p>
                 </div>
@@ -349,16 +349,16 @@ export default function OwnersPage() {
       {/* The solution */}
       <Section id="solution" tone="white">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
+          <div className="grid gap-x-12 gap-y-6 lg:grid-cols-2 lg:items-start">
             <div>
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange is a long-established part of the tax code that allows you to contribute your building
                 to a professionally managed portfolio, in exchange for a passive ownership stake,
                 with no taxable event at closing.
               </p>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 You do not sell. Your equity moves forward intact into a diversified, professionally operated portfolio.
               </p>
               <div className="mt-5 space-y-3">
@@ -366,7 +366,7 @@ export default function OwnersPage() {
                   <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                     The key distinction
                   </p>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                  <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                     A 721 exchange is a contribution, not a sale. The tax event that would occur at
                     sale is deferred, so you keep 100% of what you have built.
                   </p>
@@ -375,7 +375,7 @@ export default function OwnersPage() {
                   <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                     Why not a 1031 exchange?
                   </p>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                  <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                     A 1031 also defers taxes, but you face a 45-day identification window and 180-day
                     closing deadline, and you end up managing a new building. A 721 exchange has no
                     deadlines and no replacement property. You contribute once and exit active
@@ -404,7 +404,7 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>How we add value</Eyebrow>
             <Heading className="mt-2">We invest in improving every building.</Heading>
-            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-4 max-w-[64ch] text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
               We look at every building for improvements that pay back: better units, rents set to the market, lower operating costs, and where the building allows, additional units. We arrange the financing and do the work. No capital required from you.
             </p>
           </div>
@@ -421,8 +421,8 @@ export default function OwnersPage() {
               {TWO_PATHS.map((item) => (
                 <div key={item.title} className="border-t-2 border-[#b8894f] pt-6">
                   <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-[#b8894f]">{item.label}</p>
-                  <h3 className="font-display mt-3 text-[1.5rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-3 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <h3 className="font-display mt-3 text-[1.3rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -436,9 +436,9 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>Compare your options</Eyebrow>
             <Heading className="mt-2">How a 721 exchange stacks up</Heading>
-            <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
+            <div className="mt-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6">
               <div className="px-6 md:px-8">
-              <table className="w-full min-w-[720px] text-[0.9rem]">
+              <table className="w-full min-w-[720px] text-[0.88rem]">
                 <thead>
                   <tr>
                     <th className="w-[28%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
@@ -500,7 +500,7 @@ export default function OwnersPage() {
               </div>
             </div>
             <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
-              <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                 <span className="font-medium text-[var(--mdh-title)]">Middle Door is the only structure that clears all three: </span>
                 no tax event at contribution, complete exit from active management, and ongoing upside participation. Every other option trades at least one away.
               </p>
@@ -523,11 +523,11 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>What you receive</Eyebrow>
             <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 sm:grid-cols-2">
               {BENEFITS.map((item) => (
                 <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -541,18 +541,18 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>Working with us</Eyebrow>
             <Heading className="mt-2">How professional management grows your income</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
-              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
-                <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            <div className="mt-5 grid gap-x-12 gap-y-2 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+              <div className="grid gap-x-12 gap-y-6 md:grid-cols-2 lg:grid-cols-1">
+                <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                   Many owners are not earning everything their building could. Deferred maintenance,
                   below-market rents, and high operating costs hold returns down year after year.
                 </p>
                 <div>
-                  <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+                  <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                     Full-time, experienced management lifts income through lower operating costs, rents set
                     to the market, and efficient operations. That upside flows to you as an owner.
                   </p>
-                  <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)] border-t border-[var(--mdh-line)] pt-5">
+                  <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)] border-t border-[var(--mdh-line)] pt-5">
                     Our team has driven{" "}
                     <span className="font-medium text-[var(--mdh-title)]">$120M+ in annual net operating income growth</span>
                     {" "}across a 30,000+ home portfolio. We bring the same playbook to every building we own.
@@ -578,7 +578,7 @@ export default function OwnersPage() {
       <Section id="qualifies" tone="white">
         <Container>
           <div className="">
-            <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
+            <div className="grid gap-10 lg:gap-14 lg:grid-cols-[1fr_320px] lg:items-start">
               <div>
                 <Eyebrow>Qualifying</Eyebrow>
                 <Heading className="mt-2">Is this a fit for you?</Heading>
@@ -594,9 +594,9 @@ export default function OwnersPage() {
                 />
               </div>
             </div>
-            <div className="mt-6 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 md:grid-cols-2">
               <div>
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">MDH works best if:</h3>
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">MDH works best if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
                     "You own one or more multifamily buildings in the 2-49 unit range",
@@ -605,7 +605,7 @@ export default function OwnersPage() {
                     "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
                     "You do not need a debt-free building: we pay off your mortgage at closing",
                   ].map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                    <li key={item} className="flex gap-2.5 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                       <span className="mt-0.5 shrink-0 text-[#b8894f]">✓</span>
                       {item}
                     </li>
@@ -613,7 +613,7 @@ export default function OwnersPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
                 <ul className="mt-3 space-y-2">
                   {[
                     "You need immediate, unrestricted liquidity",
@@ -621,13 +621,13 @@ export default function OwnersPage() {
                     "You want a short-term exit rather than a long-term passive investment",
                     "The illiquid nature of a private partnership does not fit your financial situation",
                   ].map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                    <li key={item} className="flex gap-2.5 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                       <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">-</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-4 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">
                   The best way to find out is a conversation. There&apos;s no cost, no obligation, and
                   we&apos;ll give you an honest answer.
                 </p>
@@ -643,15 +643,15 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>Process</Eyebrow>
             <Heading className="mt-2">Step by step</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 md:grid-cols-2">
               {HOW_IT_WORKS.map((item) => (
                 <div key={item.step} className="flex gap-4 border-t border-[var(--mdh-line)] pt-5">
-                  <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
+                  <p className="shrink-0 text-[1.3rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                     {item.step}
                   </p>
                   <div>
                     <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                    <p className="mt-2 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    <p className="mt-2 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 </div>
               ))}
@@ -666,14 +666,14 @@ export default function OwnersPage() {
           <div className="">
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
-            <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+            <p className="mt-3 max-w-[62ch] text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
               On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
             </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (
                 <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>

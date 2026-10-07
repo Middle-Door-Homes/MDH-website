@@ -97,7 +97,7 @@ export default function AdvisorsPage() {
       <Section tone="white">
         <Container>
           <div className="">
-            <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
+            <p className="font-display max-w-3xl text-[1.3rem] font-normal leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.6rem]">
               Many of your clients have built meaningful real estate equity in a structure that was never designed for their next chapter. We give them a better one.
             </p>
           </div>
@@ -110,26 +110,26 @@ export default function AdvisorsPage() {
           <div className="">
             <Eyebrow>The problem</Eyebrow>
             <Heading className="mt-2">Clients stuck in real estate</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-3">
+            <div className="mt-5 grid gap-x-12 gap-y-2 md:grid-cols-3">
               <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The tax problem</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">The tax problem</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   Long-term owners of multifamily buildings carry decades of appreciation
                   and depreciation. A sale typically triggers a combined tax liability of
                   30-40% of their gains.
                 </p>
               </div>
               <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">The concentration risk</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">The concentration risk</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   A single building often represents a disproportionate share of your client&apos;s
                   net worth, illiquid, undiversified, and operationally demanding. The tax
                   wall prevents the diversification they need.
                 </p>
               </div>
               <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">No better structure</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">No better structure</h3>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange just replaces one building with another. Selling gives up
                   30-40% of the gains to tax. For most clients, there has simply never been a structure
                   that preserves their equity and keeps their capital working in a diversified,
@@ -144,23 +144,23 @@ export default function AdvisorsPage() {
       {/* The solution */}
       <Section id="solution" tone="white">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-x-12 gap-y-6 lg:grid-cols-2 lg:items-center">
             <div>
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 A 721 exchange allows your client to contribute their building to a professionally
                 managed portfolio in exchange for a passive ownership stake, with no taxable event
                 at closing. No capital gains. No depreciation recapture.
               </p>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
+              <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
                 Their equity moves forward intact into a diversified, income-producing portfolio. The tax event that would have occurred at a sale is deferred entirely.
               </p>
               <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
                 <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
                   Key distinction
                 </p>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
                   This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
                   that makes this possible. The tax event that would have occurred at sale is
                   deferred entirely. Your client keeps 100% of what they built.
@@ -184,15 +184,15 @@ export default function AdvisorsPage() {
       {/* For you + For your clients */}
       <Section>
         <Container>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-x-12 gap-y-6 md:grid-cols-2">
             <div className="">
               <Eyebrow>For you</Eyebrow>
               <Heading className="mt-2">A stronger advisory relationship</Heading>
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_YOU.map((item) => (
                   <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -204,8 +204,8 @@ export default function AdvisorsPage() {
               <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
                 {FOR_CLIENTS.map((item) => (
                   <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                    <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                    <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -220,11 +220,11 @@ export default function AdvisorsPage() {
           <div className="">
             <Eyebrow>Who we work with</Eyebrow>
             <Heading className="mt-2">Built for the advisors who know their clients best</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
+            <div className="mt-6 grid gap-x-12 gap-y-2 sm:grid-cols-2">
               {WHO_WE_WORK_WITH.map((item) => (
                 <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -235,19 +235,19 @@ export default function AdvisorsPage() {
       {/* How it works */}
       <Section id="how-it-works">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <Eyebrow>How it works</Eyebrow>
               <Heading className="mt-2">Three steps to a referral</Heading>
               <div className="mt-5 space-y-3">
                 {HOW_IT_WORKS.map((item) => (
                   <div key={item.step} className="flex gap-4 border-t border-[var(--mdh-line)] pt-5">
-                    <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
+                    <p className="shrink-0 text-[1.3rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
                       {item.step}
                     </p>
                     <div>
                       <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                      <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                      <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                     </div>
                   </div>
                 ))}

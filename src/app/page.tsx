@@ -113,7 +113,7 @@ const LOGOS = [
 ];
 
 const SERIF_H2 =
-  "font-display text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.5rem] xl:text-[2.75rem]";
+  "font-display text-[1.75rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.95rem] xl:text-[2.1rem]";
 
 
 const BRASS = "#b8894f";
@@ -135,7 +135,7 @@ export default function Home() {
               className="object-cover object-[62%_center]"
             />
           </div>
-          <div className="flex items-center px-5 pb-20 pt-10 sm:px-8 md:pb-24 md:pt-16 lg:min-h-[min(820px,calc(100vh-64px))] lg:pb-32 lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 lg:pt-24 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))]">
+          <div className="flex items-center px-5 pb-20 pt-10 sm:px-8 md:pb-24 md:pt-16 lg:min-h-[min(820px,calc(100vh-64px))] lg:pb-32 lg:pl-10 lg:pr-14 lg:pt-24 xl:pl-12">
             <div className="max-w-xl">
               <div className="hidden items-center gap-4 lg:flex">
                 <span className="h-px w-10" style={{ background: BRASS }} />
@@ -143,10 +143,10 @@ export default function Home() {
                   Middle Door Homes
                 </p>
               </div>
-              <h1 className="font-display text-[2.3rem] font-medium leading-[1.04] tracking-[-0.015em] text-white sm:text-[3rem] lg:mt-6 lg:text-[3.8rem] xl:text-[4.2rem]">
+              <h1 className="font-display text-balance text-[2rem] font-normal leading-[1.04] tracking-[-0.015em] text-white sm:text-[2.5rem] lg:mt-6 lg:text-[3rem] xl:text-[3.25rem]">
                 Your building&rsquo;s next chapter
               </h1>
-              <p className="mt-5 text-[1.08rem] font-light leading-relaxed text-white/80 md:mt-7 md:text-[1.3rem]">
+              <p className="mt-5 text-[0.98rem] font-light leading-relaxed text-white/80 md:mt-7 md:text-[1.15rem]">
                 The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 md:mt-10">
@@ -174,13 +174,13 @@ export default function Home() {
                 <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.2em] sm:block" style={{ color: BRASS }}>
                   {item.promise}
                 </p>
-                <p className="font-display text-[1.9rem] leading-none text-[var(--mdh-title)] lining-nums sm:mt-4 sm:text-[2.3rem] md:text-[2.6rem]">
+                <p className="font-display text-[1.6rem] leading-none text-[var(--mdh-title)] lining-nums sm:mt-4 sm:text-[1.8rem] md:text-[2rem]">
                   {item.stat}
                 </p>
                 <p className="mt-2 text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[var(--mdh-subtle)]">
                   {item.statLabel}
                 </p>
-                <p className="mt-4 hidden text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] sm:block md:text-[1.02rem]">{item.body}</p>
+                <p className="mt-4 hidden text-[0.93rem] leading-relaxed text-[var(--mdh-ink)] sm:block md:text-[0.95rem]">{item.body}</p>
               </div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.55)]" />
         <Container className="relative py-24 md:py-36">
           <Reveal>
-            <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[2.5rem] xl:text-[2.9rem]">
+            <p className="font-display mx-auto max-w-6xl text-balance text-center text-[1.7rem] font-normal leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[1.95rem] xl:text-[2.3rem]">
               Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
             </p>
           </Reveal>
@@ -230,7 +230,7 @@ export default function Home() {
                   >
                     {door.label}
                   </p>
-                  <p className={`font-display mt-1.5 text-[1.25rem] leading-snug lining-nums md:mx-auto md:mt-4 md:max-w-[18ch] md:text-[1.45rem] xl:text-[1.6rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
+                  <p className={`font-display mt-1.5 text-[1.1rem] leading-snug lining-nums md:mx-auto md:mt-4 md:max-w-[18ch] md:text-[1.25rem] xl:text-[1.35rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
                     {door.body}
                   </p>
                 </div>
@@ -254,20 +254,20 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <div className="flex items-center px-5 pt-10 sm:px-8 lg:pl-16 lg:pr-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pt-0 xl:pr-[max(5rem,calc((100vw-110rem)/2+5rem))]">
+          <div className="flex items-center px-5 pt-10 sm:px-8 lg:pl-16 lg:pr-10 lg:pt-0 xl:pr-12">
             <div className="max-w-xl">
               <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
                 Who this is for
               </p>
               <h2 className={`mt-4 ${SERIF_H2}`}>Built for investors who have earned a better next chapter</h2>
-              <p className="mt-6 text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
+              <p className="mt-6 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1rem]">
                 You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your gains to
                 tax. A 1031 keeps your wealth concentrated and the work on your plate. Middle Door Homes offers a third
                 option.
               </p>
               <ul className="mt-8 border-t border-[var(--mdh-line)]">
                 {FIT.map((item) => (
-                  <li key={item} className="flex gap-3 border-b border-[var(--mdh-line)] py-4 text-[1.05rem] text-[var(--mdh-ink)]">
+                  <li key={item} className="flex gap-3 border-b border-[var(--mdh-line)] py-4 text-[0.96rem] text-[var(--mdh-ink)]">
                     <span style={{ color: BRASS }} aria-hidden>
                       &#10003;
                     </span>
@@ -292,10 +292,10 @@ export default function Home() {
                     The math, illustrated
                   </p>
                 </div>
-                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[2.5rem] xl:text-[2.75rem]">
+                <h2 className="font-display mt-5 text-[1.75rem] font-normal leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[1.95rem] xl:text-[2.1rem]">
                   On a $1M building, about $200K more of your equity keeps working.
                 </h2>
-                <p className="mt-6 text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">
+                <p className="mt-6 text-[0.96rem] leading-relaxed text-[var(--mdh-ink)]">
                   Same building, same mortgage payoff, same closing costs. The difference is the tax you do not pay at
                   closing.
                 </p>
@@ -308,7 +308,7 @@ export default function Home() {
                   <div key={bar.label}>
                     <div className="flex items-baseline justify-between">
                       <p className="text-[0.75rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">{bar.label}</p>
-                      <p className="font-display text-[2.2rem] leading-none text-[var(--mdh-title)] lining-nums md:text-[2.2rem]">{bar.value}</p>
+                      <p className="font-display text-[1.75rem] leading-none text-[var(--mdh-title)] lining-nums md:text-[1.75rem]">{bar.value}</p>
                     </div>
                     <div className="mt-4 h-3 w-full bg-[var(--mdh-title)]/10">
                       <div
@@ -318,8 +318,8 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-                <p className="text-[0.95rem] text-[var(--mdh-ink)]">
-                  <span className="font-display text-[1.6rem] [font-variant-numeric:lining-nums]" style={{ color: BRASS }}>+$200K</span>
+                <p className="text-[0.92rem] text-[var(--mdh-ink)]">
+                  <span className="font-display text-[1.35rem] [font-variant-numeric:lining-nums]" style={{ color: BRASS }}>+$200K</span>
                   <span className="ml-3">of equity preserved.</span>
                 </p>
                 <Link
@@ -346,7 +346,7 @@ export default function Home() {
               </p>
               <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
             </div>
-            <p className="text-[1.08rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
+            <p className="text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1rem]">
               A §721 exchange lets you contribute your building to a partnership for ownership units, with no capital
               gains or depreciation recapture at contribution. It is the same tool large REITs have used for decades to
               buy from owners who did not want to sell. What is new is applying it to buildings your size.
@@ -355,11 +355,11 @@ export default function Home() {
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">
             {HOW_IT_WORKS.map((item) => (
               <div key={item.step} className="border-t-2 pt-6" style={{ borderColor: BRASS }}>
-                <p className="font-display text-[2.8rem] leading-none lining-nums" style={{ color: BRASS }}>
+                <p className="font-display text-[2.2rem] leading-none lining-nums" style={{ color: BRASS }}>
                   {item.step}
                 </p>
-                <p className="font-display mt-4 text-[1.35rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</p>
-                <p className="mt-3 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                <p className="font-display mt-4 text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">{item.title}</p>
+                <p className="mt-3 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
               </div>
             ))}
           </div>
@@ -381,10 +381,10 @@ export default function Home() {
                   Our team
                 </p>
               </div>
-              <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[2.5rem] xl:text-[2.75rem]">
+              <h2 className="font-display mt-5 text-[1.75rem] font-normal leading-[1.08] tracking-[-0.01em] text-white md:text-[1.95rem] xl:text-[2.1rem]">
                 Billions of dollars of institutional housing experience
               </h2>
-              <p className="mt-6 text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
+              <p className="mt-6 text-[0.98rem] leading-relaxed text-white/75 md:text-[1rem]">
                 Our team has operated 30,000+ units across some of the largest residential platforms in the country. We
                 built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a
                 structure that, until now, only large real estate institutions used.
@@ -397,7 +397,7 @@ export default function Home() {
                     <Image src={member.photo} alt={member.name} fill quality={90} sizes="96px" className="object-cover object-top" />
                   </span>
                   <span>
-                    <span className="block text-[1.1rem] font-medium leading-tight text-white group-hover:underline">{member.name}</span>
+                    <span className="block text-[1rem] font-medium leading-tight text-white group-hover:underline">{member.name}</span>
                     <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em] text-white/55">
                       {member.title}
                     </span>
@@ -445,8 +445,8 @@ export default function Home() {
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
                   {card.eyebrow}
                 </p>
-                <h3 className="font-display mt-4 text-[1.4rem] font-medium leading-snug text-[var(--mdh-title)]">{card.title}</h3>
-                <p className="mt-3 flex-1 text-[1.02rem] leading-relaxed text-[var(--mdh-ink)]">{card.body}</p>
+                <h3 className="font-display mt-4 text-[1.2rem] font-normal leading-snug text-[var(--mdh-title)]">{card.title}</h3>
+                <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{card.body}</p>
                 <p className="mt-6 text-[0.88rem] font-medium text-[var(--mdh-title)] transition group-hover:translate-x-1">
                   {card.cta} &rarr;
                 </p>
@@ -470,10 +470,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.58)]" />
         <Container className="relative py-24 md:py-32">
           <div className="mx-auto max-w-5xl text-center">
-            <h2 className="font-display text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.01em] text-white md:text-[2.5rem] xl:text-[2.75rem]">
+            <h2 className="font-display text-balance text-[1.75rem] font-normal leading-[1.1] tracking-[-0.01em] text-white md:text-[1.95rem] xl:text-[2.1rem]">
               You built something real. Let&apos;s make sure it keeps working for you.
             </h2>
-            <p className="mt-5 text-[1.08rem] leading-relaxed text-white/80">
+            <p className="mt-5 text-[0.98rem] leading-relaxed text-white/80">
               Send us an address for a personalized valuation and proposal.
             </p>
             <div className="mt-9">

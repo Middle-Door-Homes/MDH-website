@@ -13,13 +13,13 @@ export function FaqAccordion({ groups }: { groups: FaqGroup[] }) {
             {g.items.map((item) => (
               <details key={item.q} className="group">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 [&::-webkit-details-marker]:hidden">
-                  <span className="text-[1.02rem] font-medium leading-snug text-[var(--mdh-title)]">{item.q}</span>
-                  <span className="mt-0.5 shrink-0 text-[1.2rem] leading-none text-[#b8894f]">
+                  <span className="text-[0.95rem] font-medium leading-snug text-[var(--mdh-title)]">{item.q}</span>
+                  <span className="mt-0.5 shrink-0 text-[1.05rem] leading-none text-[#b8894f]">
                     <span className="group-open:hidden">+</span>
                     <span className="hidden group-open:inline">&minus;</span>
                   </span>
                 </summary>
-                <div className="max-w-3xl pb-6 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)]">{item.a}</div>
+                <div className="max-w-3xl pb-6 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.a}</div>
               </details>
             ))}
           </div>
