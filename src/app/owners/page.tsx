@@ -91,7 +91,7 @@ const HOW_IT_WORKS = [
   {
     step: "04",
     title: "Ongoing income",
-    body: "You receive quarterly distributions from a diversified portfolio. Our team manages all operations, working to grow the portfolio's value and income over time.",
+    body: "Distributions are targeted quarterly from a diversified portfolio. Our team manages all operations, working to grow the portfolio's value and income over time.",
   },
 ];
 
@@ -215,7 +215,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "How does my income compare to what I earn now?",
-        a: "Most long-term owners are not capturing full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Our team has driven $120M+ in annual net operating income growth across a 30,000+ home portfolio, and we bring the same playbook to every building we own.",
+        a: "Many long-term owners are not capturing their building's full income potential: deferred maintenance, below-market rents, and high operating costs reduce returns. Our team has driven $120M+ in annual net operating income growth across a 30,000+ home portfolio, and we bring the same playbook to every building we own.",
       },
     ],
   },
@@ -368,7 +368,7 @@ export default function OwnersPage() {
                   </p>
                   <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                     A 721 exchange is a contribution, not a sale. The tax event that would occur at
-                    sale is deferred, so you keep 100% of what you have built.
+                    sale is deferred, so your full equity carries forward instead of going to tax at closing.
                   </p>
                 </div>
                 <div className="border-t border-[var(--mdh-line)] pt-5">
@@ -403,9 +403,9 @@ export default function OwnersPage() {
         <Container>
           <div className="">
             <Eyebrow>How we add value</Eyebrow>
-            <Heading className="mt-2">We invest in your building, at no cost to you.</Heading>
+            <Heading className="mt-2">We invest in improving the buildings.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              We look at every building for improvements that pay back: better units, rents set to the market, lower operating costs, and where the building allows, additional units. We arrange the financing and do the work. No capital required from you.
+              We look at every building for improvements that pay back: better units, rents set to the market, lower operating costs, and where the building allows, additional units. We arrange the financing and manage the work.
             </p>
           </div>
         </Container>
@@ -501,7 +501,7 @@ export default function OwnersPage() {
             </div>
             <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                <span className="font-medium text-[var(--mdh-title)]">Middle Door is the only structure that clears all three: </span>
+                <span className="font-medium text-[var(--mdh-title)]">Middle Door is built to clear all three: </span>
                 no tax event at contribution, complete exit from active management, and ongoing upside participation. Every other option trades at least one away.
               </p>
             </div>
@@ -549,8 +549,8 @@ export default function OwnersPage() {
                 </p>
                 <div>
                   <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Full-time, experienced management lifts income through lower operating costs, rents set
-                    to the market, and efficient operations. That upside flows to you as an owner.
+                    Full-time, experienced management works to lift income through lower operating costs, rents set
+                    to the market, and efficient operations, and you share in that as an owner.
                   </p>
                   <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)] border-t border-[var(--mdh-line)] pt-5">
                     Our team has driven{" "}
@@ -602,7 +602,7 @@ export default function OwnersPage() {
                     "You own one or more multifamily buildings in the 2-49 unit range",
                     "You've held long enough to build up a large gain",
                     "You're ready to exit active operations, but the tax cost of a sale is too high",
-                    "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
+                    "You qualify as an accredited investor, as many long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
                     "You do not need a debt-free building: we pay off your mortgage at closing",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
@@ -667,7 +667,7 @@ export default function OwnersPage() {
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
+              On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. Distributions are targeted quarterly, subject to portfolio cash flow. There is nothing for you to manage.
             </p>
             <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (

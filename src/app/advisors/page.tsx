@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
-  { value: "100%", label: "Equity preserved" },
+  { value: "2-49", label: "Units per building" },
   { value: "8-12%", label: "Target annual return" },
 ];
 
@@ -22,7 +22,7 @@ const FOR_YOU = [
   },
   {
     title: "Strengthens your advisory relationship",
-    body: "Introducing a strategy that protects your client from losing 30-40% of their gains to tax at exit positions you as a proactive, comprehensive advisor, not just a portfolio manager.",
+    body: "Introducing a way to defer the 30-40% of gains a sale would send to tax positions you as a proactive, comprehensive advisor, not just a portfolio manager.",
   },
   {
     title: "Simple referral, no complexity",
@@ -32,7 +32,7 @@ const FOR_YOU = [
 
 const FOR_CLIENTS = [
   {
-    title: "Capital preservation",
+    title: "Tax deferral",
     body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client's full equity basis rolls forward intact with no tax haircut at transition.",
   },
   {
@@ -163,7 +163,7 @@ export default function AdvisorsPage() {
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
                   that makes this possible. The tax event that would have occurred at sale is
-                  deferred entirely. Your client keeps 100% of what they built.
+                  deferred entirely. Their full equity carries forward instead of going to tax at closing.
                 </p>
               </div>
             </div>

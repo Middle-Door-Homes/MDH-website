@@ -30,7 +30,7 @@ const THREE_PROOFS = [
     promise: "Collect truly passive income",
     stat: "30,000+",
     statLabel: "units of experience",
-    body: "Our professional management team handles leasing, maintenance, and renovations that grow your value. You share in all future income and appreciation.",
+    body: "Our professional management team handles leasing, maintenance, and renovations. You share in the portfolio's income and appreciation.",
   },
 ];
 
@@ -87,7 +87,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Collect ongoing distributions",
-    body: "Our team handles all asset management and operations. You receive regular distributions from a diversified portfolio, with the long-term goal of growing income over time.",
+    body: "Our team handles all asset management and operations. Distributions are targeted quarterly, with the long-term goal of growing income over time.",
   },
 ];
 

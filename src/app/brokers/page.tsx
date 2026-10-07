@@ -27,7 +27,7 @@ const FOR_YOU = [
   },
   {
     title: "Relationship flywheel",
-    body: "Satisfied owners will refer others; each conversation can unlock several more.",
+    body: "Satisfied owners often refer others who own similar buildings.",
   },
 ];
 
@@ -38,7 +38,7 @@ const FOR_CLIENTS = [
   },
   {
     title: "Continued ownership",
-    body: "Your client owns a stake in a diversified portfolio with ongoing cash flow and growth.",
+    body: "Your client owns a stake in a diversified portfolio, with ongoing income and a share of its growth.",
   },
   {
     title: "No management",
@@ -157,7 +157,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "Is this a good deal for the client or just for MDH?",
-        a: "It is genuinely good for the right client. No tax bill at closing, continued ownership in a growing portfolio, and truly passive income that is often higher than what they earned managing the building themselves. We decline transactions that are not a fit.",
+        a: "It is genuinely good for the right client. No tax bill at closing, continued ownership in a diversified portfolio, and income without the work of managing. We decline transactions that are not a fit.",
       },
       {
         q: "How liquid is this for my client?",
@@ -165,7 +165,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "Why a partnership and not a cash offer?",
-        a: "For buildings with upside left in them, a cash offer pays as-is value. The partnership pays that same value plus half of what the renovation adds.",
+        a: "For buildings with upside left in them, a cash offer pays as-is value. The partnership keeps that value for your seller and adds a share of whatever the renovation creates.",
       },
     ],
   },
