@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-7xl px-5 md:px-7 lg:px-8 ${className ?? ""}`.trim()}>
+    <div className={`mx-auto w-full max-w-[110rem] px-5 md:px-10 lg:px-16 xl:px-20 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );

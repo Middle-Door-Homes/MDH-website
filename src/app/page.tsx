@@ -131,7 +131,7 @@ export default function Home() {
               className="object-cover object-[62%_center]"
             />
           </div>
-          <div className="flex items-center px-5 pb-12 pt-10 sm:px-8 md:py-16 lg:min-h-[640px] lg:py-24 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-16">
+          <div className="flex items-center px-5 pb-12 pt-10 sm:px-8 md:py-16 lg:min-h-[640px] lg:py-24 lg:pl-[max(4rem,calc((100vw-110rem)/2+4rem))] lg:pr-16 xl:pl-[max(5rem,calc((100vw-110rem)/2+5rem))]">
             <div className="max-w-xl">
               <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/55 lg:block">
                 Middle Door Homes
