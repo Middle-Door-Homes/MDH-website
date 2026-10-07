@@ -40,37 +40,35 @@ const SITUATIONS = [
   {
     title: "Tired of managing",
     body: "You have held a long time, built a large gain, and you are done with tenants and repairs.",
-    number: "$1M building: ~$540K after a cash sale vs. ~$740K through us",
+    number: "On a $1M building, about $200K more of your equity stays invested.",
   },
   {
     title: "Loan maturing",
     body: "Refinancing at today's rates can mean a much larger payment on the same building and the same management.",
-    number: "A refi can double your payment. We pay the loan off at closing.",
+    number: "We pay off the loan at closing.",
   },
   {
     title: "Planning a 1031",
     body: "A 1031 defers the tax, but only by taking on another building to find, finance, close, and run.",
-    number: "Same deferral, no 45-day clock, no new building",
+    number: "The same deferral, with no 45-day clock and no new building.",
   },
   {
     title: "Building with upside left",
     body: "Rents that could be higher and units that could be updated. Sell as-is and the next owner keeps that upside.",
-    number: "Listed at $1.2M: ~$1.0M as-is vs. ~$1.3-1.4M after the work",
+    number: "Plus get a share of the future upside.",
   },
 ];
 
-const PARTNERSHIP_POINTS = [
+const TWO_PATHS = [
   {
-    title: "Today's value stays yours",
-    body: "The building's value today is yours in full. The upside comes on top.",
+    label: "Contribute",
+    title: "Trade your building for ownership in the portfolio",
+    body: "You contribute your building and receive ownership units of the same value. No tax at closing, you keep earning income, and you are done managing.",
   },
   {
-    title: "We handle the work",
-    body: "We own renovations, operations, and rents. You stay fully passive.",
-  },
-  {
-    title: "50/50 on the gain",
-    body: "Everything above today's value is split with you, which is how owners typically end up well past any as-is sale.",
+    label: "Partner",
+    title: "Keep your building and share in what it becomes",
+    body: "For buildings with upside left in them. Your building goes into its own partnership with us. We handle the renovation, operations, and rents, and we split the upside with you.",
   },
 ];
 
@@ -133,6 +131,14 @@ const OWNER_FAQ: FaqGroup[] = [
         a: "No. You are contributing your building to our partnership in exchange for ownership units. Because it is a contribution rather than a sale, no capital gains tax or depreciation recapture is triggered at closing.",
       },
       {
+        q: "Is this a loophole?",
+        a: "No. It is a contribution structure that has been in the tax code for decades, and large REITs have used it to buy from owners who did not want to sell. What is new is applying it to buildings your size.",
+      },
+      {
+        q: "How is this different from a property manager or a REIT?",
+        a: "A manager takes work off your plate but leaves the title, and the liability, with you. A public REIT means selling first, so you invest what is left after tax rather than your full equity. This gives you a diversified position, built from your whole equity, with no operating role.",
+      },
+      {
         q: "Do I need to be an accredited investor?",
         a: "Yes. Ownership units are securities and this offering is limited to accredited investors: generally those with a net worth over $1M (excluding primary residence) or annual income above $200K ($300K joint). We can walk you through the requirements.",
       },
@@ -155,7 +161,11 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What happens to my mortgage?",
-        a: "Your existing mortgage is paid off at closing from the contribution proceeds. Only your net equity moves forward as ownership units.",
+        a: "We pay it off at contribution. You do not need to bring a debt-free building. Your unit count is based on net equity, meaning value less outstanding debt.",
+      },
+      {
+        q: "What if I need some cash?",
+        a: "Some owners take part in cash and contribute the rest. If you need a straight all-cash sale we are not your buyer, and that is worth knowing early. Run the after-tax number first, because that is the real comparison.",
       },
     ],
   },
@@ -164,11 +174,19 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does the process look like from start to finish?",
-        a: "We start with a conversation about your building, financial situation, and goals. If it looks like a fit, we assess the building and structure the exchange terms. You review a full term sheet with your advisors. If you proceed, we close the contribution. Title transfers, your mortgage is paid off, and your ownership units are issued. From that point forward, you are a passive investor.",
+        a: "A first conversation about your property and your timeline, at no cost. A valuation and preliminary underwriting. A proposed value and unit count. Then diligence on both sides, documentation, and close, when your property transfers, your mortgage is paid off, and your units are issued.",
       },
       {
         q: "How long does the process take?",
         a: "Typically a few months from first conversation to close, depending on due diligence and third-party timelines. We move as efficiently as possible.",
+      },
+      {
+        q: "What diligence do you do?",
+        a: "What a long-term owner would: physical inspection, independent appraisal, title, a rent roll and lease audit, environmental, and a neighborhood-level market analysis. We are selective, and not every building is a fit for the portfolio.",
+      },
+      {
+        q: "What happens to my building after I contribute?",
+        a: "From the day we close you are done being a landlord. We take over tenants, leasing, repairs, rent collection, maintenance, renovation, compliance, and reporting. The building keeps producing income; you simply stop running it.",
       },
       {
         q: "Where do you buy?",
@@ -176,7 +194,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "Do I need my own attorney or CPA?",
-        a: "Yes, and we encourage it. This is a significant financial transaction and you should have independent counsel review the terms. We will provide full transparency on the documents and work cooperatively with your advisors.",
+        a: "Yes, and we will make sure you have everything you need for a proper review. We have our own counsel on the structure, and your interests and ours are not identical.",
       },
     ],
   },
@@ -185,7 +203,7 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What return can I expect?",
-        a: "We target 8-12% annualized returns through distributions and portfolio appreciation. For context, a typical balanced advisory portfolio returns 5-7% annually, and that's after you've already surrendered 30-40% of your capital to taxes to get there. The 721 exchange lets your full equity basis work from day one. Returns are not guaranteed and depend on portfolio performance, occupancy, operating expenses, and market conditions.",
+        a: "We target 8-12% annually at the portfolio level, combining current income and long-term appreciation. That is a target, not a guarantee. The more useful comparison is what a sale costs you: if taxes and costs take 30% of your equity, a moderate return on your whole equity can beat a strong return on what is left.",
       },
       {
         q: "How do distributions work?",
@@ -210,11 +228,19 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What are the risks I should understand?",
-        a: "Real estate investment carries real risk. Property values can decline, occupancy can fall, and returns are never guaranteed. The portfolio is geographically focused, so a broad market downturn would affect returns. Performance depends on MDH's execution. Past experience is not a guarantee of future results. We want you to go in with clear expectations.",
+        a: "Property values can fall, and your units track the portfolio. Units are not publicly traded, there is a minimum hold, and liquidity is not guaranteed on demand. The portfolio is geographically concentrated, and results depend on our execution. We hold low leverage against occupied, cash-flowing buildings, which reduces the downside but does not remove it.",
       },
       {
         q: "What if I change my mind after contributing?",
         a: "Once you contribute, the building belongs to the partnership and cannot be returned. Units can be redeemed through quarterly repurchase windows from year four, but you should treat this as a long-term commitment going in.",
+      },
+      {
+        q: "What are my long-term options?",
+        a: "Redeem through the repurchase windows, transfer units to another accredited investor, participate in a portfolio-level event if we recapitalize, or hold and pass units to your heirs with the step-up in basis. Selling units is generally a taxable event when you do it.",
+      },
+      {
+        q: "What visibility do I get?",
+        a: "Quarterly financial reports, annual audited statements, annual K-1s, and updates on renovation progress, occupancy, and market conditions.",
       },
     ],
   },
@@ -314,7 +340,7 @@ export default function OwnersPage() {
               ))}
             </div>
             <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              Illustrative round numbers. Figures will differ for your building.
+              Illustrative. Figures will differ for your building.
             </p>
           </div>
         </Container>
@@ -376,49 +402,27 @@ export default function OwnersPage() {
       <Section>
         <Container>
           <div className="">
-            <Eyebrow>How returns are generated</Eyebrow>
-            <Heading className="mt-2">We invest in the buildings. You get paid first.</Heading>
+            <Eyebrow>How we add value</Eyebrow>
+            <Heading className="mt-2">We invest in your building, at no cost to you.</Heading>
             <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher net operating income (rent minus operating costs), better occupancy, and where the building allows, additional units for incremental cash flow.
+              We look at every building for improvements that pay back: better units, rents set to the market, lower operating costs, and where the building allows, additional units. We arrange the financing and do the work. No capital required from you.
             </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">Building-level capital review</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  We assess every contributed building for capital improvement opportunities. Where improvements generate measurable returns, MDH arranges renovation financing and executes: systems upgrades, unit renovations, and where feasible, additional units created for incremental cash flow. No capital required from you.
-                </p>
-              </div>
-              <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">You are paid first</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50.
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 border-t border-[var(--mdh-line)] pt-5">
-              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">The alignment</p>
-              <p className="mt-2 text-[0.97rem] font-medium leading-snug text-[var(--mdh-title)]">
-                We never take more than 30% of a year&apos;s total return, and if portfolio value falls we earn nothing further until it recovers. We hold our own units alongside yours.
-              </p>
-            </div>
           </div>
         </Container>
       </Section>
 
-      {/* Value-add partnership */}
+      {/* Two paths */}
       <Section id="partnership" tone="white">
         <Container>
           <div className="">
-            <Eyebrow>For buildings with upside left in them</Eyebrow>
-            <Heading className="mt-2">The value-add partnership</Heading>
-            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Some buildings are worth more after the work than any as-is buyer will pay. For those, we offer a partnership: your building goes into a single-asset partnership with us, we handle the renovation, operations, and rents, and the increase in value is split 50/50 with you.
-            </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {PARTNERSHIP_POINTS.map((item) => (
-                <div key={item.title} className="border-t border-[var(--mdh-line)] pt-5">
-                  <h3 className="font-display text-[1.3rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+            <Eyebrow>Two ways to work with us</Eyebrow>
+            <Heading className="mt-2">Contribute your building, or partner on it.</Heading>
+            <div className="mt-8 grid gap-10 md:grid-cols-2">
+              {TWO_PATHS.map((item) => (
+                <div key={item.title} className="border-t-2 border-[#b8894f] pt-6">
+                  <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-[#b8894f]">{item.label}</p>
+                  <h3 className="font-display mt-3 text-[1.5rem] font-medium leading-snug text-[var(--mdh-title)]">{item.title}</h3>
+                  <p className="mt-3 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -526,23 +530,6 @@ export default function OwnersPage() {
                   <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
                 </div>
               ))}
-            </div>
-            <div className="mt-4 border-t border-[var(--mdh-line)] pt-5">
-              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">How 8-12% compares</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                <div>
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Balanced advisor portfolio</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">~5-7% annually, but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.</p>
-                </div>
-                <div>
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Keep managing the building</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns, with full operational responsibility and concentrated single-asset risk.</p>
-                </div>
-                <div className="border-t border-[var(--mdh-line)] pt-5">
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">MDH 721 exchange</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span>: no tax haircut at contribution, no management burden.</p>
-                </div>
-              </div>
             </div>
           </div>
         </Container>

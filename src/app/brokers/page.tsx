@@ -82,7 +82,11 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "When do I get paid?",
-        a: "Your commission is paid at close, when the building is contributed to the portfolio.",
+        a: "In cash at closing, per your listing agreement. No referral fee structure and no waiting.",
+      },
+      {
+        q: "What will you pay? What is your cap rate?",
+        a: "Our underwriting team prices it, and fast. Send us the address and the rent roll and we will come back with something real.",
       },
     ],
   },
@@ -95,7 +99,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "What if my client just wants to sell outright?",
-        a: "A traditional sale is always an option and we will say so honestly. But for long-term owners with low cost basis, the tax bill from a sale can be enormous. We can help you model the comparison. In most cases, a 721 exchange leaves the client significantly better off. That is a conversation worth having before they list.",
+        a: "Totally fair, and some do. It is worth asking, because owners often say cash until they see the after-tax number, and partial cash can be part of the conversation. If they need a straight all-cash sale, we are not their buyer, and that is worth knowing early.",
       },
       {
         q: "My client is thinking about a 1031 exchange. Should I still introduce them?",
@@ -116,7 +120,7 @@ const BROKER_FAQ: FaqGroup[] = [
       },
       {
         q: "Will you help me explain this to my client?",
-        a: "Yes. We provide materials you can share, and we are happy to do a joint call with you and your client to walk through how the 721 exchange works. You do not need to be a tax expert; you just need to open the door.",
+        a: "Yes. Forward our one-pager, and if they are interested, help us schedule one call. You are not explaining tax structure. That is on us and their CPA.",
       },
       {
         q: "What is the typical timeline from introduction to commission payment?",
@@ -149,7 +153,7 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my client actually receive?",
-        a: "Ownership units (also called OP units): a passive stake in a professionally managed, diversified portfolio. They receive quarterly distributions, annual K-1s, and nothing to manage. No tenant calls, no maintenance, no 2am emergencies.",
+        a: "Three things. The tax bill deferred. Income from distributions on their units. And no more tenants, repairs, or management. Their ownership is spread across a portfolio instead of one building.",
       },
       {
         q: "Is this a good deal for the client or just for MDH?",

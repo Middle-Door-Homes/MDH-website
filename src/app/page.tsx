@@ -320,11 +320,7 @@ export default function Home() {
                 ))}
                 <p className="text-[0.95rem] text-[var(--mdh-ink)]">
                   <span className="font-display text-[1.6rem] [font-variant-numeric:lining-nums]" style={{ color: BRASS }}>+$200K</span>
-                  <span className="ml-3">of equity preserved, about 37% more than a traditional sale.</span>
-                </p>
-                <p className="text-[0.75rem] leading-relaxed text-[var(--mdh-muted)]">
-                  Illustrative: $1M value, $200K mortgage, $60K closing costs, $200K capital gains and depreciation
-                  recapture. Figures will differ for your building.
+                  <span className="ml-3">of equity preserved.</span>
                 </p>
                 <Link
                   href="/owners#calculator"
