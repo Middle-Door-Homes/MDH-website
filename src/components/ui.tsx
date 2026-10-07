@@ -59,7 +59,7 @@ export function Heading({
 }: ClassName & { children: ReactNode; dark?: boolean; as?: "h1" | "h2" | "h3" }) {
   return (
     <Tag
-      className={`font-display text-[1.85rem] font-medium leading-[1.15] tracking-[-0.01em] md:text-[2.5rem] ${
+      className={`font-display text-balance text-[1.85rem] font-medium leading-[1.15] tracking-[-0.01em] md:text-[2.5rem] ${
         dark ? "text-white" : "text-[var(--mdh-green)]"
       } ${className ?? ""}`.trim()}
     >
@@ -75,7 +75,7 @@ export function Lead({
 }: ClassName & { children: ReactNode; dark?: boolean }) {
   return (
     <p
-      className={`mt-5 max-w-[62ch] text-[1.05rem] leading-[1.7] md:text-[1.12rem] ${
+      className={`mt-5 max-w-[60ch] text-pretty text-[1.05rem] leading-[1.7] md:text-[1.1rem] ${
         dark ? "text-white/80" : "text-[var(--mdh-ink)]"
       } ${className ?? ""}`.trim()}
     >
@@ -204,9 +204,9 @@ export function PhotoHero({
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[rgba(14,30,31,0.86)] via-[rgba(14,30,31,0.55)] to-[rgba(14,30,31,0.12)]" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[rgba(14,30,31,0.55)] via-transparent to-transparent" />
       <Container className="flex min-h-[560px] flex-col justify-end pb-14 pt-32 md:min-h-[640px] md:pb-20">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           {eyebrow ? <Eyebrow dark>{eyebrow}</Eyebrow> : null}
-          <h1 className="font-display mt-4 text-[2.4rem] font-medium leading-[1.08] tracking-[-0.015em] text-white md:text-[3.6rem]">
+          <h1 className="font-display mt-4 text-balance text-[2.4rem] font-medium leading-[1.06] tracking-[-0.015em] text-white md:text-[3.75rem]">
             {title}
           </h1>
           {children ? (
@@ -244,7 +244,7 @@ export function PageHero({
       <Container className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h1 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.1] tracking-[-0.015em] text-[var(--mdh-green)] md:text-[3.1rem]">
+          <h1 className="font-display mt-4 text-balance text-[2.2rem] font-medium leading-[1.1] tracking-[-0.015em] text-[var(--mdh-green)] md:text-[3rem]">
             {title}
           </h1>
           {children ? (
@@ -287,7 +287,7 @@ export function FactRow({
 export function CtaBand({
   title,
   children,
-  action = { href: "/contact", label: "Send us the address" },
+  action = { href: "/contact", label: "Send us an address" },
   secondary,
 }: {
   title: ReactNode;
@@ -298,10 +298,9 @@ export function CtaBand({
   return (
     <section className="bg-[var(--mdh-green)] py-16 md:py-20">
       <Container className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-start gap-6">
-          <DoorIcon open className="hidden h-20 w-14 shrink-0 text-[var(--mdh-brass-soft)] md:block" />
+        <div>
           <div>
-            <h2 className="font-display max-w-[24ch] text-[1.8rem] font-medium leading-[1.15] text-white md:text-[2.3rem]">
+            <h2 className="font-display max-w-[26ch] text-balance text-[1.8rem] font-medium leading-[1.15] text-white md:text-[2.3rem]">
               {title}
             </h2>
             {children ? <p className="mt-3 max-w-[54ch] text-[1rem] leading-relaxed text-white/75">{children}</p> : null}
@@ -341,7 +340,7 @@ export function Steps({
             {item.step}
           </span>
           <div>
-            <p className={`text-[1.05rem] font-semibold ${dark ? "text-white" : "text-[var(--mdh-green)]"}`}>{item.title}</p>
+            <p className={`font-display text-[1.25rem] leading-snug ${dark ? "text-white" : "text-[var(--mdh-green)]"}`}>{item.title}</p>
             <p className={`mt-1.5 leading-relaxed ${dark ? "text-white/75" : "text-[var(--mdh-ink)]"}`}>{item.body}</p>
           </div>
         </li>
@@ -365,9 +364,63 @@ export function FeatureGrid({
   return (
     <div className={`grid gap-x-8 gap-y-10 ${grid}`}>
       {items.map((item) => (
-        <div key={item.title} className={`border-t-2 pt-5 ${dark ? "border-[var(--mdh-brass-soft)]" : "border-[var(--mdh-brass)]"}`}>
-          <h3 className={`text-[1.05rem] font-semibold ${dark ? "text-white" : "text-[var(--mdh-green)]"}`}>{item.title}</h3>
-          <p className={`mt-2 leading-relaxed ${dark ? "text-white/75" : "text-[var(--mdh-ink)]"}`}>{item.body}</p>
+        <div key={item.title} className={`border-t pt-5 ${dark ? "border-white/20" : "border-[var(--mdh-line)]"}`}>
+          <h3 className={`font-display text-[1.25rem] leading-snug ${dark ? "text-white" : "text-[var(--mdh-green)]"}`}>{item.title}</h3>
+          <p className={`mt-2 text-pretty leading-relaxed ${dark ? "text-white/75" : "text-[var(--mdh-ink)]"}`}>{item.body}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** Heading on the left, content on the right. Keeps one left edge and one text measure site-wide. */
+export function Split({
+  eyebrow,
+  title,
+  intro,
+  children,
+  dark,
+  sticky = true,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  intro?: ReactNode;
+  children: ReactNode;
+  dark?: boolean;
+  sticky?: boolean;
+}) {
+  return (
+    <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+      <div className="lg:col-span-5">
+        <div className={sticky ? "lg:sticky lg:top-28" : ""}>
+          {eyebrow ? <Eyebrow dark={dark}>{eyebrow}</Eyebrow> : null}
+          <Heading dark={dark} className={`md:!text-[2.2rem] ${eyebrow ? "mt-3" : ""}`}>
+            {title}
+          </Heading>
+          {intro ? (
+            <p className={`mt-5 text-pretty leading-[1.7] ${dark ? "text-white/80" : "text-[var(--mdh-ink)]"}`}>{intro}</p>
+          ) : null}
+        </div>
+      </div>
+      <div className="lg:col-span-6 lg:col-start-7">{children}</div>
+    </div>
+  );
+}
+
+/** Uniform logo row: every mark sits in the same box so sizes read as even. */
+export function LogoRow({ logos, dark }: { logos: { name: string; file: string }[]; dark?: boolean }) {
+  return (
+    <div className="grid grid-cols-3 items-center gap-x-8 gap-y-6 sm:grid-cols-5">
+      {logos.map((logo) => (
+        <div key={logo.file} className="flex h-7 items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/images/logos/${logo.file}`}
+            alt={logo.name}
+            className={`max-h-full max-w-[120px] object-contain ${
+              dark ? "opacity-70 [filter:brightness(0)_invert(1)]" : "opacity-60 grayscale"
+            }`}
+          />
         </div>
       ))}
     </div>

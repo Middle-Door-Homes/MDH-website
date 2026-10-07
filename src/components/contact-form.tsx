@@ -80,7 +80,7 @@ export function ContactForm() {
           disabled={status.state === "sending"}
           className="inline-flex items-center justify-center rounded-[4px] bg-[var(--mdh-green)] px-6 py-3 text-[0.9rem] font-medium text-white hover:bg-[var(--mdh-green-soft)] disabled:opacity-60"
         >
-          {status.state === "sending" ? "Sending..." : "Send us the address"}
+          {status.state === "sending" ? "Sending..." : "Send"}
         </button>
         {status.state === "error" ? (
           <p className="text-[0.88rem] text-red-600">

@@ -17,7 +17,7 @@ export default function ContactPage() {
           <div>
             <Eyebrow>Contact</Eyebrow>
             <h1 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.1] tracking-[-0.015em] text-[var(--mdh-green)] md:text-[3rem]">
-              Send us the address for a personalized valuation and proposal
+              Send us an address for a personalized valuation and proposal
             </h1>
             <p className="mt-5 max-w-[56ch] text-[1.08rem] leading-[1.7]">
               An address is enough to start. We will come back with a number and walk you through how it works
@@ -38,7 +38,7 @@ export default function ContactPage() {
                 className="object-cover"
               />
             </div>
-            <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
+            <div className="border-t border-[var(--mdh-line)] pt-5">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-brass)]">
                 Prefer to talk?
               </p>

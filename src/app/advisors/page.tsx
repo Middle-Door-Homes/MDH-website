@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Steps } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Split, Steps } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "For Financial Advisors: 721 Exchange for Your Clients",
@@ -8,12 +8,6 @@ export const metadata: Metadata = {
     "Help clients access a diversified, professionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
   alternates: { canonical: "/advisors" },
 };
-
-const STATS = [
-  { value: "0%", label: "Taxes at closing" },
-  { value: "100%", label: "Equity preserved" },
-  { value: "8-12%", label: "Target annual return" },
-];
 
 const FOR_YOU = [
   {
@@ -105,7 +99,6 @@ export default function AdvisorsPage() {
         title="A better structure for clients with gains they want to protect."
         image="/images/nb-greystone.jpg"
         imageAlt="Greystone multifamily building with a lit entrance"
-        facts={STATS}
         actions={
           <>
             <Button href="/contact">Start a conversation</Button>
@@ -138,8 +131,8 @@ export default function AdvisorsPage() {
               passive ownership stake, with no taxable event at closing. No capital gains. No depreciation
               recapture. Their equity moves forward intact.
             </Intro>
-            <div className="mt-10 border-t-2 border-[var(--mdh-brass-soft)] pt-5">
-              <h3 className="text-[1.05rem] font-semibold text-white">Key distinction</h3>
+            <div className="mt-10 border-t border-white/20 pt-5">
+              <h3 className="font-display text-[1.25rem] leading-snug text-white">Key distinction</h3>
               <p className="mt-2 leading-relaxed text-white/75">
                 This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
                 that makes it possible. Your client keeps 100% of what they built.
@@ -189,9 +182,10 @@ export default function AdvisorsPage() {
 
       {/* How it works */}
       <Section id="how-it-works">
-        <Container className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
-          <Intro eyebrow="How it works" title="Three steps to a referral" />
-          <Steps items={HOW_IT_WORKS} />
+        <Container>
+          <Split sticky={false} eyebrow="How it works" title="Three steps to a referral">
+            <Steps items={HOW_IT_WORKS} />
+          </Split>
         </Container>
       </Section>
 

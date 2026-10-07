@@ -116,7 +116,7 @@ export function Nav() {
               href="/contact"
               className="rounded-[4px] bg-[var(--mdh-green)] px-4 py-2 text-[0.85rem] font-medium text-white hover:bg-[var(--mdh-green-soft)]"
             >
-              Send us the address
+              Send us an address
             </Link>
           </div>
 
@@ -183,7 +183,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="mt-4 inline-block rounded-[4px] bg-[var(--mdh-green)] px-4 py-2.5 text-sm font-medium text-white"
             >
-              Send us the address
+              Send us an address
             </Link>
           </Container>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Steps } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Split, Steps } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
@@ -8,12 +8,6 @@ export const metadata: Metadata = {
     "Your commission is paid in full, in cash at closing, per your listing agreement. Middle Door Homes gives long-term multifamily owners a tax-deferred way to say yes.",
   alternates: { canonical: "/brokers" },
 };
-
-const STATS = [
-  { value: "0%", label: "Taxes at closing for owners" },
-  { value: "100%", label: "Commission paid in cash at close" },
-  { value: "2-49", label: "Units per building" },
-];
 
 const FOR_YOU = [
   {
@@ -204,7 +198,6 @@ export default function BrokersPage() {
         title="Your commission, paid in full. A new way for your seller to say yes."
         image="/images/nb-sixflat-front.jpg"
         imageAlt="Brick six-flat apartment building with a front garden"
-        facts={STATS}
         actions={
           <>
             <Button href="/contact">Introduce a client</Button>
@@ -238,21 +231,19 @@ export default function BrokersPage() {
 
       {/* How it works */}
       <Section id="how-it-works" tone="stone">
-        <Container className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
-          <Intro eyebrow="How it works" title="Three steps to a commission" />
-          <Steps items={HOW_IT_WORKS} />
+        <Container>
+          <Split sticky={false} eyebrow="How it works" title="Three steps to a commission">
+            <Steps items={HOW_IT_WORKS} />
+          </Split>
         </Container>
       </Section>
 
       {/* FAQ */}
       <Section id="faq">
         <Container>
-          <div className="mx-auto max-w-4xl">
-            <Intro eyebrow="Common questions" title="Frequently asked questions" />
-            <div className="mt-10">
-              <FaqAccordion groups={BROKER_FAQ} />
-            </div>
-          </div>
+          <Split title="Frequently asked questions" intro="How the commission works, which clients fit, and what working with us looks like.">
+            <FaqAccordion groups={BROKER_FAQ} />
+          </Split>
         </Container>
       </Section>
 

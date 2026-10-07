@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button, Container, CtaBand, DoorIcon, Eyebrow, FactRow, Heading, Intro, PhotoHero, Section, Steps } from "@/components/ui";
+import {
+  Button,
+  Container,
+  CtaBand,
+  DoorIcon,
+  Eyebrow,
+  FactRow,
+  Heading,
+  Intro,
+  LogoRow,
+  PhotoHero,
+  Section,
+  Split,
+  Steps,
+} from "@/components/ui";
 import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
@@ -106,7 +120,7 @@ export default function Home() {
         actions={
           <>
             <Button href="/contact" variant="light">
-              Send us the address
+              Send us an address
             </Button>
             <Button href="#how-it-works" variant="outlineLight">
               How it works
@@ -120,7 +134,7 @@ export default function Home() {
       {/* Three doors */}
       <Section>
         <Container>
-          <Intro center eyebrow="A third option for owners" title="Sell, hold, or the middle door">
+          <Intro center eyebrow="A third option" title="Sell, hold, or the middle door">
             Selling costs you 30-40% of your gains. Holding keeps you a landlord. Contributing your
             building to Middle Door Homes does neither.
           </Intro>
@@ -153,7 +167,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <FactRow facts={FACTS} className="mx-auto mt-12 max-w-3xl text-center" />
         </Container>
       </Section>
 
@@ -180,7 +193,8 @@ export default function Home() {
           </div>
           <div className="lg:pt-24">
             <Steps items={HOW_IT_WORKS} />
-            <div className="mt-8">
+            <FactRow facts={FACTS} className="mt-4" />
+            <div className="mt-10">
               <Button href="/owners" variant="secondary">
                 The full owner overview
               </Button>
@@ -204,7 +218,7 @@ export default function Home() {
               {TEAM.map((m) => (
                 <div key={m.name}>
                   <div className="relative aspect-square overflow-hidden rounded-md bg-white/5">
-                    <Image src={m.photo} alt={m.name} fill quality={90} sizes="160px" className="object-cover object-top" />
+                    <Image src={m.photo} alt={m.name} fill quality={90} sizes="160px" className="object-cover object-top grayscale" />
                   </div>
                   <p className="mt-3 text-[0.95rem] font-semibold text-white">{m.name}</p>
                   <p className="mt-0.5 text-[0.78rem] leading-snug text-white/65">{m.title}</p>
@@ -214,16 +228,8 @@ export default function Home() {
           </div>
           <div className="mt-14 border-t border-white/15 pt-8">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white/50">Team experience from</p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-9 gap-y-5">
-              {LOGOS.map((logo) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={logo.file}
-                  src={`/images/logos/${logo.file}`}
-                  alt={logo.name}
-                  className="h-[18px] w-auto max-w-[140px] opacity-70 [filter:brightness(0)_invert(1)]"
-                />
-              ))}
+            <div className="mt-6">
+              <LogoRow logos={LOGOS} dark />
             </div>
             <Link href="/about" className="mt-8 inline-block text-[0.9rem] font-medium text-[var(--mdh-brass-soft)] hover:text-white">
               Meet the team &rarr;
@@ -234,25 +240,26 @@ export default function Home() {
 
       {/* Who this is for */}
       <Section>
-        <Container className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
-          <Intro eyebrow="Who this is for" title="Built for owners who have earned a better next chapter" />
-          <ul className="divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)]">
-            {FIT.map((item) => (
-              <li key={item} className="flex gap-4 py-4 text-[1.02rem] text-[var(--mdh-ink)]">
-                <span className="mt-0.5 text-[var(--mdh-brass)]" aria-hidden>
-                  &#10003;
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
+        <Container>
+          <Split sticky={false} eyebrow="Who this is for" title="Built for investors who have earned a better next chapter">
+            <ul className="divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)]">
+              {FIT.map((item) => (
+                <li key={item} className="flex gap-4 py-4 text-[1.02rem] text-[var(--mdh-ink)]">
+                  <span className="mt-0.5 text-[var(--mdh-brass)]" aria-hidden>
+                    &#10003;
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Split>
         </Container>
       </Section>
 
       {/* Audience routing */}
       <Section tone="stone">
         <Container>
-          <Intro eyebrow="Who we work with" title="Find your path" />
+          <Intro title="Find your path" />
           <div className="mt-12 grid gap-px overflow-hidden rounded-md border border-[var(--mdh-line)] bg-[var(--mdh-line)] md:grid-cols-3">
             {AUDIENCE_CARDS.map((card) => (
               <Link key={card.href} href={card.href} className="group flex flex-col bg-white p-7 hover:bg-[var(--mdh-parchment)] md:p-8">
@@ -271,7 +278,7 @@ export default function Home() {
       </Section>
 
       <CtaBand title="You built something real. Let's make sure it keeps working for you.">
-        Send us the address for a personalized valuation and proposal.
+        Send us an address for a personalized valuation and proposal.
       </CtaBand>
     </main>
   );

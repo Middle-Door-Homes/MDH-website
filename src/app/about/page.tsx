@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, LogoRow, PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
@@ -159,7 +159,7 @@ export default function AboutPage() {
             {TEAM.map((member) => (
               <div key={member.name} className="flex flex-col gap-5 sm:flex-row">
                 <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-md bg-[var(--mdh-stone)]">
-                  <Image src={member.photo} alt={member.name} fill quality={90} sizes="144px" className="object-cover object-top" />
+                  <Image src={member.photo} alt={member.name} fill quality={90} sizes="144px" className="object-cover object-top grayscale" />
                 </div>
                 <div>
                   <p className="font-display text-[1.4rem] leading-tight text-[var(--mdh-green)]">{member.name}</p>
@@ -175,16 +175,8 @@ export default function AboutPage() {
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-muted)]">
               Team experience from
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-9 gap-y-5">
-              {LOGOS.map((logo) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={logo.file}
-                  src={`/images/logos/${logo.file}`}
-                  alt={logo.name}
-                  className="h-[18px] w-auto max-w-[140px] opacity-60 grayscale"
-                />
-              ))}
+            <div className="mt-6">
+              <LogoRow logos={LOGOS} />
             </div>
           </div>
         </Container>
@@ -192,7 +184,7 @@ export default function AboutPage() {
 
       <CtaBand
         title="See exactly how this works for you."
-        action={{ href: "/contact", label: "Send us the address" }}
+        action={{ href: "/contact", label: "Send us an address" }}
         secondary={{ href: "/owners", label: "Owner overview" }}
       >
         The owner overview covers the 721 exchange step by step, what you receive, and what your income looks

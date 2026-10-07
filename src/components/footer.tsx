@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Container, DoorIcon } from "./ui";
+import Image from "next/image";
+import { Container } from "./ui";
 
 const LINKS = [
   { href: "/owners", label: "Owners" },
@@ -16,8 +17,10 @@ export function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <DoorIcon open className="h-9 w-7 text-[var(--mdh-brass-soft)]" />
+            <div className="flex items-center gap-2.5">
+              <span className="relative h-8 w-8 shrink-0">
+                <Image src="/images/logo-white.png" alt="" fill sizes="32px" className="object-contain" />
+              </span>
               <p className="font-display text-[1.3rem] font-medium text-white">Middle Door Homes</p>
             </div>
             <p className="mt-4 max-w-[34ch] text-[0.92rem] leading-relaxed">
@@ -39,7 +42,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2 leading-relaxed">
-                1021 W Adams St, Suite 200-29
+                1021 W Adams St, Suite 200-30
                 <br />
                 Chicago, IL 60607
               </li>

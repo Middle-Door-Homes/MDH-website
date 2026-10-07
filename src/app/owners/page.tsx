@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, CtaBand, Eyebrow, FeatureGrid, Heading, Intro, PhotoHero, Section, Steps } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, PhotoHero, Section, Split, Steps } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
@@ -33,22 +33,22 @@ const SITUATIONS = [
   {
     title: "Tired of managing",
     body: "You have held a long time, built a large gain, and you are done with tenants and repairs.",
-    number: "$1M building: ~$540K after a cash sale vs. ~$740K through us",
+    number: "On a $1M building, about $200K more of your equity stays invested.",
   },
   {
     title: "Loan maturing",
     body: "Refinancing at today's rates can mean a much larger payment on the same building and the same management.",
-    number: "A refi can double your payment. We pay the loan off at closing.",
+    number: "We pay off the loan at closing. No refinance.",
   },
   {
     title: "Planning a 1031",
     body: "A 1031 defers the tax, but only by taking on another building to find, finance, close, and run.",
-    number: "Same deferral, no 45-day clock, no new building",
+    number: "The same deferral, with no 45-day clock and no new building.",
   },
   {
     title: "Building with upside left",
     body: "Rents that could be higher and units that could be updated. Sell as-is and the next owner keeps that upside.",
-    number: "Listed at $1.2M: ~$1.0M as-is vs. ~$1.3-1.4M after the work",
+    number: "Keep today's value, plus half of what the renovation adds.",
   },
 ];
 
@@ -143,7 +143,7 @@ const OWNER_FAQ: FaqGroup[] = [
         a: "Deferred taxes become due when you sell or redeem your units. However, units can be passed to heirs with a step-up in cost basis, which can eliminate the deferred tax liability entirely for the next generation.",
       },
       {
-        q: "What is my ongoing tax treatment as an OP unit holder?",
+        q: "What is my ongoing tax treatment as a unit holder?",
         a: "You keep pass-through tax treatment and receive a Schedule K-1 each year. What that is worth in a given year depends on your own basis.",
       },
       {
@@ -248,18 +248,9 @@ const COMPARISON = [
 const COMPARISON_COLUMNS = ["Self-manage", "Hire PM", "Sale", "1031", "DST", "Middle Door"];
 
 const RETURN_COMPARE = [
-  {
-    title: "Balanced advisor portfolio",
-    body: "~5-7% annually, but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.",
-  },
-  {
-    title: "Keep managing the building",
-    body: "Similar or lower returns, with full operational responsibility and concentrated single-asset risk.",
-  },
-  {
-    title: "Middle Door 721 exchange",
-    body: "8-12% target return on 100% of your equity: no tax haircut at contribution, no management burden.",
-  },
+  { label: "Sell and reinvest", figure: "5-7%", caption: "in a balanced portfolio, on the 60-70 cents per dollar left after tax" },
+  { label: "Keep managing", figure: "Similar or lower", caption: "with the work and the single-building risk still yours" },
+  { label: "Middle Door", figure: "8-12%", caption: "target return on 100% of your equity, with no management", mdh: true },
 ];
 
 const GOOD_FIT = [
@@ -294,7 +285,7 @@ export default function OwnersPage() {
         actions={
           <>
             <Button href="/contact" variant="light">
-              Send us the address
+              Send us an address
             </Button>
             <Button href="#solution" variant="outlineLight">
               How it works
@@ -315,23 +306,25 @@ export default function OwnersPage() {
             deducted. Holding means staying a landlord, with everything riding on one property. Middle Door
             Homes offers a third path.
           </p>
-          <div className="mt-16">
-            <Eyebrow>Where owners start</Eyebrow>
-            <Heading className="mt-3">Which sounds like you?</Heading>
-            <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-[var(--mdh-line)] bg-[var(--mdh-line)] sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-20">
+            <Intro title="Which sounds like you?" />
+            <div className="mt-10 border-t border-[var(--mdh-line)]">
               {SITUATIONS.map((item) => (
-                <div key={item.title} className="flex flex-col bg-white p-7">
-                  <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">{item.title}</h3>
-                  <p className="mt-2 flex-1 leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  <p className="font-display mt-6 border-t border-[var(--mdh-line)] pt-4 text-[1.08rem] leading-snug text-[var(--mdh-brass)]">
+                <div
+                  key={item.title}
+                  className="grid gap-3 border-b border-[var(--mdh-line)] py-7 md:grid-cols-12 md:gap-8"
+                >
+                  <h3 className="font-display text-[1.4rem] leading-snug text-[var(--mdh-green)] md:col-span-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-pretty leading-relaxed text-[var(--mdh-ink)] md:col-span-5">{item.body}</p>
+                  <p className="text-pretty font-medium leading-relaxed text-[var(--mdh-green)] md:col-span-4">
                     {item.number}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[0.8rem] text-[var(--mdh-muted)]">
-              Illustrative round numbers. Figures will differ for your building.
-            </p>
+            <p className="mt-4 text-[0.8rem] text-[var(--mdh-muted)]">Illustrative. Figures will differ for your building.</p>
           </div>
         </Container>
       </Section>
@@ -346,15 +339,15 @@ export default function OwnersPage() {
               no taxable event at closing. You do not sell. Your equity moves forward intact.
             </Intro>
             <div className="mt-10 grid gap-8 sm:grid-cols-2">
-              <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
-                <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">The key distinction</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.25rem] leading-snug text-[var(--mdh-green)]">The key distinction</h3>
                 <p className="mt-2 leading-relaxed">
                   A 721 exchange is a contribution, not a sale. The tax event that would occur at sale is
                   deferred, so you keep 100% of what you have built.
                 </p>
               </div>
-              <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
-                <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">Why not a 1031?</h3>
+              <div className="border-t border-[var(--mdh-line)] pt-5">
+                <h3 className="font-display text-[1.25rem] leading-snug text-[var(--mdh-green)]">Why not a 1031?</h3>
                 <p className="mt-2 leading-relaxed">
                   A 1031 also defers taxes, but you face a 45-day identification window and a 180-day closing
                   deadline, and you end up managing a new building. Here you contribute once and exit active
@@ -379,7 +372,7 @@ export default function OwnersPage() {
       {/* How you are paid */}
       <Section>
         <Container>
-          <Intro eyebrow="How returns are generated" title="We invest in the buildings. You get paid first.">
+          <Intro title="We invest in the buildings. You get paid first.">
             We evaluate each property for value-creation potential and deploy capital where it has the most
             impact: higher net operating income (rent minus operating costs), better occupancy, and where the
             building allows, additional units.
@@ -425,7 +418,7 @@ export default function OwnersPage() {
       {/* Compare */}
       <Section>
         <Container>
-          <Intro eyebrow="Compare your options" title="How a 721 exchange stacks up" />
+          <Intro title="How a 721 exchange stacks up" />
           <div className="mt-10 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-left text-[0.95rem]">
               <thead>
@@ -468,41 +461,57 @@ export default function OwnersPage() {
               </tbody>
             </table>
           </div>
-          <p className="font-display mt-8 max-w-3xl text-[1.2rem] leading-snug text-[var(--mdh-green)]">
+          <p className="mt-4 max-w-4xl text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
+            DST = Delaware Statutory Trust. DSTs defer taxes but require a 1031 exchange process, use a blind-pool
+            structure with fixed distributions and limited upside, and offer no redemption mechanism. Hiring a
+            property manager reduces but does not eliminate active ownership: owners remain responsible for capital
+            decisions and pay 8-10% of gross rents regardless of performance.
+          </p>
+          <p className="font-display mt-10 max-w-3xl text-balance text-[1.35rem] leading-snug text-[var(--mdh-green)]">
             Middle Door is the only option that clears all three: no tax event at contribution, a complete exit
             from active management, and ongoing upside.
           </p>
-          <div className="mt-14">
-            <Eyebrow>How 8-12% compares</Eyebrow>
-            <div className="mt-6">
-              <FeatureGrid items={RETURN_COMPARE} />
+
+          <div className="mt-20">
+            <Intro title="How 8-12% compares" />
+            <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-[var(--mdh-line)] bg-[var(--mdh-line)] md:grid-cols-3">
+              {RETURN_COMPARE.map((item) => (
+                <div key={item.label} className={`p-7 ${item.mdh ? "bg-[var(--mdh-green)]" : "bg-white"}`}>
+                  <p className={`text-[0.75rem] font-semibold uppercase tracking-[0.18em] ${item.mdh ? "text-[var(--mdh-brass-soft)]" : "text-[var(--mdh-subtle)]"}`}>
+                    {item.label}
+                  </p>
+                  <p className={`font-display mt-4 text-[2rem] leading-none ${item.mdh ? "text-white" : "text-[var(--mdh-green)]"}`}>
+                    {item.figure}
+                  </p>
+                  <p className={`mt-3 text-pretty leading-relaxed ${item.mdh ? "text-white/75" : "text-[var(--mdh-ink)]"}`}>
+                    {item.caption}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-          <p className="mt-10 max-w-4xl text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
-            DST = Delaware Statutory Trust. DSTs defer taxes but require a 1031 exchange process, use a
-            blind-pool structure with fixed distributions and limited upside, and offer no redemption mechanism.
-            Hiring a property manager reduces but does not eliminate active ownership: owners remain responsible
-            for capital decisions and pay 8-10% of gross rents regardless of performance.
-          </p>
         </Container>
       </Section>
 
       {/* What you receive */}
       <Section tone="stone">
         <Container>
-          <Intro eyebrow="What you receive" title="A tax-efficient transition to passive income">
-            Full-time, experienced management lifts income through lower operating costs, rents set to the
-            market, and efficient operations. That upside flows to you as an owner.
-          </Intro>
-          <div className="mt-12">
-            <FeatureGrid cols={4} items={BENEFITS} />
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="lg:col-span-7">
+              <Intro title="A tax-efficient transition to passive income">
+                Full-time, experienced management lifts income through lower operating costs, rents set to the
+                market, and efficient operations. That upside flows to you as an owner.
+              </Intro>
+            </div>
+            <div className="border-l-2 border-[var(--mdh-brass)] pl-6 lg:col-span-4 lg:col-start-9">
+              <p className="font-display text-[2.6rem] leading-none text-[var(--mdh-green)]">$120M+</p>
+              <p className="mt-3 text-pretty leading-relaxed text-[var(--mdh-ink)]">
+                in annual net operating income growth our team has driven across a 30,000+ home portfolio.
+              </p>
+            </div>
           </div>
-          <div className="mt-12 flex flex-col gap-2 border-t border-[var(--mdh-line)] pt-8 md:flex-row md:items-baseline md:gap-6">
-            <p className="font-display shrink-0 text-[2.2rem] leading-none text-[var(--mdh-green)]">$120M+</p>
-            <p className="leading-relaxed text-[var(--mdh-ink)]">
-              in annual net operating income growth our team has driven across a 30,000+ home portfolio. We
-              bring the same playbook to every building we own.
-            </p>
+          <div className="mt-14">
+            <FeatureGrid cols={4} items={BENEFITS} />
           </div>
         </Container>
       </Section>
@@ -510,7 +519,7 @@ export default function OwnersPage() {
       {/* Fit */}
       <Section id="qualifies">
         <Container>
-          <Intro eyebrow="Qualifying" title="Is this a fit for you?" />
+          <Intro title="Is this a fit for you?" />
           <div className="mt-12 grid gap-12 md:grid-cols-2">
             <div>
               <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">Middle Door works best if:</h3>
@@ -570,22 +579,19 @@ export default function OwnersPage() {
       {/* FAQ */}
       <Section id="faq">
         <Container>
-        <div className="mx-auto max-w-4xl">
-          <Intro eyebrow="Common questions" title="Frequently asked questions" />
-          <div className="mt-10">
+          <Split title="Frequently asked questions" intro="Plain answers to what owners ask us most. Anything else, ask us directly.">
             <FaqAccordion groups={OWNER_FAQ} />
-          </div>
-          <p className="mt-8 text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
-            This is illustrative only and does not constitute an offer to sell securities. Actual tax liability
-            depends on your individual circumstances. Consult a qualified tax and legal advisor before making any
-            decisions.
-          </p>
-        </div>
+            <p className="mt-8 text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
+              This is illustrative only and does not constitute an offer to sell securities. Actual tax liability
+              depends on your individual circumstances. Consult a qualified tax and legal advisor before making any
+              decisions.
+            </p>
+          </Split>
         </Container>
       </Section>
 
       <CtaBand title="You built something real. Let's make sure it keeps working for you.">
-        Send us the address for a personalized valuation and proposal, and an honest answer on whether this is
+        Send us an address for a personalized valuation and proposal, and an honest answer on whether this is
         the right fit.
       </CtaBand>
     </main>
