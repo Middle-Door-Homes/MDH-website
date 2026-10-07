@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button, Container, DoorIcon, Eyebrow, Heading, Section } from "@/components/ui";
+import { Button, Container, DoorIcon } from "@/components/ui";
 import { TaxCalculator } from "@/components/calculator";
 
 export const metadata: Metadata = {
@@ -89,24 +89,60 @@ const HOW_IT_WORKS = [
   },
 ];
 
+const FIT = [
+  "Own one or more 2-49 unit multifamily buildings",
+  "Held 5+ years, with a large gain built up",
+  "Want passive income and long-term upside",
+  "Looking for a tax-efficient way out",
+  "Ready to hand off the day-to-day",
+];
+
+const LOGOS = [
+  { name: "Home Partners of America", file: "home-partners.svg" },
+  { name: "Invitation Homes", file: "invitation-homes.svg" },
+  { name: "LaSalle Investment Management", file: "lasalle.svg" },
+  { name: "BCG", file: "bcg.svg" },
+  { name: "CBRE", file: "cbre.svg" },
+  { name: "Landis", file: "landis.png" },
+  { name: "Real Foundations", file: "real-foundations.svg" },
+  { name: "Google", file: "google-wordmark.svg" },
+  { name: "Stanford Business School", file: "stanford.svg" },
+  { name: "Harvard University", file: "harvard.svg" },
+];
+
+const SERIF_H2 =
+  "font-display text-[2rem] font-medium leading-[1.12] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.75rem]";
+const LABEL = "text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]";
+
 export default function Home() {
   return (
     <main>
-      {/* Hero: split panel */}
+      {/* Hero: split panel (photo first on phones) */}
       <section className="bg-[var(--mdh-ink)]">
         <div className="grid lg:grid-cols-2">
-          <div className="flex items-center px-5 py-14 md:px-10 md:py-20 lg:min-h-[640px] lg:py-24 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-16">
+          <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:order-last lg:aspect-auto">
+            <Image
+              src="/images/hero-chicago-street.jpg"
+              alt="Tree-lined street of brick multifamily buildings"
+              fill
+              priority
+              quality={92}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[62%_center]"
+            />
+          </div>
+          <div className="flex items-center px-5 pb-12 pt-10 sm:px-8 md:py-16 lg:min-h-[640px] lg:py-24 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-16">
             <div className="max-w-xl">
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/55">
+              <p className="hidden text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/55 lg:block">
                 Middle Door Homes
               </p>
-              <h1 className="font-display mt-4 text-[2.4rem] font-medium leading-[1.05] tracking-[-0.01em] text-white sm:text-[3rem] lg:text-[4rem]">
+              <h1 className="font-display text-[2.3rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[3rem] lg:mt-4 lg:text-[4rem]">
                 Your building&rsquo;s next chapter
               </h1>
-              <p className="mt-5 text-[1.08rem] font-light leading-relaxed text-white/80 md:text-[1.25rem]">
+              <p className="mt-4 text-[1.05rem] font-light leading-relaxed text-white/80 md:mt-5 md:text-[1.25rem]">
                 The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-6">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 md:mt-9">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
@@ -119,276 +155,222 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-0">
-            <Image
-              src="/images/hero-chicago-street.jpg"
-              alt="Tree-lined street of brick multifamily buildings"
-              fill
-              priority
-              quality={92}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[62%_center]"
-            />
-          </div>
         </div>
       </section>
 
       {/* Key figures */}
       <section className="border-b border-[var(--mdh-line)] bg-white">
         <Container>
-          <div className="grid divide-y divide-[var(--mdh-line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          <div className="grid grid-cols-3 divide-x divide-[var(--mdh-line)]">
             {THREE_PROOFS.map((item) => (
-              <div key={item.promise} className="py-8 sm:px-8 sm:first:pl-0 sm:last:pr-0 md:py-10">
-                <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
-                  {item.promise}
-                </p>
-                <p className="mt-3 text-[2.4rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
+              <div key={item.promise} className="px-3 py-6 text-center first:pl-0 last:pr-0 sm:px-8 sm:text-left md:py-10">
+                <p className={`hidden sm:block ${LABEL}`}>{item.promise}</p>
+                <p className="text-[1.7rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)] sm:mt-3 sm:text-[2.2rem] md:text-[2.4rem]">
                   {item.stat}
                 </p>
                 <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
                   {item.statLabel}
                 </p>
-                <p className="mt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                <p className="mt-4 hidden text-[0.9rem] leading-relaxed text-[var(--mdh-ink)] sm:block">{item.body}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Statement */}
-      <section className="pb-10 pt-16 md:pb-14 md:pt-24">
+      {/* Statement + three doors */}
+      <section className="py-20 md:py-28">
         <Container>
-          <p className="font-display mx-auto max-w-4xl text-balance text-center lining-nums text-[1.75rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.5rem]">
+          <p className="font-display mx-auto max-w-4xl text-balance text-center text-[1.75rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[2.5rem]">
             Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
           </p>
-        </Container>
-      </section>
-
-      {/* Three doors */}
-      <Section className="pt-0">
-        <Container>
-          <div className="grid overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-white shadow-[0_10px_32px_rgba(18,29,41,0.04)] sm:grid-cols-3">
+          <div className="mt-14 grid border-y border-[var(--mdh-line)] md:mt-16 md:grid-cols-3">
             {THREE_DOORS.map((door) => (
               <div
                 key={door.label}
-                className={door.mdh
-                  ? "bg-[var(--mdh-ink)] p-6 md:p-8"
-                  : "border-b border-[var(--mdh-line)] p-6 sm:border-b-0 sm:border-r md:p-8"}
+                className={`flex items-center gap-5 px-5 py-6 text-left md:flex-col md:gap-0 md:px-6 md:py-12 md:text-center ${
+                  door.mdh
+                    ? "bg-[var(--mdh-ink)]"
+                    : "border-b border-[var(--mdh-line)] md:border-b-0 md:border-r"
+                }`}
               >
                 <DoorIcon
                   open={door.mdh}
-                  className={`mb-4 h-11 w-8 ${door.mdh ? "text-[#c99a5e]" : "text-[var(--mdh-subtle)]/70"}`}
+                  className={`h-12 w-9 shrink-0 md:h-14 md:w-10 ${door.mdh ? "text-[#c99a5e]" : "text-[var(--mdh-subtle)]/60"}`}
                 />
-                <p className={`text-[0.68rem] font-medium uppercase tracking-[0.2em] ${door.mdh ? "text-white/60" : "text-[var(--mdh-subtle)]"}`}>
-                  {door.label}
-                </p>
-                <p className={`mt-3 text-[1.15rem] font-medium leading-snug md:text-[1.3rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
-                  {door.body}
-                </p>
+                <div>
+                  <p className={`text-[0.7rem] font-medium uppercase tracking-[0.2em] md:mt-5 ${door.mdh ? "text-white/60" : "text-[var(--mdh-subtle)]"}`}>
+                    {door.label}
+                  </p>
+                  <p className={`font-display mt-1.5 text-[1.25rem] leading-snug lining-nums md:mx-auto md:mt-3 md:max-w-[16ch] md:text-[1.4rem] ${door.mdh ? "text-white" : "text-[var(--mdh-title)]"}`}>
+                    {door.body}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </Container>
-      </Section>
+      </section>
 
-      {/* Who this is for */}
-      <Section className="pt-4">
+      {/* Who this is for: photo beside text */}
+      <section className="bg-white py-20 md:py-28">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Who this is for</Eyebrow>
-            <Heading className="mt-2">Built for investors who have earned a better next chapter</Heading>
-            <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your gains to capital gains tax and depreciation recapture. A 1031 exchange keeps your wealth concentrated and the operational burden on your plate. Middle Door Homes offers a third option: contribute your building and receive a passive stake in a diversified, professionally managed portfolio, without sacrificing your equity gains.
-            </p>
-            <div className="mt-6 space-y-3 border-t border-[var(--mdh-line)] pt-6">
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  "Own one or more 2-49 unit multifamily buildings",
-                  "Held 5+ years, with a large gain built up",
-                ].map((item) => (
-                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4">
-                    <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
-                    <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
-                  </div>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/nb-brick-threeflats.jpg"
+                alt="Brick three-flats on a tree-lined street"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className={LABEL}>Who this is for</p>
+              <h2 className={`mt-4 ${SERIF_H2}`}>Built for investors who have earned a better next chapter</h2>
+              <p className="mt-5 text-[1rem] leading-relaxed text-[var(--mdh-ink)]">
+                You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your
+                gains to tax. A 1031 keeps your wealth concentrated and the work on your plate. Middle Door Homes
+                offers a third option.
+              </p>
+              <ul className="mt-8 border-t border-[var(--mdh-line)]">
+                {FIT.map((item) => (
+                  <li key={item} className="flex gap-3 border-b border-[var(--mdh-line)] py-3.5 text-[0.98rem] text-[var(--mdh-ink)]">
+                    <span className="text-[var(--mdh-accent)]" aria-hidden>
+                      &#10003;
+                    </span>
+                    {item}
+                  </li>
                 ))}
-              </div>
-              <div className="grid gap-3 sm:grid-cols-3">
-                {[
-                  "Enjoy passive income & long-term upside",
-                  "Seeking tax-efficient options",
-                  "Ready to hand off the day-to-day",
-                ].map((item) => (
-                  <div key={item} className="flex gap-2.5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4">
-                    <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
-                    <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item}</p>
-                  </div>
-                ))}
-              </div>
+              </ul>
             </div>
           </div>
         </Container>
-      </Section>
+      </section>
 
-      {/* How it works */}
-      <Section id="how-it-works" className="pt-4">
+      {/* How it works: numbered columns */}
+      <section id="how-it-works" className="py-20 md:py-28">
         <Container>
-          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div>
-              <Eyebrow>The 721 exchange</Eyebrow>
-              <Heading className="mt-2">Three steps to passive ownership</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A §721 exchange lets you contribute your building to a partnership for ownership
-                units, with no capital gains or depreciation recapture at contribution. It is the same
-                tool large REITs have used for decades to buy from owners who did not want to sell.
-                What is new is applying it to buildings your size.
-              </p>
-              <div className="mt-6">
-                <Button href="/owners">Owner overview</Button>
-              </div>
-              <div className="relative mt-6 h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-[240px]">
-                <Image
-                  src="/images/nb-autumn-corner.jpg"
-                  alt="Brick apartment building on a tree-lined corner in autumn"
-                  fill
-                  quality={90}
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-cover object-[center_50%]"
-                />
-              </div>
+              <p className={LABEL}>The 721 exchange</p>
+              <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
             </div>
-            <div className="space-y-3">
-              {HOW_IT_WORKS.map((item) => (
-                <div
-                  key={item.step}
-                  className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5"
-                >
-                  <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)] md:text-[1.7rem]">
-                    {item.step}
-                  </p>
-                  <div>
-                    <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                    <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  </div>
+            <p className="text-[1rem] leading-relaxed text-[var(--mdh-ink)]">
+              A §721 exchange lets you contribute your building to a partnership for ownership units, with no
+              capital gains or depreciation recapture at contribution. It is the same tool large REITs have used
+              for decades to buy from owners who did not want to sell. What is new is applying it to buildings your
+              size.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {HOW_IT_WORKS.map((item) => (
+              <div key={item.step} className="border-t border-[var(--mdh-title)]/40 pt-6">
+                <p className="font-display text-[2.4rem] leading-none text-[var(--mdh-title)]/35 lining-nums">{item.step}</p>
+                <p className="mt-5 text-[1.1rem] font-medium text-[var(--mdh-title)]">{item.title}</p>
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12">
+            <Button href="/owners">The full owner overview</Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Calculator */}
+      <TaxCalculator />
+
+      {/* Team: navy band */}
+      <section className="bg-[var(--mdh-ink)] py-20 md:py-28">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white/55">Our team</p>
+              <h2 className="font-display mt-4 text-[2rem] font-medium leading-[1.12] tracking-[-0.01em] text-white md:text-[2.75rem]">
+                Billions of dollars of institutional housing experience
+              </h2>
+              <p className="mt-5 text-[1rem] leading-relaxed text-white/75">
+                Our team has operated 30,000+ units across some of the largest residential platforms in the
+                country. We built Middle Door to bring that institutional playbook to multifamily owners, and to
+                offer them a structure that, until now, only large real estate institutions used.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-end">
+              {TEAM.map((member) => (
+                <Link key={member.name} href="/about" className="group flex items-center gap-4">
+                  <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
+                    <Image src={member.photo} alt={member.name} fill quality={90} sizes="64px" className="object-cover object-top" />
+                  </span>
+                  <span>
+                    <span className="block font-medium leading-tight text-white group-hover:underline">{member.name}</span>
+                    <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em] text-white/55">
+                      {member.title}
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="mt-16 border-t border-white/15 pt-8">
+            <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white/45">Team experience from</p>
+            <div className="mt-6 grid grid-cols-3 items-center gap-x-8 gap-y-6 sm:grid-cols-5">
+              {LOGOS.map((logo) => (
+                <div key={logo.file} className="flex h-7 items-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/images/logos/${logo.file}`}
+                    alt={logo.name}
+                    className="max-h-full max-w-[120px] object-contain opacity-70 [filter:brightness(0)_invert(1)]"
+                  />
                 </div>
               ))}
             </div>
           </div>
         </Container>
-      </Section>
+      </section>
 
-      {/* Calculator */}
-      <TaxCalculator />
-
-      {/* Team credentials */}
-      <Section className="pt-4">
+      {/* Audience routing: open columns */}
+      <section className="bg-white py-20 md:py-28">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Our team</Eyebrow>
-            <Heading className="mt-2">Billions of dollars of institutional housing experience</Heading>
-            <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Our team has operated 30,000+ units across some of the largest residential platforms in the country. We built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a structure that, until now, only large real estate institutions used.
+          <h2 className={SERIF_H2}>Find your path</h2>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            {AUDIENCE_CARDS.map((card) => (
+              <Link key={card.href} href={card.href} className="group flex flex-col border-t border-[var(--mdh-line)] pt-6">
+                <p className={LABEL}>{card.eyebrow}</p>
+                <h3 className="font-display mt-3 text-[1.4rem] font-medium leading-snug text-[var(--mdh-title)]">{card.title}</h3>
+                <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{card.body}</p>
+                <p className="mt-6 text-[0.88rem] font-medium text-[var(--mdh-accent)] transition group-hover:translate-x-0.5">
+                  {card.cta} &rarr;
+                </p>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Closing statement */}
+      <section className="border-t border-[var(--mdh-line)] py-20 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-display text-balance text-[2rem] font-medium leading-[1.15] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.75rem]">
+              You built something real. Let&apos;s make sure it keeps working for you.
+            </h2>
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-[var(--mdh-ink)]">
+              Send us an address for a personalized valuation and proposal.
             </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
-              {TEAM.map((member) => (
-                <Link key={member.name} href="/about" className="group flex items-center gap-3">
-                  <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[var(--mdh-line)]">
-                    <Image src={member.photo} alt={member.name} fill quality={90} sizes="48px" className="object-cover object-top" />
-                  </span>
-                  <span>
-                    <span className="block font-medium leading-tight text-[var(--mdh-title)] group-hover:underline">{member.name}</span>
-                    <span className="mt-0.5 block text-[0.7rem] font-medium uppercase tracking-[0.13em] text-[var(--mdh-subtle)]">{member.title}</span>
-                  </span>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
-              <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
-                Team experience from
-              </p>
-              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
-                {[
-                  { name: "Home Partners of America", file: "home-partners.svg" },
-                  { name: "Invitation Homes", file: "invitation-homes.svg" },
-                  { name: "LaSalle Investment Management", file: "lasalle.svg" },
-                  { name: "BCG", file: "bcg.svg" },
-                  { name: "CBRE", file: "cbre.svg" },
-                  { name: "Landis", file: "landis.png" },
-                  { name: "Real Foundations", file: "real-foundations.svg" },
-                  { name: "Google", file: "google-wordmark.svg" },
-                  { name: "Stanford Business School", file: "stanford.svg" },
-                  { name: "Harvard University", file: "harvard.svg" },
-                ].map((logo) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={logo.file}
-                    src={`/images/logos/${logo.file}`}
-                    alt={logo.name}
-                    className="h-[18px] w-auto max-w-[140px] transition hover:opacity-70"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Audience routing */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <div className="mb-6">
-              <Eyebrow>Who we work with</Eyebrow>
-              <Heading className="mt-2">Find your path</Heading>
-            </div>
-            <div className="grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {AUDIENCE_CARDS.map((card) => (
-                <Link
-                  key={card.href}
-                  href={card.href}
-                  className="group flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 transition hover:border-[var(--mdh-accent)] hover:shadow-[0_8px_24px_rgba(18,29,41,0.07)] md:p-6"
-                >
-                  <p className="text-[0.67rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
-                    {card.eyebrow}
-                  </p>
-                  <h2 className="mt-2 text-[1.05rem] font-medium leading-snug text-[var(--mdh-title)] md:text-[1.1rem]">
-                    {card.title}
-                  </h2>
-                  <p className="mt-2 flex-1 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {card.body}
-                  </p>
-                  <p className="mt-4 text-[0.85rem] font-medium text-[var(--mdh-accent)] transition group-hover:translate-x-0.5">
-                    {card.cta} →
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                You built something real. Let&apos;s make sure it keeps working for you.
-              </h2>
-              <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
-                Send us an address for a personalized valuation and proposal.
-              </p>
-            </div>
-            <div className="shrink-0">
+            <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[var(--mdh-ink-soft)]"
               >
                 Send us an address
               </Link>
             </div>
           </div>
         </Container>
-      </Section>
+      </section>
     </main>
   );
 }

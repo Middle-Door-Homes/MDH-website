@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Container, Eyebrow, Heading, Section } from "@/components/ui";
+import { Container, Eyebrow } from "@/components/ui";
 
 const BLDG_MIN = 200_000;
 const BLDG_MAX = 5_000_000;
@@ -113,11 +113,13 @@ export function TaxCalculator() {
   const equityGain = mdhNet - saleNet;
 
   return (
-    <Section className="pt-4">
+    <section className="bg-white py-20 md:py-28">
       <Container>
-        <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
+        <div>
           <Eyebrow>Equity calculator</Eyebrow>
-          <Heading className="mt-2">How much equity do you keep?</Heading>
+          <h2 className="font-display mt-4 text-[2rem] font-medium leading-[1.12] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.75rem]">
+            How much equity do you keep?
+          </h2>
           <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
             Adjust the sliders to match your situation. See how a 721 exchange compares to a
             traditional sale, line by line.
@@ -125,7 +127,7 @@ export function TaxCalculator() {
 
           {/* Sliders */}
           <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Building value
@@ -154,7 +156,7 @@ export function TaxCalculator() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   What you paid for the building
@@ -178,7 +180,7 @@ export function TaxCalculator() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   Outstanding mortgage
@@ -201,7 +203,7 @@ export function TaxCalculator() {
                 <span>{fmt(mortMax, true)}</span>
               </div>
             </div>
-            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
+            <div className="rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-[0.82rem] font-medium text-[var(--mdh-subtle)]">
                   State income tax rate
@@ -229,7 +231,7 @@ export function TaxCalculator() {
           {/* Comparison columns */}
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {/* Traditional sale */}
-            <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
+            <div className="rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
               <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
                 Traditional sale
               </p>
@@ -256,7 +258,7 @@ export function TaxCalculator() {
             </div>
 
             {/* MDH 721 exchange */}
-            <div className="rounded-xl border border-[var(--mdh-accent)] bg-[var(--mdh-ink)] p-5 md:p-6">
+            <div className="rounded-lg border border-[var(--mdh-accent)] bg-[var(--mdh-ink)] p-5 md:p-6">
               <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-white/60">
                 721 Exchange: Middle Door
               </p>
@@ -283,7 +285,7 @@ export function TaxCalculator() {
 
           {/* Difference callout */}
           {equityGain > 0 && (
-            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] px-5 py-4 text-center md:py-5">
+            <div className="mt-4 rounded-lg border border-[var(--mdh-line)] bg-[var(--mdh-bg)] px-5 py-4 text-center md:py-5">
               <p className="text-[0.83rem] text-[var(--mdh-subtle)]">
                 With a 721 exchange you preserve
               </p>
@@ -302,6 +304,6 @@ export function TaxCalculator() {
           </p>
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }
