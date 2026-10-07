@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, DoorIcon } from "@/components/ui";
 import { TaxCalculator } from "@/components/calculator";
+import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,8 @@ const TEAM = [
   { name: "Mike Rozovics", title: "Partner & EVP Operations", photo: "/images/mike-rozovics.jpg" },
   { name: "Bob Sievewright", title: "Principal, Acquisitions", photo: "/images/bob-sievewright.jpg" },
 ];
+
+const AUDIENCE_IMAGES = ["/images/nb-greystone.jpg", "/images/nb-sixflat-front.jpg", "/images/nb-garden-apartments.jpg"];
 
 const AUDIENCE_CARDS = [
   {
@@ -185,27 +188,25 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Statement over a full-width photo */}
-      <section className="relative mt-16 overflow-hidden md:mt-24">
-        <Image
-          src="/images/nb-autumn-corner.jpg"
-          alt=""
-          fill
-          quality={88}
-          sizes="100vw"
-          className="object-cover object-[center_60%]"
-        />
+      {/* Statement over a fixed photo */}
+      <section
+        className="relative mt-16 bg-cover bg-[center_60%] md:mt-24 lg:bg-fixed"
+        style={{ backgroundImage: "url(/images/nb-autumn-corner.jpg)" }}
+      >
         <div className="absolute inset-0 bg-[rgba(14,22,32,0.68)]" />
-        <Container className="relative py-24 md:py-36">
-          <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
-            Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
-          </p>
+        <Container className="relative py-28 md:py-44">
+          <Reveal>
+            <p className="font-display mx-auto max-w-6xl text-balance text-center text-[2.1rem] font-medium leading-[1.18] tracking-[-0.01em] text-white lining-nums md:text-[3.3rem] xl:text-[4rem]">
+              Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
+            </p>
+          </Reveal>
         </Container>
       </section>
 
       {/* Three doors */}
       <section className="bg-white py-14 md:py-20">
         <Container>
+          <Reveal>
           <div className="grid border-y border-[var(--mdh-line)] md:grid-cols-3">
             {THREE_DOORS.map((door) => (
               <div
@@ -232,6 +233,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -277,6 +279,7 @@ export default function Home() {
       {/* How it works */}
       <section id="how-it-works" className="py-14 md:py-20">
         <Container>
+          <Reveal>
           <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div>
               <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
@@ -304,6 +307,59 @@ export default function Home() {
           <div className="mt-12">
             <Button href="/owners">The full owner overview</Button>
           </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* The math */}
+      <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
+        <Container>
+          <Reveal>
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-20">
+              <div>
+                <div className="flex items-center gap-4">
+                  <span className="h-px w-10" style={{ background: BRASS }} />
+                  <p className="text-[0.72rem] font-medium uppercase tracking-[0.26em]" style={{ color: BRASS }}>
+                    The math, illustrated
+                  </p>
+                </div>
+                <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white lining-nums md:text-[3.1rem] xl:text-[3.5rem]">
+                  On a $1M building, about $200K more of your equity keeps working.
+                </h2>
+                <p className="mt-6 text-[1.05rem] leading-relaxed text-white/70">
+                  Same building, same mortgage payoff, same closing costs. The difference is the tax you do not pay at
+                  closing.
+                </p>
+              </div>
+              <div className="space-y-9">
+                {[
+                  { label: "Sell for cash", value: "$540K", pct: 54, mdh: false },
+                  { label: "Contribute to Middle Door", value: "$740K", pct: 74, mdh: true },
+                ].map((bar) => (
+                  <div key={bar.label}>
+                    <div className="flex items-baseline justify-between">
+                      <p className="text-[0.75rem] font-medium uppercase tracking-[0.18em] text-white/60">{bar.label}</p>
+                      <p className="font-display text-[2.2rem] leading-none text-white lining-nums md:text-[2.8rem]">{bar.value}</p>
+                    </div>
+                    <div className="mt-4 h-3 w-full bg-white/10">
+                      <div
+                        className="h-full"
+                        style={{ width: `${bar.pct}%`, background: bar.mdh ? BRASS : "rgba(255,255,255,0.45)" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+                <p className="text-[0.95rem] text-white/70">
+                  <span className="font-display text-[1.6rem] [font-variant-numeric:lining-nums]" style={{ color: BRASS }}>+$200K</span>
+                  <span className="ml-3">of equity preserved, about 37% more than a traditional sale.</span>
+                </p>
+                <p className="text-[0.75rem] leading-relaxed text-white/40">
+                  Illustrative: $1M value, $200K mortgage, $60K closing costs, $200K capital gains and depreciation
+                  recapture. Figures will differ for your building.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -313,7 +369,7 @@ export default function Home() {
       {/* Team: navy band */}
       <section className="bg-[var(--mdh-ink)] py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div>
               <div className="flex items-center gap-4">
                 <span className="h-px w-10" style={{ background: BRASS }} />
@@ -324,27 +380,32 @@ export default function Home() {
               <h2 className="font-display mt-5 text-[2.2rem] font-medium leading-[1.08] tracking-[-0.01em] text-white md:text-[3.1rem] xl:text-[3.5rem]">
                 Billions of dollars of institutional housing experience
               </h2>
-              <p className="mt-6 text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
+            </div>
+            <p className="text-[1.08rem] leading-relaxed text-white/75 md:text-[1.15rem]">
                 Our team has operated 30,000+ units across some of the largest residential platforms in the country. We
                 built Middle Door to bring that institutional playbook to multifamily owners, and to offer them a
                 structure that, until now, only large real estate institutions used.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-center">
-              {TEAM.map((member) => (
-                <Link key={member.name} href="/about" className="group flex items-center gap-4">
-                  <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20 md:h-24 md:w-24">
-                    <Image src={member.photo} alt={member.name} fill quality={90} sizes="96px" className="object-cover object-top" />
-                  </span>
-                  <span>
-                    <span className="block text-[1.1rem] font-medium leading-tight text-white group-hover:underline">{member.name}</span>
-                    <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em] text-white/55">
-                      {member.title}
-                    </span>
-                  </span>
-                </Link>
-              ))}
-            </div>
+            </p>
+          </div>
+          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            {TEAM.map((member) => (
+              <Link key={member.name} href="/about" className="group">
+                <span className="relative block aspect-[4/5] overflow-hidden bg-white/5">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    quality={90}
+                    sizes="(min-width: 768px) 22vw, 45vw"
+                    className="object-cover object-top transition duration-700 group-hover:scale-[1.03]"
+                  />
+                </span>
+                <span className="mt-4 block text-[1.1rem] font-medium leading-tight text-white">{member.name}</span>
+                <span className="mt-1 block text-[0.68rem] font-medium uppercase tracking-[0.13em]" style={{ color: BRASS }}>
+                  {member.title}
+                </span>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
@@ -367,10 +428,21 @@ export default function Home() {
       {/* Audience routing */}
       <section className="py-14 md:py-20">
         <Container>
+          <Reveal>
           <h2 className={SERIF_H2}>Find your path</h2>
           <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-10">
-            {AUDIENCE_CARDS.map((card) => (
-              <Link key={card.href} href={card.href} className="group flex flex-col border-t border-[var(--mdh-line)] pt-6 transition hover:border-[#b8894f]">
+            {AUDIENCE_CARDS.map((card, idx) => (
+              <Link key={card.href} href={card.href} className="group flex flex-col">
+                <span className="relative mb-6 block aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={AUDIENCE_IMAGES[idx]}
+                    alt=""
+                    fill
+                    quality={85}
+                    sizes="(min-width: 768px) 30vw, 100vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.04]"
+                  />
+                </span>
                 <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em]" style={{ color: BRASS }}>
                   {card.eyebrow}
                 </p>
@@ -382,6 +454,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          </Reveal>
         </Container>
       </section>
 
