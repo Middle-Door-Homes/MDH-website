@@ -92,62 +92,77 @@ const HOW_IT_WORKS = [
 export default function Home() {
   return (
     <main>
-      {/* Hero */}
-      <Section className="pb-5 pt-6 md:pt-8">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[52vh] min-h-[380px] md:h-[68vh] md:min-h-[480px]">
-              <Image
-                src="/images/hero-chicago-street.jpg"
-                alt="Tree-lined street with classic brick townhomes"
-                fill
-                priority
-                quality={95}
-                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_52%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.88)] via-[rgba(8,16,24,0.30)] to-[rgba(8,16,24,0.45)]" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[rgba(14,24,36,0.30)] via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  Middle Door Homes
-                </p>
-                <h1 className="font-display mt-3 text-[1.9rem] font-medium leading-[1.08] tracking-[-0.01em] text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Your building&rsquo;s next chapter
-                </h1>
-                <p className="mt-3 max-w-3xl text-[1.05rem] font-light leading-snug text-white/80 sm:text-[1.25rem] md:text-[1.45rem]">
-                  The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
-                </p>
+      {/* Hero: split panel */}
+      <section className="bg-[var(--mdh-ink)]">
+        <div className="grid lg:grid-cols-2">
+          <div className="flex items-center px-5 py-14 md:px-10 md:py-20 lg:min-h-[640px] lg:py-24 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-16">
+            <div className="max-w-xl">
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/55">
+                Middle Door Homes
+              </p>
+              <h1 className="font-display mt-4 text-[2.4rem] font-medium leading-[1.05] tracking-[-0.01em] text-white sm:text-[3rem] lg:text-[4rem]">
+                Your building&rsquo;s next chapter
+              </h1>
+              <p className="mt-5 text-[1.08rem] font-light leading-relaxed text-white/80 md:text-[1.25rem]">
+                The middle door between selling and holding. Keep your equity, hand off the management, and defer the tax.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-6">
                 <Link
                   href="/contact"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
                 >
                   Send us an address
                 </Link>
+                <Link href="#how-it-works" className="text-sm font-medium text-white/80 transition hover:text-white">
+                  How it works &rarr;
+                </Link>
               </div>
             </div>
+          </div>
+          <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-0">
+            <Image
+              src="/images/hero-chicago-street.jpg"
+              alt="Tree-lined street of brick multifamily buildings"
+              fill
+              priority
+              quality={92}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[62%_center]"
+            />
+          </div>
+        </div>
+      </section>
 
-            <div className="grid divide-y divide-[var(--mdh-line)] border-t border-[var(--mdh-line)] bg-[var(--mdh-bg)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-              {THREE_PROOFS.map((item) => (
-                <div key={item.promise} className="p-6 md:p-8">
-                  <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
-                    {item.promise}
-                  </p>
-                  <p className="mt-3 text-[2.6rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
-                    {item.stat}
-                  </p>
-                  <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
-                    {item.statLabel}
-                  </p>
-                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-4 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
+      {/* Key figures */}
+      <section className="border-b border-[var(--mdh-line)] bg-white">
+        <Container>
+          <div className="grid divide-y divide-[var(--mdh-line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            {THREE_PROOFS.map((item) => (
+              <div key={item.promise} className="py-8 sm:px-8 sm:first:pl-0 sm:last:pr-0 md:py-10">
+                <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
+                  {item.promise}
+                </p>
+                <p className="mt-3 text-[2.4rem] font-semibold leading-none tracking-[-0.02em] text-[var(--mdh-title)]">
+                  {item.stat}
+                </p>
+                <p className="mt-1.5 text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[var(--mdh-subtle)]">
+                  {item.statLabel}
+                </p>
+                <p className="mt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+              </div>
+            ))}
           </div>
         </Container>
-      </Section>
+      </section>
+
+      {/* Statement */}
+      <section className="pb-10 pt-16 md:pb-14 md:pt-24">
+        <Container>
+          <p className="font-display mx-auto max-w-4xl text-balance text-center lining-nums text-[1.75rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.5rem]">
+            Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
+          </p>
+        </Container>
+      </section>
 
       {/* Three doors */}
       <Section className="pt-0">
@@ -215,7 +230,7 @@ export default function Home() {
       </Section>
 
       {/* How it works */}
-      <Section className="pt-4">
+      <Section id="how-it-works" className="pt-4">
         <Container>
           <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
