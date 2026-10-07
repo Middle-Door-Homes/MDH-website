@@ -3,7 +3,7 @@ import { Container } from "./ui";
 
 export function Footer() {
   return (
-    <footer className="mt-14 border-t border-[var(--mdh-line)] bg-white/95">
+    <footer className="border-t border-[var(--mdh-line)] bg-white/95">
       <Container className="py-8">
         <div className="flex flex-col gap-3 text-sm text-[var(--mdh-subtle)] md:flex-row md:items-center md:justify-between">
           <div>

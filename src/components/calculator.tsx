@@ -113,7 +113,7 @@ export function TaxCalculator() {
   const equityGain = mdhNet - saleNet;
 
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 md:py-20">
       <Container>
         <div>
           <Eyebrow>Equity calculator</Eyebrow>

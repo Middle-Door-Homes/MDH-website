@@ -179,12 +179,12 @@ export default function Home() {
       </section>
 
       {/* Statement + three doors */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-20">
         <Container>
           <p className="font-display mx-auto max-w-4xl text-balance text-center text-[1.75rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] lining-nums md:text-[2.5rem]">
             Selling costs you 30-40% of your gains. Holding keeps you a landlord. Middle Door Homes is the third option.
           </p>
-          <div className="mt-14 grid border-y border-[var(--mdh-line)] md:mt-16 md:grid-cols-3">
+          <div className="mt-10 grid border-y border-[var(--mdh-line)] md:mt-12 md:grid-cols-3">
             {THREE_DOORS.map((door) => (
               <div
                 key={door.label}
@@ -213,10 +213,10 @@ export default function Home() {
       </section>
 
       {/* Who this is for: photo beside text */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-14 md:py-20">
         <Container>
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="relative aspect-[4/3] overflow-hidden">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+            <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
               <Image
                 src="/images/nb-brick-threeflats.jpg"
                 alt="Brick three-flats on a tree-lined street"
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* How it works: numbered columns */}
-      <section id="how-it-works" className="py-20 md:py-28">
+      <section id="how-it-works" className="py-14 md:py-20">
         <Container>
           <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <div>
@@ -264,7 +264,7 @@ export default function Home() {
               size.
             </p>
           </div>
-          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
             {HOW_IT_WORKS.map((item) => (
               <div key={item.step} className="border-t border-[var(--mdh-title)]/40 pt-6">
                 <p className="font-display text-[2.4rem] leading-none text-[var(--mdh-title)]/35 lining-nums">{item.step}</p>
@@ -273,7 +273,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-12">
+          <div className="mt-10">
             <Button href="/owners">The full owner overview</Button>
           </div>
         </Container>
@@ -283,7 +283,7 @@ export default function Home() {
       <TaxCalculator />
 
       {/* Team: navy band */}
-      <section className="bg-[var(--mdh-ink)] py-20 md:py-28">
+      <section className="bg-[var(--mdh-ink)] py-14 md:py-20">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -297,7 +297,7 @@ export default function Home() {
                 offer them a structure that, until now, only large real estate institutions used.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-end">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-center">
               {TEAM.map((member) => (
                 <Link key={member.name} href="/about" className="group flex items-center gap-4">
                   <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
@@ -313,29 +313,34 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="mt-16 border-t border-white/15 pt-8">
-            <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white/45">Team experience from</p>
-            <div className="mt-6 grid grid-cols-3 items-center gap-x-8 gap-y-6 sm:grid-cols-5">
-              {LOGOS.map((logo) => (
-                <div key={logo.file} className="flex h-7 items-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`/images/logos/${logo.file}`}
-                    alt={logo.name}
-                    className="max-h-full max-w-[120px] object-contain opacity-70 [filter:brightness(0)_invert(1)]"
-                  />
-                </div>
-              ))}
-            </div>
+        </Container>
+      </section>
+
+      {/* Team experience logos */}
+      <section className="border-b border-[var(--mdh-line)] bg-white py-10 md:py-12">
+        <Container>
+          <p className="text-center text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
+            Team experience from
+          </p>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {LOGOS.map((logo) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={logo.file}
+                src={`/images/logos/${logo.file}`}
+                alt={logo.name}
+                className="h-[20px] w-auto max-w-[140px]"
+              />
+            ))}
           </div>
         </Container>
       </section>
 
       {/* Audience routing: open columns */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="py-14 md:py-20">
         <Container>
           <h2 className={SERIF_H2}>Find your path</h2>
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
             {AUDIENCE_CARDS.map((card) => (
               <Link key={card.href} href={card.href} className="group flex flex-col border-t border-[var(--mdh-line)] pt-6">
                 <p className={LABEL}>{card.eyebrow}</p>
@@ -351,7 +356,7 @@ export default function Home() {
       </section>
 
       {/* Closing statement */}
-      <section className="border-t border-[var(--mdh-line)] py-20 md:py-28">
+      <section className="border-t border-[var(--mdh-line)] bg-white py-14 md:py-20">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-balance text-[2rem] font-medium leading-[1.15] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.75rem]">
