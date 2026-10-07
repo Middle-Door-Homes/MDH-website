@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "./ui";
 
 const AUDIENCE_LINKS = [
@@ -44,13 +44,37 @@ const COMPANY_LINKS = [
 
 export function Nav() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  // The menu belongs to the page it was opened on, so it closes itself on navigation.
+  const [openOn, setOpenOn] = useState<string | null>(null);
+  const open = openOn === pathname;
+  const setOpen = (value: boolean | ((v: boolean) => boolean)) =>
+    setOpenOn((prev) => {
+      const next = typeof value === "function" ? value(prev === pathname) : value;
+      return next ? pathname : null;
+    });
+
+  // Close on Escape.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenOn(null);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/96 backdrop-blur">
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-1" aria-label="Middle Door Homes home">
+          <Link
+            href="/"
+            className="flex items-center gap-1"
+            aria-label="Middle Door Homes home"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <span className="relative h-6 w-6 shrink-0">
               <Image
                 src="/images/Logo.png"
@@ -80,7 +104,7 @@ export function Nav() {
                       <path d="M4 6l4 4 4-4" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
-                  <div className="pointer-events-none absolute left-0 top-full z-50 pt-2 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100">
+                  <div className="pointer-events-none absolute left-0 top-full z-50 pt-2 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                     <div className="min-w-[180px] overflow-hidden rounded-xl border border-[var(--mdh-line)] bg-white py-1.5 shadow-[0_8px_24px_rgba(18,29,41,0.10)]">
                       {link.sections.map((s) => (
                         <Link
