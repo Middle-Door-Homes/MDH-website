@@ -5,7 +5,7 @@ import { useState } from "react";
 const EMAIL = "Acquisitions@MiddleDoorHomes.com";
 
 const inputClass =
-  "mt-1.5 w-full rounded-lg border border-[var(--mdh-line)] bg-white px-3.5 py-2.5 text-[0.95rem] text-[var(--mdh-title)] outline-none transition focus:border-[var(--mdh-accent)]";
+  "mt-1.5 w-full rounded-[4px] border border-[var(--mdh-line)] bg-white px-3.5 py-2.5 text-[1rem] text-[var(--mdh-title)] outline-none transition focus:border-[var(--mdh-green)]";
 const labelClass = "text-[0.82rem] font-medium text-[var(--mdh-subtle)]";
 
 type Status = { state: "idle" | "sending" | "sent" } | { state: "error"; message: string };
@@ -38,7 +38,7 @@ export function ContactForm() {
 
   if (status.state === "sent") {
     return (
-      <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-6">
+      <div className="rounded-md bg-white">
         <p className="font-medium text-[var(--mdh-title)]">Thank you. We have your building.</p>
         <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
           We will come back to you with a personalized valuation and proposal.
@@ -78,7 +78,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status.state === "sending"}
-          className="inline-flex items-center justify-center rounded-full bg-[var(--mdh-ink)] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:opacity-60"
+          className="inline-flex items-center justify-center rounded-[4px] bg-[var(--mdh-green)] px-6 py-3 text-[0.9rem] font-medium text-white hover:bg-[var(--mdh-green-soft)] disabled:opacity-60"
         >
           {status.state === "sending" ? "Sending..." : "Send us the address"}
         </button>

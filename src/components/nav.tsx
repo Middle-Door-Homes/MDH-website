@@ -47,10 +47,10 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/96 backdrop-blur">
-      <Container className="py-3">
+    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
+      <Container className="py-3.5">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-1" aria-label="Middle Door Homes home">
+          <Link href="/" className="flex items-center gap-1.5" aria-label="Middle Door Homes home">
             <span className="relative h-6 w-6 shrink-0">
               <Image
                 src="/images/Logo.png"
@@ -61,12 +61,12 @@ export function Nav() {
                 className="object-contain"
               />
             </span>
-            <span className="translate-y-[1.5px] text-base font-medium tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.04rem]">
+            <span className="font-display translate-y-[1px] text-[1.12rem] font-medium tracking-[-0.005em] text-[var(--mdh-green)]">
               Middle Door Homes
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-5 text-sm md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-6 text-[0.9rem] md:flex">
             {AUDIENCE_LINKS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(link.href + "/");
               return (
@@ -81,7 +81,7 @@ export function Nav() {
                     </svg>
                   </Link>
                   <div className="pointer-events-none absolute left-0 top-full z-50 pt-2 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100">
-                    <div className="min-w-[180px] overflow-hidden rounded-xl border border-[var(--mdh-line)] bg-white py-1.5 shadow-[0_8px_24px_rgba(18,29,41,0.10)]">
+                    <div className="min-w-[190px] overflow-hidden rounded-md border border-[var(--mdh-line)] bg-white py-1.5 shadow-[0_10px_28px_rgba(30,58,59,0.10)]">
                       {link.sections.map((s) => (
                         <Link
                           key={s.href}
@@ -112,12 +112,12 @@ export function Nav() {
           </nav>
 
           <div className="hidden items-center gap-4 md:flex">
-            <a
-              href="mailto:acquisitions@middledoorhomes.com"
-              className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
+            <Link
+              href="/contact"
+              className="rounded-[4px] bg-[var(--mdh-green)] px-4 py-2 text-[0.85rem] font-medium text-white hover:bg-[var(--mdh-green-soft)]"
             >
-              Acquisitions@MiddleDoorHomes.com
-            </a>
+              Send us the address
+            </Link>
           </div>
 
           <button
@@ -178,12 +178,13 @@ export function Nav() {
                 );
               })}
             </nav>
-            <a
-              href="mailto:acquisitions@middledoorhomes.com"
-              className="mt-4 inline-block text-sm font-medium text-[var(--mdh-ink)]"
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-block rounded-[4px] bg-[var(--mdh-green)] px-4 py-2.5 text-sm font-medium text-white"
             >
-              Acquisitions@MiddleDoorHomes.com
-            </a>
+              Send us the address
+            </Link>
           </Container>
         </div>
       ) : null}

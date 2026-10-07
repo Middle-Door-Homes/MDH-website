@@ -8,22 +8,22 @@ export function FaqAccordion({ groups }: { groups: FaqGroup[] }) {
     <div className="space-y-7">
       {groups.map((g) => (
         <div key={g.group}>
-          <p className="mb-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
+          <p className="mb-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-brass)]">
             {g.group}
           </p>
-          <div className="divide-y divide-[var(--mdh-line)] overflow-hidden rounded-xl border border-[var(--mdh-line)] bg-white">
+          <div className="divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)] bg-white">
             {g.items.map((item) => (
               <details key={item.q} className="group">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-5 py-4 [&::-webkit-details-marker]:hidden md:px-6">
-                  <span className="text-[0.95rem] font-medium leading-snug text-[var(--mdh-title)]">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-5 [&::-webkit-details-marker]:hidden">
+                  <span className="text-[1.02rem] font-medium leading-snug text-[var(--mdh-green)]">
                     {item.q}
                   </span>
-                  <span className="mt-0.5 shrink-0 font-medium text-[var(--mdh-subtle)]">
+                  <span className="mt-0.5 shrink-0 text-[1.2rem] leading-none text-[var(--mdh-brass)]">
                     <span className="group-open:hidden">+</span>
                     <span className="hidden group-open:inline">−</span>
                   </span>
                 </summary>
-                <div className="border-t border-[var(--mdh-line)] bg-[var(--mdh-bg)] px-5 py-4 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)] md:px-6">
+                <div className="pb-6 pr-8 leading-relaxed text-[var(--mdh-ink)]">
                   {item.a}
                 </div>
               </details>

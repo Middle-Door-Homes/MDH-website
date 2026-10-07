@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
@@ -69,210 +69,135 @@ const PRINCIPLES = [
   },
 ];
 
+const EXCHANGE_POINTS = [
+  {
+    title: "How it works",
+    body: "A long-established part of the tax code lets you contribute your building to a professionally managed portfolio in exchange for a passive ownership stake, with no capital gains or depreciation recapture at closing.",
+  },
+  {
+    title: "Why it matters",
+    body: "Selling means a large, often unexpected tax bill, typically 30-40% of your gains. A 721 exchange defers that entirely. Your equity rolls forward intact.",
+  },
+  {
+    title: "What you receive",
+    body: "A stake in a diversified, professionally managed portfolio and regular distributions. No tenant calls. No maintenance coordination.",
+  },
+  {
+    title: "Who it is for",
+    body: "Owners of 2-49 unit multifamily buildings who have built up a large gain and want a tax-efficient way into passive income.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <main>
-      <Section className="pb-6 pt-7 md:pt-10">
-        <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
-            <div>
-              <Eyebrow>About</Eyebrow>
-              <h1 className="mt-4 max-w-3xl text-[1.9rem] font-medium tracking-tight text-[var(--mdh-title)] md:text-4xl lg:text-5xl">
-                A better next step for multifamily owners.
-              </h1>
-              <Lead>
-                Many multifamily owners have spent decades building equity and kept managing because
-                there was no good way out: selling meant a large tax bill, and a 1031 meant another
-                building to run. We built Middle Door Homes to change that.
-              </Lead>
-            </div>
-            <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
-              <Image
-                src="/images/hero-brownstones.jpg"
-                alt="Classic brownstone row on a tree-lined street"
-                fill
-                priority
-                quality={90}
-                sizes="(min-width: 1024px) 420px, 100vw"
-                className="object-cover object-[center_48%]"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PageHero
+        eyebrow="About"
+        title="A better next step for multifamily owners."
+        image="/images/nb-courtyard.jpg"
+        imageAlt="Brick courtyard apartment building with a garden walkway"
+        actions={
+          <>
+            <Button href="#team">Meet the team</Button>
+            <Button href="/owners" variant="secondary">
+              Owner overview
+            </Button>
+          </>
+        }
+      >
+        Many multifamily owners have spent decades building equity and kept managing because there was no good
+        way out: selling meant a large tax bill, and a 1031 meant another building to run. We built Middle Door
+        Homes to change that.
+      </PageHero>
 
-      {/* What is a 721 exchange */}
-      <Section className="pt-4">
+      {/* The 721 exchange */}
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>The 721 exchange</Eyebrow>
-            <Heading className="mt-3">A contribution, not a sale</Heading>
-            <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                  How it works
-                </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 721 exchange is a long-established part of the tax code that allows you to contribute your
-                  building to a professionally managed portfolio in exchange for a passive ownership
-                  stake, with no taxable event at closing. No capital gains. No depreciation
-                  recapture.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                  Why it matters
-                </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Long-term owners carry decades of appreciation. Selling means a large, often
-                  unexpected tax bill, typically 30-40% of your gains. A 721 exchange
-                  defers that entirely. Your equity rolls forward intact.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                  What you receive
-                </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  You own a stake in a diversified, professionally managed portfolio. You receive
-                  regular distributions from the portfolio. Our team manages everything. No
-                  tenant calls. No maintenance coordination. Truly passive income.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                  Who it is for
-                </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Multifamily investors with 2-49 unit holdings who have built meaningful embedded
-                  gains, want to exit active operations, and are looking for a tax-efficient way to
-                  reallocate their capital into passive income.
-                </p>
-              </div>
-            </div>
+          <Intro eyebrow="The 721 exchange" title="A contribution, not a sale" />
+          <div className="mt-12">
+            <FeatureGrid cols={4} items={EXCHANGE_POINTS} />
           </div>
         </Container>
       </Section>
 
       {/* Why Middle Door */}
-      <Section className="pt-4">
-        <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-center">
-            <div>
-              <Eyebrow>Why Middle Door</Eyebrow>
-              <Heading className="mt-3">Experience managing at scale</Heading>
-              <p className="mt-4 text-[1.0rem] font-medium leading-[1.4] text-[var(--mdh-title)]">
-                We know what it takes to run residential real estate well, because we have done it
-                at scale.
-              </p>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Our team has operated 30,000+ homes at institutional scale, across some of the largest
-                residential platforms in the country. We bring that same operating playbook to every
-                multifamily building we own.
-              </p>
-            </div>
-            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[340px]">
-              <Image
-                src="/images/px-29419908.jpg"
-                alt="Sunlit brick brownstones on a tree-lined street"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[center_50%]"
-              />
-            </div>
+      <Section tone="green">
+        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <Intro dark eyebrow="Why Middle Door" title="Experience managing at scale">
+            We know what it takes to run residential real estate well, because we have done it at scale. Our
+            team has operated 30,000+ homes at institutional scale, across some of the largest residential
+            platforms in the country. We bring that same operating playbook to every multifamily building we own.
+          </Intro>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+            <Image
+              src="/images/nb-garden-apartments.jpg"
+              alt="Two-story brick garden apartment building under mature oak trees"
+              fill
+              quality={88}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </Container>
       </Section>
 
-      {/* How we work */}
-      <Section className="pt-4">
+      {/* Principles */}
+      <Section tone="stone">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>How we work</Eyebrow>
-            <Heading className="mt-3">What to expect from us</Heading>
-            <div className="mt-5 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              {PRINCIPLES.map((item) => (
-                <div key={item.title}>
-                  <h3 className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <Intro eyebrow="How we work" title="What to expect from us" />
+          <div className="mt-12">
+            <FeatureGrid cols={2} items={PRINCIPLES} />
           </div>
         </Container>
       </Section>
 
       {/* Team */}
-      <Section className="pt-4">
+      <Section id="team">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_28px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Our team</Eyebrow>
-            <Heading className="mt-3">Investors &amp; operators who have done this at scale</Heading>
-            <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
-              <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
-                Team experience from
-              </p>
-              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
-                {LOGOS.map((logo) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={logo.file}
-                    src={`/images/logos/${logo.file}`}
-                    alt={logo.name}
-                    className="h-[18px] w-auto max-w-[140px] transition hover:opacity-80"
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              {TEAM.map((member) => (
-                <div key={member.name} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 shadow-[0_2px_8px_rgba(18,29,41,0.04)]">
-                  <div className="flex items-center gap-3">
-                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[var(--mdh-line)]">
-                      <Image
-                        src={member.photo}
-                        alt={member.name}
-                        fill
-                        quality={90}
-                        sizes="48px"
-                        className="object-cover object-top"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-medium leading-tight text-[var(--mdh-title)]">{member.name}</p>
-                      <p className="mt-0.5 text-[0.7rem] font-medium uppercase tracking-[0.13em] text-[var(--mdh-subtle)]">{member.title}</p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
+          <Intro eyebrow="Our team" title="Investors & operators who have done this at scale" />
+          <div className="mt-12 grid gap-x-12 gap-y-14 md:grid-cols-2">
+            {TEAM.map((member) => (
+              <div key={member.name} className="flex flex-col gap-5 sm:flex-row">
+                <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-md bg-[var(--mdh-stone)]">
+                  <Image src={member.photo} alt={member.name} fill quality={90} sizes="144px" className="object-cover object-top" />
                 </div>
+                <div>
+                  <p className="font-display text-[1.4rem] leading-tight text-[var(--mdh-green)]">{member.name}</p>
+                  <p className="mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--mdh-brass)]">
+                    {member.title}
+                  </p>
+                  <p className="mt-3 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16 border-t border-[var(--mdh-line)] pt-8">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-muted)]">
+              Team experience from
+            </p>
+            <div className="mt-5 flex flex-wrap items-center gap-x-9 gap-y-5">
+              {LOGOS.map((logo) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={logo.file}
+                  src={`/images/logos/${logo.file}`}
+                  alt={logo.name}
+                  className="h-[18px] w-auto max-w-[140px] opacity-60 grayscale"
+                />
               ))}
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:flex-row md:items-center md:justify-between md:p-8">
-            <div>
-              <Heading>See exactly how this works for you.</Heading>
-              <p className="mt-2 max-w-[58ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                The full owner overview covers the 721 exchange step by step, what you receive,
-                and what your income looks like going forward.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <Button href="/owners">Owner overview</Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <CtaBand
+        title="See exactly how this works for you."
+        action={{ href: "/contact", label: "Send us the address" }}
+        secondary={{ href: "/owners", label: "Owner overview" }}
+      >
+        The owner overview covers the 721 exchange step by step, what you receive, and what your income looks
+        like going forward.
+      </CtaBand>
     </main>
   );
 }

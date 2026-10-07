@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Button, Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { Button, Container, CtaBand, Eyebrow, FeatureGrid, Heading, Intro, PhotoHero, Section, Steps } from "@/components/ui";
 import { FaqAccordion, type FaqGroup } from "@/components/faq";
 
 export const metadata: Metadata = {
@@ -9,12 +9,6 @@ export const metadata: Metadata = {
     "Owners of 2-49 unit multifamily buildings can contribute their building through a §721 exchange: no tax at closing and no more management. Receive quarterly distributions from a professionally managed portfolio.",
   alternates: { canonical: "/owners" },
 };
-
-const STATS = [
-  { value: "0%", label: "Taxes at closing" },
-  { value: "30,000+", label: "Units of experience" },
-  { value: "8-12%", label: "Target annual return" },
-];
 
 const BENEFITS = [
   {
@@ -243,6 +237,46 @@ const ownerFaqSchema = {
   ),
 };
 
+const COMPARISON = [
+  { label: "No tax event at transition", values: [true, true, false, true, true, true] },
+  { label: "Exit active operations completely", values: [false, false, true, false, true, true] },
+  { label: "Ongoing upside participation (vs. fixed distributions)", values: [true, true, false, true, false, true] },
+  { label: "Diversified portfolio exposure", values: [false, false, false, false, true, true] },
+  { label: "Renovation capital & value creation provided", values: [false, false, false, false, false, true] },
+  { label: "Purpose-built for 2-49 unit buildings", values: [false, false, false, false, false, true] },
+];
+const COMPARISON_COLUMNS = ["Self-manage", "Hire PM", "Sale", "1031", "DST", "Middle Door"];
+
+const RETURN_COMPARE = [
+  {
+    title: "Balanced advisor portfolio",
+    body: "~5-7% annually, but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.",
+  },
+  {
+    title: "Keep managing the building",
+    body: "Similar or lower returns, with full operational responsibility and concentrated single-asset risk.",
+  },
+  {
+    title: "Middle Door 721 exchange",
+    body: "8-12% target return on 100% of your equity: no tax haircut at contribution, no management burden.",
+  },
+];
+
+const GOOD_FIT = [
+  "You own one or more multifamily buildings in the 2-49 unit range",
+  "You've held long enough to build up a large gain",
+  "You're ready to exit active operations, but the tax cost of a sale is too high",
+  "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
+  "You do not need a debt-free building: we pay off your mortgage at closing",
+];
+
+const NOT_A_FIT = [
+  "You need immediate, unrestricted liquidity",
+  "Your mortgage is close to the building's value, leaving little equity to contribute",
+  "You want a short-term exit rather than a long-term passive investment",
+  "The illiquid nature of a private partnership does not fit your financial situation",
+];
+
 export default function OwnersPage() {
   return (
     <main>
@@ -250,103 +284,52 @@ export default function OwnersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ownerFaqSchema) }}
       />
-      {/* Hero */}
-      <Section className="pb-5 pt-6 md:pt-8">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[360px] md:h-[64vh] md:min-h-[480px]">
-              <Image
-                src="/images/px-13025296.jpg"
-                alt="Classic brick apartment building courtyard"
-                fill
-                priority
-                quality={95}
-                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_40%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.80)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For property owners
-                </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.12] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  Turn your real estate equity into a diversified portfolio.
-                </h1>
-                <p className="mt-4 max-w-[52ch] text-[0.92rem] leading-relaxed text-white/75 md:text-[1rem]">
-                  Contribute your building instead of selling it. You receive ownership in a diversified portfolio of neighborhood buildings, owe no tax at closing, and hand off the management on day one.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-              {STATS.map((item) => (
-                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}
-                  </p>
-                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
 
-      {/* Pitch */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
-            <p className="font-display max-w-3xl text-[1.6rem] font-medium leading-[1.25] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.1rem]">
-              You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means staying a landlord, with everything riding on one property. Middle Door Homes offers a third path.
-            </p>
-            <div className="mt-8 grid gap-5 border-t border-[var(--mdh-line)] pt-8 md:grid-cols-3">
-              <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Long-term owners carry decades of appreciation. Selling triggers capital gains and
-                  depreciation recapture, often costing 30-40% of your gains.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">Operational drag on returns</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Multifamily buildings require constant attention: tenant calls, aging systems,
-                  deferred maintenance. At some point, the active management burden stops being worth
-                  the return on your time and capital. You built this as an investment, not a job.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">No clean exit from operations</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 1031 exchange defers taxes, but requires identifying a replacement property in 45 days
-                  and closing in 180. You&apos;re not exiting active operations; you&apos;re just
-                  changing which building you&apos;re running.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <PhotoHero
+        image="/images/nb-brick-threeflats.jpg"
+        imageAlt="Brick three-flats on a tree-lined street"
+        imagePosition="center 40%"
+        eyebrow="For property owners"
+        title="Turn your real estate equity into a diversified portfolio."
+        actions={
+          <>
+            <Button href="/contact" variant="light">
+              Send us the address
+            </Button>
+            <Button href="#solution" variant="outlineLight">
+              How it works
+            </Button>
+          </>
+        }
+      >
+        Contribute your building instead of selling it. You receive ownership in a diversified portfolio of
+        neighborhood buildings, owe no tax at closing, and hand off the management on day one.
+      </PhotoHero>
 
-      {/* Situations */}
-      <Section className="pt-4">
+      {/* Opening + situations */}
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
+          <p className="font-display max-w-4xl text-[1.6rem] leading-[1.35] text-[var(--mdh-green)] md:text-[2.1rem]">
+            You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your
+            gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already
+            deducted. Holding means staying a landlord, with everything riding on one property. Middle Door
+            Homes offers a third path.
+          </p>
+          <div className="mt-16">
             <Eyebrow>Where owners start</Eyebrow>
-            <Heading className="mt-2">Which sounds like you?</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Heading className="mt-3">Which sounds like you?</Heading>
+            <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-[var(--mdh-line)] bg-[var(--mdh-line)] sm:grid-cols-2 lg:grid-cols-4">
               {SITUATIONS.map((item) => (
-                <div key={item.title} className="flex flex-col rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 flex-1 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  <p className="mt-4 border-t border-[var(--mdh-line)] pt-3 text-[0.9rem] font-medium leading-snug text-[var(--mdh-title)]">
+                <div key={item.title} className="flex flex-col bg-white p-7">
+                  <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">{item.title}</h3>
+                  <p className="mt-2 flex-1 leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
+                  <p className="font-display mt-6 border-t border-[var(--mdh-line)] pt-4 text-[1.08rem] leading-snug text-[var(--mdh-brass)]">
                     {item.number}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
+            <p className="mt-4 text-[0.8rem] text-[var(--mdh-muted)]">
               Illustrative round numbers. Figures will differ for your building.
             </p>
           </div>
@@ -354,416 +337,257 @@ export default function OwnersPage() {
       </Section>
 
       {/* The solution */}
-      <Section id="solution" className="pt-4">
-        <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8 lg:grid-cols-2 lg:items-start">
-            <div>
-              <Eyebrow>The solution</Eyebrow>
-              <Heading className="mt-2">A 721 exchange, not a sale</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange is a long-established part of the tax code that allows you to contribute your building
-                to a professionally managed portfolio, in exchange for a passive ownership stake,
-                with no taxable event at closing.
-              </p>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                You do not sell. Your equity moves forward intact into a diversified, professionally operated portfolio.
-              </p>
-              <div className="mt-5 space-y-3">
-                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                  <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
-                    The key distinction
-                  </p>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                    A 721 exchange is a contribution, not a sale. The tax event that would occur at
-                    sale is deferred, so you keep 100% of what you have built.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                  <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
-                    Why not a 1031 exchange?
-                  </p>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                    A 1031 also defers taxes, but you face a 45-day identification window and 180-day
-                    closing deadline, and you end up managing a new building. A 721 exchange has no
-                    deadlines and no replacement property. You contribute once and exit active
-                    ownership permanently.
-                  </p>
-                </div>
+      <Section id="solution" tone="stone">
+        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Intro eyebrow="The solution" title="A 721 exchange, not a sale">
+              A 721 exchange is a long-established part of the tax code that allows you to contribute your
+              building to a professionally managed portfolio, in exchange for a passive ownership stake, with
+              no taxable event at closing. You do not sell. Your equity moves forward intact.
+            </Intro>
+            <div className="mt-10 grid gap-8 sm:grid-cols-2">
+              <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
+                <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">The key distinction</h3>
+                <p className="mt-2 leading-relaxed">
+                  A 721 exchange is a contribution, not a sale. The tax event that would occur at sale is
+                  deferred, so you keep 100% of what you have built.
+                </p>
+              </div>
+              <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
+                <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">Why not a 1031?</h3>
+                <p className="mt-2 leading-relaxed">
+                  A 1031 also defers taxes, but you face a 45-day identification window and a 180-day closing
+                  deadline, and you end up managing a new building. Here you contribute once and exit active
+                  ownership for good.
+                </p>
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[420px]">
-              <Image
-                src="/images/bldg-04.jpg"
-                alt="Tree-lined street with classic brick multifamily buildings"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[center_45%]"
-              />
-            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+            <Image
+              src="/images/nb-greystone-row.jpg"
+              alt="Greystone and brick buildings on a tree-lined street"
+              fill
+              quality={88}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </Container>
       </Section>
 
-      {/* Value creation */}
-      <Section className="pt-4">
+      {/* How you are paid */}
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>How returns are generated</Eyebrow>
-            <Heading className="mt-2">We invest in the buildings. You get paid first.</Heading>
-            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              MDH doesn&apos;t manage contributed buildings passively. We evaluate each property for value-creation potential and deploy capital where it generates the most impact: higher net operating income (rent minus operating costs), better occupancy, and where the building allows, additional units for incremental cash flow.
+          <Intro eyebrow="How returns are generated" title="We invest in the buildings. You get paid first.">
+            We evaluate each property for value-creation potential and deploy capital where it has the most
+            impact: higher net operating income (rent minus operating costs), better occupancy, and where the
+            building allows, additional units.
+          </Intro>
+          <div className="mt-12">
+            <FeatureGrid
+              cols={2}
+              items={[
+                {
+                  title: "Building-level capital review",
+                  body: "We assess every contributed building for improvements that pay back. MDH arranges renovation financing and executes: systems upgrades, unit renovations, and where feasible, additional units. No capital required from you.",
+                },
+                {
+                  title: "You are paid first",
+                  body: "You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50.",
+                },
+              ]}
+            />
+          </div>
+          <div className="mt-10 border-l-2 border-[var(--mdh-brass)] bg-[var(--mdh-parchment)] px-6 py-5 md:px-8">
+            <p className="font-display text-[1.2rem] leading-snug text-[var(--mdh-green)] md:text-[1.35rem]">
+              We never take more than 30% of a year&apos;s total return, and if portfolio value falls we earn
+              nothing further until it recovers. We hold our own units alongside yours.
             </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">Building-level capital review</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  We assess every contributed building for capital improvement opportunities. Where improvements generate measurable returns, MDH arranges renovation financing and executes: systems upgrades, unit renovations, and where feasible, additional units created for incremental cash flow. No capital required from you.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                <h3 className="font-medium text-[var(--mdh-title)]">You are paid first</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50.
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">The alignment</p>
-              <p className="mt-2 text-[0.97rem] font-medium leading-snug text-[var(--mdh-title)]">
-                We never take more than 30% of a year&apos;s total return, and if portfolio value falls we earn nothing further until it recovers. We hold our own units alongside yours.
-              </p>
-            </div>
           </div>
         </Container>
       </Section>
 
       {/* Value-add partnership */}
-      <Section id="partnership" className="pt-4">
+      <Section id="partnership" tone="green">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>For buildings with upside left in them</Eyebrow>
-            <Heading className="mt-2">The value-add partnership</Heading>
-            <p className="mt-4 max-w-[64ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              Some buildings are worth more after the work than any as-is buyer will pay. For those, we offer a partnership: your building goes into a single-asset partnership with us, we handle the renovation, operations, and rents, and the increase in value is split 50/50 with you.
-            </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-3">
-              {PARTNERSHIP_POINTS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                </div>
-              ))}
-            </div>
+          <Intro dark eyebrow="For buildings with upside left in them" title="The value-add partnership">
+            Some buildings are worth more after the work than any as-is buyer will pay. For those, your building
+            goes into a single-asset partnership with us, we handle the renovation, operations, and rents, and
+            the increase in value is split 50/50 with you.
+          </Intro>
+          <div className="mt-12">
+            <FeatureGrid dark items={PARTNERSHIP_POINTS} />
           </div>
         </Container>
       </Section>
 
-      {/* Comparison chart */}
-      <Section className="pt-4">
+      {/* Compare */}
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>Compare your options</Eyebrow>
-            <Heading className="mt-2">How a 721 exchange stacks up</Heading>
-            <div className="mt-6 -mx-6 overflow-x-auto border-t border-[var(--mdh-line)] pt-6 md:-mx-8">
-              <div className="px-6 md:px-8">
-              <table className="w-full min-w-[720px] text-[0.9rem]">
-                <thead>
-                  <tr>
-                    <th className="w-[28%] pb-3 pr-4 text-left text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]" />
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Self-manage</th>
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Hire PM</th>
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">Sale</th>
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">1031</th>
-                    <th className="pb-3 pr-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-subtle)]">DST</th>
-                    <th className="pb-3 text-center text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--mdh-accent)]">Middle Door</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[var(--mdh-line)]">
-                  {[
-                    {
-                      label: "No tax event at transition",
-                      selfManage: true, hirePm: true, sale: false, ex1031: true, dst: true, mdh: true,
-                    },
-                    {
-                      label: "Exit active operations completely",
-                      selfManage: false, hirePm: false, sale: true, ex1031: false, dst: true, mdh: true,
-                    },
-                    {
-                      label: "Ongoing upside participation (vs. fixed distributions)",
-                      selfManage: true, hirePm: true, sale: false, ex1031: true, dst: false, mdh: true,
-                    },
-                    {
-                      label: "Diversified portfolio exposure",
-                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: true, mdh: true,
-                    },
-                    {
-                      label: "Renovation capital & value creation provided",
-                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
-                    },
-                    {
-                      label: "Purpose-built for 2-49 unit buildings",
-                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: false, mdh: true,
-                    },
-                  ].map((row) => (
-                    <tr key={row.label}>
-                      <td className="py-3 pr-4 font-medium text-[var(--mdh-title)]">{row.label}</td>
-                      {[row.selfManage, row.hirePm, row.sale, row.ex1031, row.dst].map((val, i) => (
-                        <td key={i} className="py-3 pr-4 text-center">
-                          {val
-                            ? <span className="text-emerald-600 font-bold">✓</span>
-                            : <span className="text-[var(--mdh-line)] font-bold">✗</span>
-                          }
-                        </td>
-                      ))}
-                      <td className="py-3 text-center">
-                        {row.mdh
-                          ? <span className="text-emerald-600 font-bold">✓</span>
-                          : <span className="text-[var(--mdh-line)] font-bold">✗</span>
-                        }
-                      </td>
-                    </tr>
+          <Intro eyebrow="Compare your options" title="How a 721 exchange stacks up" />
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-left text-[0.95rem]">
+              <thead>
+                <tr className="border-b-2 border-[var(--mdh-green)]">
+                  <th className="py-3 pr-4" />
+                  {COMPARISON_COLUMNS.map((c, i) => (
+                    <th
+                      key={c}
+                      className={`px-3 py-3 text-center text-[0.8rem] font-semibold uppercase tracking-[0.08em] ${
+                        i === COMPARISON_COLUMNS.length - 1
+                          ? "bg-[var(--mdh-green)] text-white"
+                          : "text-[var(--mdh-subtle)]"
+                      }`}
+                    >
+                      {c}
+                    </th>
                   ))}
-                </tbody>
-              </table>
-              </div>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON.map((row) => (
+                  <tr key={row.label} className="border-b border-[var(--mdh-line)]">
+                    <td className="py-4 pr-4 text-[var(--mdh-ink)]">{row.label}</td>
+                    {row.values.map((v, i) => (
+                      <td
+                        key={i}
+                        className={`px-3 py-4 text-center ${
+                          i === row.values.length - 1 ? "bg-[var(--mdh-green)]/[0.06] font-semibold" : ""
+                        }`}
+                      >
+                        {v ? (
+                          <span className="text-[var(--mdh-brass)]">&#10003;</span>
+                        ) : (
+                          <span className="text-[var(--mdh-muted)]/50">&#10005;</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="font-display mt-8 max-w-3xl text-[1.2rem] leading-snug text-[var(--mdh-green)]">
+            Middle Door is the only option that clears all three: no tax event at contribution, a complete exit
+            from active management, and ongoing upside.
+          </p>
+          <div className="mt-14">
+            <Eyebrow>How 8-12% compares</Eyebrow>
+            <div className="mt-6">
+              <FeatureGrid items={RETURN_COMPARE} />
             </div>
-            <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-              <p className="text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                <span className="font-medium text-[var(--mdh-title)]">Middle Door is the only structure that clears all three: </span>
-                no tax event at contribution, complete exit from active management, and ongoing upside participation. Every other option trades at least one away.
+          </div>
+          <p className="mt-10 max-w-4xl text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
+            DST = Delaware Statutory Trust. DSTs defer taxes but require a 1031 exchange process, use a
+            blind-pool structure with fixed distributions and limited upside, and offer no redemption mechanism.
+            Hiring a property manager reduces but does not eliminate active ownership: owners remain responsible
+            for capital decisions and pay 8-10% of gross rents regardless of performance.
+          </p>
+        </Container>
+      </Section>
+
+      {/* What you receive */}
+      <Section tone="stone">
+        <Container>
+          <Intro eyebrow="What you receive" title="A tax-efficient transition to passive income">
+            Full-time, experienced management lifts income through lower operating costs, rents set to the
+            market, and efficient operations. That upside flows to you as an owner.
+          </Intro>
+          <div className="mt-12">
+            <FeatureGrid cols={4} items={BENEFITS} />
+          </div>
+          <div className="mt-12 flex flex-col gap-2 border-t border-[var(--mdh-line)] pt-8 md:flex-row md:items-baseline md:gap-6">
+            <p className="font-display shrink-0 text-[2.2rem] leading-none text-[var(--mdh-green)]">$120M+</p>
+            <p className="leading-relaxed text-[var(--mdh-ink)]">
+              in annual net operating income growth our team has driven across a 30,000+ home portfolio. We
+              bring the same playbook to every building we own.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Fit */}
+      <Section id="qualifies">
+        <Container>
+          <Intro eyebrow="Qualifying" title="Is this a fit for you?" />
+          <div className="mt-12 grid gap-12 md:grid-cols-2">
+            <div>
+              <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">Middle Door works best if:</h3>
+              <ul className="mt-4 divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)]">
+                {GOOD_FIT.map((item) => (
+                  <li key={item} className="flex gap-3 py-3.5 leading-relaxed">
+                    <span className="text-[var(--mdh-brass)]" aria-hidden>
+                      &#10003;
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-[1.05rem] font-semibold text-[var(--mdh-green)]">It&apos;s probably not the right fit if:</h3>
+              <ul className="mt-4 divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)]">
+                {NOT_A_FIT.map((item) => (
+                  <li key={item} className="flex gap-3 py-3.5 leading-relaxed text-[var(--mdh-ink)]">
+                    <span className="text-[var(--mdh-muted)]" aria-hidden>
+                      &#8226;
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 leading-relaxed">
+                The best way to find out is a conversation. There&apos;s no cost, no obligation, and we&apos;ll
+                give you an honest answer.
               </p>
             </div>
-            <p className="mt-4 text-[0.78rem] leading-relaxed text-[var(--mdh-muted)]">
-              DST = Delaware Statutory Trust. DSTs defer taxes but require a 1031 exchange process, use a blind-pool structure with fixed distributions and limited upside, and offer no redemption mechanism. Hiring a property manager reduces but does not eliminate active ownership: owners remain responsible for capital decisions and pay 8-10% of gross rents regardless of performance. 1031 exchanges defer tax but require identifying a replacement property within 45 days and closing within 180, and you remain an active operator afterward.
-            </p>
           </div>
         </Container>
       </Section>
 
-      {/* Benefits */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>What you receive</Eyebrow>
-            <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
-              {BENEFITS.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5 md:p-6">
-              <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">How 8-12% compares</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                <div>
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Balanced advisor portfolio</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">~5-7% annually, but starting with 60-70 cents on the dollar after you sell and pay taxes to reallocate.</p>
-                </div>
-                <div>
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">Keep managing the building</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">Similar or lower returns, with full operational responsibility and concentrated single-asset risk.</p>
-                </div>
-                <div className="rounded-lg border border-[var(--mdh-accent)]/30 bg-white p-3">
-                  <p className="text-[0.88rem] font-medium text-[var(--mdh-title)]">MDH 721 exchange</p>
-                  <p className="mt-1 text-[0.88rem] leading-relaxed text-[var(--mdh-ink)]">8-12% target return on <span className="font-medium text-[var(--mdh-title)]">100% of your equity</span>: no tax haircut at contribution, no management burden.</p>
-                </div>
-              </div>
+      {/* Process + after close */}
+      <Section id="process" tone="stone">
+        <Container className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Intro eyebrow="Process" title="Step by step" />
+            <div className="mt-10">
+              <Steps items={HOW_IT_WORKS} />
             </div>
           </div>
-        </Container>
-      </Section>
-
-      {/* Income growth */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Working with us</Eyebrow>
-            <Heading className="mt-2">How professional management grows your income</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 lg:grid-cols-[1fr_0.85fr] lg:items-start">
-              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
-                <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Many owners are not earning everything their building could. Deferred maintenance,
-                  below-market rents, and high operating costs hold returns down year after year.
-                </p>
-                <div>
-                  <p className="text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Full-time, experienced management lifts income through lower operating costs, rents set
-                    to the market, and efficient operations. That upside flows to you as an owner.
-                  </p>
-                  <p className="mt-3 rounded-xl border border-[var(--mdh-line)] bg-white p-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                    Our team has driven{" "}
-                    <span className="font-medium text-[var(--mdh-title)]">$120M+ in annual net operating income growth</span>
-                    {" "}across a 30,000+ home portfolio. We bring the same playbook to every building we own.
-                  </p>
-                </div>
-              </div>
-              <div className="relative h-[260px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[300px]">
-                <Image
-                  src="/images/px-19928129.jpg"
-                  alt="Classic brick brownstone apartment stoops"
-                  fill
-                  quality={90}
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-[center_40%]"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Who qualifies */}
-      <Section id="qualifies" className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
-              <div>
-                <Eyebrow>Qualifying</Eyebrow>
-                <Heading className="mt-2">Is this a fit for you?</Heading>
-              </div>
-              <div className="relative hidden h-[200px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:block lg:h-[160px]">
-                <Image
-                  src="/images/brn-12168556.jpg"
-                  alt="Classic brownstone apartment buildings on a tree-lined street"
-                  fill
-                  quality={90}
-                  sizes="320px"
-                  className="object-cover object-[center_55%]"
-                />
-              </div>
-            </div>
-            <div className="mt-6 grid gap-6 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">MDH works best if:</h3>
-                <ul className="mt-3 space-y-2">
-                  {[
-                    "You own one or more multifamily buildings in the 2-49 unit range",
-                    "You've held long enough to build up a large gain",
-                    "You're ready to exit active operations, but the tax cost of a sale is too high",
-                    "You likely qualify as an accredited investor; most long-term multifamily owners do (net worth over $1M excluding primary residence, or income above $200K)",
-                    "You do not need a debt-free building: we pay off your mortgage at closing",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                      <span className="mt-0.5 shrink-0 text-emerald-600">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-medium text-[var(--mdh-title)]">It&apos;s probably not the right fit if:</h3>
-                <ul className="mt-3 space-y-2">
-                  {[
-                    "You need immediate, unrestricted liquidity",
-                    "Your mortgage is close to the building's value, leaving little equity to contribute",
-                    "You want a short-term exit rather than a long-term passive investment",
-                    "The illiquid nature of a private partnership does not fit your financial situation",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                      <span className="mt-0.5 shrink-0 text-[var(--mdh-subtle)]">-</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
-                  The best way to find out is a conversation. There&apos;s no cost, no obligation, and
-                  we&apos;ll give you an honest answer.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Process */}
-      <Section id="process" className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>Process</Eyebrow>
-            <Heading className="mt-2">Step by step</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-2">
-              {HOW_IT_WORKS.map((item) => (
-                <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
-                  <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
-                    {item.step}
-                  </p>
-                  <div>
-                    <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                    <p className="mt-2 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* After you close */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>The owner experience</Eyebrow>
-            <Heading className="mt-2">What happens after you contribute</Heading>
-            <p className="mt-3 max-w-[62ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
-            </p>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
-              {AFTER_CLOSE.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-5">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                </div>
-              ))}
+          <div>
+            <Intro eyebrow="The owner experience" title="After you contribute">
+              On close, the building transfers to our partnership and your ownership units are issued. The first
+              quarterly distribution hits your account. That is the entire job from here.
+            </Intro>
+            <div className="mt-10">
+              <FeatureGrid cols={2} items={AFTER_CLOSE} />
             </div>
           </div>
         </Container>
       </Section>
 
       {/* FAQ */}
-      <Section id="faq" className="pt-4">
+      <Section id="faq">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <Eyebrow>Common questions</Eyebrow>
-            <Heading className="mt-2">Frequently asked questions</Heading>
-            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
-              <FaqAccordion groups={OWNER_FAQ} />
-            </div>
-            <p className="mt-6 text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
-              This is illustrative only and does not constitute an offer to sell securities.
-              Actual tax liability depends on your individual circumstances. Consult a qualified tax
-              and legal advisor before making any decisions.
-            </p>
+        <div className="mx-auto max-w-4xl">
+          <Intro eyebrow="Common questions" title="Frequently asked questions" />
+          <div className="mt-10">
+            <FaqAccordion groups={OWNER_FAQ} />
           </div>
+          <p className="mt-8 text-[0.8rem] leading-relaxed text-[var(--mdh-muted)]">
+            This is illustrative only and does not constitute an offer to sell securities. Actual tax liability
+            depends on your individual circumstances. Consult a qualified tax and legal advisor before making any
+            decisions.
+          </p>
+        </div>
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                You built something real. Let&apos;s make sure it keeps working for you.
-              </h2>
-              <p className="mt-2 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/70">
-                No obligation. We start with a conversation to understand your building and your
-                goals, and give you an honest answer on whether a 721 exchange is the right fit.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
-              >
-                Send us the address
-              </a>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <CtaBand title="You built something real. Let's make sure it keeps working for you.">
+        Send us the address for a personalized valuation and proposal, and an honest answer on whether this is
+        the right fit.
+      </CtaBand>
     </main>
   );
 }

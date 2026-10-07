@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { Container, Eyebrow } from "@/components/ui";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
@@ -12,65 +12,55 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Section className="pb-6 pt-7 md:pt-10">
-        <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_380px] lg:items-end">
-            <div>
-              <Eyebrow>Contact</Eyebrow>
-              <Heading className="mt-3">Contact Us</Heading>
-              <Lead>
-                Whether you are a property owner exploring a 721 exchange, a real estate broker
-                representing a client&apos;s sale, or an advisor interested in learning more, we would be glad to connect.
-              </Lead>
-              <Lead>
-                For property owners, send us the address for a personalized, no-commitment
-                valuation and proposal, with a clear walkthrough of how the numbers work for your
-                situation. Use the form below or reach us at{" "}
-                <a
-                  href="tel:7084126898"
-                  className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
-                >
-                  (708) 412-6898
-                </a>
-                {" "}or{" "}
-                <a
-                  href="mailto:acquisitions@middledoorhomes.com"
-                  className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
-                >
-                  Acquisitions@MiddleDoorHomes.com
-                </a>
-                .
-              </Lead>
-            </div>
-            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
-              <Image
-                src="/images/hero-redbrick.jpg"
-                alt="Classic red brick apartment building"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 380px, 100vw"
-                className="object-cover object-[center_46%]"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-            <p className="text-[1.05rem] font-medium text-[var(--mdh-title)]">
+      <section className="bg-[var(--mdh-stone)] py-12 md:py-20">
+        <Container className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+          <div>
+            <Eyebrow>Contact</Eyebrow>
+            <h1 className="font-display mt-4 text-[2.2rem] font-medium leading-[1.1] tracking-[-0.015em] text-[var(--mdh-green)] md:text-[3rem]">
               Send us the address for a personalized valuation and proposal
+            </h1>
+            <p className="mt-5 max-w-[56ch] text-[1.08rem] leading-[1.7]">
+              An address is enough to start. We will come back with a number and walk you through how it works
+              for your building. Brokers and advisors, use the same form to introduce a client.
             </p>
-            <p className="mt-1 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-              An address is enough to start. We will come back with a number and walk you through how it works for your building.
-            </p>
-            <div className="mt-6 border-t border-[var(--mdh-line)] pt-6">
+            <div className="mt-10 rounded-md border border-[var(--mdh-line)] bg-white p-6 md:p-8">
               <ContactForm />
             </div>
           </div>
+          <aside className="space-y-8">
+            <div className="relative hidden aspect-[4/5] overflow-hidden rounded-md lg:block">
+              <Image
+                src="/images/nb-entrance.jpg"
+                alt="Building entrance with stone steps and a wooden door"
+                fill
+                quality={88}
+                sizes="(min-width: 1024px) 35vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="border-t-2 border-[var(--mdh-brass)] pt-5">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-brass)]">
+                Prefer to talk?
+              </p>
+              <ul className="mt-4 space-y-2 text-[1.02rem]">
+                <li>
+                  <a href="tel:7084126898" className="font-medium text-[var(--mdh-green)] hover:underline">
+                    (708) 412-6898
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:acquisitions@middledoorhomes.com"
+                    className="font-medium text-[var(--mdh-green)] hover:underline"
+                  >
+                    Acquisitions@MiddleDoorHomes.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </Container>
-      </Section>
+      </section>
     </main>
   );
 }

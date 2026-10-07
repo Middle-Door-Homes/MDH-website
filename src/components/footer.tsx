@@ -1,33 +1,76 @@
 import Link from "next/link";
-import { Container } from "./ui";
+import { Container, DoorIcon } from "./ui";
+
+const LINKS = [
+  { href: "/owners", label: "Owners" },
+  { href: "/brokers", label: "Brokers" },
+  { href: "/advisors", label: "Advisors" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/investor-login", label: "Investor Login" },
+];
 
 export function Footer() {
   return (
-    <footer className="mt-14 border-t border-[var(--mdh-line)] bg-white/95">
-      <Container className="py-8">
-        <div className="flex flex-col gap-3 text-sm text-[var(--mdh-subtle)] md:flex-row md:items-center md:justify-between">
-          <div>&copy; {new Date().getFullYear()} Middle Door Homes</div>
-          <div className="flex items-center gap-4">
-            <Link href="/investor-login" className="hover:text-[var(--mdh-ink)]">
-              Investor Login
-            </Link>
-            <a href="tel:7084126898" className="hover:text-[var(--mdh-ink)]">
-              (708) 412-6898
-            </a>
-            <a href="mailto:acquisitions@middledoorhomes.com" className="hover:text-[var(--mdh-ink)]">
-              Acquisitions@MiddleDoorHomes.com
-            </a>
+    <footer className="border-t border-white/10 bg-[#16302f] text-white/70">
+      <Container className="py-14">
+        <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <DoorIcon open className="h-9 w-7 text-[var(--mdh-brass-soft)]" />
+              <p className="font-display text-[1.3rem] font-medium text-white">Middle Door Homes</p>
+            </div>
+            <p className="mt-4 max-w-[34ch] text-[0.92rem] leading-relaxed">
+              The middle door between selling and holding for multifamily owners.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-brass-soft)]">Contact</p>
+            <ul className="mt-4 space-y-2 text-[0.92rem]">
+              <li>
+                <a href="tel:7084126898" className="hover:text-white">
+                  (708) 412-6898
+                </a>
+              </li>
+              <li>
+                <a href="mailto:acquisitions@middledoorhomes.com" className="hover:text-white">
+                  Acquisitions@MiddleDoorHomes.com
+                </a>
+              </li>
+              <li className="pt-2 leading-relaxed">
+                1021 W Adams St, Suite 200-29
+                <br />
+                Chicago, IL 60607
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[var(--mdh-brass-soft)]">Explore</p>
+            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-[0.92rem]">
+              {LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <p className="mt-5 max-w-4xl text-xs leading-relaxed text-[var(--mdh-muted)] md:text-sm">
-          For informational purposes only; not an offer to sell or solicitation to buy securities.
-          Forward-looking statements involve risks and uncertainties, and past performance does not
-          guarantee future results. Tax outcomes from a §721 exchange depend on your individual
-          circumstances, including cost basis, depreciation history, holding period, and state of
-          residence. This is not tax advice. Please consult your CPA, attorney, and financial
-          advisors before making any decisions.
-        </p>
+        <div className="mt-12 border-t border-white/10 pt-6 text-[0.75rem] leading-relaxed text-white/50">
+          <p>
+            For informational purposes only; not an offer to sell or solicitation to buy securities.
+            Forward-looking statements involve risks and uncertainties, and past performance does not
+            guarantee future results. Tax outcomes from a §721 exchange depend on your individual
+            circumstances, including cost basis, depreciation history, holding period, and state of
+            residence. This is not tax advice. Please consult your CPA, attorney, and financial
+            advisors before making any decisions.
+          </p>
+          <p className="mt-3">&copy; {new Date().getFullYear()} Middle Door Homes</p>
+        </div>
       </Container>
     </footer>
   );

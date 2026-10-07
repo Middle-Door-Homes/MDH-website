@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container, Eyebrow, Heading, Section } from "@/components/ui";
+import { Button, Container, CtaBand, FeatureGrid, Intro, PageHero, Section, Steps } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "For Financial Advisors: 721 Exchange for Your Clients",
@@ -33,7 +33,7 @@ const FOR_YOU = [
 const FOR_CLIENTS = [
   {
     title: "Capital preservation",
-    body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client&apos;s full equity basis rolls forward intact with no tax haircut at transition.",
+    body: "A §721 exchange defers capital gains and depreciation recapture entirely. Your client's full equity basis rolls forward intact with no tax haircut at transition.",
   },
   {
     title: "Income-producing passive ownership",
@@ -41,7 +41,7 @@ const FOR_CLIENTS = [
   },
   {
     title: "Estate planning benefit",
-    body: "Ownership units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely, a meaningful tool in your client&apos;s broader wealth plan.",
+    body: "Ownership units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely, a meaningful tool in your client's broader wealth plan.",
   },
 ];
 
@@ -82,247 +82,125 @@ const HOW_IT_WORKS = [
   },
 ];
 
+const PROBLEMS = [
+  {
+    title: "The tax problem",
+    body: "Long-term owners of multifamily buildings carry decades of appreciation and depreciation. A sale typically triggers a combined tax liability of 30-40% of their gains.",
+  },
+  {
+    title: "The concentration risk",
+    body: "A single building often represents a disproportionate share of your client's net worth: illiquid, undiversified, and operationally demanding. The tax wall prevents the diversification they need.",
+  },
+  {
+    title: "No better structure",
+    body: "A 1031 exchange just replaces one building with another. For most clients, there has never been a structure that preserves their equity and keeps it working in a diversified, institutional vehicle.",
+  },
+];
+
 export default function AdvisorsPage() {
   return (
     <main>
-      {/* Hero */}
-      <Section className="pb-5 pt-6 md:pt-8">
-        <Container>
-          <div className="overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] shadow-[0_20px_60px_rgba(18,29,41,0.14)]">
-            <div className="relative h-[46vh] min-h-[360px] md:h-[58vh] md:min-h-[400px]">
-              <Image
-                src="/images/bldg-10.jpg"
-                alt="Established residential neighborhood"
-                fill
-                priority
-                quality={95}
-                sizes="(min-width: 1280px) 1200px, (min-width: 768px) 92vw, 100vw"
-                className="object-cover object-[center_46%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,16,24,0.82)] via-[rgba(8,16,24,0.25)] to-[rgba(8,16,24,0.06)]" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-                <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-white/60">
-                  For financial advisors
-                </p>
-                <h1 className="font-display mt-3 max-w-3xl text-[1.8rem] font-medium leading-[1.06] tracking-[-0.01em] text-white sm:text-[2.2rem] md:text-[3.2rem] lg:text-[3.8rem]">
-                  A better structure<br className="hidden md:block" /> for clients with<br className="hidden md:block" /> gains they want to protect.
-                </h1>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-              {STATS.map((item) => (
-                <div key={item.label} className="px-3 py-3 text-center sm:px-5 sm:py-4 md:px-7 md:py-5">
-                  <p className="whitespace-nowrap text-[1.3rem] font-semibold tracking-tight text-white sm:text-[1.5rem] md:text-[1.8rem]">
-                    {item.value}
-                  </p>
-                  <p className="mt-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/50 sm:text-[0.72rem] sm:tracking-[0.14em]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Pitch */}
-      <Section className="pt-4">
-        <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-10">
-            <p className="font-display max-w-3xl text-[1.5rem] font-medium leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.9rem]">
-              Many of your clients have built meaningful real estate equity in a structure that was never designed for their next chapter. We give them a better one.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <PageHero
+        eyebrow="For financial advisors"
+        title="A better structure for clients with gains they want to protect."
+        image="/images/nb-greystone.jpg"
+        imageAlt="Greystone multifamily building with a lit entrance"
+        facts={STATS}
+        actions={
+          <>
+            <Button href="/contact">Start a conversation</Button>
+            <Button href="#how-it-works" variant="secondary">
+              How it works
+            </Button>
+          </>
+        }
+      >
+        Many of your clients have built meaningful real estate equity in a structure that was never designed
+        for their next chapter. We give them a better one.
+      </PageHero>
 
       {/* The problem */}
-      <Section className="pt-4">
+      <Section>
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>The problem</Eyebrow>
-            <Heading className="mt-2">Clients stuck in real estate</Heading>
-            <div className="mt-5 grid gap-5 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-3">
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">The tax problem</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  Long-term owners of multifamily buildings carry decades of appreciation
-                  and depreciation. A sale typically triggers a combined tax liability of
-                  30-40% of their gains.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">The concentration risk</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A single building often represents a disproportionate share of your client&apos;s
-                  net worth, illiquid, undiversified, and operationally demanding. The tax
-                  wall prevents the diversification they need.
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--mdh-line)] bg-white p-5">
-                <h3 className="font-medium text-[var(--mdh-title)]">No better structure</h3>
-                <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 1031 exchange just replaces one building with another. Selling gives up
-                  30-40% of the gains to tax. For most clients, there has simply never been a structure
-                  that preserves their equity and keeps their capital working in a diversified,
-                  institutional vehicle.
-                </p>
-              </div>
-            </div>
+          <Intro eyebrow="The problem" title="Clients stuck in real estate" />
+          <div className="mt-12">
+            <FeatureGrid items={PROBLEMS} />
           </div>
         </Container>
       </Section>
 
       {/* The solution */}
-      <Section id="solution" className="pt-4">
-        <Container>
-          <div className="grid gap-5 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-2 lg:items-center">
-            <div>
-              <Eyebrow>The solution</Eyebrow>
-              <Heading className="mt-2">A 721 exchange, not a sale</Heading>
-              <p className="mt-4 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange allows your client to contribute their building to a professionally
-                managed portfolio in exchange for a passive ownership stake, with no taxable event
-                at closing. No capital gains. No depreciation recapture.
+      <Section id="solution" tone="green">
+        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Intro dark eyebrow="The solution" title="A 721 exchange, not a sale">
+              Your client contributes their building to a professionally managed portfolio in exchange for a
+              passive ownership stake, with no taxable event at closing. No capital gains. No depreciation
+              recapture. Their equity moves forward intact.
+            </Intro>
+            <div className="mt-10 border-t-2 border-[var(--mdh-brass-soft)] pt-5">
+              <h3 className="text-[1.05rem] font-semibold text-white">Key distinction</h3>
+              <p className="mt-2 leading-relaxed text-white/75">
+                This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
+                that makes it possible. Your client keeps 100% of what they built.
               </p>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">
-                Their equity moves forward intact into a diversified, income-producing portfolio. The tax event that would have occurred at a sale is deferred entirely.
-              </p>
-              <div className="mt-5 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-                <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">
-                  Key distinction
-                </p>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
-                  This is a contribution, not a sale. IRC Section 721 is the long-established part of the tax code
-                  that makes this possible. The tax event that would have occurred at sale is
-                  deferred entirely. Your client keeps 100% of what they built.
-                </p>
-              </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[360px]">
-              <Image
-                src="/images/px-32117624.jpg"
-                alt="Tree-lined street with classic brick brownstone apartments"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[center_45%]"
-              />
-            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+            <Image
+              src="/images/nb-courtyard.jpg"
+              alt="Brick courtyard apartment building"
+              fill
+              quality={88}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </Container>
       </Section>
 
-      {/* For you + For your clients */}
-      <Section className="pt-4">
-        <Container>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-              <Eyebrow>For you</Eyebrow>
-              <Heading className="mt-2">A stronger advisory relationship</Heading>
-              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
-                {FOR_YOU.map((item) => (
-                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-4 md:p-5">
-                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  </div>
-                ))}
-              </div>
+      {/* For you + for your clients */}
+      <Section>
+        <Container className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Intro eyebrow="For you" title="A stronger advisory relationship" />
+            <div className="mt-10">
+              <FeatureGrid cols={1} items={FOR_YOU} />
             </div>
-
-            <div className="rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8">
-              <Eyebrow>For your clients</Eyebrow>
-              <Heading className="mt-2">A tax-efficient transition to passive income</Heading>
-              <div className="mt-5 space-y-4 border-t border-[var(--mdh-line)] pt-5">
-                {FOR_CLIENTS.map((item) => (
-                  <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 md:p-5">
-                    <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                  </div>
-                ))}
-              </div>
+          </div>
+          <div>
+            <Intro eyebrow="For your clients" title="A tax-efficient transition to passive income" />
+            <div className="mt-10">
+              <FeatureGrid cols={1} items={FOR_CLIENTS} />
             </div>
           </div>
         </Container>
       </Section>
 
       {/* Who we work with */}
-      <Section id="who-we-work-with" className="pt-4">
+      <Section id="who-we-work-with" tone="stone">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-6 shadow-[0_10px_32px_rgba(18,29,41,0.04)] md:p-8">
-            <Eyebrow>Who we work with</Eyebrow>
-            <Heading className="mt-2">Built for the advisors who know their clients best</Heading>
-            <div className="mt-6 grid gap-4 border-t border-[var(--mdh-line)] pt-6 sm:grid-cols-2">
-              {WHO_WE_WORK_WITH.map((item) => (
-                <div key={item.title} className="rounded-xl border border-[var(--mdh-line)] bg-white p-5 md:p-6">
-                  <h3 className="font-medium text-[var(--mdh-title)]">{item.title}</h3>
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                </div>
-              ))}
-            </div>
+          <Intro eyebrow="Who we work with" title="Built for the advisors who know their clients best" />
+          <div className="mt-12">
+            <FeatureGrid cols={4} items={WHO_WE_WORK_WITH} />
           </div>
         </Container>
       </Section>
 
       {/* How it works */}
-      <Section id="how-it-works" className="pt-4">
-        <Container>
-          <div className="grid gap-6 rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_10px_32px_rgba(18,29,41,0.05)] md:p-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-            <div>
-              <Eyebrow>How it works</Eyebrow>
-              <Heading className="mt-2">Three steps to a referral</Heading>
-              <div className="mt-5 space-y-3">
-                {HOW_IT_WORKS.map((item) => (
-                  <div key={item.step} className="flex gap-4 rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-bg)] p-4 shadow-[0_2px_8px_rgba(18,29,41,0.04)] md:p-5">
-                    <p className="shrink-0 text-[1.5rem] font-medium leading-none tracking-[-0.02em] text-[var(--mdh-line)]">
-                      {item.step}
-                    </p>
-                    <div>
-                      <p className="font-medium text-[var(--mdh-title)]">{item.title}</p>
-                      <p className="mt-1 text-[0.91rem] leading-relaxed text-[var(--mdh-ink)]">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_8px_24px_rgba(18,29,41,0.07)] lg:h-full lg:min-h-[320px]">
-              <Image
-                src="/images/px-36275920.jpg"
-                alt="Classic red brick apartment building with arched entryway"
-                fill
-                quality={90}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover object-[center_45%]"
-              />
-            </div>
-          </div>
+      <Section id="how-it-works">
+        <Container className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+          <Intro eyebrow="How it works" title="Three steps to a referral" />
+          <Steps items={HOW_IT_WORKS} />
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section className="pt-4">
-        <Container>
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-ink)] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-medium leading-tight tracking-[-0.01em] text-white md:text-[2.1rem]">
-                Have a client who might benefit?
-              </h2>
-              <p className="mt-2 max-w-[52ch] text-[0.95rem] leading-relaxed text-white/70">
-                Reach out directly. We can walk through the 721 exchange structure with you and
-                discuss whether it is a fit for your client&apos;s situation.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[var(--mdh-ink)] transition hover:bg-[var(--mdh-bg)]"
-              >
-                Start a conversation
-              </a>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <CtaBand
+        title="Have a client who might benefit?"
+        action={{ href: "/contact", label: "Start a conversation" }}
+      >
+        We can walk through the structure with you and discuss whether it fits your client&apos;s situation.
+      </CtaBand>
     </main>
   );
 }
