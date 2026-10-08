@@ -15,25 +15,25 @@ const TEAM = [
   {
     name: "Jack Elzinga",
     title: "Managing Partner",
-    photo: "/images/jack-elzinga-v3.jpg",
+    photo: "/images/jack-elzinga-v4.jpg",
     bio: "Jack built Middle Door after a decade inside institutional real estate platforms and other leading companies. He helped lead the integration of the 30,000+ home Home Partners of America portfolio through the Blackstone/Tricon merger and drove $120M+ in annual net operating income growth. That work shaped a clear view: the institutional playbook for residential operations had never been packaged in a structure that worked for individual multifamily owners. Harvard BA in Economics, Stanford MBA.",
   },
   {
     name: "Jose Torres",
     title: "Partner & CEO",
-    photo: "/images/jose-torres-v3.jpg",
+    photo: "/images/jose-torres-v4.jpg",
     bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He was head of asset management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and served as chief of staff within Invitation Homes' finance organization through its IPO. He knows what well-run residential platforms look like from the inside, both operationally and financially. Prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
     title: "Partner & EVP Operations",
-    photo: "/images/mike-rozovics-v3.jpg",
+    photo: "/images/mike-rozovics-v4.jpg",
     bio: "Mike started his career working residential construction on the south side of Chicago. He went on to run asset management and capital programs for a $10B+ residential portfolio at Home Partners of America, directing renovation, construction, and income growth across dispersed portfolios at scale. That range, from individual units to portfolio-wide systems, is the operational core of what Middle Door brings to every contributed building.",
   },
   {
     name: "Bob Sievewright",
     title: "Principal, Acquisitions",
-    photo: "/images/bob-sievewright-v3.jpg",
+    photo: "/images/bob-sievewright-v4.jpg",
     bio: "Bob spent nearly fifteen years advising high-net-worth clients on their investments: as a financial advisor at Smith Barney, Vice President of Private Client Services at Bear Stearns, and Senior Vice President of Investments at Morgan Stanley. He went on to found Wright Advisory Group, a sales and business development consultancy. At Middle Door he leads owner, broker, and advisor relationships, bringing long-term owners a way out of active management that keeps their equity working.",
   },
 ];
