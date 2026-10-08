@@ -42,10 +42,10 @@ const THREE_DOORS = [
 ];
 
 const TEAM = [
-  { name: "Jack Elzinga", title: "Managing Partner", photo: "/images/jack-elzinga-2026n.jpg" },
-  { name: "Jose Torres", title: "Partner & CEO", photo: "/images/jose-torres-2026n.jpg" },
-  { name: "Mike Rozovics", title: "Partner & EVP Operations", photo: "/images/mike-rozovics-2026n.jpg" },
-  { name: "Bob Sievewright", title: "Principal, Acquisitions", photo: "/images/bob-sievewright-2026n.jpg" },
+  { name: "Jack Elzinga", title: "Managing Partner", photo: "/images/jack-elzinga-v3.jpg" },
+  { name: "Jose Torres", title: "Partner & CEO", photo: "/images/jose-torres-v3.jpg" },
+  { name: "Mike Rozovics", title: "Partner & EVP Operations", photo: "/images/mike-rozovics-v3.jpg" },
+  { name: "Bob Sievewright", title: "Principal, Acquisitions", photo: "/images/bob-sievewright-v3.jpg" },
 ];
 
 const AUDIENCE_IMAGES = ["/images/nb-greystone.jpg", "/images/nb-sixflat-front.jpg", "/images/nb-garden-apartments.jpg"];
