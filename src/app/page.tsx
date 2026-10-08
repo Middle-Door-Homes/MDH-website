@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, DoorIcon } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
+import { LogoRow } from "@/components/logo-row";
 
 export const metadata: Metadata = {
   title: {
@@ -99,18 +100,6 @@ const FIT = [
   "Ready to hand off the day-to-day",
 ];
 
-const LOGOS = [
-  { name: "Home Partners of America", file: "home-partners.svg" },
-  { name: "Invitation Homes", file: "invitation-homes.svg" },
-  { name: "LaSalle Investment Management", file: "lasalle.svg" },
-  { name: "BCG", file: "bcg.svg" },
-  { name: "CBRE", file: "cbre.svg" },
-  { name: "Landis", file: "landis.png" },
-  { name: "Real Foundations", file: "real-foundations.svg" },
-  { name: "Google", file: "google-wordmark.svg" },
-  { name: "Stanford Business School", file: "stanford.svg" },
-  { name: "Harvard University", file: "harvard.svg" },
-];
 
 const SERIF_H2 =
   "font-display text-[1.75rem] font-medium leading-[1.08] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.95rem] xl:text-[2.1rem]";
@@ -390,7 +379,7 @@ export default function Home() {
                 structure that, until now, only large real estate institutions used.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-8 self-center">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-6 self-center sm:grid-cols-2 sm:gap-y-8">
               {TEAM.map((member) => (
                 <Link key={member.name} href="/about" className="group flex items-center gap-4">
                   <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20 md:h-24 md:w-24">
@@ -415,11 +404,8 @@ export default function Home() {
           <p className="text-center text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--mdh-subtle)]">
             Team experience from
           </p>
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {LOGOS.map((logo) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={logo.file} src={`/images/logos/${logo.file}`} alt={logo.name} className="h-[20px] w-auto max-w-[140px]" />
-            ))}
+          <div className="mt-7">
+            <LogoRow />
           </div>
         </Container>
       </section>

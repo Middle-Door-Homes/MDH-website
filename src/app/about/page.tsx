@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { LogoRow } from "@/components/logo-row";
 import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -37,18 +38,6 @@ const TEAM = [
   },
 ];
 
-const LOGOS = [
-  { name: "Home Partners of America", file: "home-partners.svg" },
-  { name: "Invitation Homes", file: "invitation-homes.svg" },
-  { name: "LaSalle Investment Management", file: "lasalle.svg" },
-  { name: "BCG", file: "bcg.svg" },
-  { name: "CBRE", file: "cbre.svg" },
-  { name: "Landis", file: "landis.png" },
-  { name: "Real Foundations", file: "real-foundations.svg" },
-  { name: "Google", file: "google-wordmark.svg" },
-  { name: "Stanford Business School", file: "stanford.svg" },
-  { name: "Harvard University", file: "harvard.svg" },
-];
 
 const PRINCIPLES = [
   {
@@ -196,16 +185,8 @@ export default function AboutPage() {
               <p className="text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)]">
                 Team experience from
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
-                {LOGOS.map((logo) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={logo.file}
-                    src={`/images/logos/${logo.file}`}
-                    alt={logo.name}
-                    className="h-[18px] w-auto max-w-[140px] transition hover:opacity-80"
-                  />
-                ))}
+              <div className="mt-4">
+                <LogoRow align="start" />
               </div>
             </div>
             <div className="mt-6 grid gap-x-12 gap-y-2 md:grid-cols-2">
