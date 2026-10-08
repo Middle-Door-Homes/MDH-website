@@ -1,4 +1,4 @@
-/** Team experience logos, set in one muted tone and optically balanced so the row reads evenly. */
+/** Team experience logos in original colors, optically balanced, on one row from laptop widths up. */
 const LOGOS = [
   { name: "Home Partners of America", file: "home-partners.svg", h: 22 },
   { name: "Invitation Homes", file: "invitation-homes.svg", h: 18 },
@@ -15,16 +15,16 @@ const LOGOS = [
 export function LogoRow({ align = "center" }: { align?: "center" | "start" }) {
   return (
     <div
-      className={`flex flex-wrap items-center gap-x-10 gap-y-6 ${align === "center" ? "justify-center" : "justify-start"}`}
+      className={`flex flex-wrap items-center gap-x-8 gap-y-6 lg:flex-nowrap lg:justify-between lg:gap-x-4 ${align === "center" ? "justify-center" : "justify-start"}`}
     >
       {LOGOS.map((logo) => (
-        <span key={logo.file} className="flex h-8 items-center">
+        <span key={logo.file} className="flex h-8 shrink items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`/images/logos/${logo.file}`}
             alt={logo.name}
             style={{ height: logo.h }}
-            className="w-auto max-w-[150px] object-contain opacity-80 [filter:grayscale(1)_brightness(0.55)_contrast(1.4)] transition hover:opacity-100"
+            className="w-auto max-w-[140px] object-contain lg:max-w-[9vw]"
           />
         </span>
       ))}
