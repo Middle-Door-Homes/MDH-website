@@ -75,23 +75,23 @@ const TWO_PATHS = [
 const HOW_IT_WORKS = [
   {
     step: "01",
-    title: "Conversation",
-    body: "We discuss your building, your financial situation, and your goals. No obligation. We want to understand if the model is genuinely a good fit.",
+    title: "We look at your building",
+    body: "Send us the address and tell us about your goals. We value the building at no cost and with no obligation.",
   },
   {
     step: "02",
-    title: "Evaluation",
-    body: "We assess the building and structure the exchange terms. You get full transparency on your passive ownership stake and what to expect.",
+    title: "You get a written offer",
+    body: "A letter of intent with the value, your ownership units, and how the partnership works for your building.",
   },
   {
     step: "03",
-    title: "Contribution",
-    body: "You contribute the building via 721 exchange, not a sale. Not a taxable event. Your existing mortgage is paid off at close. Your equity moves forward intact.",
+    title: "Your CPA and attorney review it",
+    body: "You see the full documents before you sign. Your advisors review everything, and we answer their questions directly.",
   },
   {
     step: "04",
-    title: "Ongoing income",
-    body: "You receive quarterly distributions from your building. Our team manages all operations, working to grow its value and income over time.",
+    title: "We take over",
+    body: "At closing, tenants, repairs, and leasing become our job, and you receive regular distributions.",
   },
 ];
 
@@ -160,6 +160,10 @@ const OWNER_FAQ: FaqGroup[] = [
         a: "Deferred taxes become due when you sell or redeem your units. However, units can be passed to heirs with a step-up in cost basis, which can eliminate the deferred tax liability entirely for the next generation.",
       },
       {
+        q: "What do my kids get?",
+        a: "Your units pass to your heirs. Under current law, heirs can receive a step-up in basis on inheritance, which can eliminate the deferred gain entirely.",
+      },
+      {
         q: "What is my ongoing tax treatment as a unit holder?",
         a: "You keep pass-through tax treatment and receive a Schedule K-1 each year. What that is worth in a given year depends on your own basis.",
       },
@@ -191,6 +195,10 @@ const OWNER_FAQ: FaqGroup[] = [
       {
         q: "What happens to my building after I contribute?",
         a: "From the day we close you are done being a landlord. We take over tenants, leasing, repairs, rent collection, maintenance, renovation, compliance, and reporting. The building keeps producing income; you simply stop running it.",
+      },
+      {
+        q: "What happens to my tenants?",
+        a: "Their leases stay in place. From closing, we take over management, rent collection, maintenance, and repairs, so tenants have one professional team to call.",
       },
       {
         q: "Where do you buy?",

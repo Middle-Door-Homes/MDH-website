@@ -143,11 +143,12 @@ export function DoorIcon({ open, className }: ClassName & { open?: boolean }) {
   }
   return (
     <svg viewBox="0 0 64 88" fill="none" aria-hidden className={className}>
-      <rect x="10" y="4" width="44" height="80" rx="1.5" stroke="currentColor" strokeWidth="3" />
-      <rect x="16" y="10" width="32" height="74" stroke="currentColor" strokeWidth="3" />
-      <rect x="22" y="18" width="20" height="22" rx="1" stroke="currentColor" strokeWidth="2.5" />
-      <rect x="22" y="48" width="20" height="26" rx="1" stroke="currentColor" strokeWidth="2.5" />
-      <circle cx="43" cy="46" r="2.6" fill="currentColor" />
+      <path d="M6 84h52" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <path d="M12 84V6h40v78" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+      <rect x="17" y="10.5" width="30" height="71" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="22" y="16" width="14" height="22" rx="1" stroke="currentColor" strokeWidth="2.25" />
+      <rect x="22" y="46" width="14" height="29" rx="1" stroke="currentColor" strokeWidth="2.25" />
+      <circle cx="41.5" cy="42" r="2.2" fill="currentColor" />
     </svg>
   );
 }

@@ -37,8 +37,8 @@ const THREE_PROOFS = [
 
 const THREE_DOORS = [
   { label: "Sell", body: "30-40% of gains lost to tax", mdh: false },
-  { label: "Hold", body: "Ongoing management", mdh: false },
   { label: "Middle Door", body: "Passive ownership", mdh: true },
+  { label: "Hold", body: "Ongoing management", mdh: false },
 ];
 
 const TEAM = [
@@ -145,6 +145,13 @@ export default function Home() {
                 >
                   Send us an address
                 </Link>
+                <a
+                  href="tel:7084126898"
+                  aria-label="Call us at (708) 412-6898"
+                  className="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3.5 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
+                >
+                  Call us<span className="ml-2 hidden text-white/70 sm:inline">(708) 412-6898</span>
+                </a>
                 <Link href="#how-it-works" className="text-sm font-medium text-white/80 transition hover:text-white">
                   How it works &rarr;
                 </Link>
@@ -201,16 +208,20 @@ export default function Home() {
         <Container>
           <Reveal>
           <div className="grid border-y border-[var(--mdh-line)] md:grid-cols-3">
-            {THREE_DOORS.map((door) => (
+            {THREE_DOORS.map((door, i) => (
               <div
                 key={door.label}
                 className={`flex items-center gap-5 px-5 py-6 text-left md:flex-col md:gap-0 md:px-8 md:py-16 md:text-center ${
-                  door.mdh ? "bg-[var(--mdh-ink)]" : "border-b border-[var(--mdh-line)] md:border-b-0 md:border-r"
+                  door.mdh
+                    ? "bg-[var(--mdh-ink)]"
+                    : i < THREE_DOORS.length - 1
+                      ? "border-b border-[var(--mdh-line)] md:border-b-0"
+                      : ""
                 }`}
               >
                 <DoorIcon
                   open={door.mdh}
-                  className={`h-12 w-9 shrink-0 md:h-20 md:w-14 ${door.mdh ? "text-[#b8894f]" : "text-[var(--mdh-subtle)]/60"}`}
+                  className={`h-12 w-9 shrink-0 md:h-20 md:w-14 ${door.mdh ? "text-[#b8894f]" : "text-[#9aa3ad]"}`}
                 />
                 <div>
                   <p
