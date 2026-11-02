@@ -115,7 +115,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:order-last lg:aspect-auto">
             <Image
-              src="/images/hero-chicago-street.jpg"
+              src="/images/hero-street-v2.jpg"
               alt="Tree-lined street of brick multifamily buildings"
               fill
               priority
