@@ -5,14 +5,14 @@ import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/co
 export const metadata: Metadata = {
   title: "For Financial Advisors: 721 Exchange for Your Clients",
   description:
-    "Help clients access a diversified, professionally managed real estate portfolio through a §721 exchange: no tax event, no replacement property required. Partner with Middle Door Homes.",
+    "Help clients keep owning their building as passive investors through a §721 exchange: no tax event, no replacement property, and no management. Partner with Middle Door Homes.",
   alternates: { canonical: "/advisors" },
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
   { value: "100%", label: "Equity preserved" },
-  { value: "8-12%", label: "Target annual return" },
+  { value: "30,000+", label: "Units of experience" },
 ];
 
 const FOR_YOU = [
@@ -37,7 +37,7 @@ const FOR_CLIENTS = [
   },
   {
     title: "Income-producing passive ownership",
-    body: "Your client receives quarterly distributions from a professionally managed portfolio, with professional operations replacing all landlord responsibilities.",
+    body: "Your client keeps their building, with distributions and professional operations replacing all landlord responsibilities.",
   },
   {
     title: "Estate planning benefit",
@@ -48,7 +48,7 @@ const FOR_CLIENTS = [
 const WHO_WE_WORK_WITH = [
   {
     title: "Wealth managers & RIAs",
-    body: "Clients with significant real estate equity often hold an outsized share of their net worth in a single illiquid asset. The 721 exchange is a path to tax-efficient diversification.",
+    body: "Clients with significant real estate equity often hold an outsized share of their net worth in one building. The 721 exchange makes that position passive, with an option to diversify later.",
   },
   {
     title: "CPAs & tax advisors",
@@ -56,11 +56,11 @@ const WHO_WE_WORK_WITH = [
   },
   {
     title: "Estate planning attorneys",
-    body: "For clients thinking about succession and legacy, the 721 exchange defers the tax liability and moves the asset into a professionally managed, diversified portfolio.",
+    body: "For clients thinking about succession and legacy, the 721 exchange defers the tax liability and puts the building under professional management.",
   },
   {
     title: "Financial planners",
-    body: "Clients with meaningful real estate equity and no tax-efficient way to diversify it. The 721 exchange gives them a structure their position has earned.",
+    body: "Clients with meaningful real estate equity and no tax-efficient way to step back from it. The 721 exchange gives them a structure their position has earned.",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function AdvisorsPage() {
         <Container>
           <div className="">
             <p className="font-display max-w-3xl text-[1.3rem] font-normal leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.6rem]">
-              Many of your clients have built meaningful real estate equity in a structure that was never designed for their next chapter. We give them a better one.
+              Many of your clients have built meaningful equity in a building they no longer want to run. We let them keep owning it, as passive investors, with the tax deferred.
             </p>
           </div>
         </Container>
@@ -120,11 +120,10 @@ export default function AdvisorsPage() {
                 </p>
               </div>
               <div className="border-t border-[var(--mdh-line)] pt-5">
-                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">The concentration risk</h3>
+                <h3 className="font-display text-[1.15rem] font-normal leading-snug text-[var(--mdh-title)]">The management burden</h3>
                 <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A single building often represents a disproportionate share of your client&apos;s
-                  net worth, illiquid, undiversified, and operationally demanding. The tax
-                  wall prevents the diversification they need.
+                  Owning a building often means being its manager. For clients nearing retirement or
+                  estate planning, that is the part they want to hand off.
                 </p>
               </div>
               <div className="border-t border-[var(--mdh-line)] pt-5">
@@ -132,8 +131,7 @@ export default function AdvisorsPage() {
                 <p className="mt-2 text-[0.9rem] leading-relaxed text-[var(--mdh-ink)]">
                   A 1031 exchange just replaces one building with another. Selling gives up
                   30-40% of the gains to tax. For most clients, there has simply never been a structure
-                  that preserves their equity and keeps their capital working in a diversified,
-                  institutional vehicle.
+                  that preserves their equity and takes the work off their plate.
                 </p>
               </div>
             </div>
@@ -149,12 +147,11 @@ export default function AdvisorsPage() {
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
               <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange allows your client to contribute their building to a professionally
-                managed portfolio in exchange for a passive ownership stake, with no taxable event
-                at closing. No capital gains. No depreciation recapture.
+                Your client&apos;s building goes into its own partnership, in exchange for ownership units of the
+                same value, with no taxable event at closing. No capital gains. No depreciation recapture.
               </p>
               <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                Their equity moves forward intact into a diversified, income-producing portfolio. The tax event that would have occurred at a sale is deferred entirely.
+                They keep owning the building, passively, while we run it. The tax event that would have occurred at a sale is deferred entirely.
               </p>
               <div className="mt-5 border-t border-[var(--mdh-line)] pt-5">
                 <p className="text-[0.78rem] font-medium uppercase tracking-[0.15em] text-[var(--mdh-subtle)]">

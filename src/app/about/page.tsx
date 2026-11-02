@@ -6,7 +6,7 @@ import { ClosingCta, Container, Eyebrow, Heading, PageHero, Section } from "@/co
 export const metadata: Metadata = {
   title: "About Middle Door Homes",
   description:
-    "Middle Door Homes gives multifamily owners a way out of active management through a §721 exchange: keep your equity, defer the tax, and receive passive income from a diversified portfolio.",
+    "Middle Door Homes gives multifamily owners a way out of active management through a §721 exchange: keep your equity, defer the tax, and keep owning your building as a passive investor.",
   alternates: { canonical: "/about" },
 };
 
@@ -46,7 +46,7 @@ const PRINCIPLES = [
   },
   {
     title: "You transition out of operations completely",
-    body: "Once your building joins the portfolio, our team handles everything: tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
+    body: "Once you partner with us, our team handles everything: tenants, maintenance, leasing, compliance. You receive quarterly distributions. That is the entire job.",
   },
   {
     title: "Your returns should improve",
@@ -81,9 +81,9 @@ export default function AboutPage() {
                   How it works
                 </h3>
                 <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
-                  A 721 exchange is a long-established part of the tax code that allows you to contribute your
-                  building to a professionally managed portfolio in exchange for a passive ownership
-                  stake, with no taxable event at closing. No capital gains. No depreciation
+                  A 721 exchange is a long-established part of the tax code that allows your building to go into
+                  its own partnership in exchange for ownership units of the same value, with no taxable event at
+                  closing. No capital gains. No depreciation
                   recapture.
                 </p>
               </div>
@@ -102,9 +102,9 @@ export default function AboutPage() {
                   What you receive
                 </h3>
                 <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--mdh-ink)]">
-                  You own a stake in a diversified, professionally managed portfolio. You receive
-                  regular distributions from the portfolio. Our team manages everything. No
-                  tenant calls. No maintenance coordination. Truly passive income.
+                  You keep owning your building through its own partnership. Our team manages everything,
+                  and you receive regular distributions. No tenant calls. No maintenance coordination.
+                  Truly passive income.
                 </p>
               </div>
               <div>

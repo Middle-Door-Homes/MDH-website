@@ -7,14 +7,14 @@ import { TaxCalculator } from "@/components/calculator";
 export const metadata: Metadata = {
   title: "721 Exchange for Property Owners",
   description:
-    "Owners of 2-49 unit multifamily buildings can contribute their building through a §721 exchange: no tax at closing and no more management. Receive quarterly distributions from a professionally managed portfolio.",
+    "Owners of 2-49 unit multifamily buildings can partner with Middle Door Homes through a §721 exchange: keep owning your building as a passive investor, with the tax deferred and the management handed off.",
   alternates: { canonical: "/owners" },
 };
 
 const STATS = [
   { value: "0%", label: "Taxes at closing" },
   { value: "30,000+", label: "Units of experience" },
-  { value: "8-12%", label: "Target annual return" },
+  { value: "2-49", label: "Units per building" },
 ];
 
 const BENEFITS = [
@@ -23,52 +23,52 @@ const BENEFITS = [
     body: "No capital gains or depreciation recapture at closing. Your full equity basis rolls forward intact. Ownership units can pass to heirs with a step-up in cost basis, potentially eliminating the deferred tax liability entirely.",
   },
   {
-    title: "Continued ownership with upside",
-    body: "You own a share of a diversified, professionally managed portfolio, with quarterly distributions and a share of its growth over time.",
+    title: "You keep owning your building",
+    body: "Your units represent your own building, run by our team, with regular distributions and a share of its growth.",
   },
   {
     title: "Truly passive income",
     body: "Our team handles tenants, maintenance, leasing, and compliance. You receive distributions, not work orders.",
   },
   {
-    title: "Structured liquidity",
-    body: "A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity.",
+    title: "A path to exit",
+    body: "From year four, you can choose to sell the building, or roll into a broader portfolio if one is then offered.",
   },
 ];
 
 const SITUATIONS = [
   {
-    title: "Tired of managing",
-    body: "You have held a long time, built a large gain, and you are done with tenants and repairs.",
+    title: "Thinking about selling",
+    body: "Your building has appreciated meaningfully. Most owners don't see the capital gains bill until it is too late to act.",
     number: "On a $1M building, about $200K more of your equity stays invested.",
   },
   {
     title: "Loan maturing",
-    body: "Refinancing at today's rates can mean a much larger payment on the same building and the same management.",
-    number: "We pay off the loan at closing.",
+    body: "Rolling into today's rates can mean a much larger payment on the same building and the same management.",
+    number: "We handle financing needs, so the debt is no longer your job.",
   },
   {
     title: "Planning a 1031",
-    body: "A 1031 defers the tax, but only by taking on another building to find, finance, close, and run.",
-    number: "The same deferral, with no 45-day clock and no new building.",
+    body: "A 1031 keeps your tax deferred, but only by taking on another property: find it, finance it, close it on time, and manage it.",
+    number: "The same deferral, with no clock and no replacement property.",
   },
   {
     title: "Building with upside left",
-    body: "Rents that could be higher and units that could be updated. Sell as-is and the next owner keeps that upside.",
-    number: "Plus get a share of the future upside.",
+    body: "Sell now, and that upside stays on the table for the next owner to collect.",
+    number: "Keep your building. We do the work; you share in the upside.",
   },
 ];
 
 const TWO_PATHS = [
   {
-    label: "Contribute",
-    title: "Trade your building for ownership in the portfolio",
-    body: "You contribute your building and receive ownership units of the same value. No tax at closing, you keep earning income, and you are done managing.",
+    label: "Holding partnership",
+    title: "Keep owning your building, passively",
+    body: "For buildings that run well today. We take over operations, you collect regular distributions, and your tax stays deferred.",
   },
   {
-    label: "Partner",
-    title: "Keep your building and share in what it becomes",
-    body: "For buildings with upside left in them. Your building goes into its own partnership with us. We handle the renovation, operations, and rents, and we split the upside with you.",
+    label: "Value-add partnership",
+    title: "Capture your building's full value",
+    body: "For buildings with upside left in them. We handle renovations, operations, and rents, and we split the increase in value with you.",
   },
 ];
 
@@ -91,14 +91,14 @@ const HOW_IT_WORKS = [
   {
     step: "04",
     title: "Ongoing income",
-    body: "You receive quarterly distributions from a diversified portfolio. Our team manages all operations, working to grow the portfolio's value and income over time.",
+    body: "You receive quarterly distributions from your building. Our team manages all operations, working to grow its value and income over time.",
   },
 ];
 
 const AFTER_CLOSE = [
   {
     title: "Quarterly distributions",
-    body: "Regular passive income from the portfolio, paid after operating expenses, debt service, and capital reserves, subject to portfolio cash flow.",
+    body: "Regular passive income from your building, paid after operating expenses, debt service, and capital reserves, subject to cash flow.",
   },
   {
     title: "An annual K-1",
@@ -106,7 +106,7 @@ const AFTER_CLOSE = [
   },
   {
     title: "Audited financial statements",
-    body: "Annual audited financials and quarterly portfolio reports covering occupancy, capital improvements, and market conditions, with full transparency into what you own.",
+    body: "Annual audited financials and quarterly reports covering occupancy, capital improvements, and market conditions, with full transparency into what you own.",
   },
   {
     title: "Nothing to manage",
@@ -131,12 +131,16 @@ const OWNER_FAQ: FaqGroup[] = [
         a: "No. You are contributing your building to our partnership in exchange for ownership units. Because it is a contribution rather than a sale, no capital gains tax or depreciation recapture is triggered at closing.",
       },
       {
+        q: "Do I still own my building?",
+        a: "You own it through its partnership. The building is not pooled with others, so your units track your building's performance.",
+      },
+      {
         q: "Is this a loophole?",
         a: "No. It is a contribution structure that has been in the tax code for decades, and large REITs have used it to buy from owners who did not want to sell. What is new is applying it to buildings your size.",
       },
       {
         q: "How is this different from a property manager or a REIT?",
-        a: "A manager takes work off your plate but leaves the title, and the liability, with you. A public REIT means selling first, so you invest what is left after tax rather than your full equity. This gives you a diversified position, built from your whole equity, with no operating role.",
+        a: "A manager takes work off your plate but leaves the title, and the liability, with you. A public REIT means selling first, so you invest what is left after tax rather than your full equity. This keeps your whole equity in your building, with no operating role.",
       },
       {
         q: "Do I need to be an accredited investor?",
@@ -182,7 +186,7 @@ const OWNER_FAQ: FaqGroup[] = [
       },
       {
         q: "What diligence do you do?",
-        a: "What a long-term owner would: physical inspection, independent appraisal, title, a rent roll and lease audit, environmental, and a neighborhood-level market analysis. We are selective, and not every building is a fit for the portfolio.",
+        a: "What a long-term owner would: physical inspection, independent appraisal, title, a rent roll and lease audit, environmental, and a neighborhood-level market analysis. We are selective, and not every building is a fit.",
       },
       {
         q: "What happens to my building after I contribute?",
@@ -203,15 +207,15 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What return can I expect?",
-        a: "We target 8-12% annually at the portfolio level, combining current income and long-term appreciation. That is a target, not a guarantee. The more useful comparison is what a sale costs you: if taxes and costs take 30% of your equity, a moderate return on your whole equity can beat a strong return on what is left.",
+        a: "It depends on the building. Your letter of intent carries a building-specific estimate. For holding partnerships we target 8-12% annually, combining current income and long-term appreciation. That is a target, not a guarantee.",
       },
       {
         q: "How do distributions work?",
-        a: "You receive 100% of the first 6% of annual total return before we participate at all. Above that, 70% goes to unit holders and 30% to us up to a 12% return, and the excess above 12% is split 50/50. We never take more than 30% of a year's total return, and if portfolio value falls we earn nothing further until it recovers. Distributions are targeted quarterly, subject to portfolio cash flow.",
+        a: "Net cash flow is distributed to you quarterly, subject to availability. How the growth is shared depends on the partnership: a value-add partnership returns your equity first, then splits the increase in value 50/50 with you; a holding partnership pays you the first 6% of annual return before we participate.",
       },
       {
         q: "How does Middle Door Homes make money?",
-        a: "An annual management fee of 1.25% of assets under management, our share of the upside above the 6% preferred return, and our own units alongside yours. We do our best when the portfolio does.",
+        a: "An annual asset management fee on net asset value, and our share of the growth. We do our best when your building does.",
       },
       {
         q: "How does my income compare to what I earn now?",
@@ -224,19 +228,19 @@ const OWNER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "Can I get my money out?",
-        a: "Ownership units are not publicly traded. A three-year minimum hold applies to all units. From year four, we target quarterly repurchase windows, at your option and subject to portfolio liquidity. Liquidity is not guaranteed on demand, so treat this as a long-term investment.",
+        a: "Units are not publicly traded. From year four, you can elect to sell the building, or roll into a broader portfolio if one is then offered. Treat this as a long-term investment.",
       },
       {
         q: "What are the risks I should understand?",
-        a: "Property values can fall, and your units track the portfolio. Units are not publicly traded, there is a minimum hold, and liquidity is not guaranteed on demand. The portfolio is geographically concentrated, and results depend on our execution. We hold low leverage against occupied, cash-flowing buildings, which reduces the downside but does not remove it.",
+        a: "Property values can fall, and your units track your building. Units are not publicly traded, and liquidity is not available on demand. Results depend on our execution. We hold low leverage against occupied, cash-flowing buildings, which reduces the downside but does not remove it.",
       },
       {
         q: "What if I change my mind after contributing?",
-        a: "Once you contribute, the building belongs to the partnership and cannot be returned. Units can be redeemed through quarterly repurchase windows from year four, but you should treat this as a long-term commitment going in.",
+        a: "Once you contribute, the building belongs to its partnership and cannot be returned. From year four you can elect to sell the building or roll into a broader portfolio, but you should treat this as a long-term commitment going in.",
       },
       {
         q: "What are my long-term options?",
-        a: "Redeem through the repurchase windows, transfer units to another accredited investor, participate in a portfolio-level event if we recapitalize, or hold and pass units to your heirs with the step-up in basis. Selling units is generally a taxable event when you do it.",
+        a: "From year four: sell the building, roll into a broader portfolio if one is then offered, or keep holding and pass your units to your heirs with the step-up in basis. A sale is generally a taxable event when it happens.",
       },
       {
         q: "What visibility do I get?",
@@ -279,8 +283,8 @@ export default function OwnersPage() {
       />
       <PageHero
         eyebrow="For property owners"
-        title="Turn your real estate equity into a diversified portfolio."
-        lead="Contribute your building instead of selling it. You receive ownership in a diversified portfolio of neighborhood buildings, owe no tax at closing, and hand off the management on day one."
+        title="Keep owning your building, as a passive investor."
+        lead="Partner with Middle Door. We take over the day to day, your capital gains bill is deferred, and you collect regular distributions while we work to grow your building's value."
         image="/images/nb-brick-threeflats.jpg"
         imageAlt="Brick three-flats on a tree-lined street"
         stats={STATS}
@@ -291,7 +295,7 @@ export default function OwnersPage() {
         <Container>
           <div className="">
             <p className="font-display max-w-4xl text-[1.15rem] leading-[1.45] text-[var(--mdh-title)] md:text-[1.4rem]">
-              You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means staying a landlord, with everything riding on one property. Middle Door Homes offers a third path.
+              You&apos;ve spent years building equity in your building. Selling means giving up 30-40% of your gains to capital gains tax and depreciation recapture, the tax on depreciation you&apos;ve already deducted. Holding means tenants, maintenance, and debt remain your job. Middle Door Homes offers a third path: keep the building, and hand off the work.
             </p>
             <div className="mt-8 grid gap-x-12 gap-y-2 md:grid-cols-3">
               <div>
@@ -354,12 +358,11 @@ export default function OwnersPage() {
               <Eyebrow>The solution</Eyebrow>
               <Heading className="mt-2">A 721 exchange, not a sale</Heading>
               <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                A 721 exchange is a long-established part of the tax code that allows you to contribute your building
-                to a professionally managed portfolio, in exchange for a passive ownership stake,
-                with no taxable event at closing.
+                Your building goes into its own partnership in exchange for ownership units of the same value. It is a
+                contribution, not a sale, so no capital gains tax or depreciation recapture is due at closing.
               </p>
               <p className="mt-3 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-                You do not sell. Your equity moves forward intact into a diversified, professionally operated portfolio.
+                You keep owning your building. We run it, and your equity keeps working for you.
               </p>
               <div className="mt-5 space-y-3">
                 <div className="border-t border-[var(--mdh-line)] pt-5">
@@ -415,8 +418,8 @@ export default function OwnersPage() {
       <Section id="partnership" tone="white">
         <Container>
           <div className="">
-            <Eyebrow>Two ways to work with us</Eyebrow>
-            <Heading className="mt-2">Contribute your building, or partner on it.</Heading>
+            <Eyebrow>Two ways to partner</Eyebrow>
+            <Heading className="mt-2">Keep your building, and choose how we grow it.</Heading>
             <div className="mt-8 grid gap-10 md:grid-cols-2">
               {TWO_PATHS.map((item) => (
                 <div key={item.title} className="border-t-2 border-[#b8894f] pt-6">
@@ -465,8 +468,8 @@ export default function OwnersPage() {
                       selfManage: true, hirePm: true, sale: false, ex1031: true, dst: false, mdh: true,
                     },
                     {
-                      label: "Diversified portfolio exposure",
-                      selfManage: false, hirePm: false, sale: false, ex1031: false, dst: true, mdh: true,
+                      label: "Keep your building's upside",
+                      selfManage: true, hirePm: true, sale: false, ex1031: true, dst: false, mdh: true,
                     },
                     {
                       label: "Renovation capital & value creation provided",
@@ -667,7 +670,7 @@ export default function OwnersPage() {
             <Eyebrow>The owner experience</Eyebrow>
             <Heading className="mt-2">What happens after you contribute</Heading>
             <p className="mt-3 max-w-[62ch] text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
-              On close, the building transfers to our partnership and your ownership units are issued. Your equity is now a passive stake in a diversified, professionally managed portfolio. The first quarterly distribution hits your account. That is the entire job from here.
+              On close, the building transfers to our partnership and your ownership units are issued. You own your building through its partnership, and we run it. The first quarterly distribution hits your account. That is the entire job from here.
             </p>
             <div className="mt-6 grid gap-x-12 gap-y-2 sm:grid-cols-2">
               {AFTER_CLOSE.map((item) => (

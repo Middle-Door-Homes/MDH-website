@@ -10,35 +10,35 @@ export const metadata: Metadata = {
     absolute: "Middle Door Homes | 721 Exchange for Multifamily Owners",
   },
   description:
-    "Middle Door Homes turns your multifamily equity into a passive stake in a diversified, professionally managed residential portfolio, through a §721 exchange with no capital gains at contribution.",
+    "Middle Door Homes lets multifamily owners keep owning their building as passive investors through a §721 exchange: the tax deferred, the management handed off, and a share of the growth.",
   alternates: { canonical: "/" },
 };
 
 const THREE_PROOFS = [
   {
-    promise: "Keep your equity intact",
+    promise: "Keep your equity working",
     stat: "0%",
-    statLabel: "taxes at contribution",
-    body: "A §721 exchange converts your building to a portfolio stake with no capital gains or depreciation recapture at contribution.",
+    statLabel: "taxes at closing",
+    body: "Your capital gains bill is deferred, so your full equity stays invested.",
   },
   {
-    promise: "Diversify your ownership",
-    stat: "8-12%",
-    statLabel: "target annual return",
-    body: "You receive an ownership stake in a diversified portfolio of cash-flowing neighborhood real estate.",
+    promise: "Hand off the work",
+    stat: "Day 1",
+    statLabel: "passive from closing",
+    body: "We take over tenants, repairs, and leasing. You collect regular distributions.",
   },
   {
-    promise: "Collect truly passive income",
+    promise: "Grow your building's value",
     stat: "30,000+",
     statLabel: "units of experience",
-    body: "Our professional management team handles leasing, maintenance, and renovations that grow your value. You share in all future income and appreciation.",
+    body: "Our team handles operations and renovations, working to grow your building's value. You share in that growth.",
   },
 ];
 
 const THREE_DOORS = [
   { label: "Sell", body: "30-40% of gains lost to tax", mdh: false },
-  { label: "Hold", body: "Tenants, repairs, and debt stay your job", mdh: false },
-  { label: "Middle Door", body: "Your full equity, working in a diversified portfolio", mdh: true },
+  { label: "Hold", body: "Ongoing management", mdh: false },
+  { label: "Middle Door", body: "Passive ownership", mdh: true },
 ];
 
 const TEAM = [
@@ -54,22 +54,22 @@ const AUDIENCE_CARDS = [
   {
     href: "/owners",
     eyebrow: "For property owners",
-    title: "Keep your equity working, without the work",
-    body: "Contribute your building and receive ownership in a diversified portfolio of income-producing buildings: professional management, quarterly distributions, and no tax at contribution.",
+    title: "Keep owning your building, without the work",
+    body: "Partner with Middle Door: defer the tax, hand off the management, and share in your building's growth.",
     cta: "Learn how it works",
   },
   {
     href: "/brokers",
     eyebrow: "For brokers",
-    title: "A real estate commission for representing your client's sale",
-    body: "Represent your client's building sale through a 721 exchange. We work with licensed real estate brokers whose clients want a tax-deferred transition to passive ownership.",
+    title: "A partnership instead of a sale, with your commission unchanged",
+    body: "The price and your commission are the same either way, paid in cash at closing. Your seller keeps owning the building, passively, with the tax deferred.",
     cta: "How brokers work with us",
   },
   {
     href: "/advisors",
     eyebrow: "For financial advisors",
-    title: "A tax-efficient solution for your clients' real estate",
-    body: "Help clients with embedded gains transition from active landlord to passive owner, without triggering a taxable event.",
+    title: "A tax-efficient next step for clients' real estate",
+    body: "Help clients with large gains move from active landlord to passive owner, without triggering a taxable event.",
     cta: "How advisors work with us",
   },
 ];
@@ -77,18 +77,18 @@ const AUDIENCE_CARDS = [
 const HOW_IT_WORKS = [
   {
     step: "01",
-    title: "Contribute your building",
-    body: "Instead of selling, you contribute your building under Section 721 of the tax code. No capital gains tax is due at contribution.",
+    title: "Partner with Middle Door",
+    body: "Your building goes into its own partnership, with you as the owner and Middle Door as the operating partner. No capital gains tax is due at closing.",
   },
   {
     step: "02",
-    title: "Receive a passive ownership stake",
-    body: "Your equity becomes ownership in a diversified portfolio of neighborhood buildings. You stay invested in what you know, without running any of it.",
+    title: "We take over the day to day",
+    body: "Tenants, repairs, leasing, financing needs, and renovations become our job. You are a passive investor from the day we close.",
   },
   {
     step: "03",
-    title: "Collect ongoing distributions",
-    body: "Our team handles all asset management and operations. You receive regular distributions from a diversified portfolio, with the long-term goal of growing income over time.",
+    title: "Your equity keeps working",
+    body: "You collect regular distributions while we work to grow your building's value, and you share in that growth.",
   },
 ];
 
@@ -250,9 +250,9 @@ export default function Home() {
               </p>
               <h2 className={`mt-4 ${SERIF_H2}`}>Built for investors who have earned a better next chapter</h2>
               <p className="mt-6 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1rem]">
-                You have built meaningful equity in a single asset. A traditional sale gives up 30-40% of your gains to
-                tax. A 1031 keeps your wealth concentrated and the work on your plate. Middle Door Homes offers a third
-                option.
+                You have built meaningful equity in your building. A traditional sale gives up 30-40% of your gains to
+                tax. Holding keeps tenants, maintenance, and debt on your plate. Middle Door Homes offers a third option:
+                keep owning your building, as a passive investor.
               </p>
               <ul className="mt-8 border-t border-[var(--mdh-line)]">
                 {FIT.map((item) => (
@@ -336,9 +336,9 @@ export default function Home() {
               <h2 className={`mt-4 ${SERIF_H2}`}>Three steps to passive ownership</h2>
             </div>
             <p className="text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1rem]">
-              A §721 exchange lets you contribute your building to a partnership for ownership units, with no capital
-              gains or depreciation recapture at contribution. It is the same tool large REITs have used for decades to
-              buy from owners who did not want to sell. What is new is applying it to buildings your size.
+              Partner with Middle Door and keep owning your building. Through a §721 exchange, the institutional real
+              estate tool we bring to neighborhood multifamily, your capital gains bill is deferred. It is the same tool
+              large REITs have used for decades to buy from owners who did not want to sell.
             </p>
           </div>
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-10">

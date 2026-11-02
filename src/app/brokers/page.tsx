@@ -37,8 +37,8 @@ const FOR_CLIENTS = [
     body: "For a long-term owner, a sale means a large tax bill. A 721 exchange defers that entirely.",
   },
   {
-    title: "Continued ownership",
-    body: "Your client owns a stake in a diversified portfolio with ongoing cash flow and growth.",
+    title: "Keep owning the building",
+    body: "Your client keeps their building, passively, with regular distributions.",
   },
   {
     title: "No management",
@@ -60,7 +60,7 @@ const HOW_IT_WORKS = [
   {
     step: "03",
     title: "Earn your commission",
-    body: "If your client's building is contributed to our portfolio, your commission is paid in full, in cash at closing, per your listing agreement.",
+    body: "If your client partners with Middle Door, your commission is paid in full, in cash at closing, per your listing agreement.",
   },
 ];
 
@@ -153,15 +153,15 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "What does my client actually receive?",
-        a: "Three things. The tax bill deferred. Income from distributions on their units. And no more tenants, repairs, or management. Their ownership is spread across a portfolio instead of one building.",
+        a: "Units in a partnership that owns their building. The tax bill deferred. Income from distributions. And no more tenants, repairs, or management.",
       },
       {
         q: "Is this a good deal for the client or just for MDH?",
-        a: "It is genuinely good for the right client. No tax bill at closing, continued ownership in a growing portfolio, and truly passive income that is often higher than what they earned managing the building themselves. We decline transactions that are not a fit.",
+        a: "It is genuinely good for the right client. No tax bill at closing, continued ownership of their building, and truly passive income that is often higher than what they earned managing the building themselves. We decline transactions that are not a fit.",
       },
       {
         q: "How liquid is this for my client?",
-        a: "Ownership units are not publicly traded. A three-year minimum hold applies to all units, and from year four the partnership targets quarterly repurchase windows, at the holder\'s option and subject to portfolio liquidity. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
+        a: "Units are not publicly traded. From year four, your client can elect to sell the building, or roll into a broader portfolio if one is then offered. This is a long-term investment, and not appropriate for clients who need immediate liquidity.",
       },
       {
         q: "Why a partnership and not a cash offer?",
@@ -174,11 +174,11 @@ const BROKER_FAQ: FaqGroup[] = [
     items: [
       {
         q: "How does Middle Door generate revenue?",
-        a: "An annual management fee of 1.25% of assets under management, our share of the upside above a 6% preferred return, and our own units held alongside owners\'. Owners receive 100% of the first 6% of annual total return before we participate. We do our best when the portfolio does.",
+        a: "An annual asset management fee on net asset value, and our share of the growth in the building. We do our best when the building does.",
       },
       {
         q: "Are your interests aligned with mine and my client's?",
-        a: "Yes. Owners receive the first 6% of annual total return before we participate, we never take more than 30% of a year\'s return, and if portfolio value falls we earn nothing further until it recovers. We are not a fund with a short hold period trying to flip assets. We are building a durable housing business. When your client does well, we do well.",
+        a: "Yes. We earn our share only as the building grows, so our interest is in running it well and growing its value. We are not a fund with a short hold period trying to flip assets. When your client does well, we do well.",
       },
     ],
   },
@@ -216,8 +216,8 @@ export default function BrokersPage() {
         <Container>
           <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[1fr_360px] lg:items-center">
             <p className="font-display max-w-3xl text-[1.3rem] font-normal leading-[1.3] tracking-[-0.01em] text-[var(--mdh-title)] md:text-[1.6rem]">
-              Many multifamily owners are not looking to sell. We help you unlock off-market
-              transactions, helping owners make a tax-deferred transition to passive ownership.
+              Ask about a partnership instead of a sale; the price and your commission are the same either way. Your
+              seller keeps owning the building as a passive investor, and their capital gains bill is deferred.
             </p>
             <div className="relative h-[240px] overflow-hidden lg:h-[200px]">
               <Image
@@ -297,6 +297,21 @@ export default function BrokersPage() {
                 className="object-cover object-[center_45%]"
               />
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Listings priced ahead of the market */}
+      <Section tone="white">
+        <Container>
+          <div className="max-w-3xl">
+            <Eyebrow>For listings priced ahead of the market</Eyebrow>
+            <Heading className="mt-2">Help your seller capture the building&apos;s full value.</Heading>
+            <p className="mt-4 text-[0.93rem] leading-relaxed text-[var(--mdh-ink)]">
+              Your seller knows the building better than any buyer: the rents that could be higher, the units that
+              could be updated. Buyers price the building as it runs today. A partnership lets your seller capture that
+              upside: we handle renovations, operations, and rents, and split the increase in value with them.
+            </p>
           </div>
         </Container>
       </Section>
