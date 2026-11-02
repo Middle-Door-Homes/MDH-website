@@ -146,9 +146,9 @@ export function DoorIcon({ open, className }: ClassName & { open?: boolean }) {
       <path d="M6 84h52" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
       <path d="M12 84V6h40v78" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
       <rect x="17" y="10.5" width="30" height="71" stroke="currentColor" strokeWidth="2.5" />
-      <rect x="22" y="16" width="14" height="22" rx="1" stroke="currentColor" strokeWidth="2.25" />
-      <rect x="22" y="46" width="14" height="29" rx="1" stroke="currentColor" strokeWidth="2.25" />
-      <circle cx="41.5" cy="42" r="2.2" fill="currentColor" />
+      <rect x="21.5" y="15" width="21" height="23" rx="1" stroke="currentColor" strokeWidth="2.25" />
+      <rect x="21.5" y="48" width="21" height="28" rx="1" stroke="currentColor" strokeWidth="2.25" />
+      <circle cx="40" cy="43" r="2.1" fill="currentColor" />
     </svg>
   );
 }
